@@ -1,0 +1,22 @@
+let kills = stats.find(s => s.stat == 'kills');
+      let wins = stats.find(s => s.stat == 'wins');
+      let kd = stats.find(s => s.stat == 'kd');
+      let mPlayed = stats.find(s => s.stat == 'matchesPlayed');
+      let tPlayed = stats.find(s => s.stat == 'timePlayed');
+
+  let embed = new Discord.RichEmbed()
+  .setTitle("Estadísticas Fortnite")
+  .setAuthor(data.username)
+  .setColor("#8904B1")
+  .addField("Bajas", kills.value, true)
+  .addField("Partidas Ganadas", wins.value, true)
+  .addField("KD", kd.value, true)
+  .addField("Partidas Jugadas", mPlayed.value, true)
+  .addField("Tiempo de Juego", tPlayed.value, true);
+
+  message.channel.send(embed);
+
+
+}).catch(e => {
+  console.log(e);
+  message.channel.send("No se encuentra el jugador");
