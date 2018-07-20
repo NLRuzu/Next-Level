@@ -10,7 +10,7 @@ module.exports.run = async (bot, message, args) => {
       .setColor("#8904B1")
       .addField("**En la sala**", message.member.voiceChannel);
 
-      let partidaschannel = message.guild.channels.find(`name`, "ðŸ’Žbuscar-partidas");
+      let partidaschannel = message.guild.channels.find(`name`, "💎buscar-partidas");
       if(!partidaschannel) return message.channel.send("Introduce bien el comando");
 
 
