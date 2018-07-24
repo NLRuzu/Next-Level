@@ -6,7 +6,7 @@ module.exports.run = async (bot, message, args) => {
     .setDescription("**Lista de Comandos**")
     .setColor("#FE2E2E")
     .setThumbnail(sicon)
-    .setImage("https://i.imgur.com/EHZg03H.jpg")
+    .setImage("https://i.imgur.com/PdFulT3.jpg")
 
 
     return message.channel.send(serverembed);
