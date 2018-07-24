@@ -26,7 +26,7 @@ fs.readdir("./commands/", (err, files) => {
 
 bot.on("ready", async () => {
   console.log(`${bot.user.username} está online`);
-  bot.user.setActivity("Fortnite")
+  bot.user.setActivity("+help")
 });
 
 bot.on("guildMemberAdd", async member => {
