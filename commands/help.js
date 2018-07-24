@@ -5,7 +5,7 @@ module.exports.run = async (bot, message, args) => {
     let serverembed = new Discord.RichEmbed()
     .setDescription("**Lista de Comandos**")
     .setColor("#FE2E2E")
-    .setImage("https://i.imgur.com/PdFulT3.jpg")
+    .setImage("https://i.imgur.com/xUijbJz.jpg")
 
 
     return message.channel.send(serverembed);
