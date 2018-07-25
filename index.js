@@ -26,7 +26,7 @@ fs.readdir("./commands/", (err, files) => {
 
 bot.on("ready", async () => {
   console.log(`${bot.user.username} está online`);
-  bot.user.setActivity("Fortnite")
+  bot.user.setActivity("+help")
 });
 
 bot.on("guildMemberAdd", async member => {
@@ -59,60 +59,6 @@ bot.on("message", async message => {
   let args = messageArray.slice(1);
   let commandfile = bot.commands.get(cmd.slice(prefix.length));
   if(commandfile) commandfile.run(bot,message,args);
-
-
- // server info comando
-  //if(cmd === `${prefix}serverinfo`){
-
-  //  let sicon = message.guild.iconURL;
-    //let serverembed = new Discord.RichEmbed()
-  //  .setDescription("Información del Servidor")
-  //  .setColor("#FE2E2E")
-    //.setThumbnail(sicon)
-  //  .addField("Nombre del Servidor", message.guild.name)
-  //  .addField("Miembros Totales", message.guild.memberCount);
-
-  //  return message.channel.send(serverembed);
-//
-// lista de comandos
- //if(cmd === `${prefix}help`){
-
-  // let sicon = message.guild.iconURL;
-   //let serverembed = new Discord.RichEmbed()
-  // .setDescription("Lista de Comandos")
-  // .setColor("#FE2E2E")
-  // .setThumbnail(sicon)
-  // .addField("Miembros Totales", message.guild.memberCount)
-  // .addField("!serverinfo", "INFORMACIÓN DEL SERVIDOR");
-
-
-//   return message.channel.send(serverembed);
-//}
-
-
-//if(cmd === `${prefix}busco`){
-
-    //busco gente fortnite
-    //let cantidad = args[0];
-    //let juego = args[1];
-    //let sicon = message.guild.iconURL;
-    //let reportEmbed = new Discord.RichEmbed()
-    //.setTitle(message.member.nickname)
-    //.setDescription("Busca **"+ cantidad+"** personas para jugar "+juego)
-    //.setColor("#8904B1")
-    //.addField("En la sala", message.member.voiceChannel);
-
-    //let partidaschannel = message.guild.channels.find(`name`, "💎buscar-partidas");
-    //if(!partidaschannel) return message.channel.send("No se encuentran partidas en este momento");
-
-
-    //message.delete().catch(O_o=>{});
-    //partidaschannel.send(reportEmbed);
-
-  //  return;
-//}
-
-
 
 });
 
