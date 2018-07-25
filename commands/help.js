@@ -8,6 +8,7 @@ module.exports.run = async (bot, message, args) => {
     .setThumbnail(sicon)
     .addField("**+serverinfo**", "información del servidor")
     .addField("**+fortnite**", "Comandos para uso de Fortnite")
+    .addField("**+partidas**", "Comandos para buscar partidas")
 
 
     return message.channel.send(serverembed);
