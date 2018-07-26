@@ -8,8 +8,6 @@ bot.commands = new Discord.Collection();
     bot.commands.set(props.help.name, props);
   });
 
-});
-
 
 bot.on("ready", async () => {
   console.log(`${bot.user.username} está online`);
