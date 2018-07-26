@@ -9,7 +9,8 @@ module.exports.run = async (bot, message, args) => {
     .addField("**+serverinfo**", "información del servidor")
     .addField("**+fortnite**", "Comandos para uso de Fortnite")
     .addField("**+partidas**", "Comandos para buscar partidas")
-    .addField("**+musica**", "Comandos para el uso de bot musical")
+    .addField("**+roles**", "Comandos para añadirte roles de juegos")
+    .addField("**+musica**", "Comandos para el uso de bot musical");
 
 
     return message.channel.send(serverembed);
