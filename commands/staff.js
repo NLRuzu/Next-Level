@@ -6,7 +6,7 @@ module.exports.run = async (bot, message, args) => {
     .setDescription("**COMANDOS STAFF**")
     .setColor("#FE2E2E")
     .setThumbnail(sicon)
-    .addField("**+report @user Razón**", "Damos un toque a un usuario")
+    .addField("**+toque @user Razón**", "Damos un toque a un usuario")
     .addField("**+verificado @User**", "Tras asignarle el rol de Verificado, ponemos el mensaje en #verificados")
 
 
