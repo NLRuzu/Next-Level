@@ -8,6 +8,8 @@ module.exports.run = async (bot, message, args) => {
       .setTitle(message.member.nickname)
       .setDescription("**Ha verificado a **"+ cantidad+"** correctamente**")
       .setColor("#8904B1")
+      let role = message.guild.roles.find("name", "✅Verificado");
+      User.addRole(role).catch(console.error);
 
       let partidaschannel = message.guild.channels.find(`name`, "✅-verificados");
       if(!partidaschannel) return message.channel.send("Introduce bien el comando");
