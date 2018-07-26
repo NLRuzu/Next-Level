@@ -74,6 +74,7 @@ bot.on("message", (message) => {
   if(message.content.toUpperCase().startsWith("+CSGO")){
         message.delete();
             if(message.member.roles.find("name", "✅Verificado")){
+                let User = message.member;
                 let role = message.guild.roles.find("name", "💣 CSGO");
                 let guild = bot.guilds.get("458220475957379074");
                 let miembro = guild.member(User);
