@@ -50,7 +50,7 @@ bot.on("guildMemberAdd", function(member) {
 
 
 bot.on("message", (message) => {
-  if(message.content.toUpperCase().startsWith("+VERIFICADO")){
+  if(message.content.toUpperCase().startsWith("+VERIFICAR")){
         message.delete();
             if(message.member.roles.find("name", "💎[NL] Administrador") || message.member.roles.find("name", "💎[NL] Líder") ||message.member.roles.find("name", "💎[NL] Oficial")){
                 let User = message.mentions.users.first();
