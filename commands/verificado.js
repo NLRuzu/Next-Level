@@ -6,9 +6,10 @@ module.exports.run = async (bot, message, args) => {
       let sicon = message.guild.iconURL;
       let reportEmbed = new Discord.RichEmbed()
       .setTitle(message.member.nickname)
-      .setDescription("**El usuario **"+ cantidad+"** ha sido verificado correctamente.**")
+      .setDescription("**El usuario **"+ cantidad+"** ha sido verificado correctamente**")
       .setColor("#8904B1")
-      
+
+      let partidaschannel = message.guild.channels.find(`name`, "✅-verificados");
       if(!partidaschannel) return message.channel.send("Introduce bien el comando");
 
 
