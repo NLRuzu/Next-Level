@@ -6,7 +6,7 @@ module.exports.run = async (bot, message, args) => {
       let sicon = message.guild.iconURL;
       let reportEmbed = new Discord.RichEmbed()
       .setTitle(message.member.nickname)
-      .setDescription("Está solicitando **"+ cantidad+"** para ver todo el contenido")
+      .setDescription("+cantidad+"" solicitando **acceso** para ver todo el contenido")
       .setColor("#8904B1");
    
 
