@@ -70,6 +70,24 @@ bot.on("message", (message) => {
             }
         }
   console.log("True");
+  if(message.content.toUpperCase().startsWith("+SOLICITAR")){
+        message.delete();
+            if(message.member.roles.find("name", "❎ No verificado")){
+                let User = message.mentions.users.first();
+                let guild = bot.guilds.get("458220475957379074");
+                let miembro = guild.member(User);
+                miembro.addRole(role).catch(console.error);
+                miembro.removeRole(role2).catch(console.error);
+                message.channel.send({
+                    embed: {
+                        color: 0x04ff00,
+                        title: message.member.nickname,
+                        description: "**" + User + " **está solicitando verificación**",
+                    }
+                });
+            }
+        }
+  console.log("True");
   
   if(message.content.toUpperCase().startsWith("+CSGO")){
         message.delete();
