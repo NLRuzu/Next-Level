@@ -49,7 +49,7 @@ bot.on("guildMemberAdd", function(member) {
 });
 
 
-client.on("message", (message) => {
+bot.on("message", (message) => {
   if(message.content.toUpperCase().startsWith("+VERIFICADO")){
         let User = message.mentions.users.first();
         let role = message.guild.roles.find("name", "✅Verificado");
