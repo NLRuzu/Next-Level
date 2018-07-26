@@ -55,7 +55,7 @@ bot.on("message", (message) => {
             if(message.member.roles.find("name", "💎[NL] Administrador") || message.member.roles.find("name", "💎[NL] Líder") ||message.member.roles.find("name", "💎[NL] Oficial")){
                 let User = message.mentions.users.first();
                 let role = message.guild.roles.find("name", "✅Verificado");
-                let role2 = message.guild.roles.find("name", "❎No verificado");
+                let role2 = message.guild.roles.find("name", "❎ No verificado");
                 let guild = bot.guilds.get("458220475957379074");
                 let miembro = guild.member(User);
                 miembro.addRole(role).catch(console.error);
@@ -63,7 +63,7 @@ bot.on("message", (message) => {
                 message.channel.send({
                     embed: {
                         color: 0x800080,
-                        title: miembro.displayName,
+                        title: message.author.displayName,
                         description: "**Ha verificado a **" + User + "**correctamente**",
                     }
                 });
