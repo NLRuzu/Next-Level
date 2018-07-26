@@ -16,7 +16,9 @@ module.exports.run = async (bot, message, args) => {
     let reportschannel = message.guild.channels.find(`name`, "❓-propuestas");
     if(!reportschannel) return message.channel.send("Couldn't find reports channel.");
     
-    message.react(message.guild.emojis.get('472148854175694869'));
+    message.react(message.guild.emojis.get('472146792339734565'))
+    .then(console.log)
+    .catch(console.error);
     message.delete().catch(O_o=>{});
     reportschannel.send(reportEmbed);
 
