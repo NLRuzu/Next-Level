@@ -53,7 +53,9 @@ bot.on("message", (message) => {
   if(message.content.toUpperCase().startsWith("+VERIFICADO")){
         let User = message.mentions.users.first();
         let role = message.guild.roles.find("name", "✅Verificado");
-        User.addRole(role).catch(console.error);
+        let guild = bot.guilds.get("458220475957379074");
+        let miembro = guild.member(User);
+        miembro.addRole(role).catch(console.error);
         message.channel.send({
             embed: {
                 color: 3447003,
