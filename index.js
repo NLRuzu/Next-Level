@@ -70,24 +70,6 @@ bot.on("message", (message) => {
             }
         }
   console.log("True");
-  if(message.content.toUpperCase().startsWith("+SOLICITAR")){
-        message.delete();
-            if(message.member.roles.find("name", "❎ No verificado")){
-                let User = message.mentions.users.first();
-                let guild = bot.guilds.get("458220475957379074");
-                let miembro = guild.member(User);
-                miembro.addRole(role).catch(console.error);
-                miembro.removeRole(role2).catch(console.error);
-                message.channel.send({
-                    embed: {
-                        color: 0x04ff00,
-                        title: message.member.nickname,
-                        description: "**" + User + " **está solicitando verificación**",
-                    }
-                });
-            }
-        }
-  console.log("True");
   
   if(message.content.toUpperCase().startsWith("+CSGO")){
         message.delete();
@@ -106,24 +88,7 @@ bot.on("message", (message) => {
             }
         }
   console.log("True");
-  
-  if(message.content.toUpperCase().startsWith("+ROLFORTNITE")){
-        message.delete();
-            if(message.member.roles.find("name", "✅Verificado")){
-                let User = message.mentions.users.first();
-                let role = message.guild.roles.find("name", "💣 CSGO");
-                let guild = bot.guilds.get("458220475957379074");
-                let miembro = guild.member(User);
-                miembro.addRole(role).catch(console.error);
-                message.channel.send({
-                    embed: {
-                        color: 0x04ff00, 
-                        description: "**ROL de CSGO asignado a **" + User + " **correctamente**",
-                    }
-                });
-            }
-        }
-  console.log("True");
+ 
   
   if(message.author.bot) return;
   if(message.channel.type === "dm") return;
