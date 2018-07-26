@@ -1,11 +1,12 @@
 const Discord = require("discord.js");
 
 module.exports.run = async (bot, message, args) => {
-    let rUser = message.guild.member(message.mentions.users.first());
+    let rUser = message.guild.member;
     if(!rUser) return message.channel.send("formato incorrecto +solicitar @usuario");
     
 
     let reportEmbed = new Discord.RichEmbed()
+    .setTitle(message.member.nickname)
     .setDescription("Nueva petición de acceso")
     .setColor("#15f153")
     .addField("Solicitante:", `${message.author}`)
