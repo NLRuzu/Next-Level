@@ -62,8 +62,8 @@ bot.on("message", (message) => {
                 miembro.removeRole(role2).catch(console.error);
                 message.channel.send({
                     embed: {
-                        color: 0x04ff00,
-                        title: message.member.nickname,
+                        color: 0x800080,
+                        title: miembro.displayName,
                         description: "**Ha verificado a **" + User + "**correctamente**",
                     }
                 });
