@@ -5,10 +5,10 @@ module.exports.run = async (bot, message, args) => {
       let juego = args[1];
       let sicon = message.guild.iconURL;
       let reportEmbed = new Discord.RichEmbed()
-      .setTitle(message.user.nickname)
+      .setTitle(message.member.nickname)
       .setDescription("**"+ cantidad+"** está solicitando "+juego)
-      .setColor("#8904B1");
-   
+      .setColor("#8904B1")
+      .addField("**En la sala**", message.member.voiceChannel);
 
       let partidaschannel = message.guild.channels.find(`name`, "💹-solicitudes");
       if(!partidaschannel) return message.channel.send("Introduce bien el comando");
@@ -23,3 +23,4 @@ module.exports.run = async (bot, message, args) => {
 module.exports.help = {
   name: "solicitar"
 }
+
