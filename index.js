@@ -63,7 +63,7 @@ bot.on("message", (message) => {
                 message.channel.send({
                     embed: {
                         color: 0x800080,
-                        title: message.author.displayName,
+                        title: message.member.nickname,
                         description: "**Ha verificado a **" + User + "**correctamente**",
                     }
                 });
