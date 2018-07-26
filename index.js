@@ -1,6 +1,5 @@
 const Discord = require("discord.js");
 const fs = require("fs");
-const client = new Discord.Client();
 const bot = new Discord.Client({disableEveryone: true});
 bot.commands = new Discord.Collection();
 
@@ -120,4 +119,4 @@ bot.on("message", (message) => {
 
 });
 
-client.login(process.env.BOT_TOKEN);
+bot.login(process.env.BOT_TOKEN);
