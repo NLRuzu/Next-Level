@@ -50,17 +50,7 @@ bot.on("guildMemberAdd", function(member) {
 
 
 client.on("message", (message) => {
-  if(message.author.bot) return;
-  if(message.channel.type === "dm") return;
-
-  let prefix = botconfig.prefix;
-  let messageArray = message.content.split(" ");
-  let cmd = messageArray[0];
-  let args = messageArray.slice(1);
-  let commandfile = bot.commands.get(cmd.slice(prefix.length));
-  if(commandfile) commandfile.run(bot,message,args);
-  
- if(message.content.toUpperCase().startsWith("+VERIFICADO")){
+  if(message.content.toUpperCase().startsWith("+VERIFICADO")){
         let User = message.mentions.users.first();
         let role = message.guild.roles.find("name", "✅Verificado");
         User.addRole(role).catch(console.error);
@@ -72,6 +62,18 @@ client.on("message", (message) => {
             }
         });
     }
+  console.log("True");
+  
+  if(message.author.bot) return;
+  if(message.channel.type === "dm") return;
+
+  let prefix = botconfig.prefix;
+  let messageArray = message.content.split(" ");
+  let cmd = messageArray[0];
+  let args = messageArray.slice(1);
+  let commandfile = bot.commands.get(cmd.slice(prefix.length));
+  if(commandfile) commandfile.run(bot,message,args);
+  
 
 });
 
