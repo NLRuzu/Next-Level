@@ -16,11 +16,11 @@ module.exports.run = async (bot, message, args) => {
     let reportschannel = message.guild.channels.find(`name`, "❓-propuestas");
     if(!reportschannel) return message.channel.send("Couldn't find reports channel.");
     
-    message.react('✔️')
-    .then(console.log)
-    .catch(console.error);
+    
     message.delete().catch(O_o=>{});
     reportschannel.send(reportEmbed);
+    .then((newMessage) => {
+        newMessage.react("✔️")
 
 }
 
