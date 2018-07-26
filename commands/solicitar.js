@@ -1,12 +1,12 @@
 const Discord = require("discord.js");
 
 module.exports.run = async (bot, message, args) => {
-      let cantidad = args[0];
-      let juego = args[1];
+      let acceso = args[0];
+      let user = args[1];
       let sicon = message.guild.iconURL;
       let reportEmbed = new Discord.RichEmbed()
       .setTitle(message.member.nickname)
-      .setDescription("**"+ cantidad+"** está solicitando "+juego)
+      .setDescription("**"+acceso"** está solicitando **"+ user+"**)
       .setColor("#8904B1")
       .addField("**En la sala**", message.member.voiceChannel);
 
