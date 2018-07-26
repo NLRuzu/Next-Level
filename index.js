@@ -52,7 +52,7 @@ bot.on("guildMemberAdd", function(member) {
 bot.on("message", (message) => {
   if(message.content.toUpperCase().startsWith("+VERIFICAR")){
         message.delete();
-            if(message.member.roles.find("name", "💎[NL] Administrador") || message.member.roles.find("name", "💎[NL] Líder") ||message.member.roles.find("name", "💎[NL] Oficial")){
+            if(message.member.roles.find("name", "🌟 STAFF NIVEL 3") || message.member.roles.find("name", "🌟 STAFF NIVEL 2") ||message.member.roles.find("name", "🌟 STAFF NIVEL 1")){
                 let User = message.mentions.users.first();
                 let role = message.guild.roles.find("name", "✅Verificado");
                 let role2 = message.guild.roles.find("name", "❎ No verificado");
