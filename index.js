@@ -2,13 +2,6 @@ const Discord = require("discord.js");
 const bot = new Discord.Client({disableEveryone: true});
 bot.commands = new Discord.Collection();
 
-  jsfile.forEach((f, i) =>{
-    let props = require(`./commands/${f}`);
-    console.log(`${f} cargado`);
-    bot.commands.set(props.help.name, props);
-  });
-
-
 bot.on("ready", async () => {
   console.log(`${bot.user.username} está online`);
   bot.user.setActivity("+help")
