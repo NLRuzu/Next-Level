@@ -44,7 +44,7 @@ bot.on("guildMemberRemove", async member => {
 });
 
 bot.on("guildMemberAdd", function(member) {
-    let role = member.guild.roles.find("name", "🔰 Visitante");
+    let role = member.guild.roles.find("name", "❎ No verificado");
     member.addRole(role).catch(console.error);
 });
 
