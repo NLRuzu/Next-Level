@@ -21,6 +21,7 @@ module.exports.run = async (bot, message, args) => {
     reportschannel.send(reportEmbed);
     .then((newMessage) => {
         newMessage.react("✔️")
+        })
 
 }
 
