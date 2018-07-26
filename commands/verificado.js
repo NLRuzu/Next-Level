@@ -1,20 +1,20 @@
 const Discord = require("discord.js");
 
 module.exports.run = async (bot, message, args) => {
-      let cantidad = args[0];
-      let juego = args[1];
-      let sicon = message.guild.iconURL;
-      let reportEmbed = new Discord.RichEmbed()
-      .setTitle(message.member.nickname)
-      .setDescription("**Ha verificado a **"+ cantidad+"** correctamente**")
-      .setColor("#00ff1f")
+      
+	let verificado1 = new Discord.RichEmbed
+	
+	.addField("Verificado", `text ${message.mentions.users.first().tag} even more text`);
+	 message.mentions.members.first().addRole("✅Verificado")
+    .setTitle(message.member.nickname)
+    .setColor("#8904B1")
 
       let partidaschannel = message.guild.channels.find(`name`, "✅-verificados");
       if(!partidaschannel) return message.channel.send("Introduce bien el comando");
 
 
-      message.delete().catch(O_o=>{});
-      partidaschannel.send(reportEmbed);
+    message.delete().catch(O_o=>{});
+	message.channel.send(verificado1);
 
 
 }
@@ -22,3 +22,4 @@ module.exports.run = async (bot, message, args) => {
 module.exports.help = {
   name: "verificado"
 }
+
