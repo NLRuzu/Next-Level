@@ -14,6 +14,11 @@ module.exports.run = async (bot, message, args) => {
   if(rMember.roles.has(gRole.id)) return message.reply("They already have that role.");
   await(rMember.addRole(gRole.id));
 
+  try{
+    await rMember.send(`Congrats, you have been given the role ${gRole.name}`)
+  }catch(e){
+    message.channel.send(`Congrats to <@${rMember.id}>, they have been given the role ${gRole.name}. We tried to DM them, but their DMs are locked.`)
+  }
 }
 
 module.exports.help = {
