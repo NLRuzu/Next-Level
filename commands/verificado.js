@@ -7,7 +7,7 @@ module.exports.run = async (bot, message, args) => {
       let reportEmbed = new Discord.RichEmbed()
       .setTitle(message.member.nickname)
       .setDescription("**Ha verificado a **"+ cantidad+"** correctamente**")
-      .setColor("#8904B1")
+      .setColor("#00ff1f")
 
       let partidaschannel = message.guild.channels.find(`name`, "✅-verificados");
       if(!partidaschannel) return message.channel.send("Introduce bien el comando");
