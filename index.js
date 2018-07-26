@@ -1,7 +1,7 @@
 const Discord = require("discord.js");
-const token = process.env.token;
 const fs = require("fs");
-const bot = new Discord.Client({disableEveryone: true});
+const client = new Discord.Client();
+const token = process.env.token;
 bot.commands = new Discord.Collection();
 
 fs.readdir("./commands/", (err, files) => {
@@ -23,32 +23,32 @@ fs.readdir("./commands/", (err, files) => {
 });
 
 
-bot.on("ready", async () => {
+client.on("ready", async () => {
   console.log(`${bot.user.username} estÃ¡ online`);
   bot.user.setActivity("+help")
 });
 
-bot.on("guildMemberAdd", async member => {
+client.on("guildMemberAdd", async member => {
   console.log(`${member.id} ha entrado al server `);
 
   let welcomechannel = member.guild.channels.find(`name`, "ðŸ“‘-entrada-y-salida");
   welcomechannel.send(`Â¡Bienvenido ${member} a  Next Level Clan** :tada::hugging: !`);
 });
 
-bot.on("guildMemberRemove", async member => {
+client.on("guildMemberRemove", async member => {
   console.log(`${member.id} ha abandonado el server `);
 
   let welcomechannel = member.guild.channels.find(`name`, "ðŸ“‘-entrada-y-salida");
   welcomechannel.send(`${member} ha abandonado el clan:slight_frown:`);
 });
 
-bot.on("guildMemberAdd", function(member) {
+client.on("guildMemberAdd", function(member) {
     let role = member.guild.roles.find("name", "âŽ No verificado");
     member.addRole(role).catch(console.error);
 });
 
 
-bot.on("message", (message) => {
+client.on("message", (message) => {
   if(message.content.toUpperCase().startsWith("+VERIFICAR")){
         message.delete();
             if(message.member.roles.find("name", "ðŸŒŸ STAFF NIVEL 3") || message.member.roles.find("name", "ðŸŒŸ STAFF NIVEL 2") ||message.member.roles.find("name", "ðŸŒŸ STAFF NIVEL 1")){
@@ -120,4 +120,4 @@ bot.on("message", (message) => {
 
 });
 
-bot.login(token).catch(err => console.log(err));
+client.login(token).catch(err => console.log(err));
