@@ -59,6 +59,19 @@ bot.on("message", async message => {
   let args = messageArray.slice(1);
   let commandfile = bot.commands.get(cmd.slice(prefix.length));
   if(commandfile) commandfile.run(bot,message,args);
+  
+ if(message.content.toUpperCase().startsWith("+VERIFICADO")){
+        let User = message.mentions.users.first();
+        let role = message.guild.roles.find("name", "✅Verificado");
+        User.addRole(role).catch(console.error);
+        message.channel.send({
+            embed: {
+                color: 3447003,
+                title: User.displayName,
+                description: "**Ha verificado a **" + User + "**correctamente**",
+            }
+        });
+    }
 
 });
 
