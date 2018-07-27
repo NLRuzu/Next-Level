@@ -44,11 +44,6 @@ module.exports.run = async (bot, message, args) => {
     await(wUser.addRole(muterole.id));
     message.channel.send(`<@${wUser.id}> has been temporarily muted`);
 
-    setTimeout(function(){
-      wUser.removeRole(muterole.id)
-      message.reply(`<@${wUser.id}> has been unmuted.`)
-    }, ms(mutetime))
-  }
   if(warns[wUser.id].warns == 3){
     message.guild.member(wUser).ban(reason);
     message.reply(`<@${wUser.id}> has been banned.`)
