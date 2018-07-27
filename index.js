@@ -1,9 +1,8 @@
 const Discord = require("discord.js");
 const fs = require("fs");
-const client = new Discord.Client();
 const token = process.env.token;
 const bot = new Discord.Client({disableEveryone: true});
-client.commands = new Discord.Collection();
+bot.commands = new Discord.Collection();
 
 fs.readdir("./commands/", (err, files) => {
 
@@ -18,38 +17,38 @@ fs.readdir("./commands/", (err, files) => {
   jsfile.forEach((f, i) =>{
     let props = require(`./commands/${f}`);
     console.log(`${f} cargado`);
-    client.commands.set(props.help.name, props);
+    bot.commands.set(props.help.name, props);
   });
 
 });
 
 
-client.on("ready", async () => {
+bot.on("ready", async () => {
   console.log(`${bot.user.username} estÃ¡ online`);
   bot.user.setActivity("+help")
 });
 
-client.on("guildMemberAdd", async member => {
+bot.on("guildMemberAdd", async member => {
   console.log(`${member.id} ha entrado al server `);
 
   let welcomechannel = member.guild.channels.find(`name`, "ðŸ“‘-entrada-y-salida");
   welcomechannel.send(`Â¡Bienvenido ${member} a  Next Level Clan** :tada::hugging: !`);
 });
 
-client.on("guildMemberRemove", async member => {
+bot.on("guildMemberRemove", async member => {
   console.log(`${member.id} ha abandonado el server `);
 
   let welcomechannel = member.guild.channels.find(`name`, "ðŸ“‘-entrada-y-salida");
   welcomechannel.send(`${member} ha abandonado el clan:slight_frown:`);
 });
 
-client.on("guildMemberAdd", function(member) {
+bot.on("guildMemberAdd", function(member) {
     let role = member.guild.roles.find("name", "âŽ No verificado");
     member.addRole(role).catch(console.error);
 });
 
 
-client.on("message", (message) => {
+bot.on("message", (message) => {
   if(message.content.toUpperCase().startsWith("+VERIFICAR")){
         message.delete();
             if(message.member.roles.find("name", "ðŸŒŸ STAFF NIVEL 3") || message.member.roles.find("name", "ðŸŒŸ STAFF NIVEL 2") ||message.member.roles.find("name", "ðŸŒŸ STAFF NIVEL 1")){
@@ -121,5 +120,5 @@ client.on("message", (message) => {
 
 });
 
-client.login(token).catch(err => console.log(err));
+bot.login(token).catch(err => console.log(err));
 
