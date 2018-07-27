@@ -1,6 +1,6 @@
 const Discord = require ("discord.js");
 const fs = require("fs");
-
+const botconfig = require("./botconfig.json");
 
 module.exports.noPerms = (message, perm) => {
   let embed = new Discord.RichEmbed()
