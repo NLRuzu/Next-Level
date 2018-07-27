@@ -3,7 +3,7 @@ const Discord = require("discord.js");
 module.exports.run = async (bot, message, args) => {
     let sicon = message.guild.iconURL;
     let serverembed = new Discord.RichEmbed()
-    .setTitle("**FORTNITE**")
+    .setDescription("**FORTNITE**")
     .setColor("#FE2E2E")
     .setThumbnail(sicon)
     .addField("**.ign plataforma nickname**", "Vincula tu cuenta de epicgames.")
