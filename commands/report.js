@@ -6,11 +6,11 @@ module.exports.run = async (bot, message, args) => {
     if(!rUser) return message.channel.send("formato incorrecto +report @usuario razón");
     let rreason = args.join(" ").slice(22);
     
-  if(!reports[wUser.id]) reports[wUser.id] = {
+  if(!reports[rUser.id]) reports[rUser.id] = {
     reports: 0
   };
 
-  reports[wUser.id].reports++;
+  reports[rUser.id].reports++;
 
   fs.writeFile("./warnings.json", JSON.stringify(reports), (err) => {
     if (err) console.log(err)
