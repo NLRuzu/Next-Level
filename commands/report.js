@@ -1,18 +1,18 @@
 const Discord = require("discord.js");
 const fs = require("fs");
-let warns = JSON.parse(fs.readFileSync("./warnings.json", "utf8"));
+let reports = JSON.parse(fs.readFileSync("./warnings.json", "utf8"));
 module.exports.run = async (bot, message, args) => {
     let rUser = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
     if(!rUser) return message.channel.send("formato incorrecto +report @usuario razón");
     let rreason = args.join(" ").slice(22);
     
-  if(!warns[wUser.id]) warns[wUser.id] = {
-    warns: 0
+  if(!reports[wUser.id]) reports[wUser.id] = {
+    reports: 0
   };
 
-  warns[wUser.id].warns++;
+  reports[wUser.id].reports++;
 
-  fs.writeFile("./warnings.json", JSON.stringify(warns), (err) => {
+  fs.writeFile("./warnings.json", JSON.stringify(reports), (err) => {
     if (err) console.log(err)
   });
 
@@ -31,6 +31,7 @@ module.exports.run = async (bot, message, args) => {
     message.delete().catch(O_o=>{});
     reportschannel.send(reportEmbed);
 
+    }
 }
 
 module.exports.help = {
