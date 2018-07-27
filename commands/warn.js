@@ -1,6 +1,5 @@
 const Discord = require("discord.js");
 const fs = require("fs");
-const ms = require("ms");
 let warns = JSON.parse(fs.readFileSync("./warnings.json", "utf8"));
 
 module.exports.run = async (bot, message, args) => {
@@ -40,21 +39,10 @@ module.exports.run = async (bot, message, args) => {
     let muterole = message.guild.roles.find(`name`, "muted");
     if(!muterole) return message.reply("You should create that role dude.");
 
-    let mutetime = "10s";
-    await(wUser.addRole(muterole.id));
-    message.channel.send(`<@${wUser.id}> has been temporarily muted`);
-
-    setTimeout(function(){
-      wUser.removeRole(muterole.id)
-      message.reply(`<@${wUser.id}> has been unmuted.`)
-    }, ms(mutetime))
-  }
   if(warns[wUser.id].warns == 3){
     message.guild.member(wUser).ban(reason);
     message.reply(`<@${wUser.id}> has been banned.`)
   }
-
-}
 
 module.exports.help = {
   name: "warn"
