@@ -33,19 +33,19 @@ bot.on("ready", async () => {
 bot.on("guildMemberAdd", async member => {
   console.log(`${member.id} ha entrado al server `);
 
-  let welcomechannel = member.guild.channels.find(`name`, "ðŸ“‘-entrada-y-salida");
+  let welcomechannel = member.guild.channels.find(`name`, "📑-entrada-y-salida");
   welcomechannel.send(`Â¡Bienvenido ${member} a  Next Level Clan** :tada::hugging: !`);
 });
 
 bot.on("guildMemberRemove", async member => {
   console.log(`${member.id} ha abandonado el server `);
 
-  let welcomechannel = member.guild.channels.find(`name`, "ðŸ“‘-entrada-y-salida");
+  let welcomechannel = member.guild.channels.find(`name`, "📑-entrada-y-salida");
   welcomechannel.send(`${member} ha abandonado el clan:slight_frown:`);
 });
 
 bot.on("guildMemberAdd", function(member) {
-    let role = member.guild.roles.find("name", "âŽ No verificado");
+    let role = member.guild.roles.find("name", "❎ No verificado");
     member.addRole(role).catch(console.error);
 });
 
@@ -53,10 +53,10 @@ bot.on("guildMemberAdd", function(member) {
 bot.on("message", (message) => {
   if(message.content.toUpperCase().startsWith("+VERIFICAR")){
         message.delete();
-            if(message.member.roles.find("name", "ðŸŒŸ STAFF NIVEL 3") || message.member.roles.find("name", "ðŸŒŸ STAFF NIVEL 2") ||message.member.roles.find("name", "ðŸŒŸ STAFF NIVEL 1")){
+            if(message.member.roles.find("name", "🌟 STAFF NIVEL 3") || message.member.roles.find("name", "🌟 STAFF NIVEL 2") ||message.member.roles.find("name", "🌟 STAFF NIVEL 1")){
                 let User = message.mentions.users.first();
-                let role = message.guild.roles.find("name", "âœ…Verificado");
-                let role2 = message.guild.roles.find("name", "âŽ No verificado");
+                let role = message.guild.roles.find("name", "✅Verificado");
+                let role2 = message.guild.roles.find("name", "❎ No verificado");
                 let guild = bot.guilds.get("458220475957379074");
                 let miembro = guild.member(User);
                 miembro.addRole(role).catch(console.error);
@@ -74,9 +74,9 @@ bot.on("message", (message) => {
   
   if(message.content.toUpperCase().startsWith("+ROLLCSGO")){
         message.delete();
-            if(message.member.roles.find("name", "âœ…Verificado")){
+            if(message.member.roles.find("name", "✅Verificado")){
                 let User = message.member;
-                let role = message.guild.roles.find("name", "ðŸ’£ CSGO");
+                let role = message.guild.roles.find("name", "💣 CSGO");
                 let guild = bot.guilds.get("458220475957379074");
                 let miembro = guild.member(User);
                 miembro.addRole(role).catch(console.error);
@@ -92,9 +92,9 @@ bot.on("message", (message) => {
   
   if(message.content.toUpperCase().startsWith("+ROLLFORTNITE")){
         message.delete();
-            if(message.member.roles.find("name", "âœ…Verificado")){
+            if(message.member.roles.find("name", "✅Verificado")){
                 let User = message.member;
-                let role = message.guild.roles.find("name", "ðŸ¤– Fortnite");
+                let role = message.guild.roles.find("name", "🤖 Fortnite");
                 let guild = bot.guilds.get("458220475957379074");
                 let miembro = guild.member(User);
                 miembro.addRole(role).catch(console.error);
