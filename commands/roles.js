@@ -3,7 +3,7 @@ const Discord = require("discord.js");
 module.exports.run = async (bot, message, args) => {
     let sicon = message.guild.iconURL;
     let serverembed = new Discord.RichEmbed()
-    .setTitle("**ASIGNACIÓN DE ROLES**")
+    .setDescription("**ASIGNACIÓN DE ROLES**")
     .setColor("#FE2E2E")
     .setThumbnail(sicon)
     .addField("**+rollcsgo**", "Te añade el rol de CSGO")
