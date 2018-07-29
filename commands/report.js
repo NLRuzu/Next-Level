@@ -19,7 +19,7 @@ module.exports.run = async (bot, message, args) => {
     
     message.mentions.users.map(async user => {
         const member = message.guild.member(user);
-        try { await user.send('```cs¡HAS RECIBIDO UN TOQUE!** Estimado Usari@ de Next Level, acabas de recibir un toque por alguna acción, o actitud que va encontra de nuestras normas. Porfavor visita el canal de #toques para más información. Un saludo, el STAFF```'); }
+        try { await user.send('``` **¡HAS RECIBIDO UN TOQUE!** Estimado Usari@ de Next Level, acabas de recibir un toque por alguna acción, o actitud que va encontra de nuestras normas. Porfavor visita el canal de #toques para más información. Un saludo, el STAFF```'); }
         catch (err) { console.log('error'); }
             });
 
