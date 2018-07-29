@@ -16,7 +16,7 @@ module.exports.run = async (bot, message, args) => {
 
     let reportschannel = message.guild.channels.find(`name`, "❗-toques");
     if(!reportschannel) return message.channel.send("Couldn't find reports channel.");
-User.send("¡Enhorabuena! has sido verificado, ahora puedes ver todo el contenido del servidor del clan. Para más información accede al canal de texto #info");
+    User.send("¡Enhorabuena! has sido verificado, ahora puedes ver todo el contenido del servidor del clan. Para más información accede al canal de texto #info");
 
     message.delete().catch(O_o=>{});
     reportschannel.send(reportEmbed);
