@@ -3,6 +3,7 @@ const Discord = require("discord.js");
 module.exports.run = async (bot, message, args) => {
     let rUser = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
     if(!rUser) return message.channel.send("formato incorrecto +report @usuario razón");
+    User.send("¡Enhorabuena! has sido verificado, ahora puedes ver todo el contenido del servidor del clan. Para más información accede al canal de texto #info");
     let rreason = args.join(" ").slice(22);
     
     
