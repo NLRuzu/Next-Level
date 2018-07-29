@@ -19,7 +19,7 @@ module.exports.run = async (bot, message, args) => {
     
     message.mentions.users.map(async user => {
         const member = message.guild.member(user);
-        try { await user.send('¡Enhorabuena! has sido verificado, ahora puedes ver todo el contenido del servidor del clan. Para más información accede al canal de texto #info'); }
+        try { await user.send('Estimado Usari@ de Next Level, acabas de recibir un toque por alguna acción, o actitud que va encontra de nuestras normas. Porfavor visita el canal de #toques para más información. Un saludo, el STAFF'); }
         catch (err) { console.log('error'); }
             });
 
