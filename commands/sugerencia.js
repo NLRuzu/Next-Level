@@ -2,7 +2,7 @@ const Discord = require("discord.js");
 
 module.exports.run = async (bot, message, args) => {
     
-      let rUser = message.guild.member(message.guild.members.get(args[0]));
+      let rUser = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
       if(!rUser) return message.channel.send("formato incorrecto +proponer @usuario razón de la propuesta");
       let rreason = args.join(" ").slice(22);
       let sicon = message.guild.iconURL;
