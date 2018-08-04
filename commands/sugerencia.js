@@ -7,9 +7,9 @@ module.exports.run = async (bot, message, args) => {
       let reportEmbed = new Discord.RichEmbed()
       .setTitle("Nueva sugerencia")
       .addField("Propuesta por:", `${message.author}`)
-      .addField("Desarrollo de la sugerencia:", rreason);
+      .addField("Desarrollo de la sugerencia:", rreason)
+      .addField("Fecha:", message.createdAt)
       .setColor("#8904B1")
-      .addField("Fecha:", message.createdAt);
 
       let partidaschannel = message.guild.channels.find(`name`, "sugerencias");
       if(!partidaschannel) return message.channel.send("Introduce bien el comando");
