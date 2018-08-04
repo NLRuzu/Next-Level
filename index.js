@@ -95,7 +95,7 @@ bot.on("message", (message) => {
                     }
                 });
             }
-        }
+        }) 
   console.log("True");
   
   if(message.content.toUpperCase().startsWith("+ROLLCSGO")){
