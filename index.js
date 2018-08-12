@@ -52,9 +52,9 @@ bot.on("guildMemberAdd", async member => {
  });
 bot.on("guildMemberRemove", async member => {
   console.log(`${member.id} ha abandonado el server `);
-
+  let User = member.id();
   let welcomechannel = member.guild.channels.find(`name`, "📑-entrada-y-salida");
-  welcomechannel.send(`${member.user} ha abandonado el clan:slight_frown:`);
+  welcomechannel.send(`${user} ha abandonado el clan:slight_frown:`);
 });
 
 bot.on("guildMemberAdd", function(member) {
