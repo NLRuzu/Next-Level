@@ -33,9 +33,9 @@ bot.on("guildMemberAdd", async member => {
   console.log(`${member.id} ha entrado al server `);
 
   let welcomechannel = member.guild.channels.find(`name`, "📑-entrada-y-salida");
+  User.send("Bienvenido a Next-Level, en primer lugar no te asustes si no ves nada en el servidor, es completamente normal, debido a un Sistema de verificación para proteger así la privacidad. Lo único que tendrás que hacer es ir al canal #solicitudes y escribir ahí +solicitar. En cuanto un STAFF te haya verificado se te enviará un mensaje privado confirmando esto, gracias y un saludo");
   welcomechannel.send(`Â¡Bienvenido ${member} a  Next Level Clan** :tada::hugging: !`);
 });
-
 bot.on("guildMemberRemove", async member => {
   console.log(`${member.id} ha abandonado el server `);
 
