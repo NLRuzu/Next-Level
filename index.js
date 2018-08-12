@@ -60,7 +60,13 @@ bot.on("message", (message) => {
                 let miembro = guild.member(User);
                 miembro.addRole(role).catch(console.error);
                 miembro.removeRole(role2).catch(console.error);
-                User.send("¡Enhorabuena! has sido verificado, ahora puedes ver todo el contenido del servidor del clan. Para más información accede al canal de texto #info");
+                User.send{
+                    embed: {
+                        color: 0x04ff00,
+                        title: "Has sido verificado" ,
+                        description: "**Enhorabuena**" ,
+                    }
+                });
                 message.channel.send({
                     embed: {
                         color: 0x04ff00,
