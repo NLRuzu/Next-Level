@@ -19,7 +19,15 @@ module.exports.run = async (bot, message, args) => {
     
     message.mentions.users.map(async user => {
         const member = message.guild.member(user);
-        try { await user.send('``` **¡HAS RECIBIDO UN TOQUE!** Estimado Usari@ de Next Level, acabas de recibir un toque por alguna acción, o actitud que va en contra de nuestras normas. Por favor visita el canal de #toques para más información. Un saludo, el STAFF```'); }
+        try { await user.send({
+               embed: {
+                        color: 0xFF0000,
+                        title: "HAS RECIBIDO UN TOQUE",
+                        description: "Estimado Usari@ de Next Level, acabas de recibir un toque por alguna acción, o actitud que va en contra de nuestras normas.\nPor favor visita el canal de #toques para más información.\n\nUn saludo, el STAFF",
+                    }
+                });
+                
+            }
         catch (err) { console.log('error'); }
             });
 
