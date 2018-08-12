@@ -31,7 +31,7 @@ bot.on("ready", async () => {
 
 bot.on("guildMemberAdd", async member => {
   console.log(`${member.id} ha entrado al server `);
-  let User = message.member;
+  let User = member.id;
              User.send({
                embed: {
                         color: 0x04ff00,
