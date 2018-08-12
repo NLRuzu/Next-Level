@@ -31,13 +31,22 @@ bot.on("ready", async () => {
 
 bot.on("guildMemberAdd", async member => {
   console.log(`${member.id} ha entrado al server `);
-
+  let User = message.member;
+             User.send({
+               embed: {
+                        color: 0x04ff00,
+                        title: "MENSAJE DE BIENVENIDA",
+                        description: "Bienvenido a Next-Level, en primer lugar no te asustes si no ves nada en el servidor, es completamente normal, debido a un Sistema de verificación para proteger así la privacidad. Lo único que tendrás que hacer es ir al canal #solicitudes y escribir ahí +solicitar. En cuanto un STAFF te haya verificado se te enviará un mensaje privado confirmando esto, gracias y un saludo",
+                    }
+                });
+            
+               
   let welcomechannel = member.guild.channels.find(`name`, "📑-entrada-y-salida");
   welcomechannel.send({
                embed: {
                         color: 0x04ff00,
                         title: "NUEVO MIEMBRO",
-                        description: `Bienvenido ${member} a Next-Level`,
+                        description: `Bienvenido ${member.user} a Next-Level`,
                     }
                 });
  });
@@ -45,7 +54,7 @@ bot.on("guildMemberRemove", async member => {
   console.log(`${member.id} ha abandonado el server `);
 
   let welcomechannel = member.guild.channels.find(`name`, "📑-entrada-y-salida");
-  welcomechannel.send(`${member} ha abandonado el clan:slight_frown:`);
+  welcomechannel.send(`${member.user} ha abandonado el clan:slight_frown:`);
 });
 
 bot.on("guildMemberAdd", function(member) {
