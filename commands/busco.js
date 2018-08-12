@@ -3,8 +3,8 @@ const Discord = require("discord.js");
 module.exports.run = async (bot, message, args) => {
       let cantidad = args[0];
       let sicon = message.guild.iconURL;
-      message.channel.send("@fortnite");
       let reportEmbed = new Discord.RichEmbed()
+      message.channel.send("@fortnite");
       .addField("Usuario:", `${message.author}`)
       .setDescription("Se requiere **"+ cantidad+"** personas en", message.member.voiceChannel)
       .setColor("#8904B1");
