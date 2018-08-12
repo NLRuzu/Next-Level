@@ -33,15 +33,11 @@ bot.on("guildMemberAdd", async member => {
   console.log(`${member.id} ha entrado al server `);
 
   let welcomechannel = member.guild.channels.find(`name`, "📑-entrada-y-salida");
-
-
-        
-       
   welcomechannel.send({
                embed: {
                         color: 0x04ff00,
                         title: "NUEVO MIEMBRO",
-                        description: "Bienvenido ${member} a Next-Level",
+                        description: `Bienvenido ${member} a Next-Level`,
                     }
                 });
  });
@@ -56,7 +52,6 @@ bot.on("guildMemberAdd", function(member) {
     let role = member.guild.roles.find("name", "❎ No verificado");
     member.addRole(role).catch(console.error);
 });
-
 
 bot.on("message", (message) => {
   if(message.content.toUpperCase().startsWith("+VERIFICAR")){
