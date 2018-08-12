@@ -8,7 +8,7 @@ module.exports.run = async (bot, message, args) => {
                         color: 0x04ff00,
                         content: "@🤖 Fortnite",
                         title: message.member.nickname,
-                        description: "Busco **"+ cantidad+"** personas en", message.member.voiceChannel,
+                        description: "Busco **"+ cantidad+"** personas", 
                 });
 
 
