@@ -7,7 +7,7 @@ module.exports.run = async (bot, message, args) => {
     
     
     let reportEmbed = new Discord.RichEmbed()
-    .setTitle("Informe de Toques")
+    .setTitle("INFORME DEL TOQUE")
     .setColor("#FF0000")
     .addField("Usuario reportado:", `${rUser}`)
     .addField("Reportado por:", `${message.author}`)
