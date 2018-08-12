@@ -2,7 +2,6 @@ const Discord = require("discord.js");
 
 module.exports.run = async (bot, message, args) => {
       let cantidad = args[0];
-      let juego = args[1];
       let sicon = message.guild.iconURL;
       message.channel.send("@fortnite");
       let reportEmbed = new Discord.RichEmbed()
