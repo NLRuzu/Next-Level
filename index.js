@@ -60,11 +60,11 @@ bot.on("message", (message) => {
                 let miembro = guild.member(User);
                 miembro.addRole(role).catch(console.error);
                 miembro.removeRole(role2).catch(console.error);
-                User.send{
+                User.send({
                     embed: {
                         color: 0x04ff00,
-                        title: "Has sido verificado" ,
-                        description: "**Enhorabuena**" ,
+                        title: "Has sido verificado",
+                        description: "**Enhorabuena**",
                     }
                 });
                 message.channel.send({
