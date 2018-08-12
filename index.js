@@ -36,13 +36,19 @@ bot.on("guildMemberAdd", async member => {
   Member.send({
                embed: {
                         color: 0x04ff00,
-                        title: "MENSAJE DE BIENVENIDA ",
+                        title: "MENSAJE DE BIENVENIDA",
                         description: "Bienvenido a Next-Level, en primer lugar no te asustes si no ves nada en el servidor, es completamente normal, debido a un Sistema de verificación para proteger así la privacidad. Lo único que tendrás que hacer es ir al canal #solicitudes y escribir ahí +solicitar. En cuanto un STAFF te haya verificado se te enviará un mensaje privado confirmando esto, gracias y un saludo",
                     }
                 });
-            
+         
        
-  welcomechannel.send(`Â¡Bienvenido ${member} a  Next Level Clan** :tada::hugging: !`);
+  welcomechannel.send({
+               embed: {
+                        color: 0x04ff00,
+                        title: "NUEVO MIEMBRO",
+                        description: "Bienvenido ${member} a Next-Level",
+                    }
+                });
  });
 bot.on("guildMemberRemove", async member => {
   console.log(`${member.id} ha abandonado el server `);
