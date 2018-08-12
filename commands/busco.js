@@ -4,11 +4,11 @@ module.exports.run = async (bot, message, args) => {
       let cantidad = args[0];
       let juego = args[1];
       let sicon = message.guild.iconURL;
+      message.channel.send("@fortnite");
       let reportEmbed = new Discord.RichEmbed()
       .addField("Usuario:", `${message.author}`)
-      .setDescription("Se requiere **"+ cantidad+"** personas para jugar "+juego)
-      .setColor("#8904B1")
-      .addField("**En la sala**", message.member.voiceChannel);
+      .setDescription("Se requiere **"+ cantidad+"** personas en", message.member.voiceChannel)
+      .setColor("#8904B1");
 
       let partidaschannel = message.guild.channels.find(`name`, "💎buscar-partidas");
       if(!partidaschannel) return message.channel.send("Introduce bien el comando");
