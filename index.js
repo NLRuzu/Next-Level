@@ -46,7 +46,7 @@ bot.on("guildMemberAdd", async member => {
                embed: {
                         color: 0x04ff00,
                         title: "NUEVO MIEMBRO",
-                        description: `Bienvenido ${member.id} a Next-Level`,
+                        description: `Bienvenido ${member.user} a Next-Level`,
                     }
                 });
  });
@@ -54,7 +54,7 @@ bot.on("guildMemberRemove", async member => {
   console.log(`${member.id} ha abandonado el server `);
 
   let welcomechannel = member.guild.channels.find(`name`, "📑-entrada-y-salida");
-  welcomechannel.send(`${member.id} ha abandonado el clan:slight_frown:`);
+  welcomechannel.send(`${member.user} ha abandonado el clan:slight_frown:`);
 });
 
 bot.on("guildMemberAdd", function(member) {
