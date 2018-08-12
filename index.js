@@ -33,6 +33,7 @@ bot.on("guildMemberAdd", async member => {
   console.log(`${member.id} ha entrado al server `);
 
   let welcomechannel = member.guild.channels.find(`name`, "📑-entrada-y-salida");
+  let User = message.mentions.users.first();
   User.send({
                embed: {
                         color: 0x04ff00,
