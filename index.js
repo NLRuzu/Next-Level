@@ -116,7 +116,7 @@ bot.on("message", (message) => {
                             },
                             title: "Haz click para unirte",
                             url: "https://discord.gg/" + invite.code,
-                            description: "Busco **" + 4 - message.member.voiceChannel.members.size + "** soldados en el autobús **" + message.author.voiceChannel.name + "** para luchar.",
+                            description: "Busco **" + 4 - message.member.voiceChannel.members.size + "** soldados en el autobús **" + message.member.voiceChannel.name + "** para luchar.",
                             fields: [{
                                 name: "Descripción",
                                 value: "*" + desc + "*0"
