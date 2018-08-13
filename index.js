@@ -110,7 +110,9 @@ bot.on("message", (message) => {
                             let invitacion = invite.code.split("invite/")[0];
                             let users = Number(message.member.voiceChannel.userLimit) - Number(message.member.voiceChannel.members.length);
                             message.channel.send(`[<${adminRoleObject}>]`);
-                            message.channel.send({embed: {
+                            message.channel.send({
+				    content:"@everyone"
+				    embed: {
                                 color: 3447003,
                                 author: {
                                     name: message.author.tag,
