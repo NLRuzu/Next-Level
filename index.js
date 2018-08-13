@@ -169,29 +169,24 @@ bot.on("message", (message) => {
         }
   console.log("True");
   
-  if(message.content.toUpperCase().startsWith("+SUGERENCIA")){
+
       
-                let titulo = message.content.toUpperCase().split("+SUGERENCIA")[1];
-                let descripcion = message.content.split(titulo)[1];
+
+
             
                 
-                message.author.send("Enhorabuena, tu sugerencia has sido enviada correctamente, agradecemos tu tiempo y aportación");
-                message.channel.send({
-                    embed: {
-                        author: {
-                            name: message.author.displayName,
-                            icon_url: message.author.avatarURL
+             
+
+
+
+
                             
-                        },
+
             
-                        color: 0x04ff00,
-                        title: message.member.nickname,
-                        title: titulo,
-                        description: descripcion,
-                    }
-                });
-            }
-  console.log("True");
+
+                      
+                     
+
   
  
   if(message.content.toUpperCase().startsWith("+ROLLFORTNITE")){
