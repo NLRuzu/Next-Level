@@ -16,7 +16,32 @@ module.exports.run = async (bot, message, args) => {
 
       let partidaschannel = message.guild.channels.find(`name`, "sugerencias");
       if(!partidaschannel) return message.channel.send("Introduce bien el comando");
+      
+      message.mentions.users.map(async user => {
 
+        const member = message.guild.member(user);
+
+        try { await user.send({
+
+               embed: {
+
+                        color: 0xFF0000,
+
+                        title: "HAS RECIBIDO UN TOQUE",
+
+                        description: "Estimado Usari@ de Next Level, acabas de recibir un toque por alguna acción, o actitud que va en contra de nuestras normas.\n\nPor favor visita el canal de #toques para más información.\n\nUn saludo, el STAFF",
+
+                    }
+
+                });
+
+                
+
+            }
+
+        catch (err) { console.log('error'); }
+
+            });
 
       message.delete().catch(O_o=>{});
       partidaschannel.send(reportEmbed);
@@ -26,7 +51,7 @@ module.exports.run = async (bot, message, args) => {
 }
 
 module.exports.help = {
-  name: "newsugerencia"
+  name: "sugerencia"
 }
 
 
