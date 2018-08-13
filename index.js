@@ -117,7 +117,7 @@ bot.on("message", (message) => {
                                     name: message.author.tag,
                                     icon_url: message.author.avatarURL
                                 },
-                                title: "Busco **" + users + "** soldados en el autobús " + message.member.voiceChannel.name + " para luchar.",
+                                title: "Busco **" + users + "** personas para darle calor en " + message.member.voiceChannel.name + " para luchar.",
                                 description: "[Haz click para unirte](https://discord.gg/"+ invitacion +")",
                                 fields: [{
                                     name: "Descripción",
