@@ -118,13 +118,15 @@ bot.on("message", (message) => {
                                     icon_url: message.author.avatarURL
                                 },
                                 title: "Busco **" + users + "** soldados en el autobús " + message.member.voiceChannel.name + " para luchar.",
-                                description: "[Haz click para unirte](https://discord.gg/"+ invitacion +")",
+                                
                                 fields: [{
                                     name: "Descripción",
                                     value: "*" + desc + "*"
                                 },
                                 ],
+					description: "[Haz click para unirte](https://discord.gg/"+ invitacion +")",
                             }
+				
                             })
                             message.delete();
                         })
