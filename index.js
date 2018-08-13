@@ -123,8 +123,9 @@ bot.on("message", (message) => {
                                     value: "*" + desc + "*"
                                 },
                                 ],
-					description: "[Haz click para unirte](https://discord.gg/"+ invitacion +")",
+				description: "[Haz click para unirte](https://discord.gg/"+ invitacion +")",	
                             }
+				    
                             })
                             message.delete();
                         })
