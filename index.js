@@ -111,7 +111,7 @@ bot.on("message", (message) => {
                             let users = Number(message.member.voiceChannel.userLimit) - Number(message.member.voiceChannel.members.length);
                             message.channel.send(`[<${adminRoleObject}>]`);
                             message.channel.send({
-				    content:"@everyone", 
+				    content:"[@everyone]", 
 				    embed: {
                                 color: 3447003,
                                 author: {
