@@ -15,7 +15,7 @@ module.exports.run = async (bot, message, args) => {
       .addField("Desarrollo del comunicado:", rreason);
 
 
-      let partidaschannel = message.guild.channels.find(`name`, "sugerencias");
+      let partidaschannel = message.guild.channels.find(`name`, "comunicados");
       if(!partidaschannel) return message.channel.send("Introduce bien el comando");
       
      
