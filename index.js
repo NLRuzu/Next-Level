@@ -169,7 +169,7 @@ bot.on("message", (message) => {
         }
   console.log("True");
   
-  if(message.content.toUpperCase().startsWith("+SUGERENCIA")){
+  if(message.content.toUpperCase().startsWith("+SUGERIR")){
       
                 let titulo = message.content.toUpperCase().split("+SUGERENCIA")[1];
                 let descripcion = message.content.split(titulo)[1];
