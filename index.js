@@ -43,8 +43,8 @@ bot.on("guildMemberAdd", async member => {
     member.send({
                embed: {
                         color: 0x04ff00,
-                        title: "Esto ya es un embed",
-                        description: 'Aqui pones lo que quieras xd',
+                        title: "MENSAJE DE BIENVENIDA",
+                        description: 'Bienvenido a Next-Level, en primer lugar si no ves nada en el servidor, es totalmente NORMAL. \n\nEs debido a un sistema de verificación implementado en nuestro clan para proteger así nuestra privacidad y evaluar el interés de la persona entrante. \n\nTan solo tendrás que ir al canal de #solicitudes y escribir +solicitar \n\nEn cuanto un STAFF te haya verificado te saldrá una notificación y podrás disfrutarde todo el contenido. \n\nUn saludo, el STAFF.',
                     }
                 });
  });
