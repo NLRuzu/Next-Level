@@ -3,12 +3,12 @@ const Discord = require("discord.js");
 module.exports.run = async (bot, message, args) => {
     
       let rUser = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
-      if(!rUser) return message.channel.send("formato incorrecto +proponer @usuario razón de la propuesta");
+      if(!rUser) return message.channel.send("formato incorrecto +sugerencia @usuario razón de la propuesta");
       let rreason = args.join(" ").slice(22);
       let sicon = message.guild.iconURL;
       let reportEmbed = new Discord.RichEmbed()
       
-      .setTitle("Nueva sugerencia")
+      .setTitle("NUEVA SUGERENCIA ")
       .setColor("#15f153")   
       .addField("Propuesta por:", `${rUser}`)       
       .addField("Desarrollo de la sugerencia:", rreason);
@@ -27,9 +27,9 @@ module.exports.run = async (bot, message, args) => {
 
                         color: 0xFF0000,
 
-                        title: "HAS RECIBIDO UN TOQUE",
+                        title: "SUGERENCIA RECIBIDA",
 
-                        description: "Estimado Usari@ de Next Level, acabas de recibir un toque por alguna acción, o actitud que va en contra de nuestras normas.\n\nPor favor visita el canal de #toques para más información.\n\nUn saludo, el STAFF",
+                        description: "Tu Sugerencia ha sido enviada correctamente, gracias por aportar tu granito de arena.\n\nUn saludo, el STAFF",
 
                     }
 
