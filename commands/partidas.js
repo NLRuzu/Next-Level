@@ -6,7 +6,7 @@ module.exports.run = async (bot, message, args) => {
     .setDescription("**BUSCAR PARTIDAS**")
     .setColor("#FE2E2E")
     .setThumbnail(sicon)
-    .addField("**+buscar descripción**", "Usar solo en sala #💎-buscar-partidas SIEMPRE DENTRO DE UNA DE LAS SALAS **SQUAD o DÚOS **");
+    .addField("**+buscar descripción**", "Usar solo en sala #💎-buscar-partidas.\n\n **SIEMPRE** DENTRO DE UNA DE LAS SALAS **SQUAD o DÚOS **");
 
 
     return message.channel.send(serverembed);
