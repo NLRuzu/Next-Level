@@ -42,9 +42,9 @@ bot.on("guildMemberAdd", async member => {
                 });
     member.send({
                embed: {
-                        color: 0x04ff00,
-                        title: "Esto ya es un embed",
-                        description: 'Aqui pones lo que quieras xd',
+                        color: 0x0cff00,
+                        title: "MENSAJE DE BIENVENIDA",
+                        description: 'Te damos la bienvenida a Next-Level, en primer lugar si no ves contenido ninguno en el servidor tranquilo, es completamente normal. \n\nForma parte de un sistema de verificación que tenemos implementado en el servidor, para así proteger nuestra intimidad y evaluar el verdadero interés de alguien en entrar a él. \n\nEn segundo lugar, decirte que deberás verificar tu cuenta para tener acceso completo, ingresando en la sala ❎-solicitudes y escribiendo +solicitar. \n\nEn cuanto un STAFF haya verificado tu cuenta, serás notificado de ello mediante mensaje privado y podrás posteriormente tener acceso completo. \n\nUn saludo, el STAFF.',
                     }
                 });
  });
