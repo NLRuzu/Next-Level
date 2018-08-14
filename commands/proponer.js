@@ -6,8 +6,8 @@ module.exports.run = async (bot, message, args) => {
     let rreason = args.join(" ").slice(22);
 
     let reportEmbed = new Discord.RichEmbed()
-    .setTitle("Nueva propuesta de ascenso")
-    .setColor("#15f153")
+    .setTitle("NUEVA PROPUESTA DE ASCENSO")
+    .setColor("#13ff00")
     .addField("Usuario propuesto:", `${rUser}`)
     .addField("Propuesto por:", `${message.author}`)
     .addField("Fecha:", message.createdAt)
