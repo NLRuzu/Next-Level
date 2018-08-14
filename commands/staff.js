@@ -9,7 +9,8 @@ module.exports.run = async (bot, message, args) => {
     .addField("**+report @user Razón**", "Damos un toque a un usuario")
     .addField("**+verificar @User**", "Asigna rol Verificado para acceder al contenido del discord")
     .addField("**+clear cantidad**", "Elimina X cantidad de mensajes de un canal de texto")
-    .addField("**+proponer @User Razón**", "Propone a un usuario ascenso de rango por x motivo");
+    .addField("**+proponer @User Razón**", "Propone a un usuario ascenso de rango por x motivo")
+    .addField("**+comunicar @miUser Desarrollo**", "Redactamos un comunicado, solo usar en sala #📋-comunicados");
 
 
     return message.channel.send(serverembed);
