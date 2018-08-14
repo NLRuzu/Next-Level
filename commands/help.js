@@ -3,14 +3,14 @@ const Discord = require("discord.js");
 module.exports.run = async (bot, message, args) => {
     let sicon = message.guild.iconURL;
     let serverembed = new Discord.RichEmbed()
-    .setDescription("**GENERALES**")
+    .setTitle("**GENERALES**")
     .setColor("#FE2E2E")
     .setThumbnail(sicon)
     .addField("**+serverinfo**", "información del servidor")
     .addField("**+fortnite**", "Comandos para uso de Fortnite")
     .addField("**+partidas**", "Comandos para buscar partidas")
     .addField("**+roles**", "Comandos para añadirte roles de juegos")
-    .addField("**+musica**", "Comandos para el uso de bot musical");
+    .addField("**+sugerencia**", "Comandos para publicar sugerencias (+sugerencia @nuestrouser desarrollo)");
 
 
     return message.channel.send(serverembed);
