@@ -12,7 +12,7 @@ module.exports.run = async (bot, message, args) => {
     .addField("**.stats**", "Te muestra tus stats generales.")
     .addField("**.season5**", "Te muestra tus stats de la temporada 5.");
 
-
+    message.delete().catch(O_o=>{});
     return message.channel.send(serverembed);
 }
 
