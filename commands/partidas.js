@@ -8,7 +8,7 @@ module.exports.run = async (bot, message, args) => {
     .setThumbnail(sicon)
     .addField("**+buscar descripción**", "Usar solo en sala #💎-buscar-partidas.\n\n **SIEMPRE** DENTRO DE UNA DE LAS SALAS **SQUAD o DÚOS **");
 
-
+    message.delete().catch(O_o=>{});
     return message.channel.send(serverembed);
 }
 
