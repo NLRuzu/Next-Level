@@ -8,9 +8,8 @@ module.exports.run = async (bot, message, args) => {
       let sicon = message.guild.iconURL;
       let reportEmbed = new Discord.RichEmbed()
       
-      .setTitle("[@everyone]")
       .setTitle("NUEVO COMUNICADO")
-      .setColor("#15f153")   
+      .setColor("#ffe800")    
       .addField("Comunicado por:", `${rUser}`)       
       .addField("Desarrollo del comunicado:", rreason);
 
