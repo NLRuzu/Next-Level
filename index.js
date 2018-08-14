@@ -117,7 +117,7 @@ bot.on("message", (message) => {
                                     name: message.author.tag,
                                     icon_url: message.author.avatarURL
                                 },
-                                title: "Busco " + users + " personas para darle calor en " + message.member.voiceChannel.name + "",  
+                                title: "Busco " + users + " personas para darle calor en " + message.member.voiceChannel.name + " ",  
                                 fields: [{
                                     name: "Descripción",
                                     value: "*" + desc + "*",
