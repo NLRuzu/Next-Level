@@ -96,9 +96,9 @@ bot.on("message", (message) => {
         }
  
                    
-            if(message.content.startsWith("+buscarf")){
+            if(message.content.startsWith("+buscar")){
                 if(message.member.voiceChannel != null || message.member.voiceChannel != undefined){
-                    let desc = message.content.split("+buscarf ")[1];
+                    let desc = message.content.split("+buscar ")[1];
                     if(desc != null){
                         let options = {
                             maxAge: 3600
@@ -112,13 +112,13 @@ bot.on("message", (message) => {
                             message.channel.send({
                                 content: `[<${adminRoleObject}>]`,
                                 embed: {
-                                color: 3447003,
+                                color: 0xc500ff,
                                 author: {
                                     name: message.author.tag,
                                     icon_url: message.author.avatarURL
                                 },
-                                title: "BUSCANDO PARTIDA",
-                                description: "Busco **" + users + "** personas para darle calor en " + message.member.voiceChannel.name + "",
+                                title: "BUSCANDO PARTIDA DE FORTNITE",
+                                description: "Busco **" + users + "** personas para darle calor en" + message.member.voiceChannel.name + "",
                                 fields: [{
                                     name: "Descripción",
                                     value: "*" + desc + "*",
@@ -138,22 +138,8 @@ bot.on("message", (message) => {
             }
  
   console.log("True");
- 
- 
+       
                
-         
-             
- 
- 
-                 
-                   
-                     
-                           
-               
-           
-           
-               
- 
   if(message.content.toUpperCase().startsWith("+ROLLCSGO")){
         message.delete();
             if(message.member.roles.find("name", "✅Verificado")){
@@ -164,7 +150,7 @@ bot.on("message", (message) => {
                 miembro.addRole(role).catch(console.error);
                 message.channel.send({
                     embed: {
-                        color: 0x04ff00,
+                        color: 0xffffff,
                         description: "**ROL de CSGO asignado a **" + User + " **correctamente**",
                     }
                 });
@@ -186,7 +172,7 @@ bot.on("message", (message) => {
                 miembro.addRole(role).catch(console.error);
                 message.channel.send({
                     embed: {
-                        color: 0x04ff00,
+                        color: 0xc500ff,
                         description: "**ROL de FORTNITE asignado a **" + User + " **correctamente**",
                     }
                 });
