@@ -117,13 +117,14 @@ bot.on("message", (message) => {
                                     name: message.author.tag,
                                     icon_url: message.author.avatarURL
                                 },
-                                title: "Busco " + users + " personas para darle calor en " + message.member.voiceChannel.name + " ",  
+                                title: "BUSCANDO PARTIDA",
+                                description: "Busco **" + users + "** personas para darle calor en " + message.member.voiceChannel.name + "",
                                 fields: [{
                                     name: "Descripción",
                                     value: "*" + desc + "*",
                                 },
                                 {
-                                    name: "Unete a mi sala",
+                                    name: "Únete a mi sala",
                                     value: "[Haz click para unirte](https://discord.gg/"+ invitacion +")",
                                 },
                                 ],
