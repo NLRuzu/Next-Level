@@ -42,7 +42,7 @@ module.exports.run = async (bot, message, args) => {
 
       message.delete().catch(O_o=>{});
       partidaschannel.send(sugerenciaEmbed);
-      message.react("👎")
+      message.react(':thumbsdown:');
 
 }
 
