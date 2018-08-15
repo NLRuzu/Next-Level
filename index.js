@@ -109,7 +109,8 @@ bot.on("message", (message) => {
                         .then(invite => {
                             let invitacion = invite.code.split("invite/")[0];
                             let users = message.member.voiceChannel.userLimit - message.member.voiceChannel.members.size;
-                            message.channel.send({
+                         message.channel.send('@🤖 Fortnite')
+                         message.channel.send({
                                 embed: {
                                 color: 0xc500ff,
                                 author: {
