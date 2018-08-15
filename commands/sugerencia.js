@@ -6,6 +6,8 @@ module.exports.run = async (bot, message, args) => {
       if(!rUser) return message.channel.send("formato incorrecto +sugerencia @usuario razón de la sugerencia");
       let rreason = args.join(" ").slice(22);
       let sicon = message.guild.iconURL;
+      let emoji = message.guild.emojis.find('name', "aceptado");
+      message.react(emoji);
       let sugerenciaEmbed = new Discord.RichEmbed()
       
       .setTitle("NUEVA SUGERENCIA ")
@@ -49,5 +51,4 @@ module.exports.run = async (bot, message, args) => {
 module.exports.help = {
   name: "sugerencia"
 }
-
 
