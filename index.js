@@ -110,14 +110,13 @@ bot.on("message", (message) => {
                             let invitacion = invite.code.split("invite/")[0];
                             let users = message.member.voiceChannel.userLimit - message.member.voiceChannel.members.size;
                             message.channel.send({
-                                content: `[<${adminRoleObject}>]`,
                                 embed: {
                                 color: 0xc500ff,
                                 author: {
                                     name: message.author.tag,
                                     icon_url: message.author.avatarURL
                                 },
-                                title: "BUSCANDO PARTIDA DE FORTNITE",
+                                title: "BUSCANDO PARTIDA DE FORTNITE <${adminRoleObject}>",
                                 description: "Busco **" + users + "** personas para darle calor en" + message.member.voiceChannel.name + "",
                                 fields: [{
                                     name: "Descripción",
