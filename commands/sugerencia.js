@@ -6,7 +6,7 @@ module.exports.run = async (bot, message, args) => {
       if(!rUser) return message.channel.send("formato incorrecto +sugerencia @usuario razón de la sugerencia");
       let rreason = args.join(" ").slice(22);
       let sicon = message.guild.iconURL;
-      let reportEmbed = new Discord.RichEmbed()
+      let sugerenciaEmbed = new Discord.RichEmbed()
       
       .setTitle("NUEVA SUGERENCIA ")
       .setColor("#00ffdc")   
@@ -30,12 +30,9 @@ module.exports.run = async (bot, message, args) => {
                         title: "SUGERENCIA RECIBIDA",
 
                         description: "Tu Sugerencia ha sido enviada correctamente, gracias por aportar tu granito de arena.\n\nUn saludo, el STAFF",
-
                     }
 
                 });
-
-                
 
             }
 
@@ -44,9 +41,8 @@ module.exports.run = async (bot, message, args) => {
             });
 
       message.delete().catch(O_o=>{});
-      partidaschannel.send(reportEmbed);
-    
-
+      partidaschannel.send(sugerenciaEmbed);
+      message.react("👎")
 
 }
 
