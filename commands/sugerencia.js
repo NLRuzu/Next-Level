@@ -5,9 +5,7 @@ module.exports.run = async (bot, message, args) => {
       let rUser = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
       if(!rUser) return message.channel.send("formato incorrecto +sugerencia @usuario razón de la sugerencia");
       let rreason = args.join(" ").slice(22);
-      let sicon = message.guild.iconURL;
-      let emoji = message.guild.emojis.find('name', "aceptado");
-      message.react(emoji);
+      let sicon = message.guild.iconURL;   
       let sugerenciaEmbed = new Discord.RichEmbed()
       
       .setTitle("NUEVA SUGERENCIA ")
@@ -45,7 +43,8 @@ module.exports.run = async (bot, message, args) => {
       message.delete().catch(O_o=>{});
       partidaschannel.send(sugerenciaEmbed);
       
-
+	let emoji = message.guild.emojis.find('name', "aceptado");
+      message.react(emoji);
 }
 
 module.exports.help = {
