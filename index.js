@@ -116,7 +116,7 @@ bot.on("message", (message) => {
                                     name: message.author.tag,
                                     icon_url: message.author.avatarURL
                                 },
-                                title: "BUSCANDO PARTIDA DE FORTNITE <${adminRoleObject}>",
+                                title: "BUSCANDO PARTIDA DE @🤖 Fortnite",
                                 description: "Busco **" + users + "** personas para darle calor en" + message.member.voiceChannel.name + "",
                                 fields: [{
                                     name: "Descripción",
