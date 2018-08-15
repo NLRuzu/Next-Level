@@ -43,12 +43,6 @@ module.exports.run = async (bot, message, args) => {
       message.delete().catch(O_o=>{});
       partidaschannel.send(sugerenciaEmbed);
       
-	  let message = await message.channel.send(sugerenciaEmbed);
-	  await message.react(":aceptado:472146792339734565");
-	  await message.react("noacepto:472147160423727105");
-	  
-	  const reactions = await message.awaitReactions(reaction => reaction.emoji.name ===":aceptado:472146792339734565" || reaction.emoji.name === "noacepto:472147160423727105", {time: 15000});
-	  console.log(reactions);
 
 }
 
