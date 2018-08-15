@@ -43,8 +43,7 @@ module.exports.run = async (bot, message, args) => {
       message.delete().catch(O_o=>{});
       partidaschannel.send(sugerenciaEmbed);
       
-	let emoji = message.guild.emojis.find('name', "aceptado");
-      message.react(emoji);
+
 }
 
 module.exports.help = {
