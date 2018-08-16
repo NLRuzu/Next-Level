@@ -20,8 +20,8 @@ module.exports.run = async (bot, message, args) => {
                                 ],
                             }
 							
-			
-				partidaschannel.send(`[${adminRoleObject}]`, embebido);
+			message.channel.send(`[${adminRoleObject}]`, embebido);
+				
 				message.delete().catch(O_o=>{});
 }
 
