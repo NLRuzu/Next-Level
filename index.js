@@ -137,6 +137,7 @@ bot.on("message", (message) => {
 								var mdb = {
 							  "embed": {
 								"title": "BUSCANDO PARTIDA DE FORTNITE",
+								 "url": "http://gamedev.es/",
 								"description": "Busco **" + users + "** personas para darle calor en" + message.member.voiceChannel.name + "",
 								"color": 0xc500ff,
 								"timestamp": message.createdAt,
