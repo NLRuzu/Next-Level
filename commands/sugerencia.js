@@ -5,7 +5,7 @@ module.exports.run = async (bot, message, args) => {
 	var comunicado = message.content.replace("+sugerencia ", "");  
 	  var embebido = {
 							"embed": {
-                                color: 0xff0000,
+                                color: 0x84ff80 ,
                                 author: {
                                     name: message.author.tag,
                                     icon_url: message.author.avatarURL
