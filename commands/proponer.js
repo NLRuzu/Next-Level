@@ -5,22 +5,39 @@ module.exports.run = async (bot, message, args) => {
     if(!rUser) return message.channel.send("formato incorrecto +proponer @usuario razón de la propuesta");
     let rreason = args.join(" ").slice(22);
 
-    let reportEmbed = new Discord.RichEmbed()
-    .setTitle("NUEVA PROPUESTA DE ASCENSO")
-    .setColor("#13ff00")
-    .addField("Usuario propuesto:", `${rUser}`)
-    .addField("Propuesto por:", `${message.author}`)
-    .addField("Fecha:", message.createdAt)
-    .addField("Razón de la propuesta:", rreason);
+    var proponer = {
+							"embed": {
+                                color: 0xff0000 ,
+                                author: {
+                                    name: message.author.tag,
+                                    icon_url: message.author.avatarURL
+                                },
+                                title: "**NUEVA PROPUESTA**",
+								url: "http://gamedev.es/",				
+								
+						fields: [{
+								name: "Usuario propuesto",
+								value: `${rUser}`,
+						},
+						{
+								name: "Fecha:",
+								value: message.createdAt,
+						},
+						{
+								name: "Razón de la propuesta:",
+								value: rreason.
+						}
+						],
 
-    let reportschannel = message.guild.channels.find(`name`, "❓-propuestas");
-    if(!reportschannel) return message.channel.send("Couldn't find reports channel.");
-    
-    
-    message.delete().catch(O_o=>{});
-    reportschannel.send(reportEmbed);
+				
+				
+                            }
+					};
 
-}
+				message.channel.send(proponer);
+				message.delete().catch(O_o=>{});
+
+		}	
 
 module.exports.help = {
   name: "proponer"
