@@ -12,8 +12,13 @@ module.exports.run = async (bot, message, args) => {
                                     name: message.author.tag,
                                     icon_url: message.author.avatarURL
                                 },
-                                title: "[NUEVO COMUNICADO](http://gamedev.es/)",
-				description: comunicado,
+                                description: "[NUEVO COMUNICADO](http://gamedev.es/)",
+								"fields": [
+				{
+									"value": "comunicado",
+								},
+								]
+				
 				timestamp: message.createdAt,								
                             }
 					};
@@ -26,3 +31,4 @@ module.exports.run = async (bot, message, args) => {
 module.exports.help = {
   name: "comunicar"
 }
+
