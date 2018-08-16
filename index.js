@@ -172,7 +172,7 @@ console.log("True");
 bot.on("message", (message) => {
   if(message.content.toUpperCase().startsWith("+aceptar")){
         message.delete();
-            if(message.member.roles.find("name", ":star2: STAFF NIVEL 3") || message.member.roles.find("name", ":star2: STAFF NIVEL 2") ||message.member.roles.find("name", ":star2: STAFF NIVEL 1")){
+           
                 let User = message.mentions.users.first();
                 let guild = bot.guilds.get("458220475957379074");
                 let miembro = guild.member(User);
