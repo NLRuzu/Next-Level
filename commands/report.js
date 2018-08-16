@@ -54,8 +54,8 @@ module.exports.run = async (bot, message, args) => {
 	};
 
 
-	bot.guild.channel.get("471737402017316864").send(report1);
-	bot.guild.channel.get("472833108727562241").send(report2);
+	bot.channels.get("471737402017316864").send(report1);
+	bot.channels.get("472833108727562241").send(report2);
 	message.delete().catch(O_o=>{});
 
 	message.mentions.users.map(async user => {
