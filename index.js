@@ -104,7 +104,7 @@ bot.on("message", (message) => {
                             maxAge: 3600
                         }
                         let server = bot.guilds.get("458220475957379074");
-                        let adminRoleObject = server.roles.find("name", "Fortnite");
+                        let adminRoleObject = server.roles.find("name", "🤖 Fortnite");
                         message.member.voiceChannel.createInvite(options)
                         .then(invite => {
                             let invitacion = invite.code.split("invite/")[0];
