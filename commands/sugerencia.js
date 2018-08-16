@@ -21,10 +21,6 @@ module.exports.run = async (bot, message, args) => {
                 message.channel.send(embebido);
                 message.delete().catch(O_o=>{});
 
-                if (message.channel.id == "475267748868390912" && message.author.bot) {
-                    message.react("472146792339734565");
-                    message.react("472147160423727105");
-                }
 
         }
 
