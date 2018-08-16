@@ -13,6 +13,7 @@ module.exports.run = async (bot, message, args) => {
                                     icon_url: message.author.avatarURL
                                 },
                                 title: "NUEVO COMUNICADO",
+				url: "http://gamedev.es/",				
 								
 				description: comunicado,
 				timestamp: message.createdAt,								
