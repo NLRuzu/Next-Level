@@ -12,7 +12,7 @@ module.exports.run = async (bot, message, args) => {
                                     name: message.author.tag,
                                     icon_url: message.author.avatarURL
                                 },
-                                title: "NUEVO COMUNICADO\n\n",
+                                title: "NUEVO COMUNICADO",
 				description: comunicado,
 				timestamp: message.createdAt,								
                             }
