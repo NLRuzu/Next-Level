@@ -5,58 +5,53 @@ module.exports.run = async (bot, message, args) => {
     if(!rUser) return message.channel.send("formato incorrecto +report @usuario razón");
     let rreason = args.join(" ").slice(22);
    
-    var report = {
-							"embed": {
-                                color: 0xff0000 ,
-                                author: {
-                                    name: message.author.tag,
-                                    icon_url: message.author.avatarURL
-                                },
-                                title: "**INFORME DEL TOQUE**",
-								url: "http://gamedev.es/",				
-								
-						fields: [{
-								name: "Usuario reportado",
-								value: `${rUser}`,
-						},
-						{
-								name: "Fecha:",
-								value: message.createdAt,
-						},
-						{
-								name: "Razón del toque:",
-								value: rreason,
-						}
-						]
+	var report = {
+		"embed": {
+			color: 0xff0000 ,
+			author: {
+			name: message.author.tag,
+			icon_url: message.author.avatarURL
+			},
+			title: "**INFORME DEL TOQUE**",
+			url: "http://gamedev.es/",				
+			fields: [
+				{
+				name: "Usuario reportado",
+				value: `${rUser}`,
+				},
+				{
+				name: "Fecha:",
+				value: message.createdAt,
+				},
+				{
+				name: "Razón del toque:",
+				value: rreason,
+				}
+			]
+		}
+	};
 
+	message.channel.send(report);
+	message.delete().catch(O_o=>{});
+
+	message.mentions.users.map(async user => {
+		const member = message.guild.member(user);
+		try { await user.send({
+			embed: {
+			color: 0xFF0000,
+			title: "HAS RECIBIDO UN TOQUE",
+			description: "Estimado Usari@ de Next Level, acabas de recibir un toque por alguna acción, o actitud que va en contra de nuestras normas.\n\nPor favor visita el canal de #toques para más información.\n\nUn saludo, el STAFF",
+			}
+			});
+		}
+		catch (err) { console.log('error'); }
+	});
+
+	message.delete().catch(O_o=>{});
+	reportschannel.send(reportEmbed);		
 				
-				
-                            }
-					};
-   message.channel.send(report);
-				message.delete().catch(O_o=>{});
-
-		}	
-    
-    message.mentions.users.map(async user => {
-        const member = message.guild.member(user);
-        try { await user.send({
-               embed: {
-                        color: 0xFF0000,
-                        title: "HAS RECIBIDO UN TOQUE",
-                        description: "Estimado Usari@ de Next Level, acabas de recibir un toque por alguna acción, o actitud que va en contra de nuestras normas.\n\nPor favor visita el canal de #toques para más información.\n\nUn saludo, el STAFF",
-                    }
-                });
-                
-            }
-        catch (err) { console.log('error'); }
-            });
-
-    message.delete().catch(O_o=>{});
-    reportschannel.send(reportEmbed);
-
-
-     
+}	
+       
 module.exports.help = {
   name: "report"
 }
