@@ -189,11 +189,12 @@ bot.on("message", (message) => {
                     embed: {
                         color: 0x04ff00,
                         title: message.member.nickname,
-                        description: "**Ha vaceptado la sugerencia de **" + User + " ",
+                        description: "**Ha aceptado la sugerencia de **" + User + "",
                     }
                 });
             }
         }
+}
                
   if(message.content.toUpperCase().startsWith("+ROLLCSGO")){
         message.delete();
