@@ -20,9 +20,8 @@ module.exports.run = async (bot, message, args) => {
                                 ],
                             }
 							
-			message.channel.send(`[${adminRoleObject}]`, embebido);
-				
-				message.delete().catch(O_o=>{});
+			message.guild.channels.get("478647696245129216").send([${adminRoleObject}], embebido);
+                message.delete().catch(O_o=>{});
 }
 
 module.exports.help = {
