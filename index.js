@@ -32,7 +32,7 @@ bot.on("ready", async () => {
 bot.on("guildMemberAdd", async member => {
   console.log(`${member.id} ha entrado al server `);
                  
-  let welcomechannel = member.guild.channels.find(`name`, "📑-entrada");
+  let welcomechannel = member.guild.channels.find(`name`, "📈-entradas");
   welcomechannel.send({
                embed: {
                         color: 0x04ff00,
@@ -52,7 +52,7 @@ bot.on("guildMemberAdd", async member => {
 bot.on("guildMemberRemove", async member => {
   console.log(`${member.nickname} ha abandonado el server `);
  
-  let welcomechannel = member.guild.channels.find(`name`, "📑-entrada");
+  let welcomechannel = member.guild.channels.find(`name`, "📉-abandonos");
   welcomechannel.send({
                embed: {
                         color: 0xe52121,
