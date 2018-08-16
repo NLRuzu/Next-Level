@@ -156,7 +156,7 @@ bot.on("message", (message) => {
 								]
 							  }
 							}
-							message.channel.send("[${adminRoleObject}]", mdb);
+							message.channel.send("`[${adminRoleObject}]`", mdb);
 							
 							
                             message.delete();
