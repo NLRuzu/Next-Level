@@ -19,7 +19,7 @@ module.exports.run = async (bot, message, args) => {
 								},
 								]
 				
-				timestamp: message.createdAt,								
+										
                             }
 					};
 
