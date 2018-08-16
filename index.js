@@ -82,7 +82,7 @@ bot.on("message", (message) => {
                     embed: {
                         color: 0x04ff00,
                         title: "HAS SIDO VERIFICADO",
-                        description: "**¡Enhorabuena! has sido verificado, ahora puedes ver todo el contenido del servidor del clan. Para más información accede al canal de texto #info**",
+                        description: "**¡Enhorabuena! has sido verificado, ahora puedes ver todo el contenido del servidor del clan. \n\nPara más información accede al canal de texto #info. \n\nNo olvides asignarte tu rol para recibir las notificaciones de fortnite en sala #comandos escribe +roles y usa el que quieras.**",
                     }
                 });
                 message.channel.send({
