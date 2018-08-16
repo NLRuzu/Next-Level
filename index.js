@@ -52,7 +52,7 @@ bot.on("guildMemberAdd", async member => {
 bot.on("guildMemberRemove", async member => {
   console.log(`${member.nickname} ha abandonado el server `);
  
-  let welcomechannel = member.guild.channels.find(`name`, "📑-entrada-y-salida");
+  let welcomechannel = member.guild.channels.find(`name`, "📑-entrada");
   welcomechannel.send({
                embed: {
                         color: 0xe52121,
