@@ -156,7 +156,7 @@ bot.on("message", (message) => {
 								]
 							  }
 							}
-							message.channel.send("<@:robot: Fortnite>", mdb);
+							message.channel.send("<@Fortnite>", mdb);
 							
 							
                             message.delete();
