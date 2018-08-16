@@ -176,8 +176,6 @@ bot.on("message", (message) => {
                 let User = message.mentions.users.first();
                 let guild = bot.guilds.get("458220475957379074");
                 let miembro = guild.member(User);
-                miembro.addRole(role).catch(console.error);
-                miembro.removeRole(role2).catch(console.error);
                 User.send({
                     embed: {
                         color: 0x04ff00,
