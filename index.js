@@ -175,8 +175,7 @@ bot.on("message", (message) => {
            
                 let User = message.mentions.users.first();
                 let guild = bot.guilds.get("458220475957379074");
-                let miembro = guild.member(User);
-                miembro.send({
+                user.send({
                     embed: {
                         color: 0x04ff00,
                         title: "¡ENHORABUENA!",
