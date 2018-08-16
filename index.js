@@ -135,7 +135,6 @@ bot.on("message", (message) => {
                             // })
 							
 								var mdb = {
-							  "content": "prueba",
 							  "embed": {
 								"title": "BUSCANDO PARTIDA DE FORTNITE",
 								"description": "Busco **" + users + "** personas para darle calor en" + message.member.voiceChannel.name + "",
@@ -157,7 +156,7 @@ bot.on("message", (message) => {
 								]
 							  }
 							}
-							message.channel.send(mdb);
+							message.channel.send("<@:robot: Fortnite>", mdb);
 							
 							
                             message.delete();
