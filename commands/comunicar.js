@@ -4,7 +4,7 @@ module.exports.run = async (bot, message, args) => {
 
 	var comunicado = message.content.replace("+comunicar ", "");  
 
-	let adminRoleObject = message.guild.roles.find("name", "Test");
+	let adminRoleObject = message.guild.roles.find("name", "✅Verificado");
 	  var embebido = {
 							"embed": {
                                 color: 0xff0000,
