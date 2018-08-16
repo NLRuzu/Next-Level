@@ -20,7 +20,8 @@ module.exports.run = async (bot, message, args) => {
         name: "Desarrollo del comunicado",
         value: "rreason"
       },
-
+              ],
+});
 
       let partidaschannel = message.guild.channels.find(`name`, "📋-comunicados");
       if(!partidaschannel) return message.channel.send("Introduce bien el comando");
