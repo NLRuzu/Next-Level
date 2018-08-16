@@ -4,18 +4,6 @@ module.exports.run = async (bot, message, args) => {
     let rUser = message.guild.member(message.mentions.users.first());
     if(!rUser) return message.channel.send("formato incorrecto +aceptar @usuario");
     
-	var aceptar = {
-		"embed": {
-			color: 0xff0000 ,
-			author: {
-			name: message.author.tag,
-			icon_url: message.author.avatarURL
-			},
-			title: "**SUGERENCIA ACEPTADA**",
-			url: "http://gamedev.es/",	
-		}
-	};		
-		
 	message.mentions.users.map(async user => {
 		const member = message.guild.member(user);
 		try { await user.send({
@@ -30,7 +18,7 @@ module.exports.run = async (bot, message, args) => {
 	});
 
 	message.delete().catch(O_o=>{});
-	message.channel.send(aceptar);		
+	
 				
 }	
        
