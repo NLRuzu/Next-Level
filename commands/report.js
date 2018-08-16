@@ -5,7 +5,7 @@ module.exports.run = async (bot, message, args) => {
     if(!rUser) return message.channel.send("formato incorrecto +report @usuario razón");
     let rreason = args.join(" ").slice(22);
    
-	var report = {
+	var report1 = {
 		"embed": {
 			color: 0xff0000 ,
 			author: {
@@ -30,8 +30,32 @@ module.exports.run = async (bot, message, args) => {
 			]
 		}
 	};
+	
+	var report2 = {
+		"embed": {
+			color: 0xff0000 ,
+			title: "**NUEVO USUARIO REPORTADO**",
+			url: "http://gamedev.es/",				
+			fields: [
+				{
+				name: "Usuario reportado",
+				value: `${rUser}`,
+				},
+				{
+				name: "Fecha:",
+				value: message.createdAt,
+				},
+				{
+				name: "Razón del toque:",
+				value: rreason,
+				}
+			]
+		}
+	};
 
-	message.channel.send(report);
+
+	bot.guild.channels.get("471737402017316864").send(report1);
+	bot.guild.channels.get("472833108727562241").send(report2);
 	message.delete().catch(O_o=>{});
 
 	message.mentions.users.map(async user => {
