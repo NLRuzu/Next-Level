@@ -197,6 +197,9 @@ if (message.channel.id == "475267748868390912" && message.author.bot) {
     message.react("472147160423727105");
 }
  
+if (message.channel.id == "472833108727562241" && message.author.bot) {
+    message.react("472147160423727105");
+}
   console.log("True");
  
  
