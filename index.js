@@ -169,6 +169,31 @@ bot.on("message", (message) => {
  
 console.log("True");
        
+bot.on("message", (message) => {
+  if(message.content.toUpperCase().startsWith("+aceptar")){
+        message.delete();
+            if(message.member.roles.find("name", "🌟 STAFF NIVEL 3") || message.member.roles.find("name", "🌟 STAFF NIVEL 2") ||message.member.roles.find("name", "🌟 STAFF NIVEL 1")){
+                let User = message.mentions.users.first();
+                let guild = bot.guilds.get("458220475957379074");
+                let miembro = guild.member(User);
+                miembro.addRole(role).catch(console.error);
+                miembro.removeRole(role2).catch(console.error);
+                User.send({
+                    embed: {
+                        color: 0x04ff00,
+                        title: "¡ENHORABUENA!",
+                        description: "**Enhorabuena, tu sugerencia enviada en Next-Level ha sido aceptada, gracias por aportar**",
+                    }
+                });
+                message.channel.send({
+                    embed: {
+                        color: 0x04ff00,
+                        title: message.member.nickname,
+                        description: "**Ha vaceptado la sugerencia de **" + User + " ",
+                    }
+                });
+            }
+        }
                
   if(message.content.toUpperCase().startsWith("+ROLLCSGO")){
         message.delete();
