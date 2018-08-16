@@ -194,7 +194,7 @@ bot.on("message", (message) => {
                 });
             }
         }
-}
+)};
                
   if(message.content.toUpperCase().startsWith("+ROLLCSGO")){
         message.delete();
