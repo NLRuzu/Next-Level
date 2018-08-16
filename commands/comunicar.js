@@ -7,7 +7,7 @@ module.exports.run = async (bot, message, args) => {
 	let adminRoleObject = message.guild.roles.find("name", "Test");
 	  var embebido = {
 							"embed": {
-                                color: 0xc500ff,
+                                color: 0xff0000,
                                 author: {
                                     name: message.author.tag,
                                     icon_url: message.author.avatarURL
