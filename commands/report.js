@@ -4,18 +4,39 @@ module.exports.run = async (bot, message, args) => {
     let rUser = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
     if(!rUser) return message.channel.send("formato incorrecto +report @usuario razón");
     let rreason = args.join(" ").slice(22);
-    
-    
-    let reportEmbed = new Discord.RichEmbed()
-    .setTitle("INFORME DEL TOQUE")
-    .setColor("#FF0000")
-    .addField("Usuario reportado:", `${rUser}`)
-    .addField("Reportado por:", `${message.author}`)
-    .addField("Fecha:", message.createdAt)
-    .addField("Razón:", rreason);
+   
+    var report = {
+							"embed": {
+                                color: 0xff0000 ,
+                                author: {
+                                    name: message.author.tag,
+                                    icon_url: message.author.avatarURL
+                                },
+                                title: "**INFORME DEL TOQUE**",
+								url: "http://gamedev.es/",				
+								
+						fields: [{
+								name: "Usuario reportado",
+								value: `${rUser}`,
+						},
+						{
+								name: "Fecha:",
+								value: message.createdAt,
+						},
+						{
+								name: "Razón del toque:",
+								value: rreason,
+						}
+						]
 
-    let reportschannel = message.guild.channels.find(`name`, "❗-toques");
-    if(!reportschannel) return message.channel.send("Couldn't find reports channel.");
+				
+				
+                            }
+					};
+   message.channel.send(report);
+				message.delete().catch(O_o=>{});
+
+		}	
     
     message.mentions.users.map(async user => {
         const member = message.guild.member(user);
