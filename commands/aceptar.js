@@ -22,7 +22,7 @@ module.exports.run = async (bot, message, args) => {
 			embed: {
 			color: 0xFF0000,
 			title: "¡ENHORABUENA!",
-			description: "**Enhorabuena, tu sugerencia enviada en Next-Level ha sido aceptada, gracias por aportar**",
+			description: "Enhorabuena, tu sugerencia enviada en Next-Level ha sido aceptada, gracias por aportar",
 			}
 			});
 		}
@@ -30,7 +30,7 @@ module.exports.run = async (bot, message, args) => {
 	});
 
 	message.delete().catch(O_o=>{});
-	reportschannel.send(aceptar);		
+	message.channel.send(aceptar);		
 				
 }	
        
