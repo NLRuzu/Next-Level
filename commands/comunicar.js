@@ -20,7 +20,7 @@ module.exports.run = async (bot, message, args) => {
                                 ],
                             }
 							
-			let partidaschannel = message.guild.channels.find(`name`, "📋-comunicados");
+			
 				partidaschannel.send(`[${adminRoleObject}]`, embebido);
 				message.delete().catch(O_o=>{});
 }
