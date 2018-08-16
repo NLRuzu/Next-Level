@@ -10,7 +10,7 @@ module.exports.run = async (bot, message, args) => {
                                     name: message.author.tag,
                                     icon_url: message.author.avatarURL
                                 },
-                                title: "NUEVA SUGERENCIA",
+                                title: "**NUEVA SUGERENCIA**",
                 url: "http://gamedev.es/",
 
                 description: comunicado,
