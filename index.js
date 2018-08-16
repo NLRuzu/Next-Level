@@ -186,7 +186,10 @@ console.log("True");
             }
         }
   console.log("True");
- 
+if (message.channel.id == "475267748868390912" && message.author.bot) {
+    message.react("472146792339734565");
+    message.react("472147160423727105");
+}
  
   console.log("True");
  
