@@ -25,9 +25,9 @@ module.exports.run = async (bot, message, args) => {
 						},
 						{
 								name: "Razón de la propuesta:",
-								value: rreason.
+								value: rreason,
 						}
-						],
+						]
 
 				
 				
