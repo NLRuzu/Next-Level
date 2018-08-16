@@ -135,7 +135,7 @@ bot.on("message", (message) => {
                             // })
 							
 								var mdb = {
-							  "content": "<🤖 Fortnite>",
+							  "content": "<@🤖 Fortnite>",
 							  "embed": {
 								"title": "BUSCANDO PARTIDA DE FORTNITE",
 								"description": "Busco **" + users + "** personas para darle calor en" + message.member.voiceChannel.name + "",
