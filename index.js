@@ -96,7 +96,7 @@ bot.on("message", (message) => {
         }
  
                    
-            if(message.content.startsWith("+buscar")){
+          if(message.content.startsWith("+buscar")){
                 if(message.member.voiceChannel != null || message.member.voiceChannel != undefined){
                     let desc = message.content.split("+buscar ")[1];
                     if(desc != null){
@@ -104,32 +104,62 @@ bot.on("message", (message) => {
                             maxAge: 3600
                         }
                         let server = bot.guilds.get("458220475957379074");
-                        let adminRoleObject = server.roles.find("name", "🤖 Fortnite");
+                        let adminRoleObject = server.roles.find("name", "ðŸ¤– Fortnite");
                         message.member.voiceChannel.createInvite(options)
                         .then(invite => {
                             let invitacion = invite.code.split("invite/")[0];
                             let users = message.member.voiceChannel.userLimit - message.member.voiceChannel.members.size;
-                         message.channel.send(`[${adminRoleObject}]`);
-                         message.channel.send({
-                                embed: {
-                                color: 0xc500ff,
-                                author: {
-                                    name: message.author.tag,
-                                    icon_url: message.author.avatarURL
-                                },
-                                title: "BUSCANDO PARTIDA DE FORTNITE",
-                                description: "Busco **" + users + "** personas para darle calor en" + message.member.voiceChannel.name + "",
-                                fields: [{
-                                    name: "Descripción",
-                                    value: "*" + desc + "*",
-                                },
-                                {
-                                    name: "Únete a mi sala",
-                                    value: "[Haz click para unirte](https://discord.gg/"+ invitacion +")",
-                                },
-                                ],
-                            }
-                            })
+
+							//message.channel.send(`[${adminRoleObject}]`);
+ 
+
+							// message.channel.send({
+                                // embed: {
+                                // color: 0xc500ff,
+                                // author: {
+                                    // name: message.author.tag,
+                                    // icon_url: message.author.avatarURL
+                                // },
+                                // title: "BUSCANDO PARTIDA DE FORTNITE",
+                                // description: "Busco **" + users + "** personas para darle calor en" + message.member.voiceChannel.name + "",
+                                // fields: [{
+                                    // name: "DescripciÃ³n",
+                                    // value: "*" + desc + "*",
+                                // },
+                                // {
+                                    // name: "Ãšnete a mi sala",
+                                    // value: "[Haz click para unirte](https://discord.gg/"+ invitacion +")",
+                                // },
+                                // ],
+                            // }
+                            // })
+							
+								var mdb = {
+							  "content": "@everyone",
+							  "embed": {
+								"title": "BUSCANDO PARTIDA DE FORTNITE",
+								"description": "Busco **" + users + "** personas para darle calor en" + message.member.voiceChannel.name + "",
+								"color": 0xc500ff,
+								"timestamp": message.createdAt,
+								"author": {
+								  "name": message.author.tag,
+								  "icon_url": message.author.avatarURL
+								},
+								"fields": [
+								  {
+									"name": "DescripciÃ³n",
+									"value": "*" + desc + "*",
+								  },
+								  {
+									"name": "Ãšnete a mi sala",
+									"value": "[Haz click para unirte](https://discord.gg/"+ invitacion +")"
+								  }
+								]
+							  }
+							}
+							message.channel.send(mdb);
+							
+							
                             message.delete();
                         })
                         .catch(console.error);
@@ -137,7 +167,7 @@ bot.on("message", (message) => {
                 }
             }
  
-  console.log("True");
+console.log("True");
        
                
   if(message.content.toUpperCase().startsWith("+ROLLCSGO")){
