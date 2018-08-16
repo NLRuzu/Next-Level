@@ -1,7 +1,7 @@
 const Discord = require("discord.js");
 
 module.exports.run = async (bot, message, args) => {
-    let rUser = message.guild.member(message.mentions.users.first();
+    let rUser = message.guild.member(message.mentions.users.first());
     if(!rUser) return message.channel.send("formato incorrecto +aceptar @usuario");
     
 	var aceptar = {
