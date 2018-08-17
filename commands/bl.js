@@ -2,8 +2,10 @@ const Discord = require("discord.js");
 
 module.exports.run = async (bot, message, args) => {
 
-	var comunicado = message.content.replace("+comunicar ", "");  
-	  var bl = {
+	var comunicado = message.content.replace("+bl ", "");  
+
+	
+	  var embebido = {
 							"embed": {
                                 color: 0xff0000,
                                 author: {
@@ -18,7 +20,7 @@ module.exports.run = async (bot, message, args) => {
                             }
 					};
 
-				message.channel.send(bl);
+				message.channel.send(embebido);
 				message.delete().catch(O_o=>{});
 
 		}	
@@ -26,3 +28,4 @@ module.exports.run = async (bot, message, args) => {
 module.exports.help = {
   name: "bl"
 }
+
