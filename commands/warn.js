@@ -51,8 +51,9 @@ module.exports.run = async (bot, message, args) => {
     message.reply(`<@${wUser.id}> has been banned.`)
   }
 
-}
+
 
 module.exports.help = {
   name: "warn"
 }
+
