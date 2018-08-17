@@ -227,14 +227,30 @@ if(message.content.toUpperCase().startsWith("+ACEPTAR")){
               }	
               console.log("True");
 
-//+CLEAR
-if(message.content.toUpperCase().startsWith("+CLEAR")){
-    if(!message.member.hasPermission("MANAGE_MESSAGES")) return errors.noPerms(message, "MANAGE_MESSAGES");
-    if(!args[0]) return message.channel.send("oof");
-          message.channel.bulkDelete(args[0]).then(() => {
-          message.channel.send(`${args[0]} mensajes eliminados correctamente.`).then(msg => msg.delete(5000));
-          });
-          }
+//+COMUNICAR
+if(message.content.toUpperCase().startsWith("+COMUNICAR")){
+  var comunicado = message.content.replace("+comunicar ", "");  
+
+  let adminRoleObject = message.guild.roles.find("name", "✅Verificado");
+    var embebido = {
+              "embed": {
+                                color: 0xff0000,
+                                author: {
+                                    name: message.author.tag,
+                                    icon_url: message.author.avatarURL
+                                },
+                                title: "**NUEVO COMUNICADO**",
+        url: "http://gamedev.es/",				
+                
+        description: comunicado,
+        timestamp: message.createdAt,								
+                            }
+          };
+
+        message.channel.send(`[${adminRoleObject}]`, embebido);
+        message.delete().catch(O_o=>{});
+
+    }	
 
 // CONFIG BOT 
   if(message.author.bot) return;
