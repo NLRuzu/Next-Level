@@ -63,7 +63,7 @@ module.exports.run = async (bot, message, args) => {
 		try { await user.send({
 			embed: {
 			color: 0xFF0000,
-			title: "**HAS RECIBIDO UN PRIMER TOQUE**",
+			title: "**HAS RECIBIDO UN SEGUNDO TOQUE**",
 			url: "http://gamedev.es/",
 			description: "Estimado Usari@ de Next Level, acabas de recibir un segundo toque por alguna acción, o actitud que va en contra de nuestras normas.\n\nEn este caso es tu última oportunidad para recapacitar y actuar de forma correcta.\n\nPor favor visita el canal de #toques para más información.\n\nUn saludo, el STAFF",
 			}
