@@ -59,6 +59,7 @@ if(message.member.roles.find("name", "🌟 STAFF NIVEL 3") || message.member.rol
 bot.channels.get("472833108727562241").send(report2).then(async function(message){ await message.react("479954428800139264")});
 	message.delete().catch(O_o=>{});
 
+}
 	message.mentions.users.map(async user => {
 		const member = message.guild.member(user);
 		try { await user.send({
@@ -76,7 +77,7 @@ bot.channels.get("472833108727562241").send(report2).then(async function(message
 	message.delete().catch(O_o=>{});
 	reportschannel.send(reportEmbed);		
 				
-}	
+	
        
 module.exports.help = {
   name: "report1"
