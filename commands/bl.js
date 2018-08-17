@@ -14,9 +14,10 @@ module.exports.run = async (bot, message, args) => {
                                     icon_url: message.author.avatarURL
                                 },
                                 title: "**NUEVO USUARIO AÑADIDO A LA BLACKLIST**",
-				url: "http://gamedev.es/",
-				timestamp: message.createdAt,	
-				fields: [{
+								url: "http://gamedev.es/",
+								timestamp: message.createdAt,	
+								
+								fields: [{
 								name: "Usuario añadido",
 								value: comunicado,
 						},
@@ -24,9 +25,9 @@ module.exports.run = async (bot, message, args) => {
 								name: "Razón",
 								value: comunicado2,
 						},
-											
+							]				
                             }
-							]
+							
 					};
 					 
 
@@ -38,4 +39,5 @@ module.exports.run = async (bot, message, args) => {
 module.exports.help = {
   name: "bl"
 }
+
 
