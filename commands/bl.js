@@ -7,7 +7,7 @@ module.exports.run = async (bot, message, args) => {
 
     var bl = {
 							"embed": {
-                                color: 0xffef52 ,
+                                color: 0x0e0e0e ,
                                 author: {
                                     name: message.author.tag,
                                     icon_url: message.author.avatarURL
