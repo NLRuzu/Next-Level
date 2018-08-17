@@ -72,7 +72,8 @@ module.exports.run = async (bot, message, args) => {
 		}
 		catch (err) { console.log('error'); }
 	});
-
+let reportschannel = message.guild.channels.find(`name`, "❗-toques");
+if(!reportschannel) return message.channel.send("Couldn't find reports channel.");
 	message.delete().catch(O_o=>{});
 	reportschannel.send(reportEmbed);		
 	}
