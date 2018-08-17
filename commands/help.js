@@ -10,7 +10,7 @@ module.exports.run = async (bot, message, args) => {
     .addField("**+fortnite**", "Comandos para uso de Fortnite")
     .addField("**+partidas**", "Comandos para buscar partidas")
     .addField("**+roles**", "Comandos para añadirte roles de juegos")
-    .addField("**+sugerencia**", "Comandos para publicar sugerencias (+sugerencia @nuestrouser desarrollo)");
+    .addField("**+sugerencia**", "Comandos para publicar sugerencias solo en sala #sugerencias (+sugerencia desarrollo)");
 
 
     return message.channel.send(serverembed);
