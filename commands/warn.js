@@ -1,5 +1,6 @@
 const Discord = require("discord.js");
 const fs = require("fs");
+const ms = require("ms");
 let warns = JSON.parse(fs.readFileSync("./warnings.json", "utf8"));
 
 module.exports.run = async (bot, message, args) => {
@@ -36,23 +37,19 @@ module.exports.run = async (bot, message, args) => {
   warnchannel.send(warnEmbed);
 
   if(warns[wUser.id].warns == 2){
-    user.send({
-			embed: {
-			color: 0xFF0000,
-			title: "**HAS RECIBIDO UN TOQUE**",
-			url: "http://gamedev.es/",
-			description: "Estimado Usari@ de Next Level, acabas de recibir un toque por alguna acción, o actitud que va en contra de nuestras normas.\n\nPor favor visita el canal de #toques para más información.\n\nUn saludo, el STAFF",
-			}
-			});
-		}
+    let muterole = message.guild.roles.find(`name`, "muted");
+    if(!muterole) return message.reply("You should create that role dude.");
 
-   if(warns[wUser.id].warns == 3){
+    await(wUser.addRole(muterole.id));
+    message.channel.send(`<@${wUser.id}> has been temporarily muted`);
+
+  }
+  if(warns[wUser.id].warns == 3){
     message.guild.member(wUser).ban(reason);
     message.reply(`<@${wUser.id}> has been banned.`)
   }
 
-
-};
+}
 
 module.exports.help = {
   name: "warn"
