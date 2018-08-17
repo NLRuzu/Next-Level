@@ -3,7 +3,7 @@ const Discord = require("discord.js");
 module.exports.run = async (bot, message, args) => {
 if(message.member.roles.find("name", "🌟 STAFF NIVEL 3") || message.member.roles.find("name", "🌟 STAFF NIVEL 2") ||message.member.roles.find("name", "🌟 STAFF NIVEL 1")){
     let rUser = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
-    if(!rUser) return message.channel.send("formato incorrecto +report @usuario razón");
+    if(!rUser) return message.channel.send("formato incorrecto +report1 @usuario razón");
     let rreason = args.join(" ").slice(22);
    
 	var report1 = {
