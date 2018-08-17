@@ -282,10 +282,23 @@ if(message.content.toUpperCase().startsWith("+HELP")){
   .addField("**+roles**", "Comandos para añadirte roles de juegos")
   .addField("**+sugerencia**", "Comandos para publicar sugerencias solo en sala #sugerencias (+sugerencia desarrollo)");
   
+  message.delete().catch(O_o=>{});
   return message.channel.send(serverembed);
   }	
 	
-	
+//+MUSICA
+if(message.content.toUpperCase().startsWith("+MUSICA")){
+  let sicon = message.guild.iconURL;
+  let serverembed = new Discord.RichEmbed()
+  .setDescription("**MÚSICA**")
+  .setColor("#FE2E2E")
+  .setThumbnail(sicon)
+  .addField("**!play link o nombre**", "Comando para buscar canción.")
+  .addField("**!stop**", "Comando para parar la música")
+
+  message.delete().catch(O_o=>{});
+  return message.channel.send(serverembed);
+  }	
 	
 	
 	
