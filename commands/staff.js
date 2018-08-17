@@ -4,7 +4,7 @@ module.exports.run = async (bot, message, args) => {
     let sicon = message.guild.iconURL;
     let serverembed = new Discord.RichEmbed()
     .setDescription("**COMANDOS STAFF**")
-    .setColor("#0d0d0d")
+    .setColor("#ff006c")
     .setThumbnail(sicon)
     .addField("**+report**", "Abrimos la lista de comandos para los toques")
     .addField("**+verificar @User**", "Asigna rol Verificado para acceder al contenido del discord")
