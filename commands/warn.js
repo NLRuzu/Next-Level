@@ -45,9 +45,7 @@ module.exports.run = async (bot, message, args) => {
 			}
 			});
 		}
-		catch (err) { console.log('error'); }
 });
-  }
   if(warns[wUser.id].warns == 3){
     message.guild.member(wUser).ban(reason);
     message.reply(`<@${wUser.id}> has been banned.`)
