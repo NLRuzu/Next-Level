@@ -1,7 +1,7 @@
 const Discord = require("discord.js");
 
 module.exports.run = async (bot, message, args) => {
-    let rUser = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
+    let rUser = message.guild.members.get(args[0]));
     if(!rUser) return message.channel.send("formato incorrecto +bl @usuario razón");
     let rreason = args.join(" ").slice(22);
 
