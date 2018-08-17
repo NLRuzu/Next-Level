@@ -6,7 +6,7 @@ module.exports.run = async (bot, message, args) => {
     .setDescription("**COMANDOS STAFF**")
     .setColor("#FE2E2E")
     .setThumbnail(sicon)
-    .addField("**+report @user Razón**", "Damos un toque a un usuario")
+    .addField("**+report**", "Abrimos la lista de comandos para los toques")
     .addField("**+verificar @User**", "Asigna rol Verificado para acceder al contenido del discord")
     .addField("**+clear cantidad**", "Elimina X cantidad de mensajes de un canal de texto")
     .addField("**+proponer @User Razón**", "Propone a un usuario ascenso de rango por x motivo")
