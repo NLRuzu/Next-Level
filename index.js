@@ -351,8 +351,7 @@ if(message.content.toUpperCase().startsWith("+PROPONER")){
 
                           }
         };
-        let propuestaschannel = message.guild.channels.find(`name`, "❓-propuestas");
-        if(!propuestaschannel) return message.channel.send("No se encuentra la sala");
+        
       message.channel.send(proponer);
       message.delete().catch(O_o=>{});
 }
