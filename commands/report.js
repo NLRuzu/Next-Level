@@ -24,9 +24,9 @@ module.exports.run = async (bot, message, args) => {
 		}
 	};
 
-
+	message.delete().catch(O_o=>{});
      message.channel.send(report);
-    message.delete().catch(O_o=>{});
+    
 }
 
 module.exports.help = {
