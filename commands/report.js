@@ -63,7 +63,8 @@ module.exports.run = async (bot, message, args) => {
 		try { await user.send({
 			embed: {
 			color: 0xFF0000,
-			title: "HAS RECIBIDO UN TOQUE",
+			title: "**HAS RECIBIDO UN TOQUE**",
+			url: "http://gamedev.es/",
 			description: "Estimado Usari@ de Next Level, acabas de recibir un toque por alguna acción, o actitud que va en contra de nuestras normas.\n\nPor favor visita el canal de #toques para más información.\n\nUn saludo, el STAFF",
 			}
 			});
