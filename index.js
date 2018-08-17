@@ -246,7 +246,8 @@ if(message.content.toUpperCase().startsWith("+COMUNICAR")){
         timestamp: message.createdAt,								
                             }
           };
-
+let reportschannel = message.guild.channels.find(`name`, "📋-comunicados");
+if(!reportschannel) return message.channel.send("Couldn't find reports channel.");
         message.channel.send(`[${adminRoleObject}]`, embebido);
         message.delete().catch(O_o=>{});
 
