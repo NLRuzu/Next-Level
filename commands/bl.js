@@ -2,7 +2,7 @@ const Discord = require("discord.js");
 
 module.exports.run = async (bot, message, args) => {
 
-	var bl = message.content.replace("+comunicar ", "");  
+	var comunicado = message.content.replace("+comunicar ", "");  
 	  var bl = {
 							"embed": {
                                 color: 0xff0000,
@@ -13,7 +13,7 @@ module.exports.run = async (bot, message, args) => {
                                 title: "**NUEVO USUARIO AÑADIDO A LA BLACKLIST**",
 				url: "http://gamedev.es/",				
 								
-				description: bl,
+				description: comunicado,
 				timestamp: message.createdAt,								
                             }
 					};
