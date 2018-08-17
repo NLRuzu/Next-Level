@@ -269,7 +269,21 @@ if(message.content.toUpperCase().startsWith("+FORTNITE")){
   return message.channel.send(serverembed);
 }
 	
-	
+//+HELP
+if(message.content.toUpperCase().startsWith("+HELP")){
+  let sicon = message.guild.iconURL;
+  let serverembed = new Discord.RichEmbed()
+  .setTitle("**GENERALES**")
+  .setColor("#FE2E2E")
+  .setThumbnail(sicon)
+  .addField("**+serverinfo**", "información del servidor")
+  .addField("**+fortnite**", "Comandos para uso de Fortnite")
+  .addField("**+partidas**", "Comandos para buscar partidas")
+  .addField("**+roles**", "Comandos para añadirte roles de juegos")
+  .addField("**+sugerencia**", "Comandos para publicar sugerencias solo en sala #sugerencias (+sugerencia desarrollo)");
+  
+  return message.channel.send(serverembed);
+  }	
 	
 	
 	
