@@ -349,8 +349,6 @@ if(message.content.toUpperCase().startsWith("+PROPONER")){
           }
           ]
 
-      
-      
                           }
         };
         let propuestaschannel = message.guild.channels.find(`name`, "❓-propuestas");
