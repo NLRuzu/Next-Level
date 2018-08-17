@@ -1,31 +1,20 @@
 const Discord = require("discord.js");
 
 module.exports.run = async (bot, message, args) => {
-    let rreason = args.join(" ").slice(22);
 
-    var bl = {
+	var bl = message.content.replace("+comunicar ", "");  
+	  var bl = {
 							"embed": {
-				color: 0x0e0e0e ,
+                                color: 0xff0000,
                                 author: {
                                     name: message.author.tag,
                                     icon_url: message.author.avatarURL
                                 },
                                 title: "**NUEVO USUARIO AÑADIDO A LA BLACKLIST**",
-								url: "http://gamedev.es/",				
+				url: "http://gamedev.es/",				
 								
-						fields: [{
-								
-								name: "Fecha:",
-								value: message.createdAt,
-						},
-						{
-								name: "Usuario:",
-								value: rreason,
-						}
-						]
-
-				
-				
+				description: bl,
+				timestamp: message.createdAt,								
                             }
 					};
 
