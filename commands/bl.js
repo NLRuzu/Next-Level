@@ -26,8 +26,9 @@ module.exports.run = async (bot, message, args) => {
 						},
 											
                             }
+							]
 					};
-					 ]
+					 
 
 				message.channel.send(embebido);
 				message.delete().catch(O_o=>{});
