@@ -16,15 +16,12 @@ module.exports.run = async (bot, message, args) => {
 								url: "http://gamedev.es/",				
 								
 						fields: [{
-								name: "Usuario añadido",
-								value: `${rUser}`,
-						},
-						{
+								
 								name: "Fecha:",
 								value: message.createdAt,
 						},
 						{
-								name: "Razón de la propuesta:",
+								name: "Usuario:",
 								value: rreason,
 						}
 						]
