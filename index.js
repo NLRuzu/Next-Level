@@ -4,7 +4,8 @@ const botconfig = require("./botconfig.json");
 const token = process.env.token;
 const bot = new Discord.Client({disableEveryone: true});
 bot.commands = new Discord.Collection();
- 
+
+// COMMANDS // 
 fs.readdir("./commands/", (err, files) => {
  
   if(err) console.log(err);
@@ -23,12 +24,13 @@ fs.readdir("./commands/", (err, files) => {
  
 });
  
- 
+ // ACTIVIDAD DEL BOT (JUGANDO A +HELP) //
 bot.on("ready", async () => {
   console.log(`${bot.user.username} estÃ¡ online`);
   bot.user.setActivity("+help")
 });
- 
+
+ // MENSAJE DE BIENVENIDA NUEVOS USUARIOS //
 bot.on("guildMemberAdd", async member => {
   console.log(`${member.id} ha entrado al server `);
                  
@@ -50,7 +52,8 @@ bot.on("guildMemberAdd", async member => {
                     }
                 });
  });
- 
+
+// MENSAJE DE ABANDONO DE USUARIOS
 bot.on("guildMemberRemove", async member => {
   console.log(`${member.nickname} ha abandonado el server `);
  
@@ -64,16 +67,18 @@ bot.on("guildMemberRemove", async member => {
                     }
                 });
 });
- 
+
+// ROL DE ENTRADA AL SERVIDOR - NO VERIFICADO //
 bot.on("guildMemberAdd", function(member) {
     let role = member.guild.roles.find("name", "❎ No verificado");
     member.addRole(role).catch(console.error);
 });
- 
+
+// + VERIFICAR & +BUSCAR PARTIDA
 bot.on("message", (message) => {
   if(message.content.toUpperCase().startsWith("+VERIFICAR")){
-        message.delete();
-            if(message.member.roles.find("name", "🌟 STAFF NIVEL 3") || message.member.roles.find("name", "🌟 STAFF NIVEL 2") ||message.member.roles.find("name", "🌟 STAFF NIVEL 1")){
+            message.delete();
+      if(message.member.roles.find("name", "🌟 STAFF NIVEL 3") || message.member.roles.find("name", "🌟 STAFF NIVEL 2") ||message.member.roles.find("name", "🌟 STAFF NIVEL 1")){
                 let User = message.mentions.users.first();
                 let role = message.guild.roles.find("name", "✅Verificado");
                 let role2 = message.guild.roles.find("name", "❎ No verificado");
@@ -97,10 +102,10 @@ bot.on("message", (message) => {
                     }
                 });
             }
-        }
- 
-                   
-         if(message.content.startsWith("+buscar")){
+      }
+
+ // +BUSCAR PARTIDAS //                 
+  if(message.content.startsWith("+buscar")){
                 if(message.member.voiceChannel != null || message.member.voiceChannel != undefined){
                     let desc = message.content.split("+buscar ")[1];
                     if(desc != null){
@@ -114,30 +119,6 @@ bot.on("message", (message) => {
                             let invitacion = invite.code.split("invite/")[0];
                             let users = message.member.voiceChannel.userLimit - message.member.voiceChannel.members.size;
 
-							//message.channel.send(`[${adminRoleObject}]`);
- 
-
-							// message.channel.send({
-                                // embed: {
-                                // color: 0xc500ff,
-                                // author: {
-                                    // name: message.author.tag,
-                                    // icon_url: message.author.avatarURL
-                                // },
-                                // title: "BUSCANDO PARTIDA DE FORTNITE",
-                                // description: "Busco **" + users + "** personas para darle calor en" + message.member.voiceChannel.name + "",
-                                // fields: [{
-                                    // name: "DescripciÃ³n",
-                                    // value: "*" + desc + "*",
-                                // },
-                                // {
-                                    // name: "Ãšnete a mi sala",
-                                    // value: "[Haz click para unirte](https://discord.gg/"+ invitacion +")",
-                                // },
-                                // ],
-                            // }
-                            // })
-							
 								var mdb = {
 							  "embed": {
 								"title": "BUSCANDO PARTIDA DE FORTNITE",
@@ -170,10 +151,10 @@ bot.on("message", (message) => {
                     }
                 }
             }
- 
-console.log("True");
-       
 
+ console.log("True");
+
+// +ROLLCSGO //       
   if(message.content.toUpperCase().startsWith("+ROLLCSGO")){
         message.delete();
             if(message.member.roles.find("name", "✅Verificado")){
@@ -190,24 +171,22 @@ console.log("True");
                 });
             }
         }
-  console.log("True");
+        console.log("True");
 
-
+// REACCION EMOJI SALA PROPUESTAS //
 	if (message.channel.id == "472138215042842626" && message.author.bot) {
     message.react("472146792339734565");
     message.react("472147160423727105");
-		
-}
- 
+	}
+
+ // REACCION EMOJI SALA SUGERENCIAS //
 	if (message.channel.id == "475267748868390912" && message.author.bot) {
                     message.react("472146792339734565");
                     message.react("472147160423727105");
                 }	
+                console.log("True");
  
-
-  console.log("True");
- 
- 
+ // +ROLLFORTNITE //
   if(message.content.toUpperCase().startsWith("+ROLLFORTNITE")){
         message.delete();
             if(message.member.roles.find("name", "✅Verificado")){
@@ -224,9 +203,32 @@ console.log("True");
                 });
             }
         }
-  console.log("True");
+        console.log("True");
+
+//+ACEPTAR SUGERENCIAS
+if(message.content.toUpperCase().startsWith("+ACEPTAR")){
+  let rUser = message.guild.member(message.mentions.users.first());
+  if(!rUser) return message.channel.send("formato incorrecto +aceptar @usuario");
+
+  message.mentions.users.map(async user => {
+    const member = message.guild.member(user);
+    try { await user.send({
+  embed: {
+  color: 0xFF0000,
+  title: "¡ENHORABUENA!",
+  description: "Enhorabuena, tu sugerencia enviada en Next-Level ha sido aceptada, gracias por aportar",
+  }
+  });
+}
+      catch (err) { console.log('error'); }
+    });
+    message.delete().catch(O_o=>{});  
+    }	
+    console.log("True");
+
+
  
- 
+// CONFIG BOT 
   if(message.author.bot) return;
   if(message.channel.type === "dm") return;
  
