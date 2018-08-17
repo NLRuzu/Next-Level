@@ -201,8 +201,9 @@ console.log("True");
  
 if (message.channel.id == "472833108727562241" && message.author.bot) {
     message.react("479949707267801089");
+message.react("479949720056233984");
     message.react("479949714247385088");
-    message.react("479949720056233984");
+    
 }
   console.log("True");
  
