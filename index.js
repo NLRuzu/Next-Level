@@ -345,85 +345,51 @@ if(message.content.toUpperCase().startsWith("+REPORT")){
   message.delete().catch(O_o=>{});
   message.channel.send(report);
   }		
-//+REPORT PRIMER TOQUE
-if(message.content.toUpperCase().startsWith("+REPORT1")){
-  if(message.member.roles.find("name", "🌟 STAFF NIVEL 3") || message.member.roles.find("name", "🌟 STAFF NIVEL 2") ||message.member.roles.find("name", "🌟 STAFF NIVEL 1")){
-      let rUser = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
-      if(!rUser) return message.channel.send("formato incorrecto +report @usuario razón");
-      let rreason = args.join(" ").slice(22);
-     
-  	var report1 = {
-  		"embed": {
-  			color: 0xff0000 ,
-  			author: {
-  			name: message.author.tag,
-  			icon_url: message.author.avatarURL
-  			},
-  			title: "**INFORME DEL TOQUE**",
-  			url: "http://gamedev.es/",				
-  			fields: [
-  				{
-  				name: "Usuario reportado",
-  				value: `${rUser}`,
-  				},
-  				{
-  				name: "Fecha:",
-  				value: message.createdAt,
-  				},
-  				{
-  				name: "Razón del toque:",
-  				value: rreason,
-  				}
-  			]
-  		}
-  	};
-  	
-  	var report2 = {
-  		"embed": {
-  			color: 0xff0000 ,
-  			title: "**[1] TOQUE RECIBIDO**",
-  			url: "http://gamedev.es/",				
-  			fields: [
-  				{
-  				name: "Usuario reportado",
-  				value: `${rUser}`,
-  				},
-  				{
-  				name: "Fecha:",
-  				value: message.createdAt,
-  				},
-  				{
-  				name: "Razón del toque:",
-  				value: rreason,
-  				}
-  			]
-  		}
-  	};
-  
-  
-  	bot.channels.get("471737402017316864").send(report1);
-  bot.channels.get("472833108727562241").send(report2).then(async function(message){ await message.react("479954428800139264")});
-  	message.delete().catch(O_o=>{});
-  
-  	message.mentions.users.map(async user => {
-  		const member = message.guild.member(user);
-  		try { await user.send({
-  			embed: {
-  			color: 0xFF0000,
-  			title: "**HAS RECIBIDO UN PRIMER TOQUE**",
-  			url: "http://gamedev.es/",
-  			description: "Estimado Usari@ de Next Level, acabas de recibir un primer toque por alguna acción, o actitud que va en contra de nuestras normas.\n\nPor favor visita el canal de #toques para más información.\n\nUn saludo, el STAFF",
-  			}
-  			});
-  		}
-  		catch (err) { console.log('error'); }
-  	});
-  
-  	message.delete().catch(O_o=>{});
-  			
-  				
-  	}
+// +ROLES
+if(message.content.toUpperCase().startsWith("+EOLES")){
+  let sicon = message.guild.iconURL;
+  let serverembed = new Discord.RichEmbed()
+  .setDescription("**ASIGNACIÓN DE ROLES**")
+  .setColor("#FE2E2E")
+  .setThumbnail(sicon)
+  .addField("**+rollcsgo**", "Te añade el rol de CSGO")
+  .addField("**+rollfortnite**", "Te añade el rol de FORTNITE");
+
+  return message.channel.send(serverembed);
   }
+
+// +SERVERINFO
+if(message.content.toUpperCase().startsWith("+SERVERINFO")){
+  let sicon = message.guild.iconURL;
+  let serverembed = new Discord.RichEmbed()
+  .setDescription("**Información del Servidor**")
+  .setColor("#FE2E2E")
+  .setThumbnail(sicon)
+  .addField("**Nombre del Servidor**", message.guild.name)
+  .addField("**Miembros Totales**", message.guild.memberCount);
+
+  return message.channel.send(serverembed);
+
+  }
+  
+//+SOLICITAR 
+if(message.content.toUpperCase().startsWith("+SOLICITAR")){
+  let rUser = message.guild.member;
+  if(!rUser) return message.channel.send("formato incorrecto +solicitar @usuario");
+
+  let reportEmbed = new Discord.RichEmbed()
+  .setTitle("NUEVA PETICIÓN DE ACCESO")
+  .setColor("#52a255")
+  .addField("Solicitante:", `${message.author}`)
+  .addField("Fecha:", message.createdAt)
+
+  let reportschannel = message.guild.channels.find(`name`, "❎-solicitudes");
+  if(!reportschannel) return message.channel.send("Couldn't find reports channel.");
+
+  message.delete().catch(O_o=>{});
+  reportschannel.send(reportEmbed);
+  }
+  });
 	
 	
 	
