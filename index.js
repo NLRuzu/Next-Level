@@ -203,7 +203,7 @@ if (message.channel.id == "472833108727562241" && message.author.bot) {
 	 
 message.react("479954428800139264");
 message.react("479954435477471252");
-message.react("479954440531607576");
+
 	
 	
 	
