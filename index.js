@@ -207,27 +207,35 @@ bot.on("message", (message) => {
 
 //+ACEPTAR SUGERENCIAS
 if(message.content.toUpperCase().startsWith("+ACEPTAR")){
-  let rUser = message.guild.member(message.mentions.users.first());
-  if(!rUser) return message.channel.send("formato incorrecto +aceptar @usuario");
+      let rUser = message.guild.member(message.mentions.users.first());
+      if(!rUser) return message.channel.send("formato incorrecto +aceptar @usuario");
 
-  message.mentions.users.map(async user => {
-    const member = message.guild.member(user);
-    try { await user.send({
-  embed: {
-  color: 0xFF0000,
-  title: "¡ENHORABUENA!",
-  description: "Enhorabuena, tu sugerencia enviada en Next-Level ha sido aceptada, gracias por aportar",
-  }
-  });
-}
-      catch (err) { console.log('error'); }
-    });
-    message.delete().catch(O_o=>{});  
-    }	
-    console.log("True");
+      message.mentions.users.map(async user => {
+      const member = message.guild.member(user);
+      try { await user.send({
+                    embed: {
+                      color: 0xFF0000,
+                      title: "¡ENHORABUENA!",
+                      description: "Enhorabuena, tu sugerencia enviada en Next-Level ha sido aceptada, gracias por aportar",
+                  }
+                  });
+                  }
+                  catch (err) { console.log('error'); }
+                    });
+                message.delete().catch(O_o=>{});  
 
+              }	
+              console.log("True");
 
- 
+//+CLEAR
+if(message.content.toUpperCase().startsWith("+CLEAR")){
+    if(!message.member.hasPermission("MANAGE_MESSAGES")) return errors.noPerms(message, "MANAGE_MESSAGES");
+    if(!args[0]) return message.channel.send("oof");
+          message.channel.bulkDelete(args[0]).then(() => {
+          message.channel.send(`${args[0]} mensajes eliminados correctamente.`).then(msg => msg.delete(5000));
+          });
+          }
+
 // CONFIG BOT 
   if(message.author.bot) return;
   if(message.channel.type === "dm") return;
