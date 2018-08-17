@@ -349,12 +349,15 @@ if(message.content.toUpperCase().startsWith("+PROPONER")){
           }
           ]
 
+      
+      
                           }
         };
-        
+
       message.channel.send(proponer);
       message.delete().catch(O_o=>{});
-}
+
+  }	
 	
 	
 	
