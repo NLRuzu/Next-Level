@@ -354,7 +354,8 @@ if(message.content.toUpperCase().startsWith("+ROLES")){
   .setThumbnail(sicon)
   .addField("**+rollcsgo**", "Te añade el rol de CSGO")
   .addField("**+rollfortnite**", "Te añade el rol de FORTNITE");
-
+   
+    message.delete().catch(O_o=>{});
     return message.channel.send(serverembed);
     }
 
@@ -367,7 +368,8 @@ if(message.content.toUpperCase().startsWith("+SERVERINFO")){
   .setThumbnail(sicon)
   .addField("**Nombre del Servidor**", message.guild.name)
   .addField("**Miembros Totales**", message.guild.memberCount);
-
+  
+  message.delete().catch(O_o=>{});
   return message.channel.send(serverembed);
   }
   
@@ -405,7 +407,7 @@ if(message.content.toUpperCase().startsWith("+STAFF")){
   .addField("**+aceptar @user**", "Aceptamos una sugerencia en el canal #sugerencias y se le envia un MP automático")
   .addField("**+bl @user razón**", "Añadimos una persona nueva a la BlackList en la sala #📌-blacklist");
 
-
+  message.delete().catch(O_o=>{});
   return message.channel.send(serverembed);
   }
 	
