@@ -72,7 +72,8 @@ bot.channels.get("472833108727562241").send(report2).then(async function(message
 		}
 		catch (err) { console.log('error'); }
 	});
-
+let reportschannel = message.guild.channels.find(`name`, "❗-toques");
+  if(!reportschannel) return message.channel.send("Couldn't find reports channel.");
 	message.delete().catch(O_o=>{});
 	reportschannel.send(reportEmbed);		
 				
