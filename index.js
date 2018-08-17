@@ -404,9 +404,8 @@ if(message.content.toUpperCase().startsWith("+STAFF")){
   .addField("**+clear cantidad**", "Elimina X cantidad de mensajes de un canal de texto")
   .addField("**+proponer @User Razón**", "Propone a un usuario ascenso de rango por x motivo")
   .addField("**+comunicar Desarrollo**", "Redactamos un comunicado, solo usar en sala #📋-comunicados")
-  .addField("**+aceptar @user**", "Aceptamos una sugerencia en el canal #sugerencias y se le envia un MP automático")
-  .addField("**+bl @user razón**", "Añadimos una persona nueva a la BlackList en la sala #📌-blacklist");
-
+  .addField("**+aceptar @user**", "Aceptamos una sugerencia en el canal #sugerencias y se le envia un MP automático");
+  
   message.delete().catch(O_o=>{});
   return message.channel.send(serverembed);
   }
