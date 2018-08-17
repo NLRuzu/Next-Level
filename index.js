@@ -200,9 +200,9 @@ console.log("True");
                 }	
  
 if (message.channel.id == "472833108727562241" && message.author.bot) {
-    message.react("479932600085905418");
-    message.react("479932607681789963");
-    message.react("479932614485213184");
+    message.react("472147160423727105");
+    message.react("472147160423727105");
+    message.react("472147160423727105");
 }
   console.log("True");
  
