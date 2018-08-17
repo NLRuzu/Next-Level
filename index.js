@@ -36,14 +36,16 @@ bot.on("guildMemberAdd", async member => {
   welcomechannel.send({
                embed: {
                         color: 0x04ff00,
-                        title: "NUEVO MIEMBRO",
+                        title: "**NUEVO MIEMBRO**",
+		        url: "http://gamedev.es/",
                         description: `Bienvenido ${member} a Next-Level`,
                     }
                 });
     member.send({
                embed: {
                         color: 0x04ff00,
-                        title: "MENSAJE DE BIENVENIDA",
+                        title: "**MENSAJE DE BIENVENIDA**",
+		       	url: "http://gamedev.es/",
                         description: 'Te damos la bienvenida a Next-Level, en primer lugar si no ves contenido ninguno en el servidor tranquilo, es completamente normal. \n\nForma parte de un sistema de verificación que tenemos implementado en el servidor, para así proteger nuestra intimidad y evaluar el verdadero interés de alguien en entrar a él. \n\nEn segundo lugar, decirte que deberás verificar tu cuenta para tener acceso completo, ingresando en la sala ❎-solicitudes y escribiendo +solicitar. \n\nEn cuanto un STAFF haya verificado tu cuenta, serás notificado de ello mediante mensaje privado y podrás posteriormente tener acceso completo. \n\nUn saludo, el STAFF.',
                     }
                 });
@@ -56,7 +58,8 @@ bot.on("guildMemberRemove", async member => {
   welcomechannel.send({
                embed: {
                         color: 0xe52121,
-                        title: "HA ABANDONADO",
+                        title: "**HA ABANDONADO**",
+		       	url: "http://gamedev.es/",
                         description: `${member} ha abandonado el clan`,
                     }
                 });
@@ -81,7 +84,8 @@ bot.on("message", (message) => {
                 User.send({
                     embed: {
                         color: 0x04ff00,
-                        title: "HAS SIDO VERIFICADO",
+                        title: "**HAS SIDO VERIFICADO**",
+			url: "http://gamedev.es/",
                         description: "**¡Enhorabuena! has sido verificado, ahora puedes ver todo el contenido del servidor del clan. \n\nPara más información accede al canal de texto #info. \n\nNo olvides asignarte tu rol para recibir las notificaciones de fortnite en sala #comandos escribe +roles y usa el que quieras.**",
                     }
                 });
