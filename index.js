@@ -346,7 +346,7 @@ if(message.content.toUpperCase().startsWith("+REPORT")){
   message.channel.send(report);
   }		
 // +ROLES
-if(message.content.toUpperCase().startsWith("+EOLES")){
+if(message.content.toUpperCase().startsWith("+ROLES")){
   let sicon = message.guild.iconURL;
   let serverembed = new Discord.RichEmbed()
   .setDescription("**ASIGNACIÓN DE ROLES**")
