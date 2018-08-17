@@ -420,7 +420,7 @@ if(message.content.toUpperCase().startsWith("+REPORT1")){
   	});
   
   	message.delete().catch(O_o=>{});
-  	reportschannel.send(reportEmbed);		
+  			
   				
   	}
   }
