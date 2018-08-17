@@ -34,7 +34,7 @@ module.exports.run = async (bot, message, args) => {
 	var report2 = {
 		"embed": {
 			color: 0xff0000 ,
-			title: "**SEGUNDO TOQUE A USUARIO**",
+			title: "**[3] TOQUE RECIBIDO**",
 			url: "http://gamedev.es/",				
 			fields: [
 				{
