@@ -253,7 +253,7 @@ if(message.content.toUpperCase().startsWith("+COMUNICAR")){
     }	
 
 //+FORTNITE
-if(message.content.toUpperCase().startsWith("+COMUNICAR")){
+if(message.content.toUpperCase().startsWith("+FORTNITE")){
   let sicon = message.guild.iconURL;
   let serverembed = new Discord.RichEmbed()
   .setDescription("**FORTNITE**")
