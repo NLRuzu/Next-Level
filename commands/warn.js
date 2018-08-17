@@ -45,15 +45,17 @@ module.exports.run = async (bot, message, args) => {
 			}
 			});
 		}
-};
-  if(warns[wUser.id].warns == 3){
+
+   if(warns[wUser.id].warns == 3){
     message.guild.member(wUser).ban(reason);
     message.reply(`<@${wUser.id}> has been banned.`)
   }
 
 
+};
 
 module.exports.help = {
   name: "warn"
 }
+
 
