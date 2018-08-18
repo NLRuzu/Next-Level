@@ -1,12 +1,11 @@
 const Discord = require("discord.js");
 
 module.exports.run = async (bot, message, args) => {
-    let rUser = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
-    if(!rUser) return message.channel.send("formato incorrecto +proponer @usuario razón de la propuesta");
-    let rreason = args.join(" ").slice(22);
-    let tipo = args.join(" ").slice(10);
-
-    var proponer = {
+      let nombre = args[0];
+      let tipo = args[1];
+      let razon = args[1];
+    
+    var votar = {
 							"embed": {
                                 color: 0xffef52 ,
                                 author: {
@@ -18,11 +17,11 @@ module.exports.run = async (bot, message, args) => {
 								
 						fields: [{
 								name: "Usuario propuesto",
-								value: `${rUser}`,
+								value: +nombre+,
 						},
 						{
 								name: "Tipo de Sanción:",
-								value: tipo,
+								value: +tipo+,
 						},
             {
 								name: "Fecha:",
@@ -30,7 +29,7 @@ module.exports.run = async (bot, message, args) => {
 						},
 						{
 								name: "Razón de la propuesta:",
-								value: rreason,
+								value: +razon+,
 						}
 						]
 
@@ -40,11 +39,14 @@ module.exports.run = async (bot, message, args) => {
 					};
 
 				
-        message.channel.send(proponer);
-				message.delete().catch(O_o=>{});
+        message.channel.send(votar);
+     message.delete().catch(O_o=>{});
 
 		}	
 
 module.exports.help = {
   name: "votar"
 }
+
+
+
