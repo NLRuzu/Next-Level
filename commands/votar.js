@@ -3,8 +3,7 @@ const Discord = require("discord.js");
 module.exports.run = async (bot, message, args) => {
       let nombre = args[0];
       let tipo = args[1];
-      let razon = args[2];
-    
+      let razon = args.join(" ").slice(22);
     var votar = {
 							"embed": {
                                 color: 0xffef52 ,
