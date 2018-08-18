@@ -11,18 +11,18 @@ module.exports.run = async (bot, message, args) => {
                                     name: message.author.tag,
                                     icon_url: message.author.avatarURL
                                 },
-                                title: "**NUEVA PROPUESTA**",
+                                title: "**NUEVA PROPUESTA DE SANCIÓN**",
 								url: "http://gamedev.es/",				
 								
 						fields: [{
-								name: "Usuario propuesto",
+								name: "Usuario propuesto a sanción",
 								value: nombre,
 						},
 						{
 								name: "Tipo de Sanción:",
 								value: tipo,
 						},
-                       {                                        name: "Razón de la propuesta:",
+                       {                                        name: "Razón de la sanción:",
 								value: razon,
 								
 						},
