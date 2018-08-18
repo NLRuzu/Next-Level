@@ -23,13 +23,14 @@ module.exports.run = async (bot, message, args) => {
 								name: "Tipo de Sanción:",
 								value: tipo,
 						},
-            {
-								name: "Fecha:",
-								value: message.createdAt,
+                       {                                        name: "Razón de la propuesta:",
+								value: razon,
+								
 						},
 						{
-								name: "Razón de la propuesta:",
-								value: razon,
+							name: "Fecha:",
+						        value: message.createdAt,
+								
 						}
 						]
 
