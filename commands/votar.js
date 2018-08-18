@@ -17,11 +17,11 @@ module.exports.run = async (bot, message, args) => {
 								
 						fields: [{
 								name: "Usuario propuesto",
-								value: +nombre+,
+								value: nombre,
 						},
 						{
 								name: "Tipo de Sanción:",
-								value: +tipo+,
+								value: tipo,
 						},
             {
 								name: "Fecha:",
@@ -29,7 +29,7 @@ module.exports.run = async (bot, message, args) => {
 						},
 						{
 								name: "Razón de la propuesta:",
-								value: +razon+,
+								value: razon,
 						}
 						]
 
