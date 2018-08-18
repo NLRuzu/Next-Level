@@ -38,8 +38,7 @@ module.exports.run = async (bot, message, args) => {
 				
                             }
 					};
-let propuestaschannel = message.guild.channels.find(`name`, "❓-propuestas");
-if(!propuestaschannel) return message.channel.send("Couldn't find reports channel.");
+
 				
         message.channel.send(proponer);
 				message.delete().catch(O_o=>{});
