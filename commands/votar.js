@@ -3,7 +3,7 @@ const Discord = require("discord.js");
 module.exports.run = async (bot, message, args) => {
       let nombre = args[0];
       let tipo = args[1];
-      let razon = args[1];
+      let razon = args[2];
     
     var votar = {
 							"embed": {
