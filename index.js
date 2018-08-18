@@ -142,10 +142,14 @@ bot.on("message", (message) => {
 								]
 							  }
 							}
-							message.channel.send(`[${adminRoleObject}]`, mdb);
-							
-							
-                            message.delete();
+	let partidaschannel = message.guild.channels.find(`name`, "💎-buscar-partidas");
+       if(!partidaschannel) return message.channel.send("Introduce bien el comando");
+
+
+	message.delete().catch(O_o=>{});
+        partidaschannel.send(`[${adminRoleObject}]`, mdb);
+						
+                           
                         })
                         .catch(console.error);
                     }
@@ -178,7 +182,7 @@ bot.on("message", (message) => {
     message.react("472146792339734565");
     message.react("472147160423727105");
 	}
-// REACCION EMOJI SALA PROPUESTAS //
+// REACCION EMOJI SALA VOTACION DE SANCIÓN //
 	if (message.channel.id == "480414475904745507" && message.author.bot) {
     message.react("472146792339734565");
     message.react("472147160423727105");
@@ -390,7 +394,24 @@ if(message.content.toUpperCase().startsWith("+STAFF")){
   message.delete().catch(O_o=>{});
   return message.channel.send(serverembed);
   }
-	
+
+//+VOTAR
+if(message.content.toUpperCase().startsWith("+VOTARSANCION")){
+  let sicon = message.guild.iconURL;
+  let serverembed = new Discord.RichEmbed()
+  .setDescription("**COMANDOS VOTAR SANCIONES**")
+  .setColor("#ff006c")
+  .setThumbnail(sicon)
+  .addField("**+votar**", "+votar usuario tipo razón")
+  .addField("**usuario**", "Escribimos el nombre de la persona sin @")
+  .addField("**tipo**", "Toque, expulsión..")
+  .addField("**razón**", "Exponer la razón de la votación a sanción");
+  
+  
+  message.delete().catch(O_o=>{});
+  return message.channel.send(serverembed);
+  }
+		
 //+SUGERENCIA
 if(message.content.toUpperCase().startsWith("+SUGERENCIA")){
   var comunicado = message.content.replace("+sugerencia ", "");
