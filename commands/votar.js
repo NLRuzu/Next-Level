@@ -39,8 +39,12 @@ module.exports.run = async (bot, message, args) => {
 					};
 
 				
-        message.channel.send(votar);
-     message.delete().catch(O_o=>{});
+       let partidaschannel = message.guild.channels.find(`name`, "❌-votar-sanciones");
+       if(!partidaschannel) return message.channel.send("Introduce bien el comando");
+
+
+      message.delete().catch(O_o=>{});
+      partidaschannel.send(votar);
 
 		}	
 
