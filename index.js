@@ -178,6 +178,11 @@ bot.on("message", (message) => {
     message.react("472146792339734565");
     message.react("472147160423727105");
 	}
+// REACCION EMOJI SALA PROPUESTAS //
+	if (message.channel.id == "480414475904745507" && message.author.bot) {
+    message.react("472146792339734565");
+    message.react("472147160423727105");
+	}
 
  // REACCION EMOJI SALA SUGERENCIAS //
 	if (message.channel.id == "475267748868390912" && message.author.bot) {
@@ -246,11 +251,11 @@ if(message.content.toUpperCase().startsWith("+COMUNICAR")){
         timestamp: message.createdAt,								
                             }
           };
-	
-	let reportschannel = message.guild.channels.find(`name`, "📋-comunicados");
-	if(!reportschannel) return message.channel.send("Couldn't find reports channel.");
-        message.channel.send(`[${adminRoleObject}]`, embebido);
-        message.delete().catch(O_o=>{});
+	let partidaschannel = message.guild.channels.find(`name`, "📋-comunicados");
+       if(!partidaschannel) return message.channel.send("Introduce bien el comando");
+
+	message.delete().catch(O_o=>{});
+	partidaschannel.send(`[${adminRoleObject}]`, embebido);
 
     }	
 
