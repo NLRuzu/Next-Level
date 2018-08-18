@@ -6,7 +6,7 @@ module.exports.run = async (bot, message, args) => {
       let razon = args.slice(2).join(" ");
     var votar = {
 							"embed": {
-                                color: 0xffef52 ,
+                                color: 0xff006c ,
                                 author: {
                                     name: message.author.tag,
                                     icon_url: message.author.avatarURL
