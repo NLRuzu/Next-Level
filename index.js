@@ -434,38 +434,6 @@ if(message.content.toUpperCase().startsWith("+SUGERENCIA")){
               message.delete().catch(O_o=>{});
       }	
 	
-
-
-//+DM
-if(message.content.toUpperCase().startsWith("+DM")){
-    let rUser = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
-    if(!rUser) return message.channel.send("formato incorrecto +dm @usuario mensaje");
-    let mensaje = args.slice(2).join(" ");
-	message.mentions.users.map(async user => {
-		const member = message.guild.member(user);
-		try { await user.send({
-			embed: {
-			color: 0xFF0000,
-      title: "**MENSAJE DE UN STAFF DE NEXT LEVEL**",
-								url: "http://gamedev.es/",				
-								
-						fields: [{
-								name: "Mensaje",
-								value: mensaje,
-						},            
-          ]
-			}
-			});
-		}
-		catch (err) { console.log('error'); }
-	});
-
-	message.delete().catch(O_o=>{});				
-}	
-       
-
-	
-	
 	
 // CONFIG BOT 
   if(message.author.bot) return;
