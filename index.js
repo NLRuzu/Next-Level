@@ -270,7 +270,7 @@ if(message.content.toUpperCase().startsWith("+FORTNITE")){
   .setDescription("**FORTNITE**")
   .setColor("#FE2E2E")
   .setThumbnail(sicon)
-  .addField("**.ign plataforma nickname**", "Vincula tu cuenta de epicgames.")
+  .addField("**.link plataforma nickname**", "Vincula tu cuenta de epicgames.")
   .addField("**.wins**", "Asigna las wins a tu nick, hay que actualizar constantemente.")
   .addField("**.kd**", "Asigna tu kd a tu nick, hay que actualizar constantemente.")
   .addField("**.stats**", "Te muestra tus stats generales.")
