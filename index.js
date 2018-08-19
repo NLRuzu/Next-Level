@@ -274,6 +274,7 @@ if(message.content.toUpperCase().startsWith("+FORTNITE")){
   .addField("**.wins**", "Asigna las wins a tu nick, hay que actualizar constantemente.")
   .addField("**.kd**", "Asigna tu kd a tu nick, hay que actualizar constantemente.")
   .addField("**.stats**", "Te muestra tus stats generales.")
+  .addField("**.reset**", "Os reinicia el nick sin wins ni kd, en caso de bug")
   .addField("**.season5**", "Te muestra tus stats de la temporada 5.");
 
   message.delete().catch(O_o=>{});
