@@ -438,9 +438,9 @@ if(message.content.toUpperCase().startsWith("+SUGERENCIA")){
 
 //+DM
 if(message.content.toUpperCase().startsWith("+DM")){
-    let rUser = message.guild.member(message.mentions.users.first());
+    let rUser = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
     if(!rUser) return message.channel.send("formato incorrecto +dm @usuario mensaje");
-     let mensaje = args[0];
+    let mensaje = args.slice(2).join(" ");
 	message.mentions.users.map(async user => {
 		const member = message.guild.member(user);
 		try { await user.send({
