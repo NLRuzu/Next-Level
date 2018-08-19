@@ -8,7 +8,7 @@ module.exports.run = async (bot, message, args) => {
 		const member = message.guild.member(user);
 		try { await user.send({
 			embed: {
-			color: 0xFF0000,
+			color: 0xff0061 ,
       title: "**MENSAJE DE UN STAFF DE NEXT LEVEL**",
 								url: "http://gamedev.es/",				
 								
