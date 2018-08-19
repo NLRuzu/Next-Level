@@ -389,6 +389,7 @@ if(message.content.toUpperCase().startsWith("+STAFF")){
   .addField("**+clear cantidad**", "Elimina X cantidad de mensajes de un canal de texto")
   .addField("**+proponer @User Razón**", "Propone a un usuario ascenso de rango por x motivo")
   .addField("**+comunicar Desarrollo**", "Redactamos un comunicado, solo usar en sala #📋-comunicados")
+  .addField("**+dm @user Mensaje**", "Le enviamos un DM a un usuario con un mensaje")
   .addField("**+aceptar @user**", "Aceptamos una sugerencia en el canal #sugerencias y se le envia un MP automático");
   
   message.delete().catch(O_o=>{});
