@@ -305,9 +305,13 @@ if(message.content.toUpperCase().startsWith("+MUSICA")){
   .setDescription("**MÚSICA**")
   .setColor("#FE2E2E")
   .setThumbnail(sicon)
-  .addField("**!play link o nombre**", "Comando para buscar canción.")
-  .addField("**!stop**", "Comando para parar la música")
-
+  .addField("**+play link o nombre**", "Comando para buscar canción.")
+  .addField("**+stop**", "Comando para parar la música")
+  .addField("**+skip**", "Pasar canción")
+  .addField("**+loop**", "Hacer bucle")
+  .addField("**+pause**", "Pausar música")
+  .addField("**+resume**", "volver poner música después de pausa");
+  
   message.delete().catch(O_o=>{});
   return message.channel.send(serverembed);
   }	
