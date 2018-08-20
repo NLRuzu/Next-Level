@@ -236,6 +236,28 @@ if(message.content.toUpperCase().startsWith("+ACEPTAR")){
               }	
               console.log("True");
 
+//+RECHAZAR SUGERENCIAS
+if(message.content.toUpperCase().startsWith("+RECHAZAR")){
+      let rUser = message.guild.member(message.mentions.users.first());
+      if(!rUser) return message.channel.send("formato incorrecto +aceptar @usuario");
+
+      message.mentions.users.map(async user => {
+      const member = message.guild.member(user);
+      try { await user.send({
+                    embed: {
+                      color: 0xFF0000,
+                      title: "¡LO SENTIMOS!",
+                      description: "Lo sentimos, tu sugerencia enviada en Next-Level ha sido rechazada, gracias por aportar",
+                  }
+                  });
+                  }
+                  catch (err) { console.log('error'); }
+                    });
+                message.delete().catch(O_o=>{});  
+
+              }	
+              console.log("True");
+
 //+COMUNICAR
 if(message.content.toUpperCase().startsWith("+COMUNICAR")){
   var comunicado = message.content.replace("+comunicar ", "");  
