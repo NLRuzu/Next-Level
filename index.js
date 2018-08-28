@@ -506,7 +506,7 @@ if(message.content.toUpperCase().startsWith("+STAFF")){
   }
 
 //+VOTAR
-if(message.content.toUpperCase().startsWith("+VOTAR")){
+if(message.content.toUpperCase().startsWith("+VOTARSANCIÓN")){
   let sicon = message.guild.iconURL;
   let serverembed = new Discord.RichEmbed()
   .setDescription("**COMANDOS VOTAR SANCIONES**")
