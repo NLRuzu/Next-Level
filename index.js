@@ -29,7 +29,7 @@ fs.readdir("./commands/", (err, files) => {
 bot.on("guildMemberAdd", async member => {
   console.log(`${member.id} ha entrado al server `);
                  
-  let welcomechannel = member.guild.channels.find(`name`, "ðŸ“ˆ-entradas");
+  let welcomechannel = member.guild.channels.find(`name`, "📈-entradas");
   welcomechannel.send({
                embed: {
                         color: 0x04ff00,
@@ -43,7 +43,7 @@ bot.on("guildMemberAdd", async member => {
                         color: 0x04ff00,
                         title: "**MENSAJE DE BIENVENIDA**",
 		       	url: "http://gamedev.es/",
-                        description: 'Te damos la bienvenida a Next-Level, en primer lugar si no ves contenido ninguno en el servidor tranquilo, es completamente normal. \n\nForma parte de un sistema de verificaciÃ³n que tenemos implementado en el servidor, para asÃ­ proteger nuestra intimidad y evaluar el verdadero interÃ©s de alguien en entrar a Ã©l. \n\nEn segundo lugar, decirte que deberÃ¡s verificar tu cuenta para tener acceso completo, ingresando en la sala âŽ-solicitudes y escribiendo +solicitar. \n\nEn cuanto un STAFF haya verificado tu cuenta, serÃ¡s notificado de ello mediante mensaje privado y podrÃ¡s posteriormente tener acceso completo. \n\nUn saludo, el STAFF.',
+                        description: 'Te damos la bienvenida a Next-Level, en primer lugar si no ves contenido ninguno en el servidor tranquilo, es completamente normal. \n\nForma parte de un sistema de verificación que tenemos implementado en el servidor, para así proteger nuestra intimidad y evaluar el verdadero interés de alguien en entrar a él. \n\nEn segundo lugar, decirte que deberás verificar tu cuenta para tener acceso completo, ingresando en la sala ❎-solicitudes y escribiendo +solicitar. \n\nEn cuanto un STAFF haya verificado tu cuenta, serás notificado de ello mediante mensaje privado y podrás posteriormente tener acceso completo. \n\nUn saludo, el STAFF.',
                     }
                 });
  });
@@ -52,7 +52,7 @@ bot.on("guildMemberAdd", async member => {
 bot.on("guildMemberRemove", async member => {
   console.log(`${member.nickname} ha abandonado el server `);
  
-  let welcomechannel = member.guild.channels.find(`name`, "ðŸ“‰-abandonos");
+  let welcomechannel = member.guild.channels.find(`name`, "📉-abandonos");
   welcomechannel.send({
                embed: {
                         color: 0xe52121,
@@ -65,7 +65,7 @@ bot.on("guildMemberRemove", async member => {
 
 // ROL DE ENTRADA AL SERVIDOR - NO VERIFICADO //
 bot.on("guildMemberAdd", function(member) {
-    let role = member.guild.roles.find("name", "âŽ No verificado");
+    let role = member.guild.roles.find("name", "✅Verificado");
     member.addRole(role).catch(console.error);
 });
 
@@ -73,10 +73,10 @@ bot.on("guildMemberAdd", function(member) {
 bot.on("message", (message) => {
 if(message.content.toUpperCase().startsWith("+VERIFICAR")){
             message.delete();
-      if(message.member.roles.find("name", "ðŸŒŸ STAFF NIVEL 3") || message.member.roles.find("name", "ðŸŒŸ STAFF NIVEL 2") ||message.member.roles.find("name", "ðŸŒŸ STAFF NIVEL 1")){
+      if(message.member.roles.find("name", "🌟 STAFF NIVEL 3") || message.member.roles.find("name", "🌟 STAFF NIVEL 2") ||message.member.roles.find("name", "🌟 STAFF NIVEL 1")){
                 let User = message.mentions.users.first();
-                let role = message.guild.roles.find("name", "âœ…Verificado");
-                let role2 = message.guild.roles.find("name", "âŽ No verificado");
+                let role = message.guild.roles.find("name", "✅Verificado");
+                let role2 = message.guild.roles.find("name", "❎ No verificado");
                 let guild = bot.guilds.get("458220475957379074");
                 let miembro = guild.member(User);
                 miembro.addRole(role).catch(console.error);
@@ -86,7 +86,7 @@ if(message.content.toUpperCase().startsWith("+VERIFICAR")){
                         color: 0x04ff00,
                         title: "**HAS SIDO VERIFICADO**",
 			                  url: "http://gamedev.es/",
-                        description: "**Â¡Enhorabuena! has sido verificado, ahora puedes ver todo el contenido del servidor del clan. \n\nPara mÃ¡s informaciÃ³n accede al canal de texto #info. \n\nNo olvides asignarte         tu rol para recibir las notificaciones de fortnite en sala #comandos escribe +roles y usa el que quieras.**",
+                        description: "**¡Enhorabuena! has sido verificado, ahora puedes ver todo el contenido del servidor del clan. \n\nPara más información accede al canal de texto #info. \n\nNo olvides asignarte tu rol para recibir las notificaciones de fortnite en sala #comandos escribe +roles y usa el que quieras.**",
                     }
                 });
                 message.channel.send({
@@ -108,7 +108,7 @@ if(message.content.startsWith("+buscar")) {
                             maxAge: 3600
                         }
                         let server = bot.guilds.get("458220475957379074");
-                        let adminRoleObject = server.roles.find("name", "ðŸ¤– Fortnite");
+                        let adminRoleObject = server.roles.find("name", "🤖 Fortnite");
                         message.member.voiceChannel.createInvite(options)
                         .then(invite => {
                             let invitacion = invite.code.split("invite/")[0];
@@ -127,17 +127,17 @@ if(message.content.startsWith("+buscar")) {
 								},
 								"fields": [
 								  {
-									"name": "DescripciÃ³n",
+									"name": "Descripción",
 									"value": "*" + desc + "*",
 								  },
 								  {
-									"name": "Ãšnete a mi sala",
+									"name": "Únete a mi sala",
 									"value": "[Haz click para unirte](https://discord.gg/"+ invitacion +")"
 								  }
 								]
 							  }
 							}
-	let partidaschannel = message.guild.channels.find(`name`, "ðŸ’Ž-buscar-partidas");
+	let partidaschannel = message.guild.channels.find(`name`, "💎-buscar-partidas");
        if(!partidaschannel) return message.channel.send("Introduce bien el comando");
 
 
@@ -206,7 +206,7 @@ if(message.content.startsWith("+buscar")) {
 				"color": 14470873,
 				"footer": {
 				  "icon_url": "https://media.discordapp.net/attachments/474203533885964288/481510851501752320/fortnite.png",
-				  "text": "Fornite Ramdom Location || "+message.guild.name
+				  "text": "Fornite Caidas Aleatorias || "+message.guild.name
 				},
 				"thumbnail": {
 				  "url": "https://admin.computechx.eu/plugins/discord/fortnite/"+iconsx[rpl]+".png"
@@ -226,9 +226,9 @@ if(message.content.startsWith("+buscar")) {
 // +ROLLCSGO //       
 if(message.content.toUpperCase().startsWith("+ROLLCSGO")){
         message.delete();
-            if(message.member.roles.find("name", "âœ…Verificado")){
+            if(message.member.roles.find("name", "✅Verificado")){
                 let User = message.member;
-                let role = message.guild.roles.find("name", "ðŸ’£ CSGO");
+                let role = message.guild.roles.find("name", "💣 CSGO");
                 let guild = bot.guilds.get("458220475957379074");
                 let miembro = guild.member(User);
                 miembro.addRole(role).catch(console.error);
@@ -262,9 +262,9 @@ if (message.channel.id == "475267748868390912" && message.author.bot) {
  // +ROLLFORTNITE //
 if(message.content.toUpperCase().startsWith("+ROLLFORTNITE")){
         message.delete();
-            if(message.member.roles.find("name", "âœ…Verificado")){
+            if(message.member.roles.find("name", "✅Verificado")){
                 let User = message.member;
-                let role = message.guild.roles.find("name", "ðŸ¤– Fortnite");
+                let role = message.guild.roles.find("name", "🤖 Fortnite");
                 let guild = bot.guilds.get("458220475957379074");
                 let miembro = guild.member(User);
                 miembro.addRole(role).catch(console.error);
@@ -287,7 +287,7 @@ if(message.content.toUpperCase().startsWith("+ACEPTAR")){
       try { await user.send({
                     embed: {
                       color: 0xFF0000,
-                      title: "Â¡ENHORABUENA!",
+                      title: "¡ENHORABUENA!",
                       description: "Enhorabuena, tu sugerencia enviada en Next-Level ha sido aceptada, gracias por aportar",
                   }
                   });
@@ -308,7 +308,7 @@ if(message.content.toUpperCase().startsWith("+RECHAZAR")){
       try { await user.send({
                     embed: {
                       color: 0xFF0000,
-                      title: "Â¡LO SENTIMOS!",
+                      title: "¡LO SENTIMOS!",
                       description: "Lo sentimos, tu sugerencia enviada en Next-Level ha sido rechazada, gracias por aportar",
                   }
                   });
@@ -338,7 +338,7 @@ if(message.content.toUpperCase().startsWith("+COMUNICAR")){
         timestamp: message.createdAt,								
                             }
           };
-	let partidaschannel = message.guild.channels.find(`name`, "ðŸ“‹-comunicados");
+	let partidaschannel = message.guild.channels.find(`name`, "📋-comunicados");
        if(!partidaschannel) return message.channel.send("Introduce bien el comando");
 
 	message.delete().catch(O_o=>{});
@@ -392,13 +392,13 @@ if(message.content.toUpperCase().startsWith("+HELP")){
   .setTitle("**GENERALES**")
   .setColor("#FE2E2E")
   .setThumbnail(sicon)
-  .addField("**+serverinfo**", "informaciÃ³n del servidor")
+  .addField("**+serverinfo**", "información del servidor")
   .addField("**+fortnite**", "Comandos para uso de Fortnite")
   .addField("**+partidas**", "Comandos para buscar partidas")
-  .addField("**+roles**", "Comandos para aÃ±adirte roles de juegos")
+  .addField("**+roles**", "Comandos para añdirte roles de juegos")
   .addField("**+sugerencia**", "Comandos para publicar sugerencias solo en sala #sugerencias (+sugerencia desarrollo)");
   
-  message.delete().catch(O_o=>{});
+ 
   return message.channel.send(serverembed);
   }	
 	
@@ -406,17 +406,17 @@ if(message.content.toUpperCase().startsWith("+HELP")){
 if(message.content.toUpperCase().startsWith("+MUSICA")){
   let sicon = message.guild.iconURL;
   let serverembed = new Discord.RichEmbed()
-  .setDescription("**MÃšSICA**")
+  .setDescription("**MÚSICA**")
   .setColor("#FE2E2E")
   .setThumbnail(sicon)
-  .addField("**+play link o nombre**", "Comando para buscar canciÃ³n.")
-  .addField("**+stop**", "Comando para parar la mÃºsica")
-  .addField("**+skip**", "Pasar canciÃ³n")
+  .addField("**+play link o nombre**", "Comando para buscar canción.")
+  .addField("**+stop**", "Comando para parar la música")
+  .addField("**+skip**", "Pasar canción")
   .addField("**+loop**", "Hacer bucle")
-  .addField("**+pause**", "Pausar mÃºsica")
-  .addField("**+resume**", "volver poner mÃºsica despuÃ©s de pausa");
+  .addField("**+pause**", "Pausar música")
+  .addField("**+resume**", "volver poner música después de pausa");
   
-  message.delete().catch(O_o=>{});
+  
   return message.channel.send(serverembed);
   }	
 	
@@ -429,13 +429,13 @@ if(message.content.toUpperCase().startsWith("+PARTIDAS")){
     url: "http://gamedev.es/",				
     fields: [
       {
-      name: "**+buscar descripciÃ³n**",
-      value: "Usar solo en sala #ðŸ’Ž-buscar-partidas.\n\n **SIEMPRE** DENTRO DE UNA DE LAS SALAS **SQUAD o DÃšOS **"
+      name: "**+buscar descripción**",
+      value: "Usar solo en sala #💎-buscar-partidas.\n\n **SIEMPRE** DENTRO DE UNA DE LAS SALAS **SQUAD o DÚOS **"
       },
     ]
   }
   };
-  message.delete().catch(O_o=>{});
+  
    message.channel.send(partidas);
   }	
 
@@ -443,13 +443,13 @@ if(message.content.toUpperCase().startsWith("+PARTIDAS")){
 if(message.content.toUpperCase().startsWith("+ROLES")){
   let sicon = message.guild.iconURL;
   let serverembed = new Discord.RichEmbed()
-  .setDescription("**ASIGNACIÃ“N DE ROLES**")
+  .setDescription("**ASIGNACIÓN DE ROLES**")
   .setColor("#FE2E2E")
   .setThumbnail(sicon)
-  .addField("**+rollcsgo**", "Te aÃ±ade el rol de CSGO")
-  .addField("**+rollfortnite**", "Te aÃ±ade el rol de FORTNITE");
+  .addField("**+rollcsgo**", "Te añade el rol de CSGO")
+  .addField("**+rollfortnite**", "Te añade el rol de FORTNITE");
    
-    message.delete().catch(O_o=>{});
+   
     return message.channel.send(serverembed);
     }
 
@@ -457,13 +457,13 @@ if(message.content.toUpperCase().startsWith("+ROLES")){
 if(message.content.toUpperCase().startsWith("+SERVERINFO")){
   let sicon = message.guild.iconURL;
   let serverembed = new Discord.RichEmbed()
-  .setDescription("**InformaciÃ³n del Servidor**")
+  .setDescription("**Información del Servidor**")
   .setColor("#FE2E2E")
   .setThumbnail(sicon)
   .addField("**Nombre del Servidor**", message.guild.name)
   .addField("**Miembros Totales**", message.guild.memberCount);
   
-  message.delete().catch(O_o=>{});
+  
   return message.channel.send(serverembed);
   }
   
@@ -473,12 +473,12 @@ if(message.content.toUpperCase().startsWith("+SOLICITAR")){
   if(!rUser) return message.channel.send("formato incorrecto +solicitar @usuario");
 
   let reportEmbed = new Discord.RichEmbed()
-  .setTitle("NUEVA PETICIÃ“N DE ACCESO")
+  .setTitle("NUEVA PETICIÓN DE ACCESO")
   .setColor("#52a255")
   .addField("Solicitante:", `${message.author}`)
   .addField("Fecha:", message.createdAt)
 
-  let reportschannel = message.guild.channels.find(`name`, "âŽ-solicitudes");
+  let reportschannel = message.guild.channels.find(`name`, "❎-solicitudes");
   if(!reportschannel) return message.channel.send("Couldn't find reports channel.");
 
   message.delete().catch(O_o=>{});
@@ -495,27 +495,27 @@ if(message.content.toUpperCase().startsWith("+STAFF")){
   .addField("**+report**", "Abrimos la lista de comandos para los toques")
   .addField("**+verificar @User**", "Asigna rol Verificado para acceder al contenido del discord")
   .addField("**+clear cantidad**", "Elimina X cantidad de mensajes de un canal de texto")
-  .addField("**+proponer @User RazÃ³n**", "Propone a un usuario ascenso de rango por x motivo")
-  .addField("**+comunicar Desarrollo**", "Redactamos un comunicado, solo usar en sala #ðŸ“‹-comunicados")
+  .addField("**+proponer @User Razón**", "Propone a un usuario ascenso de rango por x motivo")
+  .addField("**+comunicar Desarrollo**", "Redactamos un comunicado, solo usar en sala #comunicados")
   .addField("**+dm @user Mensaje**", "Le enviamos un DM a un usuario con un mensaje")
-  .addField("**+aceptar @user**", "Aceptamos una sugerencia en el canal #sugerencias y se le envia un MP automÃ¡tico")
-  .addField("**+rechazar @user**", "Rechazamos una sugerencia en el canal #sugerencias y se le envia un MP automÃ¡tico");
+  .addField("**+aceptar @user**", "Aceptamos una sugerencia en el canal #sugerencias y se le envia un MP automático")
+  .addField("**+rechazar @user**", "Rechazamos una sugerencia en el canal #sugerencias y se le envia un MP automático");
   
-  message.delete().catch(O_o=>{});
+  
   return message.channel.send(serverembed);
   }
 
 //+VOTAR
-if(message.content.toUpperCase().startsWith("+VOTARSANCION")){
+if(message.content.toUpperCase().startsWith("+VOTAR")){
   let sicon = message.guild.iconURL;
   let serverembed = new Discord.RichEmbed()
   .setDescription("**COMANDOS VOTAR SANCIONES**")
   .setColor("#ff006c")
   .setThumbnail(sicon)
-  .addField("**+votar**", "+votar usuario tipo razÃ³n")
+  .addField("**+votar**", "+votar usuario tipo razón")
   .addField("**usuario**", "Escribimos el nombre de la persona sin @")
-  .addField("**tipo**", "Toque, expulsiÃ³n..")
-  .addField("**razÃ³n**", "Exponer la razÃ³n de la votaciÃ³n a sanciÃ³n");
+  .addField("**tipo**", "Toque, expulsión..")
+  .addField("**razón**", "Exponer la razÃ³n de la votación a sanción");
   
   
   message.delete().catch(O_o=>{});
