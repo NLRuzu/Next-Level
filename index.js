@@ -564,7 +564,7 @@ if(message.channel.type === "dm") return;
 bot.on("ready", async () => {
   console.log(`${bot.user.username} estÃƒÂ¡ online`);
   bot.user.setActivity("+help");
-  setInterval(apiFORTNITE,350000);
+  
 });
 
 bot.login(token).catch(err => console.log(err));
