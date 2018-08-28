@@ -323,7 +323,7 @@ if(message.content.toUpperCase().startsWith("+RECHAZAR")){
 if(message.content.toUpperCase().startsWith("+COMUNICAR")){
   var comunicado = message.content.replace("+comunicar ", "");  
 
-  let adminRoleObject = message.guild.roles.find("name", "âœ…Verificado");
+  let adminRoleObject = message.guild.roles.find("name", "✅Verificado");
     var embebido = {
               "embed": {
                                 color: 0xff0000,
