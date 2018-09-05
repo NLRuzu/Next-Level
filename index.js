@@ -35,6 +35,6 @@ fs.readdir("./commands/", (err, files) => {
   if(commandfile) commandfile.run(bot,message,args);
  
  
-});
+
  
 bot.login(token).catch(err => console.log(err));
