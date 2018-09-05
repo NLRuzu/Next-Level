@@ -24,9 +24,6 @@ fs.readdir("./commands/", (err, files) => {
 });
  
  
-  if(message.author.bot) return;
-  if(message.channel.type === "dm") return;
- 
   let prefix = botconfig.prefix;
   let messageArray = message.content.split(" ");
   let cmd = messageArray[0];
@@ -34,7 +31,5 @@ fs.readdir("./commands/", (err, files) => {
   let commandfile = bot.commands.get(cmd.slice(prefix.length));
   if(commandfile) commandfile.run(bot,message,args);
  
- 
-
  
 bot.login(token).catch(err => console.log(err));
