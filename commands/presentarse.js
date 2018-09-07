@@ -1,7 +1,7 @@
 const Discord = require("discord.js");
 
 module.exports.run = async (bot, message, args) => {
-      let nick = args[0];
+      let nick = args.trim(0);
       let edad = args[1];
       let ciudad = args[2];
       let razon = args.slice(3).join(" ");
