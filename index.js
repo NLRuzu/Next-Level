@@ -1851,4 +1851,4 @@ bot.on("ready", async () => {
 	bot.user.setActivity("+help");
 });
 
-bot.login(botconfig.TOKEN);
+bot.login(botconfig.BOT_TOKEN);
