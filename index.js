@@ -1825,7 +1825,7 @@ if(message.content.startsWith("+buscarroe")) {
 			
 
 			
-}
+
 
    
 // CONFIG BOT 
