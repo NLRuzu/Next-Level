@@ -1144,7 +1144,7 @@ if(message.content.startsWith("+buscarcsgo")) {
 
 
 	message.delete().catch(O_o=>{});
-	bot.channels.get("515621718136717325").send(`[${adminRoleObject}]`, mdb);
+	bot.channels.get("537602601835823105").send(`[${adminRoleObject}]`, mdb);
         
 						
                            
