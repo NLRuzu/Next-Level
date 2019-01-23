@@ -1835,7 +1835,6 @@ if(message.channel.type === "dm") return;
 		let messageArray = message.content.split(" ");
 		let cmd = messageArray[0];
 		let argsx = messageArray.slice(1);
-		let commandfile = bot.commands.get(cmd.slice(prefix.length));
 		if(commandfile) commandfile.run(bot,message,argsx);
  
 
