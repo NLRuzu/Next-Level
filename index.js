@@ -3,7 +3,7 @@ const fs = require("fs");
 const bot = new Discord.Client({disableEveryone: true});
 bot.commands = new Discord.Collection();
 
-
+let ft = "+";
 
 
 // COMMANDS // 
