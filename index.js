@@ -2,7 +2,7 @@ const Discord = require("discord.js");
 const fs = require("fs");
 const bot = new Discord.Client({disableEveryone: true});
 bot.commands = new Discord.Collection();
-
+const botconfig = require("./botconfig.json");
 let ft = "+";
 
 
@@ -1832,11 +1832,12 @@ if(message.content.startsWith("+buscarroe")) {
 // CONFIG BOT 
 if(message.channel.type === "dm") return;
 		if(message.author.bot) return;
+		let prefix = botconfig.prefix;
 		let messageArray = message.content.split(" ");
 		let cmd = messageArray[0];
 		let argsx = messageArray.slice(1);
+		let commandfile = bot.commands.get(cmd.slice(prefix.length));
 		if(commandfile) commandfile.run(bot,message,argsx);
- 
 
 });
 
