@@ -1832,7 +1832,6 @@ if(message.content.startsWith("+buscarroe")) {
 // CONFIG BOT 
 if(message.channel.type === "dm") return;
 		if(message.author.bot) return;
-		let prefix = botconfig.prefix;
 		let messageArray = message.content.split(" ");
 		let cmd = messageArray[0];
 		let argsx = messageArray.slice(1);
