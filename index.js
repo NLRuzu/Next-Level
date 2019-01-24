@@ -31,35 +31,43 @@ bot.on("guildMemberAdd", async member => {
   console.log(`${member.id} ha entrado al server `);
             
   let welcomechannel = member.guild.channels.find(`name`, "📈-entradas");
-
-  welcomechannel.send({
-               embed: {
-                        color: 0x04ff00,
-                        title: "**NUEVO MIEMBRO**",
-		        url: "http://gamedev.es/",
-                        description: `Bienvenido ${member} a Next-Level`,
-                    }
-                });
-    member.send({
-               embed: {
-						
-                        color: 0x04ff00,
-                        title: "Hola bienvenido a Next Level",
-                        description: '**A continuación, te mostramos una breve guía sobre como entrar a nuestro servidor.**',
-						fields: [
-							{
-							name: "Advertencia:",
-							value: `:warning: Si no ves contenido ninguno en el servidor, es normal, forma parte de un sistema de verificación, para así proteger nuestra intimidad.`,
-							},
-							{
-							name: "Guía de verificación:",
-							value: `:one: Tienes que verificar tu cuenta para tener acceso completo al servidor, ingresando en la sala <#471977292214566912> y escribiendo **+solicitar**  \n:two: Una vez verificado, serás notificado de ello mediante MP y podrás tener acceso completo.  \n:three: ¡Tan solo diviértete y trae a tus amigos para que nos conozcan! Mándales este enlace de invitación: https://discord.gg/czN3fEm`,
-							}	
-						]
-                    }
-                });
- });
+    let embed = { embed: {
+                color: 0x04ff00,
+                title: "Hola bienvenido a Next Level",
+                description: '**A continuación, te mostramos una breve guía sobre como entrar a nuestro servidor.**',
+                fields: [
+                    {
+                    name: "Advertencia:",
+                    value: `:warning: Si no ves contenido ninguno en el servidor, es normal, forma parte de un sistema de verificación, para así proteger nuestra intimidad.`,
+                    },
+                    {
+                    name: "Guía de verificación:",
+                    value: `:one: Tienes que verificar tu cuenta para tener acceso completo al servidor, ingresando en la sala <#471977292214566912> y escribiendo **+solicitar**  \n:two: Una vez verificado, serás notificado de ello mediante MP y podrás tener acceso.  \n:three: Ahora solo tendrás que ir a <#481525340083191809> y escribir **+roles** y asignarte el del juego que quieras para ver las salas`,
+                    }	
+                ]
+            }
+    };
   
+  welcomechannel.send(`**Bienvenido: Nuevo usuario ${member} a Next-Level**`, embed)
+
+    member.send({
+        embed: {
+                color: 0x04ff00,
+                title: "Hola bienvenido a Next Level",
+                description: '**A continuación, te mostramos una breve guía sobre como entrar a nuestro servidor.**',
+                fields: [
+                    {
+                    name: "Advertencia:",
+                    value: `:warning: Si no ves contenido ninguno en el servidor, es normal, forma parte de un sistema de verificación, para así proteger nuestra intimidad.`,
+                    },
+                    {
+                    name: "Guía de verificación:",
+                    value: `:one: Tienes que verificar tu cuenta para tener acceso completo al servidor, ingresando en la sala <#471977292214566912> y escribiendo **+solicitar**  \n:two: Una vez verificado, serás notificado de ello mediante MP y podrás tener acceso.  \n:three: Ahora solo tendrás que ir a <#481525340083191809> y escribir **+roles** y asignarte el del juego que quieras para ver las salas`,
+                    }	
+                ]
+            }
+        });
+ });
 
 // MENSAJE DE ABANDONO DE USUARIOS
 bot.on("guildMemberRemove", async member => {
