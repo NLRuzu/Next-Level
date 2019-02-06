@@ -1125,7 +1125,58 @@ if(message.content.startsWith("+buscarfortnite")) {
                         .catch(console.error);
                     }
                 }
-            }   	
+            }
+	
+	if(message.content.startsWith("+buscarapex")) {
+                if(message.member.voiceChannel != null || message.member.voiceChannel != undefined){
+                    let desc = message.content.split("+buscarapex ")[1];
+                    if(desc != null){
+                        let options = {
+                            maxAge: 3600
+                        }
+                        let server = bot.guilds.get("458220475957379074");
+                        let adminRoleObject = server.roles.find("name", "🅰️ Apex Legends");
+                        message.member.voiceChannel.createInvite(options)
+                        .then(invite => {
+                            let invitacion = invite.code.split("invite/")[0];
+                            let users = message.member.voiceChannel.userLimit - message.member.voiceChannel.members.size;
+
+								var mdb = {
+							  "embed": {
+								"title": "BUSCANDO PARTIDA DE APEX LEGENDS",
+								"url": "http://gamedev.es/",
+								"description": "Busco **" + users + "** personas para darle calor en **" + message.member.voiceChannel.name + "**",
+								"color": 0xc500ff,
+								"timestamp": message.createdAt,
+								"author": {
+								"name": message.author.tag,
+								"icon_url": message.author.avatarURL
+								},
+								"fields": [
+								  {
+									"name": "Descripción",
+									"value": "*" + desc + "*",
+								  },
+								  {
+									"name": "Únete a mi sala",
+									"value": "[Haz click para unirte](https://discord.gg/"+ invitacion +")"
+								  }
+								]
+							  }
+							}
+
+
+
+	message.delete().catch(O_o=>{});
+	bot.channels.get("542742272337379359").send(`[${adminRoleObject}]`, mdb);
+        
+						
+                           
+                        })
+                        .catch(console.error);
+                    }
+                }
+            }   
    
 // +BUSCAR DESCRIPCION // PARTIDAS //    - FUNCIONANDO
 if(message.content.startsWith("+buscarcsgo")) {
