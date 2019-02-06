@@ -231,6 +231,23 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS GENERALES
                 });
             }
         }
+	
+	if (message.content.startsWith(ft + "rolapex")) {
+        message.delete();
+            if(message.member.roles.find("name", "✅Verificado")){
+                let User = message.member;
+                let role = message.guild.roles.find("name", "🅰️ Apex Legends");
+                let guild = bot.guilds.get("458220475957379074");
+                let miembro = guild.member(User);
+                miembro.addRole(role).catch(console.error);
+                message.channel.send({
+                    embed: {
+                        color: 0xffffff,
+                        description: "**ROL de Apex Legends asignado a **" + User + " **correctamente**",
+                    }
+                });
+            }
+        }
  
 	if (message.content.startsWith(ft + "rolfortnite")) {
         message.delete();
