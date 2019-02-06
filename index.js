@@ -536,6 +536,7 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS GENERALES
 		  .setColor("#FE2E2E")
 		  .setThumbnail(sicon)
 		  .addField("**+rolcsgo**", "Te añade el rol de CSGO y te dará acceso a la sala exclusiva de chat y búsqueda de partidas")
+		  .addField("**+rolapex**", "Te añade el rol de Apex Legends y te dará acceso a la sala exclusiva de chat y búsqueda de partidas")
 		  .addField("**+rolsalvar**", "Te añade el rol de Salvar el Mundo y te dará acceso a la sala exclusiva de chat y búsqueda de partidas")
 		  .addField("**+rolfortnite**", "Te añade el rol de Fortnite y te dará acceso a la sala exclusiva de chat y búsqueda de partidas");
 		   
