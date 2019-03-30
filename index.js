@@ -997,12 +997,12 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS SOLO STAFF
 						footer: {
 									  "text": message.guild.name
 									},
-						title: 'INFORMACI脫N IMPORTANTE',
+						title: 'INFORMACIÓN IMPORTANTE',
 						url: "http://gamedev.es/",
 						fields: [
 							{
-							name: "Gu铆a de acceso:",
-							value: `:one: Revisa tus Mensajes Privados y mira uno de Next Level. \n\n:two: Entra al canal <#485759738164936719> leete todas y cada una de las normas. \n\n:three: Solo tendr谩s que esperar a que un STAFF te verifique y te de accesos para ver todo el contenido. \n\n:four: Ve al canal <#486981605831999489> y pres茅ntate sin miedo. \n\n:five: Una vez tengas los permisos ve al canal <#481525340083191809> y escribe **+roles** , as铆gnate los roles de los juegos que quieras recibir notificaciones.`,	
+							name: "Guía de acceso:",
+							value: `:one: Revisa tus Mensajes Privados y mira uno de Next Level. \n\n:two: Entra al canal <#485759738164936719> leete todas y cada una de las normas. \n\n:three: Solo tendrías que esperar a que un STAFF te verifique y te de accesos para ver todo el contenido. \n\n:four: Ve al canal <#486981605831999489> y preséntate sin miedo. \n\n:five: Una vez tengas los permisos ve al canal <#481525340083191809> y escribe **+roles** , asígnate los roles de los juegos que quieras recibir notificaciones.`,	
 							}
 						]
                     }
