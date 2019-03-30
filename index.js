@@ -845,7 +845,7 @@ if(message.content.startsWith("+buscarfortnite")) {
 
 
 	message.delete().catch(O_o=>{});
-	bot.channels.get("468716667506130944").send(`[${adminRoleObject}]`, mdb);
+	bot.channels.get("561602695656636431").send(`[${adminRoleObject}]`, mdb);
         
 						
                            
@@ -898,7 +898,7 @@ if(message.content.startsWith("+buscarcsgo")) {
 
 
 	message.delete().catch(O_o=>{});
-	bot.channels.get("537602601835823105").send(`[${adminRoleObject}]`, mdb);
+	bot.channels.get("561607199043092480").send(`[${adminRoleObject}]`, mdb);
         
 						
                            
