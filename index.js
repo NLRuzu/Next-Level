@@ -34,17 +34,8 @@ bot.on("guildMemberAdd", async member => {
     let embed = { embed: {
                 color: 0x04ff00,
                 title: "Hola bienvenido a Next Level",
-                description: '**A continuación, te mostramos una breve guía sobre como entrar a nuestro servidor.**',
-                fields: [
-                    {
-                    name: "Advertencia:",
-                    value: `:warning: Si no ves contenido ninguno en el servidor, es normal, forma parte de un sistema de verificación, para así proteger nuestra intimidad.`,
-                    },
-                    {
-                    name: "Guía de verificación:",
-                    value: `:one: Tienes que verificar tu cuenta para tener acceso completo al servidor, ingresando en la sala <#561600837986811964> y escribiendo **+solicitar**  \n:two: Una vez verificado, serás notificado de ello mediante MP y podrás tener acceso.  \n:three: Ahora solo tendrás que ir a <#561599847183155200> y escribir **+roles** y asignarte el del juego que quieras para ver las salas`,
-                    }	
-                ]
+                 description: '**No olvides asignarte tu rol manualmente del juego que quieras ver las salas. Usando el comando +roles en la sala <#561599847183155200>**',
+                
             }
     };
   
@@ -54,17 +45,7 @@ bot.on("guildMemberAdd", async member => {
         embed: {
                 color: 0x04ff00,
                 title: "Hola bienvenido a Next Level",
-                description: '**A continuación, te mostramos una breve guía sobre como entrar a nuestro servidor.**',
-                fields: [
-                    {
-                    name: "Advertencia:",
-                    value: `:warning: Si no ves contenido ninguno en el servidor, es normal, forma parte de un sistema de verificación, para así proteger nuestra intimidad.`,
-                    },
-                    {
-                    name: "Guía de verificación:",
-                    value: `:one: Tienes que verificar tu cuenta para tener acceso completo al servidor, ingresando en la sala <#561600837986811964> y escribiendo **+solicitar**  \n:two: Una vez verificado, serás notificado de ello mediante MP y podrás tener acceso.  \n:three: Ahora solo tendrás que ir a <#561599847183155200> y escribir **+roles** y asignarte el del juego que quieras para ver las salas`,
-                    }	
-                ]
+                description: '**No olvides asignarte tu rol manualmente del juego que quieras ver las salas. Usando el comando +roles en la sala <#561599847183155200>**',   
             }
         });
  });
@@ -86,7 +67,7 @@ bot.on("guildMemberRemove", async member => {
 
 // ROL DE ENTRADA AL SERVIDOR - NO VERIFICADO //
 bot.on("guildMemberAdd", function(member) {
-    let role = member.guild.roles.find("name", "❎ No verificado");
+    let role = member.guild.roles.find("name", "✅Verificado");
     member.addRole(role).catch(console.error);
 });
 
