@@ -70,6 +70,7 @@ bot.on("guildMemberAdd", function(member) {
     let role = member.guild.roles.find("name", "✅Verificado");
     let role2 = member.guild.roles.find("name", "🤖 Fortnite");
     member.addRole(role).catch(console.error);
+	member.addRole(role2).catch(console.error);
 });
 
 // LISTA DE COMANDOS
