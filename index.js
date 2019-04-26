@@ -34,7 +34,7 @@ bot.on("guildMemberAdd", async member => {
     let embed = { embed: {
                 color: 0x04ff00,
                 title: "Hola bienvenido a Next Level",
-                 description: '**No olvides asignarte tu rol manualmente del juego que quieras ver las salas. Usando el comando +roles en la sala <#561599847183155200>**',
+                 description: '**Si además de Fortnite Battle Royale juegas a Salvar el Mundo asígnate el rol manualmente para ver las salas. Usando el comando +roles en la sala <#561599847183155200>**',
                 
             }
     };
@@ -45,7 +45,7 @@ bot.on("guildMemberAdd", async member => {
         embed: {
                 color: 0x04ff00,
                 title: "Hola bienvenido a Next Level",
-                description: '**No olvides asignarte tu rol manualmente del juego que quieras ver las salas. Usando el comando +roles en la sala <#561599847183155200>**',   
+                description: '**Si además de Fortnite Battle Royale juegas a Salvar el Mundo asígnate el rol manualmente para ver las salas. Usando el comando +roles en la sala <#561599847183155200>**',   
             }
         });
  });
@@ -545,7 +545,7 @@ if (message.content.startsWith(ft + "buscarpartidas")) {         //  +buscarpart
 						fields: [
 							{
 							name: "`+bp descripción`",
-							value: `Para Fortnite BR, escribir el comando en la sala <#468716667506130944>`,		
+							value: `Para Fortnite Battle Royale, escribir el comando en la sala <#561602695656636431>`,		
 							}
 							
 						]
