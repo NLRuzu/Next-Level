@@ -360,8 +360,8 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS GENERALES
 		  .setDescription("**ASIGNACIÓN DE ROLES**")
 		  .setColor("#FE2E2E")
 		  .setThumbnail(sicon)
-		  .addField("**+rolsalvar**", "Te añade el rol de Salvar el Mundo y te dará acceso a la sala exclusiva de chat y búsqueda de partidas")
-		  .addField("**+rolfortnite**", "Te añade el rol de Fortnite y te dará acceso a la sala exclusiva de chat y búsqueda de partidas");
+		  .addField("**+rolsalvar**", "Te añade el rol de Salvar el Mundo y te dará acceso a la sala exclusiva de chat y búsqueda de partidas");
+		  
 		   
 		   
 		  return message.channel.send(serverembed);
