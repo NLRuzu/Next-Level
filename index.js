@@ -558,10 +558,11 @@ if (message.content.startsWith(ft + "buscarpartidas")) {         //  +buscarpart
   
 			}	
 	
-	
+	// SOLUCIÓN DESAFIOS TEMPORADA 8
 if (message.content.startsWith(ft + "t8s9")) {         //  temporada 8 semana 9
 			
 			let embed1 = {
+			"color": c6ff00,
 			"embed": {
 					"image": {
 					  "url": "https://i.imgur.com/3mKj82c.png"
@@ -572,6 +573,7 @@ if (message.content.startsWith(ft + "t8s9")) {         //  temporada 8 semana 9
 			};	
 			
 			let embed2 = {
+			"color": c6ff00,
 			"embed": {
 					"image": {
 					  "url": "https://i.imgur.com/ZYgm1MC.jpg"
