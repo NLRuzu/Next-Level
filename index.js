@@ -583,10 +583,9 @@ if (message.channel.id == message.channel.id) { 	// SOLUCIÓN DESAFIOS TEMPORADA
 					},
 				  }
 			};
-  
-		message.channel.send(embed1);	
-		message.channel.send(embed2);		
-     		message.delete();
+  		bot.channels.get("571395338829824000").send(embed1);
+		bot.channels.get("571395338829824000").send(embed2);	
+     		
   
 			}
 	
