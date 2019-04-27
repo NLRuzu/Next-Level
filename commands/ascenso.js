@@ -12,7 +12,7 @@ module.exports.run = async (bot, message, args) => {
                                     name: message.author.tag,
                                     icon_url: message.author.avatarURL
                                 },
-                                title: "**NUEVO ASCENSO**",
+                                
 						"image": {
 						"url": "https://i.imgur.com/cFQ6z3q.png"
 								},
