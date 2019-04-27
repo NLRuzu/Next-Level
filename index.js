@@ -618,6 +618,7 @@ if (message.content.startsWith(ft + "parche850")) {         //  parche 8.50
 	
 	
 }
+}
 			
 
 	
