@@ -425,8 +425,13 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS SOLO STAFF
 											name: message.author.tag,
 											icon_url: message.author.avatarURL
 										},
+						 
+										"image": {
+										"url": "https://i.imgur.com/yToqaIu.png"
+										},
+										  }	
 										title: "**NUEVO COMUNICADO**",
-										url: "http://gamedev.es/",				
+														
 										footer: {
 											  text: message.guild.name
 											},
