@@ -559,6 +559,43 @@ if (message.content.startsWith(ft + "buscarpartidas")) {         //  +buscarpart
 			}	
 	
 	
+if (message.content.startsWith(ft + "t8s9")) {         //  temporada 8 semana 9
+			
+			let embed1 = {
+			"embed": {
+					"image": {
+					  "url": "https://i.imgur.com/3mKj82c.png"
+					},
+					
+				  }	
+		
+			};	
+			
+			let embed2 = {
+			"embed": {
+					"image": {
+					  "url": "https://i.imgur.com/ZYgm1MC.jpg"
+					},
+					
+				  }
+			
+			
+			
+			
+			};
+  
+		message.channel.send(embed1);	
+		message.channel.send(embed2);		
+     message.delete();
+  
+			}
+			
+}
+	
+	
+	
+	
+	
 	
 // +BUSCAR DESCRIPCION // PARTIDAS //    - FUNCIONANDO
 if(message.content.startsWith("+bp")) {
