@@ -255,7 +255,7 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS GENERALES
 	  let sicon = message.guild.iconURL;
 	  let serverembed = new Discord.RichEmbed()
 	  .setTitle("**GENERALES**")
-	  .setColor("#c6ff00")
+	  .setColor("#C6FF00")
 	  .setThumbnail(sicon)
 	  .addField("**+serverinfo**", "información del servidor")
 	  .addField("**+fortnite**", "Comandos para uso de Fortnite")
@@ -271,7 +271,7 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS GENERALES
 		  let sicon = message.guild.iconURL;
 		  let serverembed = new Discord.RichEmbed()
 		  .setDescription("**MÚSICA**")
-		  .setColor("#c6ff00")
+		  .setColor("#C6FF00")
 		  .setThumbnail(sicon)
 		  .addField("**!play link o nombre**", "Comando para buscar canción.")
 		  .addField("**!stop**", "Comando para parar la música")
@@ -358,7 +358,7 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS GENERALES
 		  let sicon = message.guild.iconURL;
 		  let serverembed = new Discord.RichEmbed()
 		  .setDescription("**ASIGNACIÓN DE ROLES**")
-		  .setColor("#c6ff00")
+		  .setColor("#C6FF00")
 		  .setThumbnail(sicon)
 		  .addField("**+rolsalvar**", "Te añade el rol de Salvar el Mundo y te dará acceso a la sala exclusiva de chat y búsqueda de partidas");
 		  
@@ -485,7 +485,7 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS SOLO STAFF
 		  let sicon = message.guild.iconURL;
 		  let serverembed = new Discord.RichEmbed()
 		  .setDescription("**COMANDOS STAFF**")
-		  .setColor("#c6ff00")
+		  .setColor("#C6FF00")
 		  .setThumbnail(sicon)
 		  .addField("**+clear cantidad**", "Elimina X cantidad de mensajes de un canal de texto")
 		  .addField("**+proponer @user @rol**", "Proponemos un ascenso de un usuario")
