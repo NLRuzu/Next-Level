@@ -562,7 +562,7 @@ if (message.content.startsWith(ft + "buscarpartidas")) {         //  +buscarpart
 if (message.content.startsWith(ft + "t8s9")) {         //  temporada 8 semana 9
 			
 			let embed1 = {
-			color: 0xc6ff00,
+			"color":  0xc6ff00,
 			"embed": {
 					"image": {
 					  "url": "https://i.imgur.com/3mKj82c.png"
@@ -573,7 +573,7 @@ if (message.content.startsWith(ft + "t8s9")) {         //  temporada 8 semana 9
 			};	
 			
 			let embed2 = {
-			color: 0xc6ff00,
+			"color":  0xc6ff00,
 			"embed": {
 					"image": {
 					  "url": "https://i.imgur.com/ZYgm1MC.jpg"
