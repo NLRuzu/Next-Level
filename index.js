@@ -567,7 +567,7 @@ if (message.channel.id == message.channel.id) { 	// SOLUCIÓN DESAFIOS TEMPORADA
 			let embed1 = {
 			
 			"embed": {
-				
+				"color": 13041408,
 				"image": {
 				"url": "https://i.imgur.com/3mKj82c.png"
 					},
