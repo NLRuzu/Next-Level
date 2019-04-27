@@ -430,7 +430,7 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS SOLO STAFF
 										"url": "https://i.imgur.com/yToqaIu.png"
 										},
 										  }	
-										title: "**NUEVO COMUNICADO**",
+										
 														
 										footer: {
 											  text: message.guild.name
