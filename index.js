@@ -557,12 +557,12 @@ if (message.content.startsWith(ft + "buscarpartidas")) {         //  +buscarpart
      message.delete();
   
 			}	
+if (message.channel.id == message.channel.id) { 	// SOLUCIÓN DESAFIOS TEMPORADA 8				
 	
-	// SOLUCIÓN DESAFIOS TEMPORADA 8
-if (message.content.startsWith(ft + "t8s9")) {         //  temporada 8 semana 9
+	if (message.content.startsWith(ft + "t8s9")) {         //  temporada 8 semana 9
 			
 			let embed1 = {
-			 "color": 13041408,
+			"color": 13041408,
 			"embed": {
 					"image": {
 					  "url": "https://i.imgur.com/3mKj82c.png"
@@ -571,7 +571,7 @@ if (message.content.startsWith(ft + "t8s9")) {         //  temporada 8 semana 9
 			};	
 			
 			let embed2 = {
-			 "color": 13041408,
+			"color": 13041408,
 			"embed": {
 					"image": {
 					  "url": "https://i.imgur.com/ZYgm1MC.jpg"
@@ -584,6 +584,8 @@ if (message.content.startsWith(ft + "t8s9")) {         //  temporada 8 semana 9
      		message.delete();
   
 			}
+	
+}
 			
 
 	
