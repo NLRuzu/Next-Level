@@ -258,7 +258,7 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS GENERALES
 	  .setColor("#C6FF00")
 	  .setThumbnail(sicon)
 	  .addField("**+serverinfo**", "información del servidor")
-	  .addField("**+fortnite**", "Comandos para uso de Fortnite")
+	  .addField("**+buscarpartidas**", "Comandos para uso búsqueda de partidas de fortnite")
 	  .addField("**+roles**", "Comandos para añadirte roles de juegos");
 	  
 	  
