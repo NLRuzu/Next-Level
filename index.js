@@ -91,7 +91,7 @@ if (message.author.id == "298029791708315649") { 	// CREATOR COMMANDS
 	} // END CREATOR COMMANDS
 	
 // REACCION EMOJI SALA PROPUESTAS //
-if (message.channel.id == "472138215042842626" && message.author.bot) {
+if (message.channel.id == "571607870660018196" && message.author.bot) {
     message.react("472146792339734565");
     message.react("472147160423727105");
 	}
