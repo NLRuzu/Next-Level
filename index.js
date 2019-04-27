@@ -490,8 +490,8 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS SOLO STAFF
 		  .setThumbnail(sicon)
 		  .addField("**+clear cantidad**", "Elimina X cantidad de mensajes de un canal de texto")
 		  .addField("**+proponer @user @rol**", "Proponemos un ascenso de un usuario")
-		  .addField("**+ascenso @user @rol**", "Redactamos un nuevo ascenso, solo usar en sala #📋-comunicados")
-		  .addField("**+comunicar Desarrollo**", "Redactamos un comunicado, solo usar en sala #📋-comunicados")
+		  .addField("**+ascenso @user @rol**", "Redactamos un nuevo ascenso, solo usar en sala <#561601089460371457>")
+		  .addField("**+comunicar Desarrollo**", "Redactamos un comunicado, solo usar en sala <#561601089460371457>")
 		  .addField("**+dm @user Mensaje**", "Le enviamos un DM a un usuario con un mensaje")
 		  
 		  
