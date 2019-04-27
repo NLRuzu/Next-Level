@@ -4,6 +4,7 @@ module.exports.run = async (bot, message, args) => {
     let rUser = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
     if(!rUser) return message.channel.send("formato incorrecto +proponer @usuario razón de la propuesta");
     let rreason = args.join(" ").slice(22);
+    let adminRoleObject = message.guild.roles.find("name", "✅Verificado");
 
     var ascenso = {
 							"embed": {
@@ -35,13 +36,10 @@ module.exports.run = async (bot, message, args) => {
 				
                             }
 					};
-let partidaschannel = message.guild.channels.find(`name`, "📋-comunicados");
-       if(!partidaschannel) return message.channel.send("Introduce bien el comando");
+bot.channels.get("561601089460371457").send(`[${adminRoleObject}]`, ascenso);
 
 
       message.delete().catch(O_o=>{});
-partidaschannel.send(ascenso);
-
 		}	
 
 module.exports.help = {
