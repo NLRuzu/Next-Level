@@ -425,13 +425,9 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS SOLO STAFF
 											name: message.author.tag,
 											icon_url: message.author.avatarURL
 										},
-						 
 										"image": {
 										"url": "https://i.imgur.com/yToqaIu.png"
 										},
-										  }	
-										
-														
 										footer: {
 											  text: message.guild.name
 											},
