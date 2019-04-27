@@ -598,19 +598,25 @@ if (message.channel.id == message.channel.id) { 	// SOLUCIÓN DESAFIOS TEMPORADA
 if (message.channel.id == message.channel.id) { 	// PARCHES INFORMATIVOS FORTNITE	
 
 if (message.content.startsWith(ft + "parche850")) {         //  parche 8.50
-		"embed": {
-		"color": 13041408,
-		"image": {
-		  "url": "https://i.imgur.com/5L1OZhW.png"
-		},
-		"author": {
-		  "name": "CLIC PARA VER LA INFORMACIÓN DEL CONTENIDO DEL PARCHE",
-		  "url": "https://epicgames.com/fortnite/es-ES/patch-notes/v8-50"
+		
+			let embed1 = {
+	
+				"embed": {
+				"color": 13041408,
+				"image": {
+				"url": "https://i.imgur.com/5L1OZhW.png"
+					},
+				"author": {
+		 			 "name": "CLIC PARA VER LA INFORMACIÓN DEL CONTENIDO DEL PARCHE",
+		  			"url": "https://epicgames.com/fortnite/es-ES/patch-notes/v8-50"
 		  
-		}
-	 
-	  }
-	  
+					}
+				  }	
+			};	
+	message.channel.send(embed1);
+	
+	
+	
 }
 			
 
