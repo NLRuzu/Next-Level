@@ -12,7 +12,7 @@ module.exports.run = async (bot, message, args) => {
                                     name: message.author.tag,
                                     icon_url: message.author.avatarURL
                                 },
-                                title: "**NUEVA PROPUESTA**",
+                                title: "**NUEVA PROPUESTA DE ASCENSO**",
 								url: "http://gamedev.es/",				
 								
 						fields: [{
@@ -24,7 +24,7 @@ module.exports.run = async (bot, message, args) => {
 								value: message.createdAt,
 						},
 						{
-								name: "Razón de la propuesta:",
+								name: "Rol propuesto:",
 								value: rreason,
 						}
 						]
