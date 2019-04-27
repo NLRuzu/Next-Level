@@ -613,7 +613,7 @@ if (message.content.startsWith(ft + "parche850")) {         //  parche 8.50
 					}
 				  }	
 			};	
-	message.channel.send(embed1);
+	bot.channels.get("571396240802316288").send(embeb1);
 	
 	
 	
