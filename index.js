@@ -32,7 +32,7 @@ bot.on("guildMemberAdd", async member => {
             
   let welcomechannel = member.guild.channels.find(`name`, "📈-entradas");
     let embed = { embed: {
-                color: 0x04ff00,
+                color: 0xc6ff00,
                 title: "Hola bienvenido a Next Level",
                  description: '**Si además de Fortnite Battle Royale juegas a Salvar el Mundo asígnate el rol manualmente para ver las salas. Usando el comando +roles en la sala <#561599847183155200>**',
                 
@@ -43,7 +43,7 @@ bot.on("guildMemberAdd", async member => {
 
     member.send({
         embed: {
-                color: 0x04ff00,
+                color: 0xc6ff00,
                 title: "Hola bienvenido a Next Level",
                 description: '**Si además de Fortnite Battle Royale juegas a Salvar el Mundo asígnate el rol manualmente para ver las salas. Usando el comando +roles en la sala <#561599847183155200>**',   
             }
@@ -57,7 +57,7 @@ bot.on("guildMemberRemove", async member => {
   let welcomechannel = member.guild.channels.find(`name`, "📉-abandonos");
   welcomechannel.send({
                embed: {
-                        color: 0xe52121,
+                        color: 0xc6ff00,
                         title: "**HA ABANDONADO**",
 		       	url: "http://gamedev.es/",
                         description: `${member} ha abandonado el clan`,
@@ -255,7 +255,7 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS GENERALES
 	  let sicon = message.guild.iconURL;
 	  let serverembed = new Discord.RichEmbed()
 	  .setTitle("**GENERALES**")
-	  .setColor("#FE2E2E")
+	  .setColor("#c6ff00")
 	  .setThumbnail(sicon)
 	  .addField("**+serverinfo**", "información del servidor")
 	  .addField("**+fortnite**", "Comandos para uso de Fortnite")
@@ -271,7 +271,7 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS GENERALES
 		  let sicon = message.guild.iconURL;
 		  let serverembed = new Discord.RichEmbed()
 		  .setDescription("**MÚSICA**")
-		  .setColor("#FE2E2E")
+		  .setColor("#c6ff00")
 		  .setThumbnail(sicon)
 		  .addField("**!play link o nombre**", "Comando para buscar canción.")
 		  .addField("**!stop**", "Comando para parar la música")
@@ -406,7 +406,7 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS SOLO STAFF
 			  let sicon = message.guild.iconURL;
 			  let serverembed = new Discord.RichEmbed()
 			  .setDescription("**Información del Servidor**")
-			  .setColor("#FE2E2E")
+			  .setColor("#c6ff00")
 			  .setThumbnail(sicon)
 			  .addField("**Nombre del Servidor**", message.guild.name)
 			  .addField("**Miembros Totales**", message.guild.memberCount);
@@ -420,7 +420,7 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS SOLO STAFF
 		  let adminRoleObject = message.guild.roles.find("name", "✅Verificado");
 			var embebido = {
 					  "embed": {
-										"color":  0x00dcff,
+										"color":  0xc6ff00,
 										author: {
 											name: message.author.tag,
 											icon_url: message.author.avatarURL
@@ -485,7 +485,7 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS SOLO STAFF
 		  let sicon = message.guild.iconURL;
 		  let serverembed = new Discord.RichEmbed()
 		  .setDescription("**COMANDOS STAFF**")
-		  .setColor("#00dcff")
+		  .setColor("#c6ff00")
 		  .setThumbnail(sicon)
 		  .addField("**+clear cantidad**", "Elimina X cantidad de mensajes de un canal de texto")
 		  .addField("**+proponer @user @rol**", "Proponemos un ascenso de un usuario")
@@ -507,7 +507,7 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS SOLO STAFF
 			let embed = {
 			"embed": {
 						
-                        color:  0x00dcff,
+                        color:  0xc6ff00,
 						footer: {
 									  "text": message.guild.name
 									},
@@ -517,7 +517,7 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS SOLO STAFF
 						fields: [
 							{
 							name: "Copia y pega el enlace a un amigo/a",
-							value: `:beginner: https://discord.gg/czN3fEm`,	
+							value: `:beginner: https://discord.gg/tztnx2f`,	
 							}
 						]
                     }
@@ -536,7 +536,7 @@ if (message.content.startsWith(ft + "buscarpartidas")) {         //  +buscarpart
 			let embed = {
 			"embed": {
 						
-                        color:  0x00dcff,
+                        color:  0xc6ff00,
 						footer: {
 									  "text": message.guild.name
 									},
