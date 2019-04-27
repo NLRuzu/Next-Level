@@ -590,7 +590,7 @@ if (message.content.startsWith(ft + "t8s9")) {         //  temporada 8 semana 9
   
 			}
 			
-}
+
 	
 	
 	
