@@ -667,6 +667,89 @@ if (message.content.startsWith(ft + "3djuegos")) {         //  3DJUEGOS
 	
 }
 }
+	
+if (message.channel.id == message.channel.id) { 	// COMANDOS DE MUSICA BOTS
+
+if (message.content.startsWith(ft + "musica")) {         //  BOT MUSICAS
+	 let adminRoleObject = message.guild.roles.find("name", "✅Verificado");	
+			let embed1 = {
+				"embed": {
+				    "title": "LISTA DE COMANDOS BOT MÚSICA",
+				    "color": 13041408,
+				    "timestamp": "2019-04-29T12:14:55.011Z",
+				    "footer": {
+				      "icon_url": "https://i.imgur.com/mL7DyRK.png",
+				      "text": "Comunidad NEXT LEVEL"
+				    },
+				    "thumbnail": {
+				      "url": "https://i.imgur.com/v2Sm3d6.png"
+				    },
+				    "image": {
+				      "url": "https://i.imgur.com/DIvVkKY.png"
+				    },
+				    "fields": [
+				      {
+					"name": "!play nombre de la canción o link",
+					"value": "Reproduce una canción y si ponemos muchas seguidas se añaden a una lista de reproducción"
+				      },
+				      {
+					"name": "!pause y !stop",
+					"value": "Para una canción o la deja en pause"
+				      },
+				      {
+					"name": "!loop",
+					"value": "Ponemos en reprodución en ciclo la lista de reproducción"
+				      },
+				      {
+					 "name": "!leave y !skip",
+					"value": "El primero hace que se marche el bot de nuestra sala y el segundo hace pasar a la siguiente canción"  
+				      }
+
+				    ]
+				  }	
+				let embed2 = {
+				"embed": {
+				    "title": "LISTA DE COMANDOS BOT MÚSICA 2",
+				    "color": 13041408,
+				    "timestamp": "2019-04-29T12:14:55.011Z",
+				    "footer": {
+				      "icon_url": "https://i.imgur.com/mL7DyRK.png",
+				      "text": "Comunidad NEXT LEVEL"
+				    },
+				    "thumbnail": {
+				      "url": "https://i.imgur.com/v2Sm3d6.png"
+				    },
+				    "image": {
+				      "url": "https://i.imgur.com/UMST8Lc.png"
+				    },
+				    "fields": [
+				      {
+					"name": "-play nombre de la canción o link",
+					"value": "Reproduce una canción y si ponemos muchas seguidas se añaden a una lista de reproducción"
+				      },
+				      {
+					"name": "-pause y -stop",
+					"value": "Para una canción o la deja en pause"
+				      },
+				      {
+					"name": "-loop",
+					"value": "Ponemos en reprodución en ciclo la lista de reproducción"
+				      },
+				      {
+					 "name": "-leave y -next",
+					"value": "El primero hace que se marche el bot de nuestra sala y el segundo hace pasar a la siguiente canción"  
+				      }
+
+				    ]
+				  }	
+			};	
+	message.channel.send(`[${adminRoleObject}]`, embed1);
+	message.channel.send(embed2);
+	
+	
+	
+}
+}
 			
 
 	
