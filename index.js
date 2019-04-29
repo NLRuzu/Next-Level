@@ -692,7 +692,7 @@ if (message.content.startsWith(ft + "musica")) {         //  BOT MUSICAS
 				      }
 
 				    ]
-				  }	
+				  };	
 				let embed2 = {
 				"embed": {
 				    "title": "LISTA DE COMANDOS BOT MÚSICA 2",
@@ -727,8 +727,8 @@ if (message.content.startsWith(ft + "musica")) {         //  BOT MUSICAS
 				      }
 
 				    ]
-				  }	
-			};	
+				  };	
+				
 	message.channel.send(`[${adminRoleObject}]`, embed1);
 	message.channel.send(embed2);
 	
