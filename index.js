@@ -692,6 +692,7 @@ if (message.content.startsWith(ft + "musica")) {         //  BOT MUSICAS
 				      }
 
 				    ]
+					}
 				  };	
 				let embed2 = {
 				"embed": {
@@ -727,6 +728,7 @@ if (message.content.startsWith(ft + "musica")) {         //  BOT MUSICAS
 				      }
 
 				    ]
+					}
 				  };	
 				
 	message.channel.send(`[${adminRoleObject}]`, embed1);
