@@ -644,10 +644,6 @@ if (message.content.startsWith(ft + "3djuegos")) {         //  3DJUEGOS
 				    "image": {
 				      "url": "https://i.imgur.com/l5fJOYP.png"
 				    },
-				    "author": {
-				      "name": "NEXT LEVEL INFO",
-				      "icon_url": "https://i.imgur.com/v2Sm3d6.png"
-				    },
 				    "fields": [
 				      {
 					"name": "FORO PC FORTNITE",
