@@ -620,6 +620,57 @@ if (message.content.startsWith(ft + "parche850")) {         //  parche 8.50
 	
 }
 }
+	
+	
+	
+if (message.channel.id == message.channel.id) { 	// COMENTA EN 3DJUEGOS	
+
+if (message.content.startsWith(ft + "3djuegos")) {         //  3DJUEGOS
+	 let adminRoleObject = message.guild.roles.find("name", "✅Verificado");	
+			let embed1 = {
+	
+				"embed": {
+				    "title": "PUEDES AYUDARNOS",
+				    "description": "Tan solo debes dejar un comentario con tu opinión de tu experiencia con nosotros, y de tu opinión general de la comunidad. Además deja tu VOTO dándole a la manita arriba.",
+				    "color": 13041408,
+				    "timestamp": "2019-04-29T12:14:55.011Z",
+				    "footer": {
+				      "icon_url": "https://i.imgur.com/mL7DyRK.png",
+				      "text": "Comunidad NEXT LEVEL"
+				    },
+				    "thumbnail": {
+				      "url": "https://i.imgur.com/v2Sm3d6.png"
+				    },
+				    "image": {
+				      "url": "https://i.imgur.com/l5fJOYP.png"
+				    },
+				    "author": {
+				      "name": "NEXT LEVEL INFO",
+				      "icon_url": "https://i.imgur.com/v2Sm3d6.png"
+				    },
+				    "fields": [
+				      {
+					"name": "FORO PC FORTNITE",
+					"value": "https://www.3djuegos.com/foros/tema/50190729/0/next-level/"
+				      },
+				      {
+					"name": "FORO PS4 FORTNITE",
+					"value": "https://www.3djuegos.com/niforos/tema/50190752/0/next-level/"
+				      },
+				      {
+					 "name": "FORO XBOX FORTNITE",
+					"value": "https://www.3djuegos.com/niforos/tema/50190793/0/next-level/"  
+				      }
+
+				    ]
+				  }	
+			};	
+	message.channel.send(`[${adminRoleObject}]`, embed1);
+	
+	
+	
+}
+}
 			
 
 	
