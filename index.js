@@ -267,21 +267,7 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS GENERALES
 	  bot.channels.get("561599847183155200").send(serverembed);
 	  }	
 	
-	if (message.content.startsWith(ft + "musica")) {
-		  let sicon = message.guild.iconURL;
-		  let serverembed = new Discord.RichEmbed()
-		  .setDescription("**MÚSICA**")
-		  .setColor("#C6FF00")
-		  .setThumbnail(sicon)
-		  .addField("**!play link o nombre**", "Comando para buscar canción.")
-		  .addField("**!stop**", "Comando para parar la música")
-		  .addField("**!skip**", "Pasar canción")
-		  .addField("**!loop**", "Hacer bucle")
-		  .addField("**!pause**", "Pausar música")
-		  .addField("**!resume**", "volver poner música después de pausa");
-		  
-		  bot.channels.get("561599847183155200").send(serverembed);
-		  }
+	
 	
     
 	
