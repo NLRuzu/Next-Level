@@ -577,6 +577,36 @@ if (message.channel.id == message.channel.id) { 	// SOLUCIÓN DESAFIOS TEMPORADA
   
 			}
 	
+	if (message.content.startsWith(ft + "t8s10")) {         //  temporada 8 semana 9
+			
+		
+		
+		
+			let embed1 = {
+			
+			"embed": {
+				"color": 13041408,
+				"image": {
+				"url": "https://i.imgur.com/mJGho9h.png"
+					},
+				  }	
+			};	
+			
+			let embed2 = {
+			
+			"embed": {
+				"color": 13041408,
+				"image": {
+				"url": "https://i.imgur.com/fKAPDLz.jpg"
+					},
+				  }
+			};
+  		bot.channels.get("571395338829824000").send(embed1);
+		bot.channels.get("571395338829824000").send(embed2);	
+     		
+  
+			}
+	
 }
 	
 	
