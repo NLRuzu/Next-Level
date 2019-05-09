@@ -996,9 +996,6 @@ if (message.content.startsWith(ft + "musica")) {         //  BOT MUSICAS
 	
 	  if(message.author.bot) return;
 	  if(message.channel.type === "dm") return;
-
-	  
-	  let messageArray = message.content.split(" ");
 	  let cmd = messageArray[0];
 	  
 
