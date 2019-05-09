@@ -250,6 +250,165 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS GENERALES
                 });
             }
         }
+	
+	
+	
+	// TEMPORADAS FORTNITE ROLES TEMPORALES //
+	
+	if (message.content.startsWith(ft + "temporada1")) {
+        message.delete();
+            if(message.member.roles.find("name", "✅Verificado")){
+                let User = message.member;
+                let role = message.guild.roles.find("name", "Temporada 1");
+                let guild = bot.guilds.get("458220475957379074");
+                let miembro = guild.member(User);
+                miembro.addRole(role).catch(console.error);
+                message.channel.send({
+                    embed: {
+                        color: 0xc500ff,
+                        description: "**ROL de la Temporada 1 asignado a **" + User + " **correctamente**",
+                    }
+                });
+            }
+        }
+	
+	if (message.content.startsWith(ft + "temporada2")) {
+        message.delete();
+            if(message.member.roles.find("name", "✅Verificado")){
+                let User = message.member;
+                let role = message.guild.roles.find("name", "Temporada 2");
+                let guild = bot.guilds.get("458220475957379074");
+                let miembro = guild.member(User);
+                miembro.addRole(role).catch(console.error);
+                message.channel.send({
+                    embed: {
+                        color: 0xc500ff,
+                        description: "**ROL de la Temporada 2 asignado a **" + User + " **correctamente**",
+                    }
+                });
+            }
+        }
+	
+	if (message.content.startsWith(ft + "temporada3")) {
+        message.delete();
+            if(message.member.roles.find("name", "✅Verificado")){
+                let User = message.member;
+                let role = message.guild.roles.find("name", "Temporada 3");
+                let guild = bot.guilds.get("458220475957379074");
+                let miembro = guild.member(User);
+                miembro.addRole(role).catch(console.error);
+                message.channel.send({
+                    embed: {
+                        color: 0xc500ff,
+                        description: "**ROL de la Temporada 3 asignado a **" + User + " **correctamente**",
+                    }
+                });
+            }
+        }
+	
+	if (message.content.startsWith(ft + "temporada4")) {
+        message.delete();
+            if(message.member.roles.find("name", "✅Verificado")){
+                let User = message.member;
+                let role = message.guild.roles.find("name", "Temporada 4");
+                let guild = bot.guilds.get("458220475957379074");
+                let miembro = guild.member(User);
+                miembro.addRole(role).catch(console.error);
+                message.channel.send({
+                    embed: {
+                        color: 0xc500ff,
+                        description: "**ROL de la Temporada 4 asignado a **" + User + " **correctamente**",
+                    }
+                });
+            }
+        }
+	
+	if (message.content.startsWith(ft + "temporada5")) {
+        message.delete();
+            if(message.member.roles.find("name", "✅Verificado")){
+                let User = message.member;
+                let role = message.guild.roles.find("name", "Temporada 5");
+                let guild = bot.guilds.get("458220475957379074");
+                let miembro = guild.member(User);
+                miembro.addRole(role).catch(console.error);
+                message.channel.send({
+                    embed: {
+                        color: 0xc500ff,
+                        description: "**ROL de la Temporada 5 asignado a **" + User + " **correctamente**",
+                    }
+                });
+            }
+        }
+	
+	if (message.content.startsWith(ft + "temporada6")) {
+        message.delete();
+            if(message.member.roles.find("name", "✅Verificado")){
+                let User = message.member;
+                let role = message.guild.roles.find("name", "Temporada 6");
+                let guild = bot.guilds.get("458220475957379074");
+                let miembro = guild.member(User);
+                miembro.addRole(role).catch(console.error);
+                message.channel.send({
+                    embed: {
+                        color: 0xc500ff,
+                        description: "**ROL de la Temporada 6 asignado a **" + User + " **correctamente**",
+                    }
+                });
+            }
+        }
+	
+	if (message.content.startsWith(ft + "temporada7")) {
+        message.delete();
+            if(message.member.roles.find("name", "✅Verificado")){
+                let User = message.member;
+                let role = message.guild.roles.find("name", "Temporada 7");
+                let guild = bot.guilds.get("458220475957379074");
+                let miembro = guild.member(User);
+                miembro.addRole(role).catch(console.error);
+                message.channel.send({
+                    embed: {
+                        color: 0xc500ff,
+                        description: "**ROL de la Temporada 7 asignado a **" + User + " **correctamente**",
+                    }
+                });
+            }
+        }
+	
+	if (message.content.startsWith(ft + "temporada8")) {
+        message.delete();
+            if(message.member.roles.find("name", "✅Verificado")){
+                let User = message.member;
+                let role = message.guild.roles.find("name", "Temporada 8");
+                let guild = bot.guilds.get("458220475957379074");
+                let miembro = guild.member(User);
+                miembro.addRole(role).catch(console.error);
+                message.channel.send({
+                    embed: {
+                        color: 0xc500ff,
+                        description: "**ROL de la Temporada 8 asignado a **" + User + " **correctamente**",
+                    }
+                });
+            }
+        }
+	
+	if (message.content.startsWith(ft + "temporada9")) {
+        message.delete();
+            if(message.member.roles.find("name", "✅Verificado")){
+                let User = message.member;
+                let role = message.guild.roles.find("name", "Temporada 9");
+                let guild = bot.guilds.get("458220475957379074");
+                let miembro = guild.member(User);
+                miembro.addRole(role).catch(console.error);
+                message.channel.send({
+                    embed: {
+                        color: 0xc500ff,
+                        description: "**ROL de la Temporada 9 asignado a **" + User + " **correctamente**",
+                    }
+                });
+            }
+        }
+	
+	// FIN DE TEMPORADAS FORTNITE ROLES TEMPORALES //
 		
 	if (message.content.startsWith(ft + "help")) {
 	  let sicon = message.guild.iconURL;
@@ -829,6 +988,7 @@ if (message.content.startsWith(ft + "musica")) {         //  BOT MUSICAS
 	
 }
 }
+	
 			
 
 	
