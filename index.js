@@ -418,7 +418,8 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS GENERALES
 	  .setThumbnail(sicon)
 	  .addField("**+serverinfo**", "información del servidor")
 	  .addField("**+buscarpartidas**", "Comandos para uso búsqueda de partidas de fortnite")
-	  .addField("**+roles**", "Comandos para añadirte roles de juegos");
+	  .addField("**+roles**", "Comandos para añadirte roles de juegos")
+	  .addField("**+rolestemporales**", "Comandos para añadirte roles de las temporadas de fortnite");
 	  
 	  
 	  
@@ -983,6 +984,73 @@ if (message.content.startsWith(ft + "musica")) {         //  BOT MUSICAS
 				
 	message.channel.send(`[${adminRoleObject}]`, embed1);
 	message.channel.send(embed2);
+	
+	
+	
+}
+}
+	
+if (message.channel.id == message.channel.id) { 	// NUEVOS ROLES TEMPORADAS TEMPORALES
+
+if (message.content.startsWith(ft + "rolestemporales")) {         //  ROLES TEMPORALES
+	 let adminRoleObject = message.guild.roles.find("name", "✅Verificado");	
+			let embed1 = {
+				"embed": {
+				    "title": "LISTA DE COMANDOS DE ROLES POR TIEMPO LIMITADO",
+				    "color": 13041408,
+				    "timestamp": "2019-04-29T12:14:55.011Z",
+				    "footer": {
+				      "icon_url": "https://i.imgur.com/mL7DyRK.png",
+				      "text": "Comunidad NEXT LEVEL"
+				    },
+				    "thumbnail": {
+				      "url": "https://i.imgur.com/v2Sm3d6.png"
+				    },
+				    "image": {
+				      "url": "https://i.imgur.com/Cj3q5QS.png"
+				    },
+				    "fields": [
+				      {
+					"name": "+temporada1",
+					"value": "Te añade este rol, si juegas desde la temporada 1"
+				      },
+				      {
+					"name": "+temporada2",
+					"value": "Te añade este rol, si juegas desde la temporada 2"
+				      },
+				      {
+					"name": "+temporada3",
+					"value": "Te añade este rol, si juegas desde la temporada 3"
+				      },
+				      {
+					"name": "+temporada4",
+					"value": "Te añade este rol, si juegas desde la temporada 4"
+				      },
+					  {
+					"name": "+temporada5",
+					"value": "Te añade este rol, si juegas desde la temporada 5"
+				      },
+					  {
+					"name": "+temporada6",
+					"value": "Te añade este rol, si juegas desde la temporada 6"
+				      },
+					  {
+					"name": "+temporada7",
+					"value": "Te añade este rol, si juegas desde la temporada 7"
+				      },
+					  {
+					"name": "+temporada8",
+					"value": "Te añade este rol, si juegas desde la temporada 8"
+				      },
+					  {
+					"name": "+temporada9",
+					"value": "Te añade este rol, si juegas desde la temporada 9"
+				      }
+
+				    ]
+					}
+				  };			
+	message.channel.send(embed1);
 	
 	
 	
