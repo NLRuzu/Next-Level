@@ -996,7 +996,7 @@ if (message.content.startsWith(ft + "musica")) {         //  BOT MUSICAS
 	
 	  if(message.author.bot) return;
 	  if(message.channel.type === "dm") return;
-	  let cmd = messageArray[0];
+	  
 	  
 
 	  if(cmd === `${prefix}kick`){
