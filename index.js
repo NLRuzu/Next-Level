@@ -993,8 +993,7 @@ if (message.content.startsWith(ft + "musica")) {         //  BOT MUSICAS
 if (message.channel.id == message.channel.id) { 	// NUEVOS ROLES TEMPORADAS TEMPORALES
 
 if (message.content.startsWith(ft + "rolestemporales")) {         //  ROLES TEMPORALES
-	 let adminRoleObject = message.guild.roles.find("name", "✅Verificado");	
-			let embed1 = {
+			let temporales = {
 				"embed": {
 				    "title": "LISTA DE COMANDOS DE ROLES POR TIEMPO LIMITADO",
 				    "color": 13041408,
@@ -1050,7 +1049,7 @@ if (message.content.startsWith(ft + "rolestemporales")) {         //  ROLES TEMP
 				    ]
 					}
 				  };			
-	message.channel.send(embed1);
+	message.channel.send(temporales);
 	
 	
 	
