@@ -686,7 +686,7 @@ if (message.content.startsWith(ft + "parche900")) {         //  parche 9.00
 					},
 				"author": {
 		 			 "name": "CLIC PARA VER LA INFORMACIÓN DEL CONTENIDO DEL PARCHE",
-		  			"url": "https://epicgames.com/fortnite/es-ES/patch-notes/v8-51"
+		  			"url": "https://www.epicgames.com/fortnite/es-ES/patch-notes/v9-00"
 					}
 				  }	
 			};	
