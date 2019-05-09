@@ -419,7 +419,7 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS GENERALES
 	  .addField("**+serverinfo**", "información del servidor")
 	  .addField("**+buscarpartidas**", "Comandos para uso búsqueda de partidas de fortnite")
 	  .addField("**+roles**", "Comandos para añadirte roles de juegos")
-	  .addField("**+rolestemporales**", "Comandos para añadirte roles de las temporadas de fortnite");
+	  .addField("**+temporadas**", "Comandos para añadirte roles de las temporadas de fortnite");
 	  
 	  
 	  
@@ -992,7 +992,7 @@ if (message.content.startsWith(ft + "musica")) {         //  BOT MUSICAS
 	
 if (message.channel.id == message.channel.id) { 	// NUEVOS ROLES TEMPORADAS TEMPORALES
 
-if (message.content.startsWith(ft + "rolestemporales")) {         //  ROLES TEMPORALES
+if (message.content.startsWith(ft + "temporadas")) {         //  ROLES TEMPORALES
 			let temporales = {
 				"embed": {
 				    "title": "LISTA DE COMANDOS DE ROLES POR TIEMPO LIMITADO",
