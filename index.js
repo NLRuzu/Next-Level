@@ -994,12 +994,7 @@ if (message.content.startsWith(ft + "musica")) {         //  BOT MUSICAS
 	///// KICK /////
 	
 	
-	  if(message.author.bot) return;
-	  if(message.channel.type === "dm") return;
-	  
-	  
-
-	  if(cmd === `${prefix}kick`){
+	  if(message.content.startsWith("+kick")) {
 
     //!kick @daeshan askin for it
 
@@ -1016,7 +1011,7 @@ if (message.content.startsWith(ft + "musica")) {         //  BOT MUSICAS
     .addField("Tiime", message.createdAt)
     .addField("Reason", kReason);
 	
-    let kickEmbed2 = new Discord.RichEmbed()
+	let kickEmbed2 = new Discord.RichEmbed()
     .setDescription("~Kick LOG~")
     .setColor("#e56b00")
     .addField("Kicked User", `${kUser} with ID ${kUser.id}`)
