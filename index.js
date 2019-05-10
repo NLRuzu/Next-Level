@@ -419,6 +419,7 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS GENERALES
 	  .addField("**+serverinfo**", "información del servidor")
 	  .addField("**+buscarpartidas**", "Comandos para uso búsqueda de partidas de fortnite")
 	  .addField("**+roles**", "Comandos para añadirte roles de juegos")
+	  .addField("**+fortnite**", "Comandos de uso del bot fortnite")
 	  .addField("**+temporadas**", "Comandos para añadirte roles de las temporadas de fortnite");
 	  
 	  
@@ -428,7 +429,59 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS GENERALES
 	  }	
 	
 	
+	if (message.channel.id == message.channel.id) { 	// BOT FORTNITE
+
+if (message.content.startsWith(ft + "fortnite")) {         //  BOT FORTNITE
+	 let adminRoleObject = message.guild.roles.find("name", "✅Verificado");	
+			let embed1 = {
+				"embed": {
+				    "title": "LISTA DE COMANDOS BOT FORTNITE",
+				    "color": 13041408,
+				    "timestamp": "2019-04-29T12:14:55.011Z",
+				    "footer": {
+				      "icon_url": "https://i.imgur.com/mL7DyRK.png",
+				      "text": "Comunidad NEXT LEVEL"
+				    },
+				    "thumbnail": {
+				      "url": "https://i.imgur.com/cVbWqlZ.png"
+				    },
+				    "image": {
+				      "url": "https://i.imgur.com/KNWIYuk.png"
+				    },
+				    "fields": [
+				      {
+					"name": "!link nombreepic",
+					"value": "Nos linkea la cuenta de epic games con el discord"
+				      },
+				      {
+					"name": "!kd",
+					"value": "Nos pone el KD en nuestro nick, para actualizarlo usarlo de nuevo cada vez que lo necesitéis."
+				      },
+				      {
+					"name": "!wins",
+					"value": "Nos pone las WINS en nuestro nick, para actualizarlo usarlo de nuevo cada vez que lo necesitéis."
+				      },
+				      {
+					"name": "!delwins",
+					"value": "Nos elimina las WINS del nick."
+				      },
+					  {
+					"name": "!delkd",
+					"value": "Nos elimina el KD del nick."
+				      },
+					  {
+					"name": "!fts",
+					"value": "Muestra las estadísticas generales de nuestra cuenta."
+				      }
+				    ]
+					}
+				  };			
+	bot.channels.get("561599847183155200").send(embed1);
 	
+	
+	
+}
+} // FIN BOT FORTNITE //
     
 	
 	 
