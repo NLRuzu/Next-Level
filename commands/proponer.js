@@ -4,6 +4,7 @@ module.exports.run = async (bot, message, args) => {
     let rUser = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
     if(!rUser) return message.channel.send("formato incorrecto +proponer @usuario razón de la propuesta");
     let rreason = args.join(" ").slice(22);
+    let adminRoleObject = message.guild.roles.find("name", "🌟 STAFF");
 
     var proponer = {
 							"embed": {
@@ -33,12 +34,8 @@ module.exports.run = async (bot, message, args) => {
 				
                             }
 					};
-let partidaschannel = message.guild.channels.find(`name`, "❓-propuestas");
-       if(!partidaschannel) return message.channel.send("Introduce bien el comando");
-
-
+bot.channels.get("571607870660018196").send(`[${adminRoleObject}]`, proponer);
       message.delete().catch(O_o=>{});
-partidaschannel.send(proponer);
 
 		}	
 
