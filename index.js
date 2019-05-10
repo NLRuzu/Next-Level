@@ -786,7 +786,7 @@ if (message.content.startsWith(ft + "t9s1")) {         //  temporada 9 semana 1
 			"embed": {
 				"color": 13041408,
 				"image": {
-				"url": "https://i.imgur.com/fKAPDLz.jpg"
+				"url": "https://i.imgur.com/VRaRPEn.jpg"
 					},
 				  }
 			};
