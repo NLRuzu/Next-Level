@@ -115,7 +115,7 @@ if (message.channel.id == "499632058881146880" && message.author.bot) {
 	}
 	
  // REACCION EMOJI SALA SUGERENCIAS //
-if (message.channel.id == "475267748868390912" && message.author.bot) {
+if (message.channel.id == "5716078706600181962" && message.author.bot) {
                     message.react("472146792339734565");
                     message.react("472147160423727105");
                 }	let ed1 = {
@@ -1057,6 +1057,30 @@ if (message.content.startsWith(ft + "temporadas")) {         //  ROLES TEMPORALE
 	
 }
 }
+	
+	
+// +SUGERENCIA //
+if(message.content.toUpperCase().startsWith("+SUGERENCIA")){
+  var comunicado = message.content.replace("+sugerencia ", "");
+    var embebido = {
+                          "embed": {
+                              color: 0xc6ff00,
+                              author: {
+                                  name: message.author.tag,
+                                  icon_url: message.author.avatarURL
+                              },
+                              title: "**NUEVA SUGERENCIA**",
+              url: "http://gamedev.es/",
+
+              description: comunicado,
+              timestamp: message.createdAt,
+                          }
+                  };
+
+              bot.channels.get("571607870660018196").send(embebido);
+              message.delete().catch(O_o=>{});
+      }	
+	/// FIN SUGERENCIA ///
 	
 			
 
