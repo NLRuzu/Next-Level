@@ -1061,6 +1061,7 @@ if (message.content.startsWith(ft + "temporadas")) {         //  ROLES TEMPORALE
 	
 // +SUGERENCIA //
 if(message.content.toUpperCase().startsWith("+SUGERENCIA")){
+let adminRoleObject = message.guild.roles.find("name", "🌟 STAFF");	
   var comunicado = message.content.replace("+sugerencia ", "");
     var embebido = {
                           "embed": {
@@ -1077,7 +1078,7 @@ if(message.content.toUpperCase().startsWith("+SUGERENCIA")){
                           }
                   };
 
-              bot.channels.get("571607870660018196").send(embebido);
+              bot.channels.get("571607870660018196").send(`[${adminRoleObject}]`, embebido);
               message.delete().catch(O_o=>{});
       }	
 	/// FIN SUGERENCIA ///
