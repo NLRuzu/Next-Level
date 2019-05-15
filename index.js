@@ -907,6 +907,23 @@ if (message.content.startsWith(ft + "parche900")) {         //  parche 9.00
 	
 }
 	
+	if (message.content.startsWith(ft + "parche901")) {         //  parche 9.01		
+			let embed1 = {
+				"embed": {
+				"color": 13041408,
+				"image": {
+				"url": "https://i.imgur.com/mecViDW.png"
+					},
+				"author": {
+		 			 "name": "CLIC PARA VER LA INFORMACIÓN DEL CONTENIDO DEL PARCHE",
+		  			"url": "https://epicgames.com/fortnite/es-ES/patch-notes/v9-01"
+					}
+				  }	
+			};	
+	bot.channels.get("571396240802316288").send(embed1);
+	
+}
+	
 	
 	
 }
