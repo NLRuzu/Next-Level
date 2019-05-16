@@ -849,6 +849,36 @@ if (message.content.startsWith(ft + "t9s1")) {         //  temporada 9 semana 1
   
 			}
 	
+	if (message.content.startsWith(ft + "t9s2")) {         //  temporada 9 semana 2
+			
+		
+		
+		
+			let embed1 = {
+			
+			"embed": {
+				"color": 13041408,
+				"image": {
+				"url": "https://i.imgur.com/Xzj9IFx.png"
+					},
+				  }	
+			};	
+			
+			let embed2 = {
+			
+			"embed": {
+				"color": 13041408,
+				"image": {
+				"url": "https://i.imgur.com/6XqM6B1.jpg"
+					},
+				  }
+			};
+  		bot.channels.get("571395338829824000").send(embed1);
+		bot.channels.get("571395338829824000").send(embed2);	
+     		
+  
+			}
+	
 }
 	
 	
