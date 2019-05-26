@@ -233,6 +233,23 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS GENERALES
                 });
             }
         }
+	
+	if (message.content.startsWith(ft + "roldauntless")) {
+        message.delete();
+            if(message.member.roles.find("name", "✅Verificado")){
+                let User = message.member;
+                let role = message.guild.roles.find("name", "🐲 Dauntless");
+                let guild = bot.guilds.get("458220475957379074");
+                let miembro = guild.member(User);
+                miembro.addRole(role).catch(console.error);
+                message.channel.send({
+                    embed: {
+                        color: 0xc500ff,
+                        description: "**ROL de DAUNTLESS asignado a **" + User + " **correctamente**",
+                    }
+                });
+            }
+        }
 		
 	if (message.content.startsWith(ft + "rolsalvar")) {
         message.delete();
@@ -559,7 +576,9 @@ if (message.content.startsWith(ft + "fortnite")) {         //  BOT FORTNITE
 		  .setDescription("**ASIGNACIÓN DE ROLES**")
 		  .setColor("#C6FF00")
 		  .setThumbnail(sicon)
+		  .addField("**+roldauntless**", "Te añade el rol de Dauntless y te dará acceso a la sala exclusiva de chat y búsqueda de partidas")
 		  .addField("**+rolsalvar**", "Te añade el rol de Salvar el Mundo y te dará acceso a la sala exclusiva de chat y búsqueda de partidas");
+		  
 		  
 		   
 		   
