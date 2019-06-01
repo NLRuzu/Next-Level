@@ -928,6 +928,36 @@ if (message.content.startsWith(ft + "t9s1")) {         //  temporada 9 semana 1
   
 			}
 	
+	if (message.content.startsWith(ft + "t9s4")) {         //  temporada 9 semana 4
+			
+		
+		
+		
+			let embed1 = {
+			
+			"embed": {
+				"color": 13041408,
+				"image": {
+				"url": "https://i.imgur.com/uijf1EQ.png"
+					},
+				  }	
+			};	
+			
+			let embed2 = {
+			
+			"embed": {
+				"color": 13041408,
+				"image": {
+				"url": "https://i.imgur.com/c5k6Dal.jpg"
+					},
+				  }
+			};
+  		bot.channels.get("571395338829824000").send(embed1);
+		bot.channels.get("571395338829824000").send(embed2);	
+     		
+  
+			}
+	
 }
 	
 	
@@ -1013,6 +1043,23 @@ if (message.content.startsWith(ft + "parche900")) {         //  parche 9.00
 				"author": {
 		 			 "name": "CLIC PARA VER LA INFORMACIÓN DEL CONTENIDO DEL PARCHE",
 		  			"url": "https://epicgames.com/fortnite/es-ES/patch-notes/v9-10"
+					}
+				  }	
+			};	
+	bot.channels.get("571396240802316288").send(embed1);
+	
+}
+	
+	if (message.content.startsWith(ft + "parche910ac")) {         //  parche 9.10 actuacluzacio		
+			let embed1 = {
+				"embed": {
+				"color": 13041408,
+				"image": {
+				"url": "https://i.imgur.com/ZP7TuWN.png"
+					},
+				"author": {
+		 			 "name": "CLIC PARA VER LA INFORMACIÓN DEL CONTENIDO DEL PARCHE",
+		  			"url": "https://epicgames.com/fortnite/es-ES/patch-notes/v9-10-content-update"
 					}
 				  }	
 			};	
