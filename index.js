@@ -1224,42 +1224,10 @@ if (message.content.startsWith(ft + "temporadas")) {         //  ROLES TEMPORALE
 				      "url": "https://i.imgur.com/Cj3q5QS.png"
 				    },
 				    "fields": [
-				      {
-					"name": "+temporada1",
-					"value": "Te añade este rol, si juegas desde la temporada 1"
-				      },
-				      {
-					"name": "+temporada2",
-					"value": "Te añade este rol, si juegas desde la temporada 2"
-				      },
-				      {
-					"name": "+temporada3",
-					"value": "Te añade este rol, si juegas desde la temporada 3"
-				      },
-				      {
-					"name": "+temporada4",
-					"value": "Te añade este rol, si juegas desde la temporada 4"
-				      },
-					  {
-					"name": "+temporada5",
-					"value": "Te añade este rol, si juegas desde la temporada 5"
-				      },
-					  {
-					"name": "+temporada6",
-					"value": "Te añade este rol, si juegas desde la temporada 6"
-				      },
-					  {
-					"name": "+temporada7",
-					"value": "Te añade este rol, si juegas desde la temporada 7"
-				      },
-					  {
-					"name": "+temporada8",
-					"value": "Te añade este rol, si juegas desde la temporada 8"
-				      },
 					  {
 					"name": "+temporada9",
 					"value": "Te añade este rol, si juegas desde la temporada 9"
-				      }
+				      },
 
 				    ]
 					}
