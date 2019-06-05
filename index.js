@@ -34,7 +34,7 @@ bot.on("guildMemberAdd", async member => {
     let embed = { embed: {
                 color: 0xc6ff00,
                 title: "Hola bienvenido a Next Level",
-                 description: '**Si además de Fortnite Battle Royale juegas a Salvar el Mundo asígnate el rol manualmente para ver las salas. Usando el comando +roles en la sala <#561599847183155200>**',
+                 description: '**Si además de Fortnite Battle Royale juegas a Salvar el Mundo o Dauntless asígnate el rol manualmente para ver las salas. Usando el comando +roles en la sala <#561599847183155200>**',
                 
             }
     };
@@ -45,7 +45,7 @@ bot.on("guildMemberAdd", async member => {
         embed: {
                 color: 0xc6ff00,
                 title: "Hola bienvenido a Next Level",
-                description: '**Si además de Fortnite Battle Royale juegas a Salvar el Mundo asígnate el rol manualmente para ver las salas. Usando el comando +roles en la sala <#561599847183155200>**',   
+                description: '**Si además de Fortnite Battle Royale juegas a Salvar el Mundo o Dauntless asígnate el rol manualmente para ver las salas. Usando el comando +roles en la sala <#561599847183155200>**',   
             }
         });
  });
