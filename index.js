@@ -34,7 +34,7 @@ bot.on("guildMemberAdd", async member => {
     let embed = { embed: {
                 color: 0xc6ff00,
                 title: "Hola bienvenido a Next Level",
-                 description: '**Si además de Fortnite Battle Royale juegas a Salvar el Mundo o Dauntless asígnate el rol manualmente para ver las salas. Usando el comando +roles en la sala <#561599847183155200>**',
+                 description: '**Asígnate el rol manualmente para ver las salas. Ve a la sala <#585873855676153857> y haz clic en el icono del rol que quieras**',
                 
             }
     };
@@ -45,7 +45,7 @@ bot.on("guildMemberAdd", async member => {
         embed: {
                 color: 0xc6ff00,
                 title: "Hola bienvenido a Next Level",
-                description: '**Si además de Fortnite Battle Royale juegas a Salvar el Mundo o Dauntless asígnate el rol manualmente para ver las salas. Usando el comando +roles en la sala <#561599847183155200>**',   
+                description: '**Asígnate el rol manualmente para ver las salas. Ve a la sala <#585873855676153857> y haz clic en el icono del rol que quieras**',   
             }
         });
  });
@@ -68,9 +68,8 @@ bot.on("guildMemberRemove", async member => {
 // ROL DE ENTRADA AL SERVIDOR - NO VERIFICADO //
 bot.on("guildMemberAdd", function(member) {
     let role = member.guild.roles.find("name", "✅Verificado");
-    let role2 = member.guild.roles.find("name", "🤖 Fortnite");
     member.addRole(role).catch(console.error);
-	member.addRole(role2).catch(console.error);
+	
 });
 
 // LISTA DE COMANDOS
