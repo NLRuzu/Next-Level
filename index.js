@@ -957,6 +957,8 @@ if (message.content.startsWith(ft + "t9s1")) {         //  temporada 9 semana 1
   
 			}
 	
+	
+	
 	if (message.content.startsWith(ft + "t9s5")) {         //  temporada 9 semana 5
 			
 		
@@ -986,7 +988,35 @@ if (message.content.startsWith(ft + "t9s1")) {         //  temporada 9 semana 1
      		
   
 			}
-	
+	if (message.content.startsWith(ft + "t9s6")) {         //  temporada 9 semana 6
+			
+		
+		
+		
+			let embed1 = {
+			
+			"embed": {
+				"color": 13041408,
+				"image": {
+				"url": "https://i.imgur.com/mtJ1dBy.png"
+					},
+				  }	
+			};	
+			
+			let embed2 = {
+			
+			"embed": {
+				"color": 13041408,
+				"image": {
+				"url": "https://i.imgur.com/ICMEWQG.jpg"
+					},
+				  }
+			};
+  		bot.channels.get("571395338829824000").send(embed1);
+		bot.channels.get("571395338829824000").send(embed2);	
+     		
+  
+			}
 }
 	
 	
