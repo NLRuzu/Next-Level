@@ -683,7 +683,7 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS SOLO STAFF
                 });
 				
 			
-                bot.channels.get("561600874053500928").send({
+                bot.channels.get("571607870660018196").send({
                     embed: {
 						author: {
 							name: message.author.tag,
