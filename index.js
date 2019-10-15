@@ -797,12 +797,12 @@ if (message.channel.id == message.channel.id) { 	// PARCHES INFORMATIVOS FORTNIT
 	
 	if (message.content.startsWith(ft + "ad1")) {        //  +ad1 @user   =  Advertimos al usuario
 		message.delete();
-  if(message.member.roles.find("name", "🌟 STAFF MÁSTER") || message.member.roles.find("name", "🌟 STAFF NIVEL 2") || message.member.roles.find("name", "🌟 STAFF NIVEL 1") || message.member.roles.find("name", "🌟 STAFF EN PRUEBAS")){
+  if(message.member.roles.find("name", "🌟 STAFF")){
 			let User = message.mentions.users.first();
 			let guild = bot.guilds.get("458220475957379074");
 			let miembro = guild.member(User);
 			
-			User.send({
+			message.channel.send({
 				embed: {
 					color: 0x04ff00,
 					title: "**USUARIO ADVERTIDO**",
