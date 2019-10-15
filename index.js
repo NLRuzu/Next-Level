@@ -554,7 +554,7 @@ if (message.content.startsWith(ft + "3djuegos")) {         //  3DJUEGOS
 	
 if (message.content.startsWith(ft + "salas")) {         //  3DJUEGOS
 	
-		   let embed1 = {
+		   let embed2 = {
    
 			   "embed": {
 				   "title": "USO ADECUADO DE NUESTRAS SALAS",
