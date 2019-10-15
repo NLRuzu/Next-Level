@@ -571,23 +571,23 @@ if (message.content.startsWith(ft + "salas")) {         //  3DJUEGOS
 				   
 				   "fields": [
 					 {
-				   "name": "<#561605836414255114>",
+				   "name": "💬-chat",
 				   "value": "Esta es la sala principal de charla, vale todo respetando siempre las normas."
 					 },
 					 {
-				   "name": "<#561600463963684874>",
+				   "name": "🎼-música",
 				   "value": "Sala exclusiva de uso de comandos de música"
 					 },
 					 {
-					"name": "<#561599847183155200>",
+					"name": "📲-comandos",
 				   "value": "Sala exclusiva de uso de comandos, ahí usarás todos los comandos de la comunidad que tengas a tu disposición de uso."  
 					 },
 					 {
-					"name": "<#561602695656636431>",
+					"name": "🌋-buscar-partidas",
 					   "value": "Sala exclusiva para BUSCAR gente para jugar Fortnite BATTLE ROYALE, no se admite debates, ni charlas del juego SOLO BÚSQUEDA DE GENTE."  
 					 },
 					 {
-					"name": "<#561606357942534154>",
+					"name": "🌍-buscar-partidas",
 					"value": "Sala exclusiva para BUSCAR gente para jugar Fortnite Salvar el Mundo, no se admite debates, ni charlas del juego SOLO BÚSQUEDA DE GENTE."  
 					 }
 
