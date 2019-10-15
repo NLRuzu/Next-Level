@@ -583,7 +583,7 @@ if (message.content.startsWith(ft + "salas")) {         //  3DJUEGOS
 				   "value": "Sala exclusiva de uso de comandos, ahí usarás todos los comandos de la comunidad que tengas a tu disposición de uso."  
 					 },
 					 {
-					"ame": "<#561602695656636431>",
+					"name": "<#561602695656636431>",
 					   "value": "Sala exclusiva para BUSCAR gente para jugar Fortnite BATTLE ROYALE, no se admite debates, ni charlas del juego SOLO BÚSQUEDA DE GENTE."  
 					 },
 					 {
@@ -594,7 +594,7 @@ if (message.content.startsWith(ft + "salas")) {         //  3DJUEGOS
 				   ]
 				 }	
 		   };	
-   message.channel.send(embed1);
+   message.channel.send(embed2);
    
    
    
