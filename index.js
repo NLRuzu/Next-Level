@@ -127,7 +127,7 @@ if (message.channel.id == "5716078706600181962" && message.author.bot) {
 
 
 
-if (message.channel.id == message.channel.id) { 				    // COMANDOS GENERALES
+
 
 	
 
