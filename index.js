@@ -552,6 +552,56 @@ if (message.content.startsWith(ft + "3djuegos")) {         //  3DJUEGOS
 }
 }
 	
+if (message.content.startsWith(ft + "salas")) {         //  3DJUEGOS
+	
+		   let embed1 = {
+   
+			   "embed": {
+				   "title": "USO ADECUADO DE NUESTRAS SALAS",
+				   "description": "A continuación explicamos muy brevemente el uso de cada sala, y así evitar posibles conflictos.",
+				   "color": 13041408,
+				   "timestamp": "2019-04-29T12:14:55.011Z",
+				   "footer": {
+					 "icon_url": "https://i.imgur.com/mL7DyRK.png",
+					 "text": "Comunidad NEXT LEVEL"
+				   },
+				   "thumbnail": {
+					 "url": "https://i.imgur.com/v2Sm3d6.png"
+				   },
+				   
+				   "fields": [
+					 {
+				   "name": "<#561605836414255114>",
+				   "value": "Esta es la sala principal de charla, vale todo respetando siempre las normas."
+					 },
+					 {
+				   "name": "<#561600463963684874>",
+				   "value": "Sala exclusiva de uso de comandos de música"
+					 },
+					 {
+					"name": "<#561599847183155200>",
+				   "value": "Sala exclusiva de uso de comandos, ahí usarás todos los comandos de la comunidad que tengas a tu disposición de uso."  
+					 },
+					 {
+					"ame": "<#561602695656636431>",
+					   "value": "Sala exclusiva para BUSCAR gente para jugar Fortnite BATTLE ROYALE, no se admite debates, ni charlas del juego SOLO BÚSQUEDA DE GENTE."  
+					 },
+					 {
+					"name": "<#561606357942534154>",
+					"value": "Sala exclusiva para BUSCAR gente para jugar Fortnite Salvar el Mundo, no se admite debates, ni charlas del juego SOLO BÚSQUEDA DE GENTE."  
+					 }
+
+				   ]
+				 }	
+		   };	
+   message.channel.send(embed1);
+   
+   
+   
+}	
+	
+	
+	
 if (message.channel.id == message.channel.id) { 	// COMANDOS DE MUSICA BOTS
 
 if (message.content.startsWith(ft + "musica")) {         //  BOT MUSICAS
