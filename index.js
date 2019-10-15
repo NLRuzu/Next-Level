@@ -424,7 +424,7 @@ if (message.channel.id == message.channel.id) { 	// PARCHES INFORMATIVOS FORTNIT
 			let guild = bot.guilds.get("458220475957379074");
 			let miembro = guild.member(User);
 			
-			message.channel.send({
+			User.send({
 				embed: {
 					color: 0xFF0000,
 					title: "**ACABAS DE RECIBIR UNA ADVERTENCIA**",
@@ -469,7 +469,7 @@ if(message.member.roles.find("name", "🌟 STAFF")){
 		let guild = bot.guilds.get("458220475957379074");
 		let miembro = guild.member(User);
 		
-		message.channel.send({
+		User.send({
 			embed: {
 				color: 0xFF0000,
 				title: "**ACABAS DE RECIBIR UNA ADVERTENCIA**",
