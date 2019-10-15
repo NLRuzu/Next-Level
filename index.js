@@ -822,7 +822,7 @@ if (message.channel.id == message.channel.id) { 	// PARCHES INFORMATIVOS FORTNIT
 					fields: [
 						{
 						  "name": "Ha advertido a **" + User + " **por incumplimiento del",
-						  "value": "*"**ART 1: Uso inhadecuado de canales de texto**"*",
+						  "value": "*"ART 1. Uso inhadecuado de canales de texto"*",
 						}
 					  ]
 				
