@@ -415,7 +415,7 @@ if (message.channel.id == message.channel.id) { 	// PARCHES INFORMATIVOS FORTNIT
 }
 	
 	
-	// INICIO SISTEMA DE ADVERTENCIAS USUARIOS // ADVERTENCIA 2: USO INHADECUADO DE CANALES DE TEXTO
+	// INICIO SISTEMA DE ADVERTENCIAS USUARIOS // ADVERTENCIA 1: USO INHADECUADO DE CANALES DE TEXTO
 	
 	if (message.content.startsWith(ft + "ad1")) {        //  +ad1 @user   =  Advertimos al usuario
 		message.delete();
@@ -426,10 +426,10 @@ if (message.channel.id == message.channel.id) { 	// PARCHES INFORMATIVOS FORTNIT
 			
 			message.channel.send({
 				embed: {
-					color: 0x04ff00,
-					title: "**USUARIO ADVERTIDO**",
+					color: 0xFF0000,
+					title: "**ACABAS DE RECIBIR UNA ADVERTENCIA**",
 						  url: "http://gamedev.es/",
-					description: "**Acabas de recibir una advertencia por incumplimiento del ART 1: Uso inhadecuado de canales de texto \n\nPara evitar mas advertencias de este tipo, accede al canal de texto #info. \n\n**",
+					description: "**Acabas de recibir una advertencia por incumplimiento del ART 1: Uso inadecuado de canales de texto \n\nPara evitar mas advertencias de este tipo, accede al canal de texto <#561595483328610304> y mira el uso de cada sala.\n\n**",
 				}
 			});
 			
@@ -440,12 +440,12 @@ if (message.channel.id == message.channel.id) { 	// PARCHES INFORMATIVOS FORTNIT
 						name: message.author.tag,
 						icon_url: message.author.avatarURL
 					},
-					color: 0x04ff00,
+					color: 0xFF0000,
 					description: "Ha advertido a **" + User + "**",
 					fields: [
 						{
 						  "name": "por incumplimiento del",
-						  "value": "**ART 1: Uso inhadecuado de canales de texto**",
+						  "value": "**ART 1: Uso inadecuado de canales de texto**",
 						}
 					  ]
 				
@@ -458,7 +458,52 @@ if (message.channel.id == message.channel.id) { 	// PARCHES INFORMATIVOS FORTNIT
 		}
   }
 
-// FIN SISTEMA DE ADVERTENCIAS USUARIOS // ADVERTENCIA 1: USO INHADECUADO DE CANALES DE TEXTO
+// FIN SISTEMA DE ADVERTENCIAS USUARIOS // ADVERTENCIA 1: USO INADECUADO DE CANALES DE TEXTO
+
+// INICIO SISTEMA DE ADVERTENCIAS USUARIOS // ADVERTENCIA 2: VOCABULARIO INADECUADO
+	
+if (message.content.startsWith(ft + "ad2")) {        //  +ad2 @user   =  Advertimos al usuario
+	message.delete();
+if(message.member.roles.find("name", "🌟 STAFF")){
+		let User = message.mentions.users.first();
+		let guild = bot.guilds.get("458220475957379074");
+		let miembro = guild.member(User);
+		
+		message.channel.send({
+			embed: {
+				color: 0xFF0000,
+				title: "**ACABAS DE RECIBIR UNA ADVERTENCIA**",
+					  url: "http://gamedev.es/",
+				description: "**Acabas de recibir una advertencia por incumplimiento del ART 2: Vocabulario inadecuado \n\nPara evitar mas advertencias de este tipo modera las formas o tu lenguaje con los miembros de la comunidad.\n\n**",
+			}
+		});
+		
+	
+		bot.channels.get("633700114980143104").send({
+			embed: {
+				author: {
+					name: message.author.tag,
+					icon_url: message.author.avatarURL
+				},
+				color: 0xFF0000,
+				description: "Ha advertido a **" + User + "**",
+				fields: [
+					{
+					  "name": "por incumplimiento del",
+					  "value": "**ART 2: Vocabulario inadecuado**",
+					}
+				  ]
+			
+			
+			
+			
+			
+			}
+		});
+	}
+}
+
+// FIN SISTEMA DE ADVERTENCIAS USUARIOS // ADVERTENCIA 2: VOCABULARIO INADECUADO
 	
 	
 	
