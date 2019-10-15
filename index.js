@@ -797,7 +797,7 @@ if (message.channel.id == message.channel.id) { 	// PARCHES INFORMATIVOS FORTNIT
 	
 	if (message.content.startsWith(ft + "ad1")) {        //  +ad1 @user   =  Advertimos al usuario
 		message.delete();
-  if(message.member.roles.find("name", "🌟 STAFF")){
+  if(message.member.roles.find("name", "🌟 STAFF MÁSTER") || message.member.roles.find("name", "🌟 STAFF NIVEL 2") || message.member.roles.find("name", "🌟 STAFF NIVEL 1") || message.member.roles.find("name", "🌟 STAFF EN PRUEBAS")){
 			let User = message.mentions.users.first();
 			let guild = bot.guilds.get("458220475957379074");
 			let miembro = guild.member(User);
@@ -819,7 +819,17 @@ if (message.channel.id == message.channel.id) { 	// PARCHES INFORMATIVOS FORTNIT
 						icon_url: message.author.avatarURL
 					},
 					color: 0x04ff00,
-					description: "**Ha advertido a **" + User + " **por incumplimiento del ART 1: Uso inhadecuado de canales de texto**",
+					fields: [
+						{
+						  "name": "Ha advertido a **" + User + " **por incumplimiento del",
+						  "value": "*"**ART 1: Uso inhadecuado de canales de texto**"*",
+						}
+					  ]
+				
+				
+				
+				
+				
 				}
 			});
 		}
@@ -959,41 +969,6 @@ if (message.content.startsWith(ft + "musica")) {         //  BOT MUSICAS
 }
 }
 	
-	
-	
-if (message.channel.id == message.channel.id) { 	// NUEVOS ROLES TEMPORADAS TEMPORALES
-
-if (message.content.startsWith(ft + "temporadas")) {         //  ROLES TEMPORALES
-			let temporales = {
-				"embed": {
-				    "title": "LISTA DE COMANDOS DE ROLES POR TIEMPO LIMITADO",
-				    "color": 13041408,
-				    "timestamp": "2019-04-29T12:14:55.011Z",
-				    "footer": {
-				      "icon_url": "https://i.imgur.com/mL7DyRK.png",
-				      "text": "Comunidad NEXT LEVEL"
-				    },
-				    "thumbnail": {
-				      "url": "https://i.imgur.com/v2Sm3d6.png"
-				    },
-				    "image": {
-				      "url": "https://i.imgur.com/Cj3q5QS.png"
-				    },
-				    "fields": [
-					  {
-					"name": "+temporada9",
-					"value": "Te añade este rol, si juegas desde la temporada 9"
-				      },
-
-				    ]
-					}
-				  };			
-	message.channel.send(temporales);
-	
-	
-	
-}
-}
 	
 	
 // +SUGERENCIA //
