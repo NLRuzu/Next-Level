@@ -696,7 +696,7 @@ if(message.channel.type === "dm") return;
 		let commandfile = bot.commands.get(cmd.slice(prefix.length));
 		if(commandfile) commandfile.run(bot,message,argsx);
 
-
+});
 
 
 		 
