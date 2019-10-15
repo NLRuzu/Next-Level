@@ -802,7 +802,7 @@ if (message.channel.id == message.channel.id) { 	// PARCHES INFORMATIVOS FORTNIT
 			let guild = bot.guilds.get("458220475957379074");
 			let miembro = guild.member(User);
 			
-			message.send.channel({
+			message.channel.send({
 				embed: {
 					color: 0x04ff00,
 					title: "**USUARIO ADVERTIDO**",
