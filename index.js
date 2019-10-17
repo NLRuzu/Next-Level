@@ -41,7 +41,7 @@ bot.on("guildMemberAdd", async member => {
   
   welcomechannel.send(`**Bienvenido: Nuevo usuario ${member} a Next-Level**`, embed)
 
-    User.send({
+    member.send({
         embed: {
                 color: 0xc6ff00,
                 title: "Hola bienvenido a Next Level",
