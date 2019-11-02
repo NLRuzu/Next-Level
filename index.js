@@ -265,7 +265,7 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS SOLO STAFF
 											icon_url: message.author.avatarURL
 										},
 										"image": {
-										"url": "https://i.imgur.com/yToqaIu.png"
+									
 										},
 										footer: {
 											  text: message.guild.name
