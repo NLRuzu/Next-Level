@@ -13,7 +13,7 @@ module.exports.run = async (bot, message, args) => {
   // We need the User object aswell for different properties
   const user = guildMember.user;
   var medallas = [💛 Fiel a Next Level, 🔪 Cazador Sombrío];
-  var existe = medallas.includes(💛 Fiel a Next Level);
+  
   
   let embed = new Discord.RichEmbed()
     .setAuthor(user.username)
