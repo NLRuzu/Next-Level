@@ -23,7 +23,7 @@ module.exports.run = async (bot, message, args) => {
   message.channel.send({
                     embed:
                     {
-                        color: #C6FF00
+                        color: 0xc6ff00,
                         description: "Información",
                         fields: [
                             {
