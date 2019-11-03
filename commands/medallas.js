@@ -15,26 +15,24 @@ module.exports.run = async (bot, message, args) => {
   var medallas = ["633653927715274772", "633653848434671616"];
   var strMedallas =""; 
  for(let i=0; i<medallas.length; i++){
+    for(let i=0; i<medallas.length; i++){
     if(guildMember.roles.has(medallas[i])){
-        strMedallas = strMedallas + medallas[i] + " ";
+        strMedallas = strMedallas + message.guild.roles.get(medallas[i]) + " ";
     }
 }
   
   message.channel.send({
-                    embed:
-                    {
+                    embed:{
                         color: 0xc6ff00,
                         description: "Información",
-                        fields: [
-                            {
-                                name:"Roles",
-                                value: `${strMedallas}`
-                                
-                            }
-                        ]
-                    }
-      })
-}
+                        fields: 
+                          [{
+                              name:"Roles",
+                              value: `${strMedallas}`   
+                          }]
+                          }
+                          })
+                          }
 
 module.exports.help = {
   name: "medallas"
