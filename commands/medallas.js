@@ -20,16 +20,33 @@ module.exports.run = async (bot, message, args) => {
         strMedallas = strMedallas + message.guild.roles.get(medallas[i]) + " \n";
     }
 }
+
+var eventos = ["633025474808774697", "638002315348934658"];
+  var strEventos =""; 
+	
+    for(let i=0; i<eventos.length; i++){
+    if(guildMember.roles.has(eventos[i])){
+        strEventos = strEventos + message.guild.roles.get(eventos[i]) + " \n";
+    }
+}
   
   message.channel.send({
                     embed:{
                         color: 0xc6ff00,
                         description: "Información",
                         fields: 
-                          [{
+                          [
+						  {
+                              name:"Eventos",
+                              value: `${strEventos}`   
+                          }
+						  {
                               name:"Roles",
                               value: `${strMedallas}`   
-                          }]
+                          }
+						  
+						  
+						  ]
                           }
                           })
                           }
