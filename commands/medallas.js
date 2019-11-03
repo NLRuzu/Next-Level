@@ -19,6 +19,7 @@ module.exports.run = async (bot, message, args) => {
     if(guildMember.roles.has(medallas[i])){
         strMedallas = strMedallas + message.guild.roles.get(medallas[i]) + " ";
     }
+	}
 }
   
   message.channel.send({
@@ -36,4 +37,4 @@ module.exports.run = async (bot, message, args) => {
 
 module.exports.help = {
   name: "medallas"
-} 
+}
