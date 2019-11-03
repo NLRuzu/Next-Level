@@ -37,19 +37,19 @@ var eventos = ["633025474808774697", "638002315348934658"];
             description: "Toda la información referente al perfil del usuario",
             thumbnail: {
             url: "https://i.imgur.com/v2Sm3d6.png",
-            }
+            };
             
                         fields: 
                           [
-							{
-						name: "Perfil de",
-						value: `${guildMember}`
-							},
-                  
-                          {
+			{
+			name: "Perfil de",
+			value: `${guildMember}`
+			}
+
+                         {
                          name:"Eventos Participados",
                          value: `${strEventos} `   
-                          },
+                          }
                           {
                           name:"Medallas Obtenidas",
                               value: `${strMedallas} `   
