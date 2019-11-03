@@ -12,8 +12,8 @@ module.exports.run = async (bot, message, args) => {
 
   // We need the User object aswell for different properties
   const user = guildMember.user;
-  var medallas = [633653927715274772, 633653848434671616];
-  var existe = medallas.includes(633653927715274772, 633653848434671616);
+  var medallas = [@&633653927715274772, @633653848434671616];
+  var existe = medallas.includes(633653927715274772);
   
   let embed = new Discord.RichEmbed()
     .setAuthor(user.username)
