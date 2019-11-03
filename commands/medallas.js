@@ -34,7 +34,7 @@ strMedallas = "Ninguna";
 }
 	
 if (!strEventos) {
-strEventos = "Ninguna";
+strEventos = "Ninguno";
 }
 
 	
