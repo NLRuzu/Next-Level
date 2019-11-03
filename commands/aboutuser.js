@@ -55,4 +55,4 @@ async run(message, args){
 }
 
 }
-module.exports = userinfo;
+module.exports = aboutuser;
