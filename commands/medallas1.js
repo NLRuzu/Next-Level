@@ -29,7 +29,7 @@ var eventos = ["633025474808774697", "638002315348934658"];
         strEventos = strEventos + message.guild.roles.get(eventos[i]) + " \n";
     }
 }
-  
+  let embed1 = {
   "embed": {
 				    "title": "Información Perfil",
 				    "description": "Toda la información referente al perfil del usuario",
@@ -62,7 +62,8 @@ var eventos = ["633025474808774697", "638002315348934658"];
 				  }	
 			};	
   
-  
+  message.channel.send(embed1);
+	
 module.exports.help = {
   name: "medallas1"
 }
