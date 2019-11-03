@@ -12,7 +12,7 @@ module.exports.run = async (bot, message, args) => {
 
   // We need the User object aswell for different properties
   const user = guildMember.user;
-  var medallas = ["633653927715274772", "633653848434671616"];
+  var medallas = ["💛 Fiel a Next Level", "Cazador Sombrío 🔪"];
   var strMedallas =""; 
  for(let i=0; i<medallas.length; i++){
     if(guildMember.roles.has(medallas[i])){
