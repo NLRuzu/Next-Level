@@ -24,7 +24,7 @@ module.exports.run = async (bot, message, args) => {
     .setAuthor(user.username)
     .setDescription("Información")
     .setColor("#64FF00")
-    .addField("Roles", ${strMedallas});
+    .addField("Roles", `${strMedallas}`);
 
   message.channel.send(embed);
 }
