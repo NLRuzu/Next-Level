@@ -1,9 +1,7 @@
 let user;
 if (message.mentions.users.first()) {
     user = message.mentions.users.first();
-} else {
-    user = message.`enter code here`author;
-}
+} 
 
 const member = message.guild.member(user);
 
