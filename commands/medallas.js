@@ -62,5 +62,5 @@ var eventos = ["633025474808774697", "638002315348934658"];
        }
 
 module.exports.help = {
-  name: "medallas"
+  name: "info"
 }
