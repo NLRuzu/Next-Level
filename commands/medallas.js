@@ -24,7 +24,7 @@ module.exports.run = async (bot, message, args) => {
                     embed:
                     {
                         color: "#64FF00",
-                        description: "Información"
+                        description: "Información",
                         fields: [
                             {
                                 name:"Roles",
