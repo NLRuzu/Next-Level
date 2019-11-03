@@ -33,7 +33,7 @@ var eventos = ["633025474808774697", "638002315348934658"];
   message.channel.send({
                     embed:{
 		                        color: 0xc6ff00,
-                        description: "Información Perfil de `${guildMember}`",
+                        description: "Información Perfil",
 			
                         fields: 
                           [
