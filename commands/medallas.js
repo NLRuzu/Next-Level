@@ -40,18 +40,18 @@ var eventos = ["633025474808774697", "638002315348934658"];
             	"url": "https://i.imgur.com/v2Sm3d6.png",
            		 }
             
-            "fields": [
+            fields: [
 		{
-		"name": "Perfil de",
-		"value": `${guildMember}`
+		name: "Perfil de",
+		value: `${guildMember}`
 		},
 		{
-                 "name":"Eventos Participados",
-                 "value": `${strEventos} `   
+                 name: "Eventos Participados",
+                 value: `${strEventos} `   
                 },
                 {
-                "name":"Medallas Obtenidas",
-                "value": `${strMedallas} `   
+                name: "Medallas Obtenidas",
+                value: `${strMedallas} `   
                  }]
               }
            })
