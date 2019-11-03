@@ -28,12 +28,11 @@ module.exports.run = async (bot, message, args) => {
                         fields: [
                             {
                                 name:"Roles",
-                                value: `${strMedallas} `,
+                                value: `${strMedallas}`
                                 
                             }
                         ]
-                    }
-}
+                    })
 
 module.exports.help = {
   name: "medallas"
