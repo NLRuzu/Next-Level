@@ -19,9 +19,6 @@ module.exports.run = async (bot, message, args) => {
     .setColor("#64FF00", true)
     .addField("Full Username:", `${user.username}${user.discriminator}`, true)
     .addField("ID:", user.id, true)
-    .addField("Created at:", user.createdAt, true)
-    .addField("Status:", `${user.presence.status}`, true)
-    .addField("Game:", `${user.presence.game}`, true)
     .addField("Roles", guildMember.roles.map(r => `${r}`).join('|'), true);
 
   message.channel.send(embed);
