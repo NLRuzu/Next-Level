@@ -15,7 +15,7 @@ module.exports.run = async (bot, message, args) => {
   var medallas = [633653927715274772, 633653848434671616];
   var strMedallas =""; 
  for(let i=0; i<medallas.length; i++){
-    if(guildMember.roles.has(medallas[i]){
+    if(guildMember.roles.has(medallas[i])){
         strMedallas = strMedallas + medallas[i] + " ";
     }
 }
