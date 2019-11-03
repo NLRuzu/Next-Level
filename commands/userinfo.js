@@ -15,11 +15,11 @@ module.exports.run = async (bot, message, args) => {
 
   let embed = new Discord.RichEmbed()
     .setAuthor(user.username)
-    .setDescription("Users Info", true)
-    .setColor("#64FF00", true)
-    .addField("Full Username:", `${user.username}${user.discriminator}`, true)
-    .addField("ID:", user.id, true)
-    .addField("Roles", guildMember.roles.map(r => `${r}`).join('|'), true);
+    .setDescription("Información")
+    .setColor("#64FF00")
+    .addField("Full Username:", `${user.username}${user.discriminator}`)
+    .addField("ID:", user.id)
+    .addField("Roles", guildMember.roles.map(r => `${r}`).join('|'));
 
   message.channel.send(embed);
 }
