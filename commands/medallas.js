@@ -33,18 +33,18 @@ var eventos = ["633025474808774697", "638002315348934658"];
   message.channel.send({
                     embed:{
 		                        color: 0xc6ff00,
-                        title: "**Información Perfil**",
+                        title: "Información Perfil",
 			description: "Toda la información referente al perfil del usuario",
-			  thumbnail: {
+			 thumbnail: {
 			url: 'https://i.imgur.com/v2Sm3d6.png',
-			},
+			}
 			
                         fields: 
                           [
 				{
 			name: "Perfil de",
 			value: `${guildMember}`,
-			},  
+			},
 				  
 						  {
                               name:"Eventos Participados",
