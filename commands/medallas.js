@@ -32,12 +32,9 @@ var eventos = ["633025474808774697", "638002315348934658"];
   
   message.channel.send({
                     embed:{
-			title: 'Información de Usuario',
-                        color: 0xc6ff00,
+		                        color: 0xc6ff00,
                         description: "Información",
-			thumbnail: {
-			url: 'https://i.imgur.com/Kr75jKl.png',
-			}
+			
                         fields: 
                           [
 						  {
