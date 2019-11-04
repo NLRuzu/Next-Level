@@ -55,7 +55,7 @@ strExp = "Ninguno";
                     "embed":{
 			    
             color: 0xc6ff00,
-            title: "Información Perfil",
+            title: "INFORMACIÓN PERFIL",
             description: "Toda la información referente al perfil del usuario",
             
 		thumbnail: {
