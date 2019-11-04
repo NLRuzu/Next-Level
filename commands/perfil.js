@@ -30,24 +30,7 @@ var eventos = ["633025474808774697", "638002315348934658"];
     }
 }
 	
-var plataforma = ["633637417114402856", "633637857206075392"];
-  var strPlataforma =""; 
-    
-    for(let i=0; i<plataforma.length; i++){
-    if(guildMember.roles.has(plataforma[i])){
-        strPlataforma = strPlataforma + message.guild.roles.get(plataforma[i]) + " \n";
-    }
-}
-	
-var juegos = ["464055613484302336", "490531888063184905"];
-  var strJuegos =""; 
-    
-    for(let i=0; i<juegos.length; i++){
-    if(guildMember.roles.has(juegos[i])){
-        strJuegos = strJuegos + message.guild.roles.get(juegos[i]) + " \n";
-    }
-}
-	
+
 var exp = ["633959653012668416", "633959800715083787", "634001148180955136", "634001183211520020", "634001209417662485", "634001240950571018", "634001268641366037", "634001297078484993", "634001321250258944", "634001358025916428"];
  var strExp =""; 
     
@@ -70,13 +53,7 @@ if (!strExp) {
 strExp = "Ninguno";
 }
 	
-if (!strPlataforma) {
-strPlataforma = "Ninguna";
-}
-	
-if (!strJuegos) {
-strJuegos = "Ninguno";
-}
+
 
 	
   message.channel.send({
@@ -100,16 +77,6 @@ strJuegos = "Ninguno";
 		{
 		name: "🔰 Rango EXP",
 		value: `${strExp}`,
-		inline:true 
-		},
-		{
-		name: "📱 Plataforma",
-		value: `${strPlataforma}`,
-		inline:true 
-		},
-		{
-		name: "🎲 Juegos",
-		value: `${strJuegos}`,
 		inline:true 
 		},
 		
