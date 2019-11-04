@@ -61,8 +61,8 @@ strEventos = "Ninguno";
                         },       
                 {
                 name: "Medallas Obtenidas",
-                value: `${strMedallas}`  
-			
+                value: `${strMedallas}`,  
+	inline:true 	
                  }]
               }
            })
