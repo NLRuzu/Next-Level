@@ -89,5 +89,5 @@ strExp = "Ninguno";
        }
 
 module.exports.help = {
-  name: "info"
+  name: "perfil"
 }
