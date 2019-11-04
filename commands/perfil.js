@@ -58,7 +58,7 @@ var exp = ["633959653012668416", "633959800715083787", "634001148180955136", "63
 }
 	
 	
- 	if (!strMedallas) {
+if (!strMedallas) {
 strMedallas = "Ninguna";
 }
 	
@@ -112,16 +112,7 @@ strJuegos = "Ninguno";
 		value: `${strJuegos}`,
 		inline:true 
 		},
-		{
-		name: "🔻 Temporadas",
-		value: `${strTemp}`,
-		inline:true 
-		},
-		{
-		name: "❗ Notificaciones",
-		value: `${strNoti}`,
-		inline:true 
-		},
+		
 		{   
 		name: "💿 Eventos Participados",
       		value: `${strEventos}`,
