@@ -56,12 +56,39 @@ var exp = ["633959653012668416", "633959800715083787", "634001148180955136", "63
         strExp = strExp + message.guild.roles.get(exp[i]) + " \n";
     }
 }
+	
+var temp = ["575979975321059338", "575980093453631488", "575980132569972736", "575980163465216000", "575980190984044545", "575980222202249237", "575980271271149568", "575980303949234176", "575980337390157824", "606416829212131330", "633644980094763011"];
+ var strTemp =""; 
+    
+    for(let i=0; i<temp.length; i++){
+    if(guildMember.roles.has(temp[i])){
+        strTemp = strTemp + message.guild.roles.get(temp[i]) + " \n";
+    }
+}
+	
+var noti = ["575979975321059338", "575980093453631488"];
+ var strNoti =""; 
+    
+    for(let i=0; i<noti.length; i++){
+    if(guildMember.roles.has(noti[i])){
+        strNoti = strNoti + message.guild.roles.get(noti[i]) + " \n";
+    }
+}	
+	
+	
  	if (!strMedallas) {
 strMedallas = "Ninguna";
 }
 	
 if (!strEventos) {
 strEventos = "Ninguno";
+}
+if (!strTemp) {
+strTemp = "Ninguna";
+}
+	
+if (!strNoti) {
+strNoti = "Ninguno";
 }
 	
 if (!strExp) {
@@ -108,6 +135,16 @@ strJuegos = "Ninguno";
 		{
 		name: "🎲 Juegos",
 		value: `${strJuegos}`,
+		inline:true 
+		},
+		{
+		name: "🔻 Temporadas",
+		value: `${strTemp}`,
+		inline:true 
+		},
+		{
+		name: "❗ Notificaciones",
+		value: `${strNoti}`,
 		inline:true 
 		},
 		{   
