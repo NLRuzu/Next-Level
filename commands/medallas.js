@@ -55,11 +55,10 @@ strEventos = "Ninguno";
 		name: "Perfil de",
 		value: `${guildMember}`
 		},
-		{
-                 name: "Eventos Participados",
-                 value: `${strEventos}`
-		
-                },
+		 {   name: "Eventos Participados",
+       value: `${strEventos}`,
+    inline:true 
+                        },       
                 {
                 name: "Medallas Obtenidas",
                 value: `${strMedallas}`  
