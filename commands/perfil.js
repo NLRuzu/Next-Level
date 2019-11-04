@@ -65,7 +65,7 @@ strExp = "Ninguno";
             fields:
 	[
 		{
-		name: "👱 Perfil de",
+		name: "🔗 Perfil de",
 		value: `${guildMember}`,
 		inline:true 
 		},
@@ -75,7 +75,7 @@ strExp = "Ninguno";
 		inline:true 
 		},
 		{   
-		name: "🎭 Eventos Participados",
+		name: "💿 Eventos Participados",
       		value: `${strEventos}`,
     		inline:true 
                         },       
