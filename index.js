@@ -165,7 +165,7 @@ if (message.content.startsWith(ft + "fortnite")) {         //  BOT FORTNITE
 				      "text": "Comunidad NEXT LEVEL"
 				    },
 				    "thumbnail": {
-				      "url": "https://i.imgur.com/cVbWqlZ.png"
+				      "url": "https://i.imgur.com/nM5N16C.png"
 				    },
 				    "image": {
 				      "url": "https://i.imgur.com/KNWIYuk.png"
