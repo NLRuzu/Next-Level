@@ -580,10 +580,6 @@ if (message.content.startsWith(ft + "salas")) {         //  3DJUEGOS
 				   "value": "Sala exclusiva de uso de comandos, ahí usarás todos los comandos de la comunidad que tengas a tu disposición de uso."  
 					 },
 					 {
-					"name": "🌋-buscar-partidas",
-					   "value": "Sala exclusiva para BUSCAR gente para jugar Fortnite BATTLE ROYALE, no se admite debates, ni charlas del juego SOLO BÚSQUEDA DE GENTE."  
-					 },
-					 {
 					"name": "🌍-buscar-partidas",
 					"value": "Sala exclusiva para BUSCAR gente para jugar Fortnite Salvar el Mundo, no se admite debates, ni charlas del juego SOLO BÚSQUEDA DE GENTE."  
 					 }
