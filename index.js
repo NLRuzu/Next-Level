@@ -172,29 +172,26 @@ if (message.content.startsWith(ft + "fortnite")) {         //  BOT FORTNITE
 				    },
 				    "fields": [
 				      {
-					"name": "!link nombreepic",
+					"name": "+link nombreepic",
 					"value": "Nos linkea la cuenta de epic games con el discord"
 				      },
 				      {
-					"name": "!kd",
-					"value": "Nos pone el KD en nuestro nick, para actualizarlo usarlo de nuevo cada vez que lo necesitéis."
+					"name": "+kd",
+					"value": "Nos muestra el KD de nuestra cuenta."
 				      },
 				      {
-					"name": "!wins",
-					"value": "Nos pone las WINS en nuestro nick, para actualizarlo usarlo de nuevo cada vez que lo necesitéis."
+					"name": "+wins",
+					"value": "Nos muestra las partidas ganadas de nuestra cuenta."
 				      },
 				      {
-					"name": "!delwins",
-					"value": "Nos elimina las WINS del nick."
+					"name": "+rank",
+					"value": "Nos pone las WINS y el KD en el nick, para actualizarlo hay que escribirlo de nuevo. **Solo podrán usarlos los que tengan el rol <@641189390793703435>"
 				      },
 					  {
 					"name": "!delkd",
 					"value": "Nos elimina el KD del nick."
-				      },
-					  {
-					"name": "!fts",
-					"value": "Muestra las estadísticas generales de nuestra cuenta."
 				      }
+					
 				    ]
 					}
 				  };			
