@@ -185,11 +185,15 @@ if (message.content.startsWith(ft + "fortnite")) {         //  BOT FORTNITE
 				      },
 				      {
 					"name": "+rank",
-					"value": "Nos pone las WINS y el KD en el nick, *para actualizarlo hay que escribirlo de nuevo*. **Solo podrán usarlos los que tengan el rol ⭐Apoya un Creador **"
+					"value": "Nos pone las WINS y el KD en el nick*. **Solo podrán usarlos los que tengan el rol ⭐Apoya un Creador **"
 				      },
 					  {
 					"name": "IMPORTANTE",
 					"value": "Todos los comandos deben usarse en la sala <#561599847183155200>."
+				      },
+				{
+					"name": "**PARA ACTUALIZAR WINS Y KD**",
+					"value": "Debemos usar cualquier comando `+kd` o `+wins` nos actualizará el nick con las WINS y KD actual."
 				      }
 					
 				    ]
