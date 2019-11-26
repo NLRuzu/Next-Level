@@ -72,23 +72,23 @@ strFortnite = "Ninguno";
 		{
 		name: "🔗 Perfil de",
 		value: `${guildMember}`,
-		inline:true 
+		inline:false 
 		},
 		{
 		name: "Fortnite",
 		value: `${strFortnite}`,
-		inline:true 
+		inline:false
 		},
 		
 		{   
 		name: "Red Dead",
       		value: `${strReddead}`,
-    		inline:true 
+    		inline:false
                         },       
                 {
                 name: "Comunidad",
                 value: `${strComunidad}`,  
-	inline:true 	
+	inline:false 	
                  }]
               }
            })
