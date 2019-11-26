@@ -129,26 +129,7 @@ if (message.channel.id == "5716078706600181962" && message.author.bot) {
 
 
 
-	
 
-		
-	if (message.content.startsWith(ft + "help")) {
-	  let sicon = message.guild.iconURL;
-	  let serverembed = new Discord.RichEmbed()
-	  .setTitle("**GENERALES**")
-	  .setColor("#C6FF00")
-	  .setThumbnail(sicon)
-	  .addField("**+serverinfo**", "información del servidor")
-	  .addField("**+buscarpartidas**", "Comandos para uso búsqueda de partidas de fortnite")
-	  .addField("**+roles**", "Comandos para añadirte roles de juegos")
-	  .addField("**+fortnite**", "Comandos de uso del bot fortnite")
-	  .addField("**+temporadas**", "Comandos para añadirte roles de las temporadas de fortnite");
-	  
-	  
-	  
-
-	  bot.channels.get("561599847183155200").send(serverembed);
-	  }	
 	
 	
 	if (message.channel.id == message.channel.id) { 	// BOT FORTNITE
