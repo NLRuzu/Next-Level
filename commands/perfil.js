@@ -89,7 +89,14 @@ strExp = "Ninguno";
                 name: "📀 Medallas Obtenidas",
                 value: `${strMedallas}`,  
 	inline:false 	
-                 }]
+                 },
+		{
+                name: "Para ver todas las medallas por secciones de juegos",
+                value: "```usa +medallas```",  
+	inline:false 	
+                 }
+	
+	]
               }
            })
        }
