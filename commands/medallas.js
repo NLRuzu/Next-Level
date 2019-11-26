@@ -81,17 +81,17 @@ strFortnite = "Ninguno";
 		},
 		
 		{   
-		name: "Red Dead",
+		name: "**Red Dead**",
       		value: `${strReddead}`,
     		inline:false
                         },       
                 {
-                name: "Comunidad",
+                name: "**Comunidad**",
                 value: `${strComunidad}`,  
 	inline:false 	
                  },
 		{
-                name: "Para ver toda la información de medallas",
+                name: "**Para ver toda la información de medallas**",
                 value: "```usa +infomedallas```",  
 	inline:false 	
                  }
