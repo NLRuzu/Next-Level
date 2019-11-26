@@ -91,8 +91,8 @@ strFortnite = "Ninguno";
 	inline:false 	
                  },
 		{
-                name: "Para ver toda la información de medallas ",
-                value: ```usa +infomedallas```,  
+                name: "Para ver toda la información de medallas",
+                value: "```usa +infomedallas```",  
 	inline:false 	
                  }
 	
