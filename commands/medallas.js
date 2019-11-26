@@ -89,7 +89,14 @@ strFortnite = "Ninguno";
                 name: "Comunidad",
                 value: `${strComunidad}`,  
 	inline:false 	
-                 }]
+                 },
+		{
+                name: "Para ver toda la información de medallas ",
+                value: ```usa +infomedallas```,  
+	inline:false 	
+                 }
+	
+	]
               }
            })
        }
