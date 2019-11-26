@@ -72,23 +72,23 @@ strExp = "Ninguno";
 		{
 		name: "🔗 Perfil de",
 		value: `${guildMember}`,
-		inline:true 
+		inline:false 
 		},
 		{
 		name: "🔰 Rango EXP",
 		value: `${strExp}`,
-		inline:true 
+		inline:false
 		},
 		
 		{   
 		name: "💿 Eventos Participados",
       		value: `${strEventos}`,
-    		inline:true 
+    		inline:false 
                         },       
                 {
                 name: "📀 Medallas Obtenidas",
                 value: `${strMedallas}`,  
-	inline:true 	
+	inline:false 	
                  }]
               }
            })
