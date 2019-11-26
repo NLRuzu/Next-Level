@@ -75,7 +75,7 @@ strFortnite = "Ninguno";
 		inline:false 
 		},
 		{
-		name: "Fortnite",
+		name: "**Fortnite**",
 		value: `${strFortnite}`,
 		inline:false
 		},
