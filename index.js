@@ -234,7 +234,7 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS SOLO STAFF
 			  
 			  return message.channel.send(serverembed);
 			  }			  
-
+// comunicar general
     if (message.content.startsWith(ft + "comunicar")) {        //  +comunicar mensaje  = Enviamos un comunicado en una sala concreta
 		  if(message.member.roles.find("name", "🌟 STAFF")){
 		  var comunicado = message.content.replace("+comunicar ", "");  
@@ -265,7 +265,73 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS SOLO STAFF
 			}
 		}
 
+	// fin comunicar general
 	
+	// comunicar noticia red dead
+    if (message.content.startsWith(ft + "noticiared")) {        //  +comunicar mensaje  = Enviamos un comunicado en una sala concreta
+		  if(message.member.roles.find("name", "🌟 [Red Dead] STAFF")){
+		  var comunicado = message.content.replace("+noticiared ", "");  
+		  let adminRoleObject = message.guild.roles.find("name", "📑 Noticias Red Dead");
+			var embebido = {
+					  "embed": {
+										"color":  0xc6ff00,
+										author: {
+											name: message.author.tag,
+											icon_url: message.author.avatarURL
+										},
+										"image": {
+									
+										},
+										footer: {
+											  text: message.guild.name
+											},
+										description: comunicado,
+										timestamp: message.createdAt,								
+									}
+									};
+			
+			
+
+			message.delete().catch(O_o=>{});
+			bot.channels.get("643943366752469023").send(`[${adminRoleObject}]`, embebido);
+
+			}
+		}
+
+	// fin comunicar general
+	
+	// comunicar consejo red dead
+    if (message.content.startsWith(ft + "consejored")) {        //  +comunicar mensaje  = Enviamos un comunicado en una sala concreta
+		  if(message.member.roles.find("name", "🌟 [Red Dead] STAFF")){
+		  var comunicado = message.content.replace("+consejored ", "");  
+		  let adminRoleObject = message.guild.roles.find("name", "💰 Consejos Red Dead");
+			var embebido = {
+					  "embed": {
+										"color":  0xc6ff00,
+										author: {
+											name: message.author.tag,
+											icon_url: message.author.avatarURL
+										},
+										"image": {
+									
+										},
+										footer: {
+											  text: message.guild.name
+											},
+										description: comunicado,
+										timestamp: message.createdAt,								
+									}
+									};
+			
+			
+
+			message.delete().catch(O_o=>{});
+			bot.channels.get("645208289029914625").send(`[${adminRoleObject}]`, embebido);
+
+			}
+		}
+
+	// fin comunicar general
 	
 	if (message.content.startsWith(ft + "verificar")) {        //  +verificar @user   = Verificamos a un usuario
             message.delete();
