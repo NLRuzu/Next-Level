@@ -649,6 +649,61 @@ let adminRoleObject = message.guild.roles.find("name", "🌟 STAFF");
 	/// FIN SUGERENCIA ///
 	
 			
+// +BUSCAR DESCRIPCION // PARTIDAS //    - FUNCIONANDO
+if(message.content.startsWith("+rd")) {
+                if(message.member.voiceChannel != null || message.member.voiceChannel != undefined){
+                    let desc = message.content.split("+bp ")[1];
+                    if(desc != null){
+                        let options = {
+                            maxAge: 3600
+                        }
+                        let server = bot.guilds.get("458220475957379074");
+                        let adminRoleObject = server.roles.find("name", "Red Dead Redemption 2");
+                        message.member.voiceChannel.createInvite(options)
+                        .then(invite => {
+                            let invitacion = invite.code.split("invite/")[0];
+                            let users = message.member.voiceChannel.userLimit - message.member.voiceChannel.members.size;
+
+								var mdb = {
+							  "embed": {
+								"title": "BUSCANDO PARTIDA DE RED DEAD ONLINE",
+								"url": "http://gamedev.es/",
+								"description": "Busco **" + users + "** compañeros para jugar en **" + message.member.voiceChannel.name + "**",
+								"color": 0xc500ff,
+								"timestamp": message.createdAt,
+								"author": {
+								"name": message.author.tag,
+								"icon_url": message.author.avatarURL
+								},
+								"fields": [
+								  {
+									"name": "Descripción",
+									"value": "*" + desc + "*",
+								  },
+								  {
+									"name": "Únete a mi sala",
+									"value": "[Haz click para unirte](https://discord.gg/"+ invitacion +")"
+								  }
+								]
+							  }
+							}
+
+
+
+	message.delete().catch(O_o=>{});
+	bot.channels.get("643449055359270932").send(`[${adminRoleObject}]`, mdb);
+        
+						
+                           
+                        })
+                        .catch(console.error);
+                    }
+                }
+            }
+	
+   
+
+			
 
 	
 	
