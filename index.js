@@ -368,7 +368,7 @@ if (message.content.startsWith(ft + "buscarrd")) {         //  +buscarpartidas  
                         description: '**DEBERÁS ESTAR EN UNA SALA DE VOZ EN PRIMER LUGAR.**',
 						fields: [
 							{
-							name: "`+bp descripción`",
+							name: "`+rd mensaje`",
 							value: `Para Red Dead Online, escribir el comando en la sala <#643449055359270932>`,		
 							}
 							
