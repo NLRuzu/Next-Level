@@ -690,7 +690,7 @@ if(message.content.startsWith("+rd")) {
 
 
 
-	message.delete().catch(O_o=>{});
+	
 	bot.channels.get("643449055359270932").send(`[${adminRoleObject}]`, mdb);
         
 						
