@@ -757,7 +757,7 @@ if(message.content.startsWith("+rd")) {
 
 
 	
-	bot.channels.get("643449055359270932").send(`[${adminRoleObject}]`, mdb);
+	bot.channels.get("649281948191293450").send(`[${adminRoleObject}]`, mdb);
         
 						
                            
