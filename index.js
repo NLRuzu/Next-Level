@@ -34,7 +34,7 @@ bot.on("guildMemberAdd", async member => {
     let embed = { embed: {
                 color: 0xc6ff00,
                 title: "Hola bienvenido a Next Level",
-                 description: '**Asígnate el rol manualmente para ver las salas. Ve a la sala <#585873855676153857> y haz clic en el icono del rol que quieras**',
+                 description: '**Para ver las salas de los juegos asígnatelos manualmente. Ve a la sección **ASIGNACIÓN DE ROLES** y haz clic en el icono del rol que quieras**', 
                 
             }
     };
@@ -45,7 +45,7 @@ bot.on("guildMemberAdd", async member => {
         embed: {
                 color: 0xc6ff00,
                 title: "Hola bienvenido a Next Level",
-                description: '**Asígnate el rol manualmente para ver las salas. Ve a la sala <#585873855676153857> y haz clic en el icono del rol que quieras**',   
+                description: '**Para ver las salas de los juegos asígnatelos manualmente. Ve a la sección **ASIGNACIÓN DE ROLES** y haz clic en el icono del rol que quieras**',   
             }
         });
  });
@@ -60,7 +60,7 @@ bot.on("guildMemberRemove", async member => {
                         color: 0xc6ff00,
                         title: "**HA ABANDONADO**",
 		       	url: "http://gamedev.es/",
-                        description: `${member} ha abandonado el clan`,
+                        description: `${member} ha abandonado la comunidad`,
                     }
                 });
 });
