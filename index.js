@@ -294,7 +294,7 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS SOLO STAFF
 			};
 
 
-			let torneochannel = bot.channels.get("649281948191293450").send(`[${adminRoleObject}]`, apuntarme);
+			let torneochannel = bot.channels.get("649325138289885209").send(`[${adminRoleObject}]`, apuntarme);
 			if(!torneochannel) return message.channel.send("No se encuentra la sala");
 
 
