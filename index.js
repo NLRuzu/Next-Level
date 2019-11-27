@@ -669,7 +669,7 @@ if(message.content.startsWith("+rd")) {
 								"title": "BUSCANDO PARTIDA DE RED DEAD ONLINE",
 								"url": "http://gamedev.es/",
 								"description": "Busco **" + users + "** compañeros para jugar en **" + message.member.voiceChannel.name + "**",
-								"color": 0xc500ff,
+								"color": 0xc6ff00,
 								"timestamp": message.createdAt,
 								"author": {
 								"name": message.author.tag,
