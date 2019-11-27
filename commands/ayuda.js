@@ -59,7 +59,7 @@ module.exports.run = async (bot, message, args) => {
                  },
 		{
                 name: "**Para crear una partida de red dead online programada**",
-                value: ```usa +partidard "descripcion" "día y hora" en la sala 💬-chat-rdr2```,  
+                value: "```usa +partidared \"Descripción\" \"Día y Hora\" en la sala 💬-chat-rdr2```",  
 	inline:false 	
                  }
 	
