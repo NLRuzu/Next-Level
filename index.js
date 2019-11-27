@@ -724,7 +724,7 @@ if(message.content.startsWith("+rd")) {
                             maxAge: 3600
                         }
                         let server = bot.guilds.get("458220475957379074");
-                        let adminRoleObject = server.roles.find("name", "Red Dead Redemption 2");
+                        let adminRoleObject = server.roles.find("name", "Red Dead");
                         message.member.voiceChannel.createInvite(options)
                         .then(invite => {
                             let invitacion = invite.code.split("invite/")[0];
