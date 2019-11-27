@@ -652,7 +652,7 @@ let adminRoleObject = message.guild.roles.find("name", "🌟 STAFF");
 // +BUSCAR DESCRIPCION // PARTIDAS //    - FUNCIONANDO
 if(message.content.startsWith("+rd")) {
                 if(message.member.voiceChannel != null || message.member.voiceChannel != undefined){
-                    let desc = message.content.split("+bp ")[1];
+                    let desc = message.content.split("+rd ")[1];
                     if(desc != null){
                         let options = {
                             maxAge: 3600
