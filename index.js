@@ -789,7 +789,7 @@ if(message.channel.type === "dm") return;
  // ACTIVIDAD DEL BOT (JUGANDO A +HELP) //
 bot.on("ready", async () => {
 	console.log(`${bot.user.username} estÃ¡ online`);
-	bot.user.setActivity("+help");
+	bot.user.setActivity("+ayuda");
 });
 
 bot.login(process.env.BOT_TOKEN);
