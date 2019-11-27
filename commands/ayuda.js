@@ -56,6 +56,11 @@ module.exports.run = async (bot, message, args) => {
                 name: "**Para buscar gente para jugar a red dead online**",
                 value: "```usa +buscarrd en la sala 💬-chat-rdr2```",  
 	inline:false 	
+                 },
+		{
+                name: "**Para crear una partida de red dead online programada**",
+                value: "```usa +partidard "descripción" "día y hora" en la sala 💬-chat-rdr2```",  
+	inline:false 	
                  }
 	
 	]
