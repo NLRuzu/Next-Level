@@ -49,7 +49,7 @@ module.exports.run = async (bot, message, args) => {
                  },
                  {
                 name: "**Para ver información de comandos del bot fortnite**",
-                value: "```usa +fortnite en la sala <#561599847183155200> ```",  
+                value: "```usa +fortnite en la sala``` <#561599847183155200>`",  
 	inline:false 	
                  },
                  {
