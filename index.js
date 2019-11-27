@@ -355,7 +355,7 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS SOLO STAFF
     
     } // FIN COMANDOS STAFF
 
-if (message.content.startsWith(ft + "buscarpartidas")) {         //  +buscarpartidas   = Envía toda la información sobre invitaciones canal INFO
+if (message.content.startsWith(ft + "buscarrd")) {         //  +buscarpartidas   = Envía toda la información sobre invitaciones canal INFO
 			let embed = {
 			"embed": {
 						
@@ -369,7 +369,7 @@ if (message.content.startsWith(ft + "buscarpartidas")) {         //  +buscarpart
 						fields: [
 							{
 							name: "`+bp descripción`",
-							value: `Para Fortnite Battle Royale, escribir el comando en la sala <#561602695656636431>`,		
+							value: `Para Red Dead Online, escribir el comando en la sala <#643449055359270932>`,		
 							}
 							
 						]
