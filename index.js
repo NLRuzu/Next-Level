@@ -34,7 +34,7 @@ bot.on("guildMemberAdd", async member => {
     let embed = { embed: {
                 color: 0xc6ff00,
                 title: "Hola bienvenido a Next Level",
-                description: '**Para ver las salas de los juegos asígnatelos manualmente. Ve a la sección ASIGNACIÓN DE ROLES y haz clic en el icono del rol que quieras**', 
+                description: '**Para ver las salas de los juegos asígnatelos manualmente. Ve a la sala <#585873855676153857> y haz clic en el icono del rol que quieras**', 
                 
             }
     };
@@ -45,7 +45,7 @@ bot.on("guildMemberAdd", async member => {
         embed: {
                 color: 0xc6ff00,
                 title: "Hola bienvenido a Next Level",
-                description: '**Para ver las salas de los juegos asígnatelos manualmente. Ve a la sección ASIGNACIÓN DE ROLES y haz clic en el icono del rol que quieras**',   
+                description: '**Para ver las salas de los juegos asígnatelos manualmente. Ve a la sala <#585873855676153857> y haz clic en el icono del rol que quieras**',   
             }
         });
  });
