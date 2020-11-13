@@ -6,8 +6,7 @@ module.exports.run = async (bot, message, args) => {
 	console.log(guildMember);
   if (message.mentions.members.first()) {
     guildMember = message.mentions.members.first();
-  } else {
-    guildMember = message.member;
+  
   }
 	
 
@@ -72,7 +71,7 @@ strExp = "Ninguno";
 	[
 		{
 		name: "🔗 Perfil de",
-		value: `${message.mentions.members.first()}`,
+		value: `${guildMember}`,
 		inline:false 
 		},
 		{
