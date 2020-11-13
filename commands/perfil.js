@@ -22,7 +22,7 @@ module.exports.run = async (bot, message, args) => {
     
     for(let i=0; i<medallas.length; i++){
     if(guildMember.roles.has(medallas[i])){
-        strMedallas = strMedallas + guildMember.roles.get(medallas[i]) + " \n";
+        strMedallas = strMedallas + guildMember.roles.cache.get(medallas[i]) + " \n";
     }
 }
 
@@ -31,7 +31,7 @@ var eventos = ["633025474808774697", "638002315348934658"];
     
     for(let i=0; i<eventos.length; i++){
     if(guildMember.roles.has(eventos[i])){
-        strEventos = strEventos + guildMember.roles.get(eventos[i]) + " \n";
+        strEventos = strEventos + guildMember.roles.cache.get(eventos[i]) + " \n";
     }
 }
 	
@@ -41,7 +41,7 @@ var exp = ["633959653012668416", "633959800715083787", "634001148180955136", "63
     
     for(let i=0; i<exp.length; i++){
     if(guildMember.roles.has(exp[i])){
-        strExp = strExp + guildMember.roles.get(exp[i]) + " \n";
+        strExp = strExp + guildMember.roles.cache.get(exp[i]) + " \n";
     }
 }
 	
