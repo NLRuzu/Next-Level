@@ -9,6 +9,8 @@ module.exports.run = async (bot, message, args) => {
   } else {
     guildMember = message.member;
   }
+	
+	console.log(guildMember);
 
   // We need the User object aswell for different properties
   const user = guildMember.user;
