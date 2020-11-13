@@ -3,7 +3,7 @@ const Discord = require("discord.js");
 module.exports.run = async (bot, message, args) => {
 
   let guildMember;
-	
+	console.log(guildMember);
   if (message.mentions.members.first()) {
     guildMember = message.mentions.members.first();
   } else {
@@ -72,7 +72,7 @@ strExp = "Ninguno";
 	[
 		{
 		name: "🔗 Perfil de",
-		value: `${guildMember}`,
+		value: `${message.mentions.members.first()}`,
 		inline:false 
 		},
 		{
