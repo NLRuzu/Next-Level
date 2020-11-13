@@ -72,7 +72,7 @@ strExp = "Ninguno";
 	[
 		{
 		name: "🔗 Perfil de",
-		value: `${guildMember}`,
+		value: `${user }`,
 		inline:false 
 		},
 		{
