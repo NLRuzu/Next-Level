@@ -5,7 +5,7 @@ module.exports.run = async (bot, message, args) => {
   let guildMember;
 	
   if (message.mentions.members.first()) {
-    guildMember = message.mentions.members.first();
+    guildMember = message.author();
   } else {
     guildMember = message.member;
   }
