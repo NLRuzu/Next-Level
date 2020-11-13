@@ -3,6 +3,9 @@ const Discord = require("discord.js");
 module.exports.run = async (bot, message, args) => {
 
   let guildMember;
+	console.log(message);
+	console.log(message.mentions.members.first());
+	console.log(message.member);
 
   if (message.mentions.members.first()) {
     guildMember = message.mentions.members.first();
@@ -10,7 +13,6 @@ module.exports.run = async (bot, message, args) => {
     guildMember = message.member;
   }
 	
-	console.log(guildMember);
 
   // We need the User object aswell for different properties
   const user = guildMember.user;
