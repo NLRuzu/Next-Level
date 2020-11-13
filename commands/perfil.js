@@ -4,9 +4,10 @@ module.exports.run = async (bot, message, args) => {
 
   let guildMember;
 	console.log(guildMember);
-  if (message.mentions.members.first()) {
-    guildMember = message.mentions.members.first();
-  
+  if (message.mentions.users.first()) {
+    guildMember = message.mentions.users.first();
+  } else {
+    guildMember = message.user;
   }
 	
 
