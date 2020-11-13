@@ -1,6 +1,6 @@
 const Discord = require("discord.js");
 const fs = require("fs");
-const bot = new Discord.Client({disableEveryone: true});
+const bot = new Discord.Client({ disableMentions: 'everyone' });
 bot.commands = new Discord.Collection();
 const botconfig = require("./botconfig.json");
 let ft = "+";
