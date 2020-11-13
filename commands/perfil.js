@@ -12,7 +12,7 @@ module.exports.run = async (bot, message, args) => {
 	
 
   // We need the User object aswell for different properties
-  const user = message.mentions.members.first();
+  const user = guildMember.user;
   var medallas = ["633653927715274772", "633653848434671616", "633653772660244491", "641189390793703435"];
   var strMedallas =""; 
     
@@ -72,7 +72,7 @@ strExp = "Ninguno";
 	[
 		{
 		name: "🔗 Perfil de",
-		value: `${user }`,
+		value: `${guildMember}`,
 		inline:false 
 		},
 		{
