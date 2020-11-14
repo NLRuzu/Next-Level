@@ -1,15 +1,11 @@
 const Discord = require("discord.js");
 
 module.exports.run = async (bot, message, args, guildMember) => {
-	console.log(bot, message, args)
 	
-	console.log(message)
-
   if (message.mentions.members.first()) {
     guildMember = message.mentions.members.first();
   } else {
     guildMember = message.member;
-	  console.log(guildMember);
   }
 
   // We need the User object aswell for different properties
@@ -19,6 +15,7 @@ module.exports.run = async (bot, message, args, guildMember) => {
     
     for(let i=0; i<comunidad.length; i++){   
     if(guildMember.roles.cache.get(comunidad[i])){
+	console.log(guildMember);
         strComunidad = strComunidad + message.guild.roles.cache.get(comunidad[i]) + " \n";
 	    
     }
