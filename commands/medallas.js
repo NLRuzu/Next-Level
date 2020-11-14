@@ -3,7 +3,6 @@ const Discord = require("discord.js");
 module.exports.run = async (bot, message, args) => {
 
   let guildMember;
-console.log(message.guild.roles.cache.get);
   if (message.mentions.members.first()) {
     guildMember = message.mentions.members.first();
   } else {
