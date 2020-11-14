@@ -6,6 +6,7 @@ module.exports.run = async (bot, message, args, guildMember) => {
     guildMember = message.mentions.members.first();
   } else {
     guildMember = message.member;
+	  console.log(guildMember);
   }
 
   // We need the User object aswell for different properties
@@ -13,10 +14,7 @@ module.exports.run = async (bot, message, args, guildMember) => {
   var comunidad = ["633653927715274772"];
   var strComunidad =""; 
     
-    for(let i=0; i<comunidad.length; i++){
-	   
-	    console.log(guildMember);
-	    
+    for(let i=0; i<comunidad.length; i++){   
     if(guildMember.roles.cache.get(comunidad[i])){
         strComunidad = strComunidad + message.guild.roles.cache.get(comunidad[i]) + " \n";
 	    
