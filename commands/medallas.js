@@ -2,8 +2,10 @@ const Discord = require("discord.js");
 
 module.exports.run = async (bot, message, args, guildMember) => {
 
-	function getRolName(id) {
-		return message.guild.roles.cache.get(id).name;
+	function getRolName(id, role) {
+		role = message.guild.roles.cache.get(id);
+		console.log(role);
+		return role.name;
 	}
 
 
