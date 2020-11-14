@@ -2,10 +2,10 @@ const Discord = require("discord.js");
 
 module.exports.run = async (bot, message, args, guildMember) => {
 
-	function getRolName(id, role) {
-		role = message.guild.roles.cache.get(id);
-		return role.name;
-	}
+	// function getRolName(id, role) {
+	// 	role = message.guild.roles.cache.get(id);
+	// 	return role.name;
+	// }
 
 
 	if (message.mentions.members.first()) {
@@ -44,7 +44,8 @@ module.exports.run = async (bot, message, args, guildMember) => {
 
 	for (let i = 0; i < fortnite.length; i++) {
 		if (guildMember.roles.cache.get(fortnite[i])) {
-			strFortnite = strFortnite + getRolName(message.guild.roles.cache.get(fortnite[i])) + " \n";
+			// strFortnite = strFortnite + getRolName(message.guild.roles.cache.get(fortnite[i])) + " \n";
+			strFortnite = strFortnite + "<@"+id+"> \n";
 		}
 	}
 
