@@ -16,7 +16,7 @@ module.exports.run = async (bot, message, args) => {
   var strComunidad =""; 
     
     for(let i=0; i<comunidad.length; i++){
-    if(message.mentions.has(comunidad[i])){
+    if(guildMember.roles.cache.has(comunidad[i])){
         strComunidad = strComunidad + message.guild.roles.cache.get(comunidad[i]) + " \n";
     }
 }
