@@ -2,12 +2,6 @@ const Discord = require("discord.js");
 
 module.exports.run = async (bot, message, args, guildMember) => {
 
-	// function getRolName(id, role) {
-	// 	role = message.guild.roles.cache.get(id);
-	// 	return role.name;
-	// }
-
-
 	if (message.mentions.members.first()) {
 		guildMember = message.mentions.members.first();
 	} else {
@@ -21,31 +15,25 @@ module.exports.run = async (bot, message, args, guildMember) => {
 
 	for (let i = 0; i < comunidad.length; i++) {
 		if (guildMember.roles.cache.get(comunidad[i])) {
-			console.log(guildMember);
-			var id = message.guild.roles.cache.get(comunidad[i]);
-			// strComunidad = strComunidad + getRolName(id) + " \n";
-			strComunidad = strComunidad + "<@&"+id+"> \n";
+			strComunidad = strComunidad + "<@&"+message.guild.roles.cache.get(comunidad[i])+"> \n";
 		}
 	}
 
 	var reddead = ["648991811494477843"];
 	var strReddead = "";
 
-	for (let i = 0; i < reddead.length; i++) {
-		if (guildMember.roles.cache.get(reddead[i])) {
-			var id = message.guild.roles.cache.get(reddead[i]);
-			strReddead = strReddead + "<@&"+id+"> \n";
+	for (let a = 0; a < reddead.length; a++) {
+		if (guildMember.roles.cache.get(reddead[a])) {
+			strReddead = strReddead + "<@&"+message.guild.roles.cache.get(reddead[a])+"> \n";
 		}
 	}
-
 
 	var fortnite = ["633653848434671616", "633653772660244491", "641189390793703435"];
 	var strFortnite = "";
 
-	for (let i = 0; i < fortnite.length; i++) {
-		if (guildMember.roles.cache.get(fortnite[i])) {
-			// strFortnite = strFortnite + getRolName(message.guild.roles.cache.get(fortnite[i])) + " \n";
-			strFortnite = strFortnite + "<@&"+id+"> \n";
+	for (let u = 0; u < fortnite.length; u++) {
+		if (guildMember.roles.cache.get(fortnite[u])) {
+			strFortnite = strFortnite + "<@&"+message.guild.roles.cache.get(fortnite[u])+"> \n";
 		}
 	}
 
@@ -61,9 +49,6 @@ module.exports.run = async (bot, message, args, guildMember) => {
 	if (!strFortnite) {
 		strFortnite = "Ninguno";
 	}
-
-
-
 
 	message.channel.send({
 		"embed": {
