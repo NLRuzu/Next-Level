@@ -24,7 +24,7 @@ module.exports.run = async (bot, message, args, guildMember) => {
 			console.log(guildMember);
 			var id = message.guild.roles.cache.get(comunidad[i]);
 			// strComunidad = strComunidad + getRolName(id) + " \n";
-			strComunidad = strComunidad + "<#"+id+"> \n";
+			strComunidad = strComunidad + "<@&"+id+"> \n";
 		}
 	}
 
@@ -34,7 +34,7 @@ module.exports.run = async (bot, message, args, guildMember) => {
 	for (let i = 0; i < reddead.length; i++) {
 		if (guildMember.roles.cache.get(reddead[i])) {
 			var id = message.guild.roles.cache.get(reddead[i]);
-			strReddead = strReddead + "<#"+id+"> \n";
+			strReddead = strReddead + "<@&"+id+"> \n";
 		}
 	}
 
@@ -45,7 +45,7 @@ module.exports.run = async (bot, message, args, guildMember) => {
 	for (let i = 0; i < fortnite.length; i++) {
 		if (guildMember.roles.cache.get(fortnite[i])) {
 			// strFortnite = strFortnite + getRolName(message.guild.roles.cache.get(fortnite[i])) + " \n";
-			strFortnite = strFortnite + "<#"+id+"> \n";
+			strFortnite = strFortnite + "<@&"+id+"> \n";
 		}
 	}
 
