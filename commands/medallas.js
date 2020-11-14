@@ -3,8 +3,7 @@ const Discord = require("discord.js");
 module.exports.run = async (bot, message, args, guildMember) => {
 
 	function getRolName(id, role) {
-		role = message.guild.roles.get(id);
-		console.log(role);
+		role = message.guild.roles.cache.get(id);
 		return role.name;
 	}
 
@@ -24,8 +23,8 @@ module.exports.run = async (bot, message, args, guildMember) => {
 		if (guildMember.roles.cache.get(comunidad[i])) {
 			console.log(guildMember);
 			var id = message.guild.roles.cache.get(comunidad[i]);
-			strComunidad = strComunidad + getRolName(id) + " \n";
-
+			// strComunidad = strComunidad + getRolName(id) + " \n";
+			strComunidad = strComunidad + "<@"+id+"> \n";
 		}
 	}
 
@@ -34,7 +33,8 @@ module.exports.run = async (bot, message, args, guildMember) => {
 
 	for (let i = 0; i < reddead.length; i++) {
 		if (guildMember.roles.cache.get(reddead[i])) {
-			strReddead = strReddead + getRolName(message.guild.roles.cache.get(reddead[i])) + " \n";
+			var id = message.guild.roles.cache.get(reddead[i]);
+			strReddead = strReddead + "<@"+id+"> \n";
 		}
 	}
 
