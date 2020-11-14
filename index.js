@@ -26,11 +26,8 @@ fs.readdir("./commands/", (err, files) => {
 });
 
 // MENSAJE DE BIENVENIDA NUEVOS USUARIOS //
-bot.on("guildMemberAdd", async member => {
-
+bot.on("guildMemberAdd", (member) => {
     console.log(`${member.id} ha entrado al server `);
-
-    let welcomechannel = member.guild.channels.cache.get("561602218219012106");
     let embed = {
         embed: {
             color: 0xc6ff00,
@@ -40,7 +37,8 @@ bot.on("guildMemberAdd", async member => {
         }
     };
 
-    welcomechannel.send(`**Bienvenido: Nuevo usuario ${member} a Next-Level**`, embed)
+    member.guild.channels.cache.get("561602218219012106")
+    .send(`**Bienvenido: Nuevo usuario ${member} a Next-Level**`, embed);
 
     member.send({
         embed: {
