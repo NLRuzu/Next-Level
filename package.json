@@ -9,7 +9,7 @@
   "author": "Ruzu",
   "license": "ISC",
   "dependencies": {
-    "discord.js": "^11.3.2",
+    "discord.js": "^12.2.0",
     "fortnite": "^4.1.1",
     "fortnite-api": "^2.12.2"
   }
