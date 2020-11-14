@@ -41,7 +41,7 @@ var exp = ["633959653012668416", "633959800715083787", "634001148180955136", "63
     
     for(let i=0; i<exp.length; i++){
     if(message.guild.roles.cache.get(exp[i])){
-        strExp = strExp + message.guild.roles.cache..get(exp[i]) + " \n";
+        strExp = strExp + message.guild.roles.cache.get(exp[i]) + " \n";
     }
 }
 	
