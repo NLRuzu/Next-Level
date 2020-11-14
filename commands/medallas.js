@@ -11,7 +11,7 @@ module.exports.run = async (bot, message, args) => {
   }
 
   // We need the User object aswell for different properties
-  const user = guildMember.user;
+
   var comunidad = ["633653927715274772"];
   var strComunidad =""; 
     
