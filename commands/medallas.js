@@ -25,8 +25,8 @@ var reddead = ["648991811494477843"];
   var strReddead =""; 
     
     for(let i=0; i<reddead.length; i++){
-    if(guildMember.roles.has(reddead[i])){
-        strReddead = strReddead + message.guild.roles.get(reddead[i]) + " \n";
+    if(guildMember.roles.cache.get(reddead[i])){
+        strReddead = strReddead + message.guild.roles.cache.get(reddead[i]) + " \n";
     }
 }
 	
@@ -35,8 +35,8 @@ var fortnite = ["633653848434671616", "633653772660244491", "641189390793703435"
  var strFortnite =""; 
     
     for(let i=0; i<fortnite.length; i++){
-    if(guildMember.roles.has(fortnite[i])){
-        strFortnite = strFortnite + message.guild.roles.get(fortnite[i]) + " \n";
+    if(guildMember.roles.cache.get(fortnite[i])){
+        strFortnite = strFortnite + message.guild.roles.cache.get(fortnite[i]) + " \n";
     }
 }
 	
