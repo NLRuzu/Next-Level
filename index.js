@@ -274,13 +274,7 @@ strFortnite = "Ninguno";
 	
 	
 }		
-		
-		
-		
-		
-		
-		
-} // FIN BOT FORTNITE //
+
     
 	
 	 
