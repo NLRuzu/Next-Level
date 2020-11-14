@@ -27,7 +27,7 @@ fs.readdir("./commands/", (err, files) => {
 
 
 // // MENSAJE DE BIENVENIDA NUEVOS USUARIOS //
-// bot.on("guildMemberAdd", (member) => {
+bot.on("guildMemberAdd", (member) => {
 //     console.log(`${member.id} ha entrado al server `);
 //     let embed = {
 //         embed: {
