@@ -2,6 +2,12 @@ const Discord = require("discord.js");
 
 module.exports.run = async (bot, message, args, guildMember) => {
 	
+	function getRolName(id) {
+		var name = message.guild.roles.cache.get(id)
+		return name;
+	}
+	
+	
   if (message.mentions.members.first()) {
     guildMember = message.mentions.members.first();
   } else {
@@ -16,7 +22,7 @@ module.exports.run = async (bot, message, args, guildMember) => {
     for(let i=0; i<comunidad.length; i++){   
     if(guildMember.roles.cache.get(comunidad[i])){
 	console.log(guildMember);
-        strComunidad = strComunidad + message.guild.roles.cache.get(comunidad[i]) + " \n";
+        strComunidad = strComunidad + getRolName(message.guild.roles.cache.get(comunidad[i])) + " \n";
 	    
     }
 }
@@ -26,7 +32,7 @@ var reddead = ["648991811494477843"];
     
     for(let i=0; i<reddead.length; i++){
     if(guildMember.roles.cache.get(reddead[i])){
-        strReddead = strReddead + message.guild.roles.cache.get(reddead[i]) + " \n";
+        strReddead = strReddead + getRolName(message.guild.roles.cache.get(reddead[i])) + " \n";
     }
 }
 	
@@ -36,7 +42,7 @@ var fortnite = ["633653848434671616", "633653772660244491", "641189390793703435"
     
     for(let i=0; i<fortnite.length; i++){
     if(guildMember.roles.cache.get(fortnite[i])){
-        strFortnite = strFortnite + message.guild.roles.cache.get(fortnite[i]) + " \n";
+        strFortnite = strFortnite + getRolName(message.guild.roles.cache.get(fortnite[i])) + " \n";
     }
 }
 	
