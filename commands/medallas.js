@@ -1,8 +1,7 @@
 const Discord = require("discord.js");
 
-module.exports.run = async (bot, message, args) => {
+module.exports.run = async (bot, message, args, guildMember) => {
 
-  let guildMember;
   if (message.mentions.members.first()) {
     guildMember = message.mentions.members.first();
   } else {
@@ -15,6 +14,9 @@ module.exports.run = async (bot, message, args) => {
   var strComunidad =""; 
     
     for(let i=0; i<comunidad.length; i++){
+	   
+	    console.log(guildMember);
+	    
     if(guildMember.roles.cache.get(comunidad[i])){
         strComunidad = strComunidad + message.guild.roles.cache.get(comunidad[i]) + " \n";
 	    
