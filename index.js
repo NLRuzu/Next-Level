@@ -393,192 +393,191 @@ bot.on("message", (message) => {
 
     } // FIN COMANDOS STAFF
 
-    if (message.content.startsWith(ft + "buscarrogue")) {         //  +buscarpartidas   = Envía toda la información sobre invitaciones canal INFO
-        let embed = {
-            "embed": {
+    // if (message.content.startsWith(ft + "buscarrogue")) {         //  +buscarpartidas   = Envía toda la información sobre invitaciones canal INFO
+    //     let embed = {
+    //         "embed": {
 
-                color: 0xc6ff00,
-                footer: {
-                    "text": message.guild.name
-                },
-                title: 'COMANDO PARA BUSCAR PARTIDAS',
-                url: "http://gamedev.es/",
-                description: '**DEBERÁS ESTAR EN UNA SALA DE VOZ EN PRIMER LUGAR.**',
-                fields: [
-                    {
-                        name: "`+rogue mensaje`",
-                        value: `Para Rogue Company, escribir el comando en la sala <#777506899611353098>`,
-                    }
+    //             color: 0xc6ff00,
+    //             footer: {
+    //                 "text": message.guild.name
+    //             },
+    //             title: 'COMANDO PARA BUSCAR PARTIDAS',
+    //             url: "http://gamedev.es/",
+    //             description: '**DEBERÁS ESTAR EN UNA SALA DE VOZ EN PRIMER LUGAR.**',
+    //             fields: [
+    //                 {
+    //                     name: "`+rogue mensaje`",
+    //                     value: `Para Rogue Company, escribir el comando en la sala <#777506899611353098>`,
+    //                 }
 
-                ]
-            }
-        };
-        message.delete();
-        bot.channels.cache.get("777506899611353098").send(embed);
+    //             ]
+    //         }
+    //     };
+    //     message.delete();
+    //     bot.channels.cache.get("777506899611353098").send(embed);
 
-    }
+    // }
     
-    if (message.channel.id == message.channel.id) { 	// SOLUCIÓN DESAFIOS TEMPORADA 8				
+    // if (message.channel.id == message.channel.id) { 	// SOLUCIÓN DESAFIOS TEMPORADA 8				
 
 
 
-    }
-
-
-
-
-    if (message.channel.id == message.channel.id) { 	// PARCHES INFORMATIVOS FORTNITE	
+    // }
 
 
 
 
-    }
-
-
-    // INICIO SISTEMA DE ADVERTENCIAS USUARIOS // ADVERTENCIA 1: USO INHADECUADO DE CANALES DE TEXTO
-
-    if (message.content.startsWith(ft + "ad1")) {        //  +ad1 @user   =  Advertimos al usuario
-        message.delete();
-        if (message.member.roles.find("name", "🌟 STAFF")) {
-            let User = message.mentions.users.first();
-            let guild = bot.guilds.get("458220475957379074");
-            let miembro = guild.member(User);
-
-            User.send({
-                embed: {
-                    color: 0xFF0000,
-                    title: "**ACABAS DE RECIBIR UNA ADVERTENCIA**",
-                    url: "http://gamedev.es/",
-                    description: "**Acabas de recibir una advertencia por incumplimiento del ART 1: Uso inadecuado de canales de texto \n\nPara evitar mas advertencias de este tipo, accede al canal de texto <#561595483328610304> y mira el uso de cada sala.\n\n**",
-                }
-            });
-
-
-            bot.channels.get("633700114980143104").send({
-                embed: {
-                    author: {
-                        name: message.author.tag,
-                        icon_url: message.author.avatarURL
-                    },
-                    color: 0xFF0000,
-                    description: "Ha advertido a **" + User + "**",
-                    fields: [
-                        {
-                            "name": "por incumplimiento del",
-                            "value": "**ART 1: Uso inadecuado de canales de texto**",
-                        }
-                    ]
+    // if (message.channel.id == message.channel.id) { 	// PARCHES INFORMATIVOS FORTNITE	
 
 
 
 
-
-                }
-            });
-        }
-    }
-
-    // FIN SISTEMA DE ADVERTENCIAS USUARIOS // ADVERTENCIA 1: USO INADECUADO DE CANALES DE TEXTO
-
-    // INICIO SISTEMA DE ADVERTENCIAS USUARIOS // ADVERTENCIA 2: VOCABULARIO INADECUADO
-
-    if (message.content.startsWith(ft + "ad2")) {        //  +ad2 @user   =  Advertimos al usuario
-        message.delete();
-        if (message.member.roles.find("name", "🌟 STAFF")) {
-            let User = message.mentions.users.first();
-            let guild = bot.guilds.get("458220475957379074");
-            let miembro = guild.member(User);
-
-            User.send({
-                embed: {
-                    color: 0xFF0000,
-                    title: "**ACABAS DE RECIBIR UNA ADVERTENCIA**",
-                    url: "http://gamedev.es/",
-                    description: "**Acabas de recibir una advertencia por incumplimiento del ART 2: Vocabulario inadecuado \n\nPara evitar mas advertencias de este tipo modera las formas o tu lenguaje con los miembros de la comunidad.\n\n**",
-                }
-            });
+    // }
 
 
-            bot.channels.get("633700114980143104").send({
-                embed: {
-                    author: {
-                        name: message.author.tag,
-                        icon_url: message.author.avatarURL
-                    },
-                    color: 0xFF0000,
-                    description: "Ha advertido a **" + User + "**",
-                    fields: [
-                        {
-                            "name": "por incumplimiento del",
-                            "value": "**ART 2: Vocabulario inadecuado**",
-                        }
-                    ]
+    // // INICIO SISTEMA DE ADVERTENCIAS USUARIOS // ADVERTENCIA 1: USO INHADECUADO DE CANALES DE TEXTO
+
+    // if (message.content.startsWith(ft + "ad1")) {        //  +ad1 @user   =  Advertimos al usuario
+    //     message.delete();
+    //     if (message.member.roles.find("name", "🌟 STAFF")) {
+    //         let User = message.mentions.users.first();
+    //         let guild = bot.guilds.get("458220475957379074");
+    //         let miembro = guild.member(User);
+
+    //         User.send({
+    //             embed: {
+    //                 color: 0xFF0000,
+    //                 title: "**ACABAS DE RECIBIR UNA ADVERTENCIA**",
+    //                 url: "http://gamedev.es/",
+    //                 description: "**Acabas de recibir una advertencia por incumplimiento del ART 1: Uso inadecuado de canales de texto \n\nPara evitar mas advertencias de este tipo, accede al canal de texto <#561595483328610304> y mira el uso de cada sala.\n\n**",
+    //             }
+    //         });
+
+
+    //         bot.channels.get("633700114980143104").send({
+    //             embed: {
+    //                 author: {
+    //                     name: message.author.tag,
+    //                     icon_url: message.author.avatarURL
+    //                 },
+    //                 color: 0xFF0000,
+    //                 description: "Ha advertido a **" + User + "**",
+    //                 fields: [
+    //                     {
+    //                         "name": "por incumplimiento del",
+    //                         "value": "**ART 1: Uso inadecuado de canales de texto**",
+    //                     }
+    //                 ]
 
 
 
 
 
-                }
-            });
-        }
-    }
+    //             }
+    //         });
+    //     }
+    // }
 
-    // FIN SISTEMA DE ADVERTENCIAS USUARIOS // ADVERTENCIA 2: VOCABULARIO INADECUADO
+    // // FIN SISTEMA DE ADVERTENCIAS USUARIOS // ADVERTENCIA 1: USO INADECUADO DE CANALES DE TEXTO
+
+    // // INICIO SISTEMA DE ADVERTENCIAS USUARIOS // ADVERTENCIA 2: VOCABULARIO INADECUADO
+
+    // if (message.content.startsWith(ft + "ad2")) {        //  +ad2 @user   =  Advertimos al usuario
+    //     message.delete();
+    //     if (message.member.roles.find("name", "🌟 STAFF")) {
+    //         let User = message.mentions.users.first();
+    //         let guild = bot.guilds.get("458220475957379074");
+    //         let miembro = guild.member(User);
+
+    //         User.send({
+    //             embed: {
+    //                 color: 0xFF0000,
+    //                 title: "**ACABAS DE RECIBIR UNA ADVERTENCIA**",
+    //                 url: "http://gamedev.es/",
+    //                 description: "**Acabas de recibir una advertencia por incumplimiento del ART 2: Vocabulario inadecuado \n\nPara evitar mas advertencias de este tipo modera las formas o tu lenguaje con los miembros de la comunidad.\n\n**",
+    //             }
+    //         });
 
 
-
-
-
-    if (message.content.startsWith(ft + "salas")) {         //  3DJUEGOS
-
-        let embed2 = {
-
-            "embed": {
-                "title": "USO ADECUADO DE NUESTRAS SALAS",
-                "description": "A continuación explicamos muy brevemente el uso de cada sala, y así evitar posibles conflictos.",
-                "color": 13041408,
-                "timestamp": "2019-04-29T12:14:55.011Z",
-                "footer": {
-                    "icon_url": "https://i.imgur.com/mL7DyRK.png",
-                    "text": "Comunidad NEXT LEVEL"
-                },
-                "thumbnail": {
-                    "url": "https://i.imgur.com/v2Sm3d6.png"
-                },
-
-                "fields": [
-                    {
-                        "name": "💬-chat",
-                        "value": "Esta es la sala principal de charla, vale todo respetando siempre las normas."
-                    },
-                    {
-                        "name": "🎼-música",
-                        "value": "Sala exclusiva de uso de comandos de música"
-                    },
-                    {
-                        "name": "📲-comandos",
-                        "value": "Sala exclusiva de uso de comandos, ahí usarás todos los comandos de la comunidad que tengas a tu disposición de uso."
-                    },
-                    {
-                        "name": "🌍-buscar-partidas",
-                        "value": "Sala exclusiva para BUSCAR gente para jugar Fortnite Salvar el Mundo, no se admite debates, ni charlas del juego SOLO BÚSQUEDA DE GENTE."
-                    }
-
-                ]
-            }
-        };
-        message.channel.send(embed2);
+    //         bot.channels.get("633700114980143104").send({
+    //             embed: {
+    //                 author: {
+    //                     name: message.author.tag,
+    //                     icon_url: message.author.avatarURL
+    //                 },
+    //                 color: 0xFF0000,
+    //                 description: "Ha advertido a **" + User + "**",
+    //                 fields: [
+    //                     {
+    //                         "name": "por incumplimiento del",
+    //                         "value": "**ART 2: Vocabulario inadecuado**",
+    //                     }
+    //                 ]
 
 
 
-    }
+
+
+    //             }
+    //         });
+    //     }
+    // }
+
+    // // FIN SISTEMA DE ADVERTENCIAS USUARIOS // ADVERTENCIA 2: VOCABULARIO INADECUADO
+
+
+
+
+
+    // if (message.content.startsWith(ft + "salas")) {         //  3DJUEGOS
+
+    //     let embed2 = {
+
+    //         "embed": {
+    //             "title": "USO ADECUADO DE NUESTRAS SALAS",
+    //             "description": "A continuación explicamos muy brevemente el uso de cada sala, y así evitar posibles conflictos.",
+    //             "color": 13041408,
+    //             "timestamp": "2019-04-29T12:14:55.011Z",
+    //             "footer": {
+    //                 "icon_url": "https://i.imgur.com/mL7DyRK.png",
+    //                 "text": "Comunidad NEXT LEVEL"
+    //             },
+    //             "thumbnail": {
+    //                 "url": "https://i.imgur.com/v2Sm3d6.png"
+    //             },
+
+    //             "fields": [
+    //                 {
+    //                     "name": "💬-chat",
+    //                     "value": "Esta es la sala principal de charla, vale todo respetando siempre las normas."
+    //                 },
+    //                 {
+    //                     "name": "🎼-música",
+    //                     "value": "Sala exclusiva de uso de comandos de música"
+    //                 },
+    //                 {
+    //                     "name": "📲-comandos",
+    //                     "value": "Sala exclusiva de uso de comandos, ahí usarás todos los comandos de la comunidad que tengas a tu disposición de uso."
+    //                 },
+    //                 {
+    //                     "name": "🌍-buscar-partidas",
+    //                     "value": "Sala exclusiva para BUSCAR gente para jugar Fortnite Salvar el Mundo, no se admite debates, ni charlas del juego SOLO BÚSQUEDA DE GENTE."
+    //                 }
+
+    //             ]
+    //         }
+    //     };
+    //     message.channel.send(embed2);
+
+
+
+    // }
 
 
 
     if (message.channel.id == message.channel.id) { 	// COMANDOS DE MUSICA BOTS
 
         if (message.content.startsWith(ft + "musica")) {         //  BOT MUSICAS
-            let adminRoleObject = message.guild.roles.find("name", "✅Verificado");
             let embed1 = {
                 "embed": {
                     "title": "LISTA DE COMANDOS BOT MÚSICA",
@@ -652,8 +651,8 @@ bot.on("message", (message) => {
                 }
             };
 
-            message.channel.send(`[${adminRoleObject}]`, embed1);
-            message.channel.send(embed2);
+            message.channel.cache.send(embed1);
+            message.channel.cache.send(embed2);
 
 
 
@@ -687,50 +686,50 @@ bot.on("message", (message) => {
     /// FIN SUGERENCIA ///
 
 
-    // +BUSCAR DESCRIPCION // PARTIDAS //    - FUNCIONANDO
-    if (message.content.startsWith("+rd")) {
-        if (message.guild.voiceChannel != null || message.guild.voiceChannel != undefined) {
-            let desc = message.content.split("+rd ")[1];
-            if (desc != null) {
-                let options = {
-                    maxAge: 3600
-                }
-                let server = bot.guilds.cache.get("495734058794483723");
+    // // +BUSCAR DESCRIPCION // PARTIDAS //    - FUNCIONANDO
+    // if (message.content.startsWith("+rd")) {
+    //     if (message.guild.voiceChannel != null || message.guild.voiceChannel != undefined) {
+    //         let desc = message.content.split("+rd ")[1];
+    //         if (desc != null) {
+    //             let options = {
+    //                 maxAge: 3600
+    //             }
+    //             let server = bot.guilds.cache.get("495734058794483723");
                 
-                message.guild.voiceChannel.createInvite(options)
-                    .then(invite => {
-                        let invitacion = invite.code.split("invite/")[0];
-                        let users = message.guild.voiceChannel.userLimit - message.guild.voiceChannel.members.size;
+    //             message.guild.voiceChannel.createInvite(options)
+    //                 .then(invite => {
+    //                     let invitacion = invite.code.split("invite/")[0];
+    //                     let users = message.guild.voiceChannel.userLimit - message.guild.voiceChannel.members.size;
 
-                        var mdb = {
-                            "embed": {
-                                "title": "BUSCANDO PARTIDA DE ROGUE COMPANY",
-                                "url": "http://gamedev.es/",
-                                "description": "Busco **" + users + "** compañeros para jugar en **" + message.guild.voiceChannel.name + "**",
-                                "color": 0xc6ff00,
-                                "timestamp": message.createdAt,
-                                "author": {
-                                    "name": message.author.tag,
-                                    "icon_url": message.author.avatarURL
-                                },
-                                "fields": [
-                                    {
-                                        "name": "Descripción",
-                                        "value": "*" + desc + "*",
-                                    },
-                                    {
-                                        "name": "Únete a mi sala",
-                                        "value": "[Haz click para unirte](https://discord.gg/" + invitacion + ")"
-                                    }
-                                ]
-                            }
-                        }
-                        bot.channels.cache.get("777506899611353098").send(mdb);
-                    })
-                    .catch(console.error);
-            }
-        }
-    }
+    //                     var mdb = {
+    //                         "embed": {
+    //                             "title": "BUSCANDO PARTIDA DE ROGUE COMPANY",
+    //                             "url": "http://gamedev.es/",
+    //                             "description": "Busco **" + users + "** compañeros para jugar en **" + message.guild.voiceChannel.name + "**",
+    //                             "color": 0xc6ff00,
+    //                             "timestamp": message.createdAt,
+    //                             "author": {
+    //                                 "name": message.author.tag,
+    //                                 "icon_url": message.author.avatarURL
+    //                             },
+    //                             "fields": [
+    //                                 {
+    //                                     "name": "Descripción",
+    //                                     "value": "*" + desc + "*",
+    //                                 },
+    //                                 {
+    //                                     "name": "Únete a mi sala",
+    //                                     "value": "[Haz click para unirte](https://discord.gg/" + invitacion + ")"
+    //                                 }
+    //                             ]
+    //                         }
+    //                     }
+    //                     bot.channels.cache.get("777506899611353098").send(mdb);
+    //                 })
+    //                 .catch(console.error);
+    //         }
+    //     }
+    // }
 
     // +BUSCAR DESCRIPCION // PARTIDAS //    - FUNCIONANDO
     if (message.content.startsWith("+bp")) {
