@@ -278,13 +278,11 @@ bot.on("message", (message) => {
         // }
 
 
-        // comunicar noticia red dead
-        if (message.content.startsWith(ft + "noticiared")) {        //  +comunicar mensaje  = Enviamos un comunicado en una sala concreta
+        // COMUNICAR NOTICIAS ROGUE COMPANY
+        if (message.content.startsWith(ft + "noticiasrogue")) {        //  +comunicar mensaje  = Enviamos un comunicado en una sala concreta
             
             if (message.member.roles.cache.some(role => role.name === '🌟 ADMINISTRADOR')) {
                 var comunicado = message.content.replace("+noticiared ", "");
-                let adminRoleObject = message.member.roles.cache.some(role => role.name === '✅Verificado');
-                
                 var embebido = {
                     "embed": {
                         "color": 0xc6ff00,
@@ -293,7 +291,7 @@ bot.on("message", (message) => {
                             icon_url: message.author.avatarURL
                         },
                         "image": {
-
+                            "url": "https://i.gyazo.com/30e5409130ec045f666f76aea42cd290.png"
                         },
                         footer: {
                             text: message.guild.name
@@ -303,10 +301,8 @@ bot.on("message", (message) => {
                     }
                 };
 
-
-
                 message.delete().catch(O_o => { });
-                bot.channels.cache.get("561601089460371457").send(`[${adminRoleObject}]`, embebido);
+                bot.channels.cache.get("561601089460371457").send(embebido);
 
             }
         }
