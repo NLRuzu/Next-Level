@@ -34,23 +34,23 @@ module.exports.run = async (bot, message, args) => {
 		
 		            {
                 name: "**Para ver los comandos de medallas**",
-                value: "```usa +helpmedallas en la sala <#561599847183155200>```",  
+                value: "```usa +helpmedallas en la sala 💾┊𝗖𝗼𝗺𝗮𝗻𝗱𝗼𝘀```",  
 	inline:false 	
                  },
                  {
                 name: "**Para ver los comandos de los bots de música**",
-                value: "```usa +musica en la sala <#561599847183155200>```",  
+                value: "```usa +musica en la sala 💾┊𝗖𝗼𝗺𝗮𝗻𝗱𝗼𝘀```",  
 	inline:false 	
                  },
                  {
                 name: "**Para ver información de tu perfil de comunidad o del usuario que menciones**",
-                value: "```usa +perfil o +perfil @user en la sala <#561599847183155200>```",  
+                value: "```usa +perfil o +perfil @user en la sala 💾┊𝗖𝗼𝗺𝗮𝗻𝗱𝗼𝘀```",  
 	inline:false 	
                  },
                  
 		{
                 name: "**Información de nuestro rango de experiencia**",
-                value: "```usa !rank en la sala <#561599847183155200>```",  
+                value: "```usa !rank en la sala 💾┊𝗖𝗼𝗺𝗮𝗻𝗱𝗼𝘀```",  
 	inline:false 	
                  }
 	
