@@ -9,7 +9,23 @@ module.exports.run = async (bot, message, args, guildMember) => {
         guildMember = message.member;
     }
 
+    var rango = ["458227404691996673", "485455156247396352", "776881483117363200", "776881900484689940", "484455466102161409", "776881848857002024", "777103249500667916", "776881979672887326", "458227928359239690", "777103663671541760", "777103629647740938", "777103985273339924"];
+    var strRango = "";
 
+    for (let d = 0; d < rango.length; d++) {
+        if (guildMember.roles.cache.get(rango[d])) {
+            strRango = strRango + "<@&" + message.guild.roles.cache.get(rango[d]) + "> \n";
+        }
+    }
+
+    var juegos = ["464055613484302336", "643448526524776458", "777153619056787467", "777153814553034772"];
+    var strJuegos = "";
+
+    for (let c = 0; c < juegos.length; c++) {
+        if (guildMember.roles.cache.get(juegos[c])) {
+            strJuegos = strJuegos + "<@&" + message.guild.roles.cache.get(juegos[c]) + "> \n";
+        }
+    }
 
     var medallas = ["633653927715274772", "633653848434671616", "633653772660244491", "641189390793703435"];
     var strMedallas = "";
@@ -39,6 +55,13 @@ module.exports.run = async (bot, message, args, guildMember) => {
         }
     }
 
+    if (!strJuegos) {
+        strJuegos = "Ninguno";
+    }
+
+    if (!strRango) {
+        strRango = "Ninguno";
+    }
 
     if (!strMedallas) {
         strMedallas = "Ninguna";
@@ -76,6 +99,18 @@ module.exports.run = async (bot, message, args, guildMember) => {
                     {
                         name: "🔰 Rango EXP",
                         value: `${strExp}`,
+                        inline: false
+                    },
+
+                    {
+                        name: "⚜️ Rango Comunidad",
+                        value: `${strRango}`,
+                        inline: false
+                    },
+
+                    {
+                        name: "💎 Juegos",
+                        value: `${strJuegos}`,
                         inline: false
                     },
 
