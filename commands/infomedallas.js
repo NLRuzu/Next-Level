@@ -20,27 +20,9 @@ module.exports.run = async (bot, message, args) => {
 		name: "💛 Fiel a Next Level [Comunidad]",
 		value: "*Obtenida tras demostrar vuestra fidelidad, compromiso y actividad a la comunidad. Solo los verdaderos nextleveros la llevan.*",
 		inline:false 
-		},
-    {
-		name: "🔪 Cazador Sombrío [Fortnite]",
-		value: "*Obtenida tras demostrar vuestro compromiso y participación en el Evento de HalloWeen 2019 de la comunidad. Haber asistido a la totalidad de eventos realizados.*",
-		inline:false 
-		},
-    {
-		name: "💉 Vampiro Sangriento [Fortnite]",
-		value: "*Obtenida tras demostrar vuestro compromiso y participación en el Evento de HalloWeen 2019 de la comunidad. Haber asistido casi a la totalidad de eventos realizados.*",
-		inline:false 
-		},
-    {
-		name: "⭐ Apoyando a Next Level [Fortnite]",
-		value: "*Obtenida tras demostrar vuestro compromiso e involucraciónn con la comunidad usando el código NL-RUZU en apoya a un creador de la tienda*",
-		inline:false 
-		},
-    {
-		name: "💛 Compañero Fiel [Red Dead]",
-		value: "*Obtenida tras demostrar vuestro compromiso e involucración con tus compañeros de cuadrilla Red Dead*",
-		inline:false 
 		}
+    
+    
     
     
     
