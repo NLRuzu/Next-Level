@@ -19,16 +19,16 @@ module.exports.run = async (bot, message, args, guildMember) => {
 		}
 	}
 
-	var reddead = ["648991811494477843"];
-	var strReddead = "";
+	var rogue = [""];
+	var strRogue = "";
 
-	for (let a = 0; a < reddead.length; a++) {
-		if (guildMember.roles.cache.get(reddead[a])) {
-			strReddead = strReddead + "<@&"+message.guild.roles.cache.get(reddead[a])+"> \n";
+	for (let a = 0; a < rogue.length; a++) {
+		if (guildMember.roles.cache.get(rogue[a])) {
+			strRogue = strRogue + "<@&"+message.guild.roles.cache.get(rogue[a])+"> \n";
 		}
 	}
 
-	var fortnite = ["633653848434671616", "633653772660244491", "641189390793703435"];
+	var fortnite = ["", "", ""];
 	var strFortnite = "";
 
 	for (let u = 0; u < fortnite.length; u++) {
@@ -36,14 +36,53 @@ module.exports.run = async (bot, message, args, guildMember) => {
 			strFortnite = strFortnite + "<@&"+message.guild.roles.cache.get(fortnite[u])+"> \n";
 		}
 	}
+	
+	var phasmo = [""];
+	var strPhasmo = "";
+
+	for (let b = 0; b < phasmo.length; b++) {
+		if (guildMember.roles.cache.get(phasmo[b])) {
+			strPhasmo = strPhasmo + "<@&"+message.guild.roles.cache.get(phasmo[b])+"> \n";
+		}
+	}
+	
+	var rocket = [""];
+	var strRocket = "";
+
+	for (let c = 0; c < rocket.length; c++) {
+		if (guildMember.roles.cache.get(rocket[c])) {
+			strRocket = strRocket + "<@&"+message.guild.roles.cache.get(rocket[c])+"> \n";
+		}
+	}
+	
+	var among = [""];
+	var strAmong = "";
+
+	for (let d = 0; d < among.length; d++) {
+		if (guildMember.roles.cache.get(among[d])) {
+			strAmong = strAmong + "<@&"+message.guild.roles.cache.get(among[d])+"> \n";
+		}
+	}
 
 
 	if (!strComunidad) {
 		strComunidad = "Ninguna";
 	}
-
-	if (!strReddead) {
-		strReddead = "Ninguno";
+	
+	if (!strRogue) {
+		strRogue = "Ninguna";
+	}
+	
+	if (!strPhasmo) {
+		strPhasmo = "Ninguna";
+	}
+	
+	if (!strRocket) {
+		strRocket = "Ninguna";
+	}
+	
+	if (!strAmong) {
+		strAmong = "Ninguna";
 	}
 
 	if (!strFortnite) {
@@ -75,10 +114,30 @@ module.exports.run = async (bot, message, args, guildMember) => {
 					},
 
 					{
-						name: "**Red Dead**",
-						value: `${strReddead}`,
+						name: "**Rogue Company**",
+						value: `${strRogue}`,
 						inline: false
 					},
+					
+					{
+						name: "**Phasmophobia**",
+						value: `${strPhasmo}`,
+						inline: false
+					},
+					
+					{
+						name: "**Rocket League**",
+						value: `${strRocket}`,
+						inline: false
+					},
+					
+					{
+						name: "**Among Us**",
+						value: `${strAmong}`,
+						inline: false
+					},
+					
+					
 					{
 						name: "**Comunidad**",
 						value: `${strComunidad}`,
