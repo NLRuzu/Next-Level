@@ -282,7 +282,7 @@ bot.on("message", (message) => {
         if (message.content.startsWith(ft + "noticiasrogue")) {        //  +comunicar mensaje  = Enviamos un comunicado en una sala concreta
             
             if (message.member.roles.cache.some(role => role.name === '🌟 ADMINISTRADOR')) {
-                var comunicado = message.content.replace("+noticiared ", "");
+                var comunicado = message.content.replace("");
                 var embebido = {
                     "embed": {
                         "color": 0xc6ff00,
