@@ -34,32 +34,23 @@ module.exports.run = async (bot, message, args) => {
 		
 		            {
                 name: "**Para ver los comandos de medallas**",
-                value: "```usa +helpmedallas en la sala 📲-comandos```",  
+                value: "```usa +helpmedallas en la sala <#561599847183155200>```",  
 	inline:false 	
                  },
                  {
                 name: "**Para ver los comandos de los bots de música**",
-                value: "```usa +musica en la sala 📲-comandos```",  
+                value: "```usa +musica en la sala <#561599847183155200>```",  
 	inline:false 	
                  },
                  {
-                name: "**Para ver información de tu perfil de comunidad**",
-                value: "```usa +perfil en la sala 📲-comandos```",  
+                name: "**Para ver información de tu perfil de comunidad o del usuario que menciones**",
+                value: "```usa +perfil o +perfil @user en la sala <#561599847183155200>```",  
 	inline:false 	
                  },
-                 {
-                name: "**Para ver información de comandos del bot fortnite**",
-                value: "```usa +fortnite en la sala 📲-comandos```",  
-	inline:false 	
-                 },
-                 {
-                name: "**Para buscar gente para jugar a red dead online**",
-                value: "```usa +buscarrd en la sala 💬-chat-rdr2```",  
-	inline:false 	
-                 },
+                 
 		{
-                name: "**Para crear una partida de red dead online programada**",
-                value: "```usa +partidared \"Descripción\" \"Día y Hora\" en la sala 💬-chat-rdr2```",  
+                name: "**Información de nuestro rango de experiencia**",
+                value: "```usa !rank en la sala <#561599847183155200>```",  
 	inline:false 	
                  }
 	
