@@ -256,6 +256,37 @@ bot.on("message", (message) => {
 
         //FIN COMUNICADOS NOTICIAS ROGUE
 
+        // COMUNICAR NOTICIAS PHASMOPHOBIA
+        if (message.content.startsWith(ft + "noticiasphasmo")) {        //  +comunicar mensaje  = Enviamos un comunicado en una sala concreta
+            
+            if (message.member.roles.cache.some(role => role.name === '🔴 JEFE SECCIÓN: PHASMOPHOBIA') || (message.member.roles.cache.some(role => role.name === '🟥 MODERADOR PHASMOPHOBIA'))) {
+                var comunicado = message.content.replace("+noticiasphasmo ", "");
+                var embebido = {
+                    "embed": {
+                        "color": 0xc6ff00,
+                        author: {
+                            name: message.author.tag,
+                            icon_url: message.author.avatarURL
+                        },
+                        "image": {
+                            "url": "https://i.gyazo.com/30e5409130ec045f666f76aea42cd290.png"
+                        },
+                        footer: {
+                            text: message.guild.name
+                        },
+                        description: comunicado,
+                        timestamp: message.createdAt,
+                    }
+                };
+
+                message.delete().catch(O_o => { });
+                bot.channels.cache.get("776872406404038677").send(embebido);
+
+            }
+        }
+
+        //FIN COMUNICADOS NOTICIAS ROGUE
+
     
 
         // if (message.content.startsWith(ft + "partidared")) {  //  +quedada "Nick1" "Nick2"     = Participantes del torneo
