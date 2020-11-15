@@ -196,11 +196,10 @@ bot.on("message", (message) => {
         //     return message.channel.send(serverembed);
         // }
 
-        // comunicar general
+        // COMANDO COMUNICAR GENERAL
         if (message.content.startsWith(ft + "comunicar")) {        //  +comunicar mensaje  = Enviamos un comunicado en una sala concreta
-            if (message.member.roles.find("name", "🌟 STAFF")) {
+            if (message.member.roles.cache.some(role => role.name === '🌟 ADMINISTRADOR')) {
                 var comunicado = message.content.replace("+comunicar ", "");
-                let adminRoleObject = message.guild.roles.find("name", "✅Verificado");
                 var embebido = {
                     "embed": {
                         "color": 0xc6ff00,
@@ -219,15 +218,45 @@ bot.on("message", (message) => {
                     }
                 };
 
+                message.delete().catch(O_o => { });
+                bot.channels.cache.get("561601089460371457").send(embebido);
 
+            }
+        }
+        // FIN COMUNICADOS GENERALES
+
+        // COMUNICAR NOTICIAS ROGUE COMPANY
+        if (message.content.startsWith(ft + "noticiasrogue")) {        //  +comunicar mensaje  = Enviamos un comunicado en una sala concreta
+            
+            if (message.member.roles.cache.some(role => role.name === '🌟 ADMINISTRADOR')) {
+                var comunicado = message.content.replace("+noticiasrogue ", "");
+                var embebido = {
+                    "embed": {
+                        "color": 0xc6ff00,
+                        author: {
+                            name: message.author.tag,
+                            icon_url: message.author.avatarURL
+                        },
+                        "image": {
+                            "url": "https://i.gyazo.com/30e5409130ec045f666f76aea42cd290.png"
+                        },
+                        footer: {
+                            text: message.guild.name
+                        },
+                        description: comunicado,
+                        timestamp: message.createdAt,
+                    }
+                };
 
                 message.delete().catch(O_o => { });
-                bot.channels.get("561601089460371457").send(`[${adminRoleObject}]`, embebido);
+                bot.channels.cache.get("776875070642454589").send(embebido);
 
             }
         }
 
-        // fin comunicar general
+        //FIN COMUNICADOS NOTICIAS ROGUE
+
+    
 
         // if (message.content.startsWith(ft + "partidared")) {  //  +quedada "Nick1" "Nick2"     = Participantes del torneo
         //     var args = [];
@@ -277,160 +306,94 @@ bot.on("message", (message) => {
 
         // }
 
-
-        // COMUNICAR NOTICIAS ROGUE COMPANY
-        if (message.content.startsWith(ft + "noticiasrogue")) {        //  +comunicar mensaje  = Enviamos un comunicado en una sala concreta
-            
-            if (message.member.roles.cache.some(role => role.name === '🌟 ADMINISTRADOR')) {
-                var comunicado = message.content.replace("");
-                var embebido = {
-                    "embed": {
-                        "color": 0xc6ff00,
-                        author: {
-                            name: message.author.tag,
-                            icon_url: message.author.avatarURL
-                        },
-                        "image": {
-                            "url": "https://i.gyazo.com/30e5409130ec045f666f76aea42cd290.png"
-                        },
-                        footer: {
-                            text: message.guild.name
-                        },
-                        description: comunicado,
-                        timestamp: message.createdAt,
-                    }
-                };
-
-                message.delete().catch(O_o => { });
-                bot.channels.cache.get("561601089460371457").send(embebido);
-
-            }
-        }
-
         // fin comunicar general
 
-        // comunicar consejo red dead
-        if (message.content.startsWith(ft + "consejored")) {        //  +comunicar mensaje  = Enviamos un comunicado en una sala concreta
-            if (message.member.roles.find("name", "🌟 [Red Dead] STAFF")) {
-                var comunicado = message.content.replace("+consejored ", "");
-                let adminRoleObject = message.guild.roles.find("name", "💰 Consejos Red Dead");
-                var embebido = {
-                    "embed": {
-                        "color": 0xc6ff00,
-                        author: {
-                            name: message.author.tag,
-                            icon_url: message.author.avatarURL
-                        },
-                        "image": {
-
-                        },
-                        footer: {
-                            text: message.guild.name
-                        },
-                        description: comunicado,
-                        timestamp: message.createdAt,
-                    }
-                };
+        // if (message.content.startsWith(ft + "verificar")) {        //  +verificar @user   = Verificamos a un usuario
+        //     message.delete();
+        //     if (message.member.roles.find("name", "🌟 STAFF MÁSTER") || message.member.roles.find("name", "🌟 STAFF NIVEL 2") || message.member.roles.find("name", "🌟 STAFF NIVEL 1") || message.member.roles.find("name", "🌟 STAFF EN PRUEBAS")) {
+        //         let User = message.mentions.users.first();
+        //         let role = message.guild.roles.find("name", "✅Verificado");
+        //         let role2 = message.guild.roles.find("name", "❎ No verificado");
+        //         let guild = bot.guilds.get("458220475957379074");
+        //         let miembro = guild.member(User);
+        //         miembro.addRole(role).catch(console.error);
+        //         miembro.removeRole(role2).catch(console.error);
+        //         User.send({
+        //             embed: {
+        //                 color: 0x04ff00,
+        //                 title: "**HAS SIDO VERIFICADO**",
+        //                 url: "http://gamedev.es/",
+        //                 description: "**¡Enhorabuena! has sido verificado, ahora puedes ver todo el contenido del servidor del clan. \n\nPara más información accede al canal de texto #info. \n\nNo olvides asignarte tu rol para recibir las notificaciones de fortnite en sala #comandos escribe +roles y usa el que quieras.**",
+        //             }
+        //         });
 
 
-
-                message.delete().catch(O_o => { });
-                bot.channels.get("645208289029914625").send(`[${adminRoleObject}]`, embebido);
-
-            }
-        }
-
-        // fin comunicar general
-
-        if (message.content.startsWith(ft + "verificar")) {        //  +verificar @user   = Verificamos a un usuario
-            message.delete();
-            if (message.member.roles.find("name", "🌟 STAFF MÁSTER") || message.member.roles.find("name", "🌟 STAFF NIVEL 2") || message.member.roles.find("name", "🌟 STAFF NIVEL 1") || message.member.roles.find("name", "🌟 STAFF EN PRUEBAS")) {
-                let User = message.mentions.users.first();
-                let role = message.guild.roles.find("name", "✅Verificado");
-                let role2 = message.guild.roles.find("name", "❎ No verificado");
-                let guild = bot.guilds.get("458220475957379074");
-                let miembro = guild.member(User);
-                miembro.addRole(role).catch(console.error);
-                miembro.removeRole(role2).catch(console.error);
-                User.send({
-                    embed: {
-                        color: 0x04ff00,
-                        title: "**HAS SIDO VERIFICADO**",
-                        url: "http://gamedev.es/",
-                        description: "**¡Enhorabuena! has sido verificado, ahora puedes ver todo el contenido del servidor del clan. \n\nPara más información accede al canal de texto #info. \n\nNo olvides asignarte tu rol para recibir las notificaciones de fortnite en sala #comandos escribe +roles y usa el que quieras.**",
-                    }
-                });
+        //         bot.channels.get("570620409406423060").send({
+        //             embed: {
+        //                 author: {
+        //                     name: message.author.tag,
+        //                     icon_url: message.author.avatarURL
+        //                 },
+        //                 color: 0x04ff00,
+        //                 description: "**Ha verificado a **" + User + " **correctamente**",
+        //             }
+        //         });
+        //     }
+        // }
 
 
-                bot.channels.get("570620409406423060").send({
-                    embed: {
-                        author: {
-                            name: message.author.tag,
-                            icon_url: message.author.avatarURL
-                        },
-                        color: 0x04ff00,
-                        description: "**Ha verificado a **" + User + " **correctamente**",
-                    }
-                });
-            }
-        }
-
-
-
-        if (message.content.startsWith(ft + "staff")) {            //  +staff   = Información de todos los comandos de STAFF
-            if (message.guild.roles.find("name", "🌟 STAFF")) {
-                let sicon = message.guild.iconURL;
-                let serverembed = new Discord.RichEmbed()
-                    .setDescription("**COMANDOS STAFF**")
-                    .setColor("#C6FF00")
-                    .setThumbnail(sicon)
-                    .addField("**+clear cantidad**", "Elimina X cantidad de mensajes de un canal de texto")
-                    .addField("**+proponer @user @rol**", "Proponemos un ascenso de un usuario")
-                    .addField("**+ascenso @user @rol**", "Redactamos un nuevo ascenso, solo usar en sala <#561601089460371457>")
-                    .addField("**+comunicar Desarrollo**", "Redactamos un comunicado, solo usar en sala <#561601089460371457>")
-                    .addField("**+dm @user Mensaje**", "Le enviamos un DM a un usuario con un mensaje")
+        // if (message.content.startsWith(ft + "staff")) {            //  +staff   = Información de todos los comandos de STAFF
+        //     if (message.guild.roles.find("name", "🌟 STAFF")) {
+        //         let sicon = message.guild.iconURL;
+        //         let serverembed = new Discord.RichEmbed()
+        //             .setDescription("**COMANDOS STAFF**")
+        //             .setColor("#C6FF00")
+        //             .setThumbnail(sicon)
+        //             .addField("**+clear cantidad**", "Elimina X cantidad de mensajes de un canal de texto")
+        //             .addField("**+proponer @user @rol**", "Proponemos un ascenso de un usuario")
+        //             .addField("**+ascenso @user @rol**", "Redactamos un nuevo ascenso, solo usar en sala <#561601089460371457>")
+        //             .addField("**+comunicar Desarrollo**", "Redactamos un comunicado, solo usar en sala <#561601089460371457>")
+        //             .addField("**+dm @user Mensaje**", "Le enviamos un DM a un usuario con un mensaje")
 
 
 
 
-                return message.channel.send(serverembed);
-            }
-        }
+        //         return message.channel.send(serverembed);
+        //     }
+        // }
 
+ // PARA QUITAR COMENTARIO PULSAS CONTROL + K + U
 
+        // if (message.content.startsWith(ft + "infoinvi")) {         //  +infoinvi   = Envía toda la información sobre invitaciones canal INFO
+        //     let embed = {
+        //         "embed": {
 
+        //             color: 0xc6ff00,
+        //             footer: {
+        //                 "text": message.guild.name
+        //             },
+        //             title: 'INFORMACIÓN SOBRE LINK DE INVITACIÓN',
+        //             url: "http://gamedev.es/",
+        //             description: '**Conoces gente que le pueda interesar nuestro clan o quieres que entren contigo aquí. Invítalos usando el siguiente link**',
+        //             fields: [
+        //                 {
+        //                     name: "Copia y pega el enlace a un amigo/a",
+        //                     value: `:beginner: https://discord.gg/tztnx2f`,
+        //                 }
+        //             ]
+        //         }
+        //     };
 
+        //     message.channel.send(embed);
+        //     message.delete();
 
-        if (message.content.startsWith(ft + "infoinvi")) {         //  +infoinvi   = Envía toda la información sobre invitaciones canal INFO
-            let embed = {
-                "embed": {
-
-                    color: 0xc6ff00,
-                    footer: {
-                        "text": message.guild.name
-                    },
-                    title: 'INFORMACIÓN SOBRE LINK DE INVITACIÓN',
-                    url: "http://gamedev.es/",
-                    description: '**Conoces gente que le pueda interesar nuestro clan o quieres que entren contigo aquí. Invítalos usando el siguiente link**',
-                    fields: [
-                        {
-                            name: "Copia y pega el enlace a un amigo/a",
-                            value: `:beginner: https://discord.gg/tztnx2f`,
-                        }
-                    ]
-                }
-            };
-
-            message.channel.send(embed);
-            message.delete();
-
-        }
+        // }
 
 
 
     } // FIN COMANDOS STAFF
 
-    if (message.content.startsWith(ft + "buscarrd")) {         //  +buscarpartidas   = Envía toda la información sobre invitaciones canal INFO
+    if (message.content.startsWith(ft + "buscarrogue")) {         //  +buscarpartidas   = Envía toda la información sobre invitaciones canal INFO
         let embed = {
             "embed": {
 
@@ -444,7 +407,7 @@ bot.on("message", (message) => {
                 fields: [
                     {
                         name: "`+rd mensaje`",
-                        value: `Para Red Dead Online, escribir el comando en la sala <#643449055359270932>`,
+                        value: `Para Rogue Company, escribir el comando en la sala <#776877947075559424>`,
                     }
 
                 ]
@@ -455,6 +418,7 @@ bot.on("message", (message) => {
         message.delete();
 
     }
+    
     if (message.channel.id == message.channel.id) { 	// SOLUCIÓN DESAFIOS TEMPORADA 8				
 
 
