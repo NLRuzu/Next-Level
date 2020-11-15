@@ -656,31 +656,29 @@ bot.on("message", (message) => {
         }
     }
 
+    // // +SUGERENCIA //
+    // if (message.content.toUpperCase().startsWith("+SUGERENCIA")) {
+    //     let adminRoleObject = message.guild.roles.find("name", "🌟 STAFF");
+    //     var comunicado = message.content.replace("+sugerencia ", "");
+    //     var embebido = {
+    //         "embed": {
+    //             color: 0xc6ff00,
+    //             author: {
+    //                 name: message.author.tag,
+    //                 icon_url: message.author.avatarURL
+    //             },
+    //             title: "**NUEVA SUGERENCIA**",
+    //             url: "http://gamedev.es/",
 
+    //             description: comunicado,
+    //             timestamp: message.createdAt,
+    //         }
+    //     };
 
-    // +SUGERENCIA //
-    if (message.content.toUpperCase().startsWith("+SUGERENCIA")) {
-        let adminRoleObject = message.guild.roles.find("name", "🌟 STAFF");
-        var comunicado = message.content.replace("+sugerencia ", "");
-        var embebido = {
-            "embed": {
-                color: 0xc6ff00,
-                author: {
-                    name: message.author.tag,
-                    icon_url: message.author.avatarURL
-                },
-                title: "**NUEVA SUGERENCIA**",
-                url: "http://gamedev.es/",
-
-                description: comunicado,
-                timestamp: message.createdAt,
-            }
-        };
-
-        bot.channels.get("571607870660018196").send(`[${adminRoleObject}]`, embebido);
-        message.delete().catch(O_o => { });
-    }
-    /// FIN SUGERENCIA ///
+    //     bot.channels.get("571607870660018196").send(`[${adminRoleObject}]`, embebido);
+    //     message.delete().catch(O_o => { });
+    // }
+    // /// FIN SUGERENCIA ///
 
 
     // // +BUSCAR DESCRIPCION // PARTIDAS //    - FUNCIONANDO
@@ -728,66 +726,7 @@ bot.on("message", (message) => {
     //     }
     // }
 
-    // +BUSCAR DESCRIPCION // PARTIDAS //    - FUNCIONANDO
-    if (message.content.startsWith("+bp")) {
-        if (message.member.voiceChannel != null || message.member.voiceChannel != undefined) {
-            let desc = message.content.split("+bp ")[1];
-            if (desc != null) {
-                let options = {
-                    maxAge: 3600
-                }
-                let server = bot.guilds.get("458220475957379074");
-                let adminRoleObject = server.roles.find("name", "🤖 Fortnite");
-                message.member.voiceChannel.createInvite(options)
-                    .then(invite => {
-                        let invitacion = invite.code.split("invite/")[0];
-                        let users = message.member.voiceChannel.userLimit - message.member.voiceChannel.members.size;
-
-                        var mdb = {
-                            "embed": {
-                                "title": "BUSCANDO PARTIDA DE FORTNITE",
-                                "url": "http://gamedev.es/",
-                                "description": "Busco **" + users + "** personas para darle calor en **" + message.member.voiceChannel.name + "**",
-                                "color": 0xc500ff,
-                                "timestamp": message.createdAt,
-                                "author": {
-                                    "name": message.author.tag,
-                                    "icon_url": message.author.avatarURL
-                                },
-                                "fields": [
-                                    {
-                                        "name": "Descripción",
-                                        "value": "*" + desc + "*",
-                                    },
-                                    {
-                                        "name": "Únete a mi sala",
-                                        "value": "[Haz click para unirte](https://discord.gg/" + invitacion + ")"
-                                    }
-                                ]
-                            }
-                        }
-
-
-
-                        message.delete().catch(O_o => { });
-                        bot.channels.get("561602695656636431").send(`[${adminRoleObject}]`, mdb);
-
-
-
-                    })
-                    .catch(console.error);
-            }
-        }
-    }
-
-
-
-
-
-
-
-
-
+   
     // CONFIG BOT 
     if (message.channel.type === "dm") return;
     if (message.author.bot) return;
@@ -805,7 +744,7 @@ bot.on("message", (message) => {
 
 // ACTIVIDAD DEL BOT (JUGANDO A +HELP) //
 bot.on("ready", async () => {
-    console.log(`${bot.user.username} estÃ¡ online`);
+    console.log(`${bot.user.username} LISTO`);
     bot.user.setActivity("+ayuda");
 });
 
