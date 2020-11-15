@@ -283,7 +283,7 @@ bot.on("message", (message) => {
             
             if (message.member.roles.cache.some(role => role.name === '🌟 ADMINISTRADOR')) {
                 var comunicado = message.content.replace("+noticiared ", "");
-                let adminRoleObject = message.member.roles.cache.some(role => role.name === '✅Verificado'))
+                let adminRoleObject = message.member.roles.cache.some(role => role.name === '✅Verificado')
                 var embebido = {
                     "embed": {
                         "color": 0xc6ff00,
