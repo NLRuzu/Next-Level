@@ -269,7 +269,7 @@ bot.on("message", (message) => {
                             icon_url: message.author.avatarURL
                         },
                         "image": {
-                            "url": "https://i.gyazo.com/30e5409130ec045f666f76aea42cd290.png"
+                            "url": "https://i.gyazo.com/4ab1def65c0b80b4dd71fe226bae2f90.png"
                         },
                         footer: {
                             text: message.guild.name
