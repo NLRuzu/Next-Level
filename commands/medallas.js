@@ -19,7 +19,7 @@ module.exports.run = async (bot, message, args, guildMember) => {
 		}
 	}
 
-	var rogue = [""];
+	var rogue = ["633653848434671616"];
 	var strRogue = "";
 
 	for (let a = 0; a < rogue.length; a++) {
@@ -37,7 +37,7 @@ module.exports.run = async (bot, message, args, guildMember) => {
 		}
 	}
 	
-	var phasmo = [""];
+	var phasmo = ["633653772660244491"];
 	var strPhasmo = "";
 
 	for (let b = 0; b < phasmo.length; b++) {
