@@ -689,7 +689,7 @@ bot.on("message", (message) => {
 
     // +BUSCAR DESCRIPCION // PARTIDAS //    - FUNCIONANDO
     if (message.content.startsWith("+rd")) {
-        if (message.member.voiceChannel != null || message.member.voiceChannel != undefined) {
+        if (message.guild.voiceChannel != null || message.guild.voiceChannel != undefined) {
             let desc = message.content.split("+rd ")[1];
             if (desc != null) {
                 let options = {
@@ -697,16 +697,16 @@ bot.on("message", (message) => {
                 }
                 let server = bot.guilds.cache.get("495734058794483723");
                 
-                message.member.voiceChannel.createInvite(options)
+                message.guild.voiceChannel.createInvite(options)
                     .then(invite => {
                         let invitacion = invite.code.split("invite/")[0];
-                        let users = message.member.voiceChannel.userLimit - message.member.voiceChannel.members.size;
+                        let users = message.guild.voiceChannel.userLimit - message.guild.voiceChannel.members.size;
 
                         var mdb = {
                             "embed": {
                                 "title": "BUSCANDO PARTIDA DE ROGUE COMPANY",
                                 "url": "http://gamedev.es/",
-                                "description": "Busco **" + users + "** compañeros para jugar en **" + message.member.voiceChannel.name + "**",
+                                "description": "Busco **" + users + "** compañeros para jugar en **" + message.guild.voiceChannel.name + "**",
                                 "color": 0xc6ff00,
                                 "timestamp": message.createdAt,
                                 "author": {
