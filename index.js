@@ -406,16 +406,15 @@ bot.on("message", (message) => {
                 description: '**DEBERÁS ESTAR EN UNA SALA DE VOZ EN PRIMER LUGAR.**',
                 fields: [
                     {
-                        name: "`+rd mensaje`",
-                        value: `Para Rogue Company, escribir el comando en la sala <#776877947075559424>`,
+                        name: "`+rogue mensaje`",
+                        value: `Para Rogue Company, escribir el comando en la sala <#777506899611353098>`,
                     }
 
                 ]
             }
         };
-
-        message.channel.send(embed);
         message.delete();
+        bot.channels.cache.get("777506899611353098").send(embed);
 
     }
     
@@ -696,8 +695,8 @@ bot.on("message", (message) => {
                 let options = {
                     maxAge: 3600
                 }
-                let server = bot.guilds.get("458220475957379074");
-                let adminRoleObject = server.roles.find("name", "Red Dead");
+                let server = bot.guilds.cache.get("458220475957379074");
+                let adminRoleObject = server.roles.cache.some(role => role.name === 'Rogue Company')
                 message.member.voiceChannel.createInvite(options)
                     .then(invite => {
                         let invitacion = invite.code.split("invite/")[0];
@@ -705,7 +704,7 @@ bot.on("message", (message) => {
 
                         var mdb = {
                             "embed": {
-                                "title": "BUSCANDO PARTIDA DE RED DEAD ONLINE",
+                                "title": "BUSCANDO PARTIDA DE ROGUE COMPANY",
                                 "url": "http://gamedev.es/",
                                 "description": "Busco **" + users + "** compañeros para jugar en **" + message.member.voiceChannel.name + "**",
                                 "color": 0xc6ff00,
@@ -730,7 +729,7 @@ bot.on("message", (message) => {
 
 
 
-                        bot.channels.get("649281948191293450").send(`[${adminRoleObject}]`, mdb);
+                        bot.channels.get("777506899611353098").send(`[${adminRoleObject}]`, mdb);
 
 
 
