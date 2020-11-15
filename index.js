@@ -651,11 +651,8 @@ bot.on("message", (message) => {
                 }
             };
 
-            message.channel.cache.send(embed1);
-            message.channel.cache.send(embed2);
-
-
-
+            bot.channels.cache.get("561599847183155200").send(embed1);
+            bot.channels.cache.get("561599847183155200").send(embed2);
         }
     }
 
