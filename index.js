@@ -305,7 +305,7 @@ bot.on("message", (message) => {
 
 
                 message.delete().catch(O_o => { });
-                bot.channels.get("561601089460371457").send(`[${adminRoleObject}]`, embebido);
+                bot.channels.cache.get("561601089460371457").send(`[${adminRoleObject}]`, embebido);
 
             }
         }
