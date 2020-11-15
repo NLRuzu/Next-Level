@@ -283,7 +283,8 @@ bot.on("message", (message) => {
             
             if (message.member.roles.cache.some(role => role.name === '🌟 ADMINISTRADOR')) {
                 var comunicado = message.content.replace("+noticiared ", "");
-                let adminRoleObject = message.member.roles.cache.some(role => role.name === '✅Verificado')
+                let adminRoleObject = message.guild.roles.cache.find("name", "✅Verificado");
+                
                 var embebido = {
                     "embed": {
                         "color": 0xc6ff00,
@@ -305,7 +306,7 @@ bot.on("message", (message) => {
 
 
                 message.delete().catch(O_o => { });
-                bot.channels.cache.get("561601089460371457").send(`@✅Verificado`, embebido);
+                bot.channels.cache.get("561601089460371457").send(`[${adminRoleObject}]`, embebido);
 
             }
         }
