@@ -75,30 +75,11 @@ bot.on("guildMemberAdd", function (member) {
 // LISTA DE COMANDOS
 bot.on("message", (message) => {
 
-
-
-    // +RESTART // SOLO OWNER
-    if (message.author.id == "298029791708315649") { 	// CREATOR COMMANDS
-
-        if (message.content.startsWith(ft + "restart")) {			// 	[FUNCIONANDO] 		&restart					= Reinicia el proceso el bot por completo (Precaucion)
-            message.channel.send(":robot: Reiniciando el bot");
-            setTimeout(function () {
-                child.kill();
-            }, 1000);
-        }
-
-    } // END CREATOR COMMANDS
-
-
-
-
     // REACCION EMOJI SALA CARTELERA //
     if (message.channel.id == "649325138289885209" && message.author.bot) {
         message.react("472146792339734565");
         message.react("472147160423727105");
     }
-
-
 
     // REACCION EMOJI SALA SUGERENCIAS //
     if (message.channel.id == "5716078706600181962" && message.author.bot) {
@@ -113,67 +94,61 @@ bot.on("message", (message) => {
     };
 
 
+    // if (message.channel.id == message.channel.id) { 	// BOT FORTNITE
+
+    //     if (message.content.startsWith(ft + "fortnite")) {         //  BOT FORTNITE
+    //         let adminRoleObject = message.guild.roles.find("name", "✅Verificado");
+    //         let embed1 = {
+    //             "embed": {
+    //                 "title": "LISTA DE COMANDOS BOT FORTNITE",
+    //                 "color": 13041408,
+    //                 "timestamp": "2019-04-29T12:14:55.011Z",
+    //                 "footer": {
+    //                     "icon_url": "https://i.imgur.com/mL7DyRK.png",
+    //                     "text": "Comunidad NEXT LEVEL"
+    //                 },
+    //                 "thumbnail": {
+    //                     "url": "https://i.imgur.com/nM5N16C.png"
+    //                 },
+    //                 "image": {
+    //                     "url": "https://i.imgur.com/KNWIYuk.png"
+    //                 },
+    //                 "fields": [
+    //                     {
+    //                         "name": "+link nombreepic",
+    //                         "value": "Nos linkea la cuenta de epic games con el discord"
+    //                     },
+    //                     {
+    //                         "name": "+kd",
+    //                         "value": "Nos muestra el KD de nuestra cuenta."
+    //                     },
+    //                     {
+    //                         "name": "+wins",
+    //                         "value": "Nos muestra las partidas ganadas de nuestra cuenta."
+    //                     },
+    //                     {
+    //                         "name": "+rank",
+    //                         "value": "Nos pone las WINS y el KD en el nick*. **Solo podrán usarlos los que tengan el rol ⭐Apoya un Creador **"
+    //                     },
+    //                     {
+    //                         "name": "IMPORTANTE",
+    //                         "value": "Todos los comandos deben usarse en la sala <#561599847183155200>."
+    //                     },
+    //                     {
+    //                         "name": "**PARA ACTUALIZAR WINS Y KD**",
+    //                         "value": "Debemos usar cualquier comando `+kd` o `+wins` nos actualizará el nick con las WINS y KD actual."
+    //                     }
+
+    //                 ]
+    //             }
+    //         };
+    //         bot.channels.get("561599847183155200").send(embed1);
 
 
 
+    //     }
 
-
-
-    if (message.channel.id == message.channel.id) { 	// BOT FORTNITE
-
-        if (message.content.startsWith(ft + "fortnite")) {         //  BOT FORTNITE
-            let adminRoleObject = message.guild.roles.find("name", "✅Verificado");
-            let embed1 = {
-                "embed": {
-                    "title": "LISTA DE COMANDOS BOT FORTNITE",
-                    "color": 13041408,
-                    "timestamp": "2019-04-29T12:14:55.011Z",
-                    "footer": {
-                        "icon_url": "https://i.imgur.com/mL7DyRK.png",
-                        "text": "Comunidad NEXT LEVEL"
-                    },
-                    "thumbnail": {
-                        "url": "https://i.imgur.com/nM5N16C.png"
-                    },
-                    "image": {
-                        "url": "https://i.imgur.com/KNWIYuk.png"
-                    },
-                    "fields": [
-                        {
-                            "name": "+link nombreepic",
-                            "value": "Nos linkea la cuenta de epic games con el discord"
-                        },
-                        {
-                            "name": "+kd",
-                            "value": "Nos muestra el KD de nuestra cuenta."
-                        },
-                        {
-                            "name": "+wins",
-                            "value": "Nos muestra las partidas ganadas de nuestra cuenta."
-                        },
-                        {
-                            "name": "+rank",
-                            "value": "Nos pone las WINS y el KD en el nick*. **Solo podrán usarlos los que tengan el rol ⭐Apoya un Creador **"
-                        },
-                        {
-                            "name": "IMPORTANTE",
-                            "value": "Todos los comandos deben usarse en la sala <#561599847183155200>."
-                        },
-                        {
-                            "name": "**PARA ACTUALIZAR WINS Y KD**",
-                            "value": "Debemos usar cualquier comando `+kd` o `+wins` nos actualizará el nick con las WINS y KD actual."
-                        }
-
-                    ]
-                }
-            };
-            bot.channels.get("561599847183155200").send(embed1);
-
-
-
-        }
-
-    }
+    // }
 
 
 
@@ -181,45 +156,46 @@ bot.on("message", (message) => {
     if (message.channel.id == message.channel.id) { 				    // COMANDOS SOLO STAFF
 
 
-        if (message.content.startsWith(ft + "delrol")) {           //  +delrol @user     = Elimina un rol establecido en por ID
-            let rUser = message.guild.member(message.mentions.users.first());
-            let role = message.guild.roles.find("id", "458226959907028992");
-            rUser.removeRole(role).catch(console.error);
-            message.channel.send({
-                embed: {
-                    color: 0xc500ff,
-                    description: "ROL eliminado a " + rUser + " correctamente",
-                }
-            });
-            message.delete();
-        }
+        // if (message.content.startsWith(ft + "delrol")) {           //  +delrol @user     = Elimina un rol establecido en por ID
+        //     let rUser = message.guild.member(message.mentions.users.first());
+        //     let role = message.guild.roles.find("id", "458226959907028992");
+        //     rUser.removeRole(role).catch(console.error);
+        //     message.channel.send({
+        //         embed: {
+        //             color: 0xc500ff,
+        //             description: "ROL eliminado a " + rUser + " correctamente",
+        //         }
+        //     });
+        //     message.delete();
+        // }
 
-        if (message.content.startsWith(ft + "addrol")) {           //  +addrol @user      = Añade un rol establecido en por ID
+        // if (message.content.startsWith(ft + "addrol")) {           //  +addrol @user      = Añade un rol establecido en por ID
 
-            let rUser = message.guild.member(message.mentions.users.first());
-            let role = message.guild.roles.find("id", "458226959907028992");
-            let guild = bot.guilds.get("458220475957379074");
-            rUser.addRole(role).catch(console.error);
-            message.channel.send({
-                embed: {
-                    color: 0xc500ff,
-                    description: "ROL añadido a " + rUser + " correctamente",
-                }
-            });
-            message.delete();
-        }
+        //     let rUser = message.guild.member(message.mentions.users.first());
+        //     let role = message.guild.roles.find("id", "458226959907028992");
+        //     let guild = bot.guilds.get("458220475957379074");
+        //     rUser.addRole(role).catch(console.error);
+        //     message.channel.send({
+        //         embed: {
+        //             color: 0xc500ff,
+        //             description: "ROL añadido a " + rUser + " correctamente",
+        //         }
+        //     });
+        //     message.delete();
+        // }
 
-        if (message.content.startsWith(ft + "serverinfo")) {       //  +serverinfo  = Muestra la informaciónd del servidor
-            let sicon = message.guild.iconURL;
-            let serverembed = new Discord.RichEmbed()
-                .setDescription("**Información del Servidor**")
-                .setColor("#c6ff00")
-                .setThumbnail(sicon)
-                .addField("**Nombre del Servidor**", message.guild.name)
-                .addField("**Miembros Totales**", message.guild.memberCount);
+        // if (message.content.startsWith(ft + "serverinfo")) {       //  +serverinfo  = Muestra la informaciónd del servidor
+        //     let sicon = message.guild.iconURL;
+        //     let serverembed = new Discord.RichEmbed()
+        //         .setDescription("**Información del Servidor**")
+        //         .setColor("#c6ff00")
+        //         .setThumbnail(sicon)
+        //         .addField("**Nombre del Servidor**", message.guild.name)
+        //         .addField("**Miembros Totales**", message.guild.memberCount);
 
-            return message.channel.send(serverembed);
-        }
+        //     return message.channel.send(serverembed);
+        // }
+
         // comunicar general
         if (message.content.startsWith(ft + "comunicar")) {        //  +comunicar mensaje  = Enviamos un comunicado en una sala concreta
             if (message.member.roles.find("name", "🌟 STAFF")) {
@@ -253,63 +229,59 @@ bot.on("message", (message) => {
 
         // fin comunicar general
 
-        if (message.content.startsWith(ft + "partidared")) {  //  +quedada "Nick1" "Nick2"     = Participantes del torneo
-            var args = [];
-            var texto = message.content;
-            try {
-                while (texto.includes("\"")) {
-                    texto = texto.substr(texto.indexOf("\"") + 1);
-                    args.push(texto.substring(0, texto.indexOf("\"")));
-                    texto = texto.substr(texto.indexOf("\"") + 1);
-                }
-            }
-            catch (err) {
-                message.channel.send("+partidared \"Descripción\" \"Día y Hora\"");
-                return;
-            }
-            let server = bot.guilds.get("597732937659842581");
-            let adminRoleObject = message.guild.roles.find("name", "Red Dead");
-            let NickParticipante1 = args[0];
-            let NickParticipante2 = args[1];
-            let disponible = args[2];
-            var apuntarme = {
-                "embed": {
-                    color: 0xafff00,
-                    title: "**NUEVA PARTIDA PROGRAMADA**",
-                    url: "http://gamedev.es/",
+        // if (message.content.startsWith(ft + "partidared")) {  //  +quedada "Nick1" "Nick2"     = Participantes del torneo
+        //     var args = [];
+        //     var texto = message.content;
+        //     try {
+        //         while (texto.includes("\"")) {
+        //             texto = texto.substr(texto.indexOf("\"") + 1);
+        //             args.push(texto.substring(0, texto.indexOf("\"")));
+        //             texto = texto.substr(texto.indexOf("\"") + 1);
+        //         }
+        //     }
+        //     catch (err) {
+        //         message.channel.send("+partidared \"Descripción\" \"Día y Hora\"");
+        //         return;
+        //     }
+        //     let server = bot.guilds.get("597732937659842581");
+        //     let adminRoleObject = message.guild.roles.find("name", "Red Dead");
+        //     let NickParticipante1 = args[0];
+        //     let NickParticipante2 = args[1];
+        //     let disponible = args[2];
+        //     var apuntarme = {
+        //         "embed": {
+        //             color: 0xafff00,
+        //             title: "**NUEVA PARTIDA PROGRAMADA**",
+        //             url: "http://gamedev.es/",
 
-                    fields: [
-                        {
-                            name: "📜 Descripción",
-                            value: NickParticipante1,
-                        },
-                        {
-                            name: "📆 Día y Hora",
-                            value: NickParticipante2,
-                        }
+        //             fields: [
+        //                 {
+        //                     name: "📜 Descripción",
+        //                     value: NickParticipante1,
+        //                 },
+        //                 {
+        //                     name: "📆 Día y Hora",
+        //                     value: NickParticipante2,
+        //                 }
 
-                    ]
-                }
-            };
-
-
-            let torneochannel = bot.channels.get("649325138289885209").send(`[${adminRoleObject}]`, apuntarme);
-            if (!torneochannel) return message.channel.send("No se encuentra la sala");
+        //             ]
+        //         }
+        //     };
 
 
-            message.delete().catch(O_o => { });
-
-        }
-
+        //     let torneochannel = bot.channels.get("649325138289885209").send(`[${adminRoleObject}]`, apuntarme);
+        //     if (!torneochannel) return message.channel.send("No se encuentra la sala");
 
 
+        //     message.delete().catch(O_o => { });
 
-
+        // }
 
 
         // comunicar noticia red dead
         if (message.content.startsWith(ft + "noticiared")) {        //  +comunicar mensaje  = Enviamos un comunicado en una sala concreta
-            if (message.member.roles.find("name", "🌟 [Red Dead] STAFF")) {
+            
+            if (message.member.roles.cache.some(role => role.name === '🌟 ADMINISTRADOR')) {
                 var comunicado = message.content.replace("+noticiared ", "");
                 let adminRoleObject = message.guild.roles.find("name", "📑 Noticias Red Dead");
                 var embebido = {
@@ -333,7 +305,7 @@ bot.on("message", (message) => {
 
 
                 message.delete().catch(O_o => { });
-                bot.channels.get("643943366752469023").send(`[${adminRoleObject}]`, embebido);
+                bot.channels.get("561601089460371457").send(`[${adminRoleObject}]`, embebido);
 
             }
         }
