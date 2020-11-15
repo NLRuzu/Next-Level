@@ -696,6 +696,7 @@ bot.on("message", (message) => {
                     maxAge: 3600
                 }
                 let server = bot.guilds.cache.get("458220475957379074");
+                let adminRoleObject = server.roles.cache.some(role => role.name === 'Rogue Company')
                 message.member.voiceChannel.createInvite(options)
                     .then(invite => {
                         let invitacion = invite.code.split("invite/")[0];
@@ -728,7 +729,7 @@ bot.on("message", (message) => {
 
 
 
-                        bot.channels.get("777506899611353098").send(mdb);
+                        bot.channels.get("777506899611353098").send(`[${adminRoleObject}]`, mdb);
 
 
 
