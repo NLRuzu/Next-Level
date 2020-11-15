@@ -729,7 +729,7 @@ bot.on("message", (message) => {
 
 
 
-                        bot.channels.get("777506899611353098").send(`[${adminRoleObject}]`, mdb);
+                        bot.channels.cache.get("777506899611353098").send(`[${adminRoleObject}]`, mdb);
 
 
 
