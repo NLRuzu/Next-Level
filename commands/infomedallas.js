@@ -27,8 +27,13 @@ module.exports.run = async (bot, message, args) => {
 		inline:false 
 		},
 		{
-		name: "❕ Acceso Beta [Phasmophobia]",
-		value: "*Obtenida a aquellos/as jugadores/as que llevan jugando desde el Acceso Beta al Phasmophobia.*",
+		name: "❕ Acceso Beta [Rogue Comany]",
+		value: "*Obtenida a aquellos/as jugadores/as que llevan jugando desde el Acceso Beta al Rogue Company.*",
+		inline:false 
+		},
+		{
+		name: "🎩 Sombrero Dorado [Red Dead Online]",
+		value: "*Obtenida a aquellos/as jugadores/as que se han incorporado al Modo Online en las fechas de preoferta de separación de Modo Online y Modo Historia. Son auténticos cow boys que saben aprovechar el momento adecuado.*",
 		inline:false 
 		}
     
