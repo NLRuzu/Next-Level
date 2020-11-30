@@ -63,6 +63,15 @@ module.exports.run = async (bot, message, args, guildMember) => {
 			strAmong = strAmong + "<@&"+message.guild.roles.cache.get(among[d])+"> \n";
 		}
 	}
+	
+	var redead = ["777281262155071519"];
+	var strRedDead = "";
+
+	for (let d = 0; d < redead.length; d++) {
+		if (guildMember.roles.cache.get(redead[d])) {
+			strRedDead = strRedDead + "<@&"+message.guild.roles.cache.get(redead[d])+"> \n";
+		}
+	}
 
 
 	if (!strComunidad) {
@@ -87,6 +96,10 @@ module.exports.run = async (bot, message, args, guildMember) => {
 
 	if (!strFortnite) {
 		strFortnite = "Ninguno";
+	}
+	
+	if (!strRedDead) {
+		strRedDead = "Ninguno";
 	}
 
 	message.channel.send({
@@ -134,6 +147,12 @@ module.exports.run = async (bot, message, args, guildMember) => {
 					{
 						name: "**Among Us**",
 						value: `${strAmong}`,
+						inline: false
+					},
+					
+					{
+						name: "**Red Dead Online**",
+						value: `${strRedDead}`,
 						inline: false
 					},
 					
