@@ -27,7 +27,7 @@ module.exports.run = async (bot, message, args, guildMember) => {
         }
     }
 
-    var medallas = ["633653927715274772", "633653848434671616", "633653772660244491", "641189390793703435"];
+    var medallas = ["633653927715274772", "633653848434671616", "633653772660244491", "641189390793703435", "777281262155071519"];
     var strMedallas = "";
 
     for (let i = 0; i < medallas.length; i++) {
