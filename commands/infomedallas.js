@@ -22,13 +22,13 @@ module.exports.run = async (bot, message, args) => {
 		inline:false 
 		},
 		{
-		name: "❕ Acceso Beta [Rogue Comany]",
-		value: "*Obtenida a aquellos/as jugadores/as que llevan jugando desde el Acceso Beta al Rogue Company.*",
+		name: "❕ Acceso Beta [Phasmophobia]",
+		value: "*Obtenida a aquellos/as jugadores/as que llevan jugando desde el Acceso Beta al Phasmophobia.*",
 		inline:false 
 		},
 		{
-		name: "❕ Acceso Beta [Rogue Comany]",
-		value: "*Obtenida a aquellos/as jugadores/as que llevan jugando desde el Acceso Beta al Rogue Company.*",
+		name: "❕ Acceso Beta [Wild Rift]",
+		value: "*Obtenida a aquellos/as jugadores/as que llevan jugando desde el Acceso Beta al League of Legends Wild Rift.*",
 		inline:false 
 		},
 		{
