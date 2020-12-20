@@ -127,7 +127,7 @@ module.exports.run = async (bot, message, args, guildMember) => {
 					},
 
 					{
-						name: "**Rogue Company**",
+						name: "**Wild Rift**",
 						value: `${strRogue}`,
 						inline: false
 					},
