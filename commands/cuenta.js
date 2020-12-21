@@ -86,7 +86,7 @@ module.exports.run = async (bot, message, args, guildMember) => {
             description: "Toda la información referente al perfil del usuario",
 
             thumbnail: {
-                url: "https://i.imgur.com/v2Sm3d6.png",
+                url: "https://i.gyazo.com/fbc29e84a7a992cb70277a8f4194c2fc.png",
             },
 
             fields:
