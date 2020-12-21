@@ -82,7 +82,7 @@ module.exports.run = async (bot, message, args, guildMember) => {
         "embed": {
 
             color: 0xc6ff00,
-            title: "INFORMACIÓN PERFIL",
+            title: "INFORMACIÓN CUENTA WILD RIFT",
             description: "Toda la información referente al perfil del usuario",
 
             thumbnail: {
