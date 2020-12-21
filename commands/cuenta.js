@@ -100,24 +100,24 @@ module.exports.run = async (bot, message, args, guildMember) => {
                     {
                         name: "🔰 Liga",
                         value: `${strRango}`,
-                        inline: false
+                        inline: true
                     },
 
                     {
                         name: "💎 Roles",
                         value: `${strJuegos}`,
-                        inline: false
+                        inline: true
                     },
 
                     {
                         name: "💿 Eventos Participados",
                         value: `${strEventos}`,
-                        inline: false
+                        inline: true
                     },
                     {
                         name: "📀 Medallas Obtenidas",
                         value: `${strMedallas}`,
-                        inline: false
+                        inline: true
                     },
                     {
                         name: "Para ver todas las medallas por secciones de juegos",
