@@ -13,7 +13,7 @@ module.exports.run = async (bot, message, args, guildMember) => {
                     "embed":{
 			    
             color: 0xc6ff00,
-            title: "BIENVENIDO `${guildMember}`, A LA SECCIÓN DE WILD RIFT NEXT LEVEL",
+            title: "BIENVENIDO A LA SECCIÓN DE WILD RIFT NEXT LEVEL",
             description: "Escríbenos tu nick#tag para añadirte a <#790176071806484490>",
             
 		thumbnail: {
