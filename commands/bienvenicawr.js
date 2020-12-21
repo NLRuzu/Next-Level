@@ -2,6 +2,13 @@ const Discord = require("discord.js");
 
 module.exports.run = async (bot, message, args, guildMember) => {
 
+    if (message.mentions.members.first()) {
+        guildMember = message.mentions.members.first();
+    } else {
+        guildMember = message.member;
+    }
+
+
     message.channel.send({
                     "embed":{
 			    
