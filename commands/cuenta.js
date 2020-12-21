@@ -94,7 +94,7 @@ module.exports.run = async (bot, message, args, guildMember) => {
                     {
                         name: "🔗 Perfil de",
                         value: `${guildMember}`,
-                        inline: false
+                        inline: true
                     },
                    
                     {
