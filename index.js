@@ -83,8 +83,8 @@ bot.on("message", (message) => {
 
     // REACCION EMOJI SALA SUGERENCIAS //
     if (message.channel.id == "570620409406423060" && message.author.bot) {
-        message.react("✅");
-        message.react("");
+       
+      
     } 
         
         // COMANDO COMUNICAR GENERAL
@@ -581,6 +581,7 @@ bot.on("message", (message) => {
     // // +SUGERENCIA //
      if (message.content.toUpperCase().startsWith("+SUGERENCIA")) {
          var comunicado = message.content.replace("+sugerencia ", "");
+        message.react('✅');
          var embebido = {
              "embed": {
                  color: 0xc6ff00,
