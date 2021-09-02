@@ -581,22 +581,22 @@ bot.on("message", (message) => {
     // // +SUGERENCIA //
      if (message.content.toUpperCase().startsWith("+SUGERENCIA")) {
          var comunicado = message.content.replace("+sugerencia ", "");
-        message.react('✅');
-         var embebido = {
-             "embed": {
-                 color: 0xc6ff00,
-                 author: {
-                     name: message.author.tag,
-                     icon_url: message.author.avatarURL
-                 },
+        var embebido = {
+            "embed": {
+                color: 0xc6ff00,
+                author: {
+                    name: message.author.tag,
+                    icon_url: message.author.avatarURL
+                },
                 title: "**NUEVA SUGERENCIA**",
                 url: "http://gamedev.es/",
 
                 description: comunicado,
                 timestamp: message.createdAt,
-             }
+            }
          };
          bot.channels.cache.get("570620409406423060").send(embebido);
+         message.react('✅');
          message.delete().catch(O_o => { });
      }
     // /// FIN SUGERENCIA ///
