@@ -83,8 +83,8 @@ bot.on("message", (message) => {
 
     // REACCION EMOJI SALA SUGERENCIAS //
     if (message.channel.id == "570620409406423060" && message.author.bot) {
-        message.react("472146792339734565");
-        message.react("472147160423727105");
+        message.react("882937621486108703");
+        message.react("882937677354237975");
     } let ed1 = {
         embed: {
             color: 0x04ff00,
@@ -689,7 +689,6 @@ bot.on("message", (message) => {
 
     // // +SUGERENCIA //
      if (message.content.toUpperCase().startsWith("+SUGERENCIA")) {
-         let adminRoleObject = message.member.roles.cache.some(role => role.name === '🌟 ADMINISTRADOR');
          var comunicado = message.content.replace("+sugerencia ", "");
          var embebido = {
              "embed": {
@@ -705,7 +704,7 @@ bot.on("message", (message) => {
                 timestamp: message.createdAt,
              }
          };
-         bot.channels.cache.get("570620409406423060").send(`[${adminRoleObject}]`, embebido);
+         bot.channels.cache.get("570620409406423060").send(`[${adminRoleObject}]`);
          message.delete().catch(O_o => { });
      }
     // /// FIN SUGERENCIA ///
