@@ -580,7 +580,8 @@ bot.on("message", (message) => {
 
     // // +SUGERENCIA //
      if (message.content.toUpperCase().startsWith("+SUGERENCIA")) {
-         var comunicado = message.content.replace("+sugerencia ", "");
+        message.react('✅');
+        var comunicado = message.content.replace("+sugerencia ", "");
         var embebido = {
             "embed": {
                 color: 0xc6ff00,
@@ -596,7 +597,7 @@ bot.on("message", (message) => {
             }
          };
          bot.channels.cache.get("570620409406423060").send(embebido);
-         message.react('✅');
+         
          message.delete().catch(O_o => { });
      }
     // /// FIN SUGERENCIA ///
