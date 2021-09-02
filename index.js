@@ -73,19 +73,6 @@ bot.on("guildMemberAdd", function (member) {
 });
 
 
-bot.on('interactionCreate', async interaction => {
-	if (!interaction.isCommand()) return;
-
-	const { commandName } = interaction;
-
-	if (commandName === 'fruits') {
-		interaction.reply('Reacting with fruits!');
-		const message = await interaction.fetchReply();
-		message.react('🍎');
-		message.react('🍊');
-		message.react('🍇');
-	}
-});
 
 
 
@@ -101,6 +88,11 @@ bot.on("message", (message) => {
 
     // REACCION EMOJI SALA SUGERENCIAS //
     if (message.channel.id == "570620409406423060" && message.author.bot) {
+        interaction.reply('Reacting with fruits!');
+		const message = await interaction.fetchReply();
+		message.react('🍎');
+		message.react('🍊');
+		message.react('🍇');
         message.react("882938884319768577");
       
     } 
