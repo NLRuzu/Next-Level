@@ -82,7 +82,7 @@ bot.on("message", (message) => {
     }
 
     // REACCION EMOJI SALA SUGERENCIAS //
-    if (message.channel.id == "5716078706600181962" && message.author.bot) {
+    if (message.channel.id == "570620409406423060" && message.author.bot) {
         message.react("472146792339734565");
         message.react("472147160423727105");
     } let ed1 = {
@@ -688,27 +688,27 @@ bot.on("message", (message) => {
     }
 
     // // +SUGERENCIA //
-    // if (message.content.toUpperCase().startsWith("+SUGERENCIA")) {
-    //     let adminRoleObject = message.guild.roles.find("name", "🌟 STAFF");
-    //     var comunicado = message.content.replace("+sugerencia ", "");
-    //     var embebido = {
-    //         "embed": {
-    //             color: 0xc6ff00,
-    //             author: {
-    //                 name: message.author.tag,
-    //                 icon_url: message.author.avatarURL
-    //             },
-    //             title: "**NUEVA SUGERENCIA**",
-    //             url: "http://gamedev.es/",
+     if (message.content.toUpperCase().startsWith("+SUGERENCIA")) {
+         let adminRoleObject = message.guild.roles.find("name", "🌟 STAFF");
+         var comunicado = message.content.replace("+sugerencia ", "");
+         var embebido = {
+             "embed": {
+                 color: 0xc6ff00,
+                 author: {
+                     name: message.author.tag,
+                     icon_url: message.author.avatarURL
+                 },
+                title: "**NUEVA SUGERENCIA**",
+                url: "http://gamedev.es/",
 
-    //             description: comunicado,
-    //             timestamp: message.createdAt,
-    //         }
-    //     };
+                description: comunicado,
+                timestamp: message.createdAt,
+             }
+         };
 
-    //     bot.channels.get("571607870660018196").send(`[${adminRoleObject}]`, embebido);
-    //     message.delete().catch(O_o => { });
-    // }
+         bot.channels.get("570620409406423060").send(`[${adminRoleObject}]`, embebido);
+         message.delete().catch(O_o => { });
+     }
     // /// FIN SUGERENCIA ///
 
 
