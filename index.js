@@ -313,7 +313,7 @@ bot.on("message", (message) => {
 
 
 
-    } // FIN COMANDOS STAFF
+    //} // FIN COMANDOS STAFF
 
     // if (message.content.startsWith(ft + "buscarrogue")) {         //  +buscarpartidas   = Envía toda la información sobre invitaciones canal INFO
     //     let embed = {
