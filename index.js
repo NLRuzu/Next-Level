@@ -83,15 +83,11 @@ bot.on("message", (message) => {
 
     // REACCION EMOJI SALA SUGERENCIAS //
     if (message.channel.id == "570620409406423060" && message.author.bot) {
-        message.react("882937621486108703");
-        message.react("882937677354237975");
-    } let ed1 = {
-        embed: {
-            color: 0x04ff00,
-            title: "**:warning: LO SENTIMOS**",
-            description: "Tu rol actual no dispone de suficientes privilegios, debes de participar e interactuar más con el clan para ascender a un rol superior. \n\n Para mas información ir al canal: <#485759738164936719> y sección **BENEFICIOS**",
-        }
-    };
+        message.react("882939126691803146");
+        message.react("882939562484170782");
+    } 
+        
+};
 
 
     // if (message.channel.id == message.channel.id) { 	// BOT FORTNITE
