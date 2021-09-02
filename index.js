@@ -689,7 +689,7 @@ bot.on("message", (message) => {
 
     // // +SUGERENCIA //
      if (message.content.toUpperCase().startsWith("+SUGERENCIA")) {
-         let adminRoleObject = message.guild.roles.find("name", "🌟 ADMINISTRADOR");
+         let adminRoleObject = message.member.roles.cache.some(role => role.name === '🌟 ADMINISTRADOR');
          var comunicado = message.content.replace("+sugerencia ", "");
          var embebido = {
              "embed": {
