@@ -705,8 +705,7 @@ bot.on("message", (message) => {
                 timestamp: message.createdAt,
              }
          };
-
-         bot.channels.get("570620409406423060").send(`[${adminRoleObject}]`, embebido);
+         bot.channels.cache.get("570620409406423060").send(`[${adminRoleObject}]`, embebido);
          message.delete().catch(O_o => { });
      }
     // /// FIN SUGERENCIA ///
