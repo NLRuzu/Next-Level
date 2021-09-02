@@ -87,7 +87,7 @@ bot.on("message", (message) => {
         message.react("882939562484170782");
     } 
         
-};
+
 
 
     // if (message.channel.id == message.channel.id) { 	// BOT FORTNITE
