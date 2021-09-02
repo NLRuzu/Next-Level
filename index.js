@@ -83,7 +83,7 @@ bot.on("message", (message) => {
 
     // REACCION EMOJI SALA SUGERENCIAS //
     if (message.channel.id == "570620409406423060" && message.author.bot) {
-       
+        message.react("882938884319768577");
       
     } 
         
@@ -580,7 +580,7 @@ bot.on("message", (message) => {
 
     // // +SUGERENCIA //
      if (message.content.toUpperCase().startsWith("+SUGERENCIA")) {
-        message.react('✅');
+        
         var comunicado = message.content.replace("+sugerencia ", "");
         var embebido = {
             "embed": {
