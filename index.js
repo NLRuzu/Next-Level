@@ -219,7 +219,7 @@ bot.on("message", (message) => {
                 };
 
                 message.delete().catch(O_o => { });
-                bot.channels.cache.get("561601089460371457").send(embebido);
+                bot.channels.cache.get("777549041268686879").send(embebido);
 
             }
         }
